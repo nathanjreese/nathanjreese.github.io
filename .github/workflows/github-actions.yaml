@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Indycar secrets
 run-name: Indycar Driver App 🚀
 on: [push]
 jobs:
@@ -10,4 +10,4 @@ jobs:
       env: 
         VITE_DATABASE_PASSWORD: ${{ secrets.PLANETSCALE_PW }}
         VITE_TEST_IN_ENV: ${{ secrets.TEST_VALUE }}
-        VITE_TEST_NOT_ENV: ${{ secrets.TEST_VALUE }}
+        VITE_TEST_NOT_ENV: ${{ secrets.TEST_VALUE2 }}
