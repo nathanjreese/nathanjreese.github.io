@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+run-name: Indycar Driver App 🚀
+on: [push]
+jobs:
+  default_env_variables:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: testing-secrets
+      env: 
+        VITE_DATABASE_PASSWORD: ${{ secrets.PLANETSCALE_PW }}
+        VITE_TEST_IN_ENV: ${{ secrets.TEST_VALUE }}
+        VITE_TEST_NOT_ENV: ${{ secrets.TEST_VALUE }}
