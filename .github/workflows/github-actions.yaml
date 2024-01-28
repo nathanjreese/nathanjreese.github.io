@@ -5,8 +5,8 @@ jobs:
   default_env_variables:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
     - name: testing-secrets
+      uses: actions/checkout@v4
       env: 
         VITE_DATABASE_PASSWORD: ${{ secrets.PLANETSCALE_PW }}
         VITE_TEST_IN_ENV: ${{ secrets.TEST_VALUE }}
