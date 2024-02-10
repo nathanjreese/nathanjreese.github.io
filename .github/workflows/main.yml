@@ -11,6 +11,7 @@ jobs:
           database_name: indycar
           branch_name: ps_action
           org_name: nathanjreese
+          from: main
         env:
           PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
           PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
