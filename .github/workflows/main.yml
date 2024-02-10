@@ -1,0 +1,16 @@
+name: create a database branch
+on: create
+env:
+  PLANET_SCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANET_SCALE_SERVICE_TOKEN_ID }}
+  PLANET_SCALE_SERVICE_TOKEN: ${{ secrets.PLANET_SCALE_SERVICE_TOKEN }}
+
+jobs:
+  create_a_branch:
+    runs_on: ubuntu_latest
+    steps: 
+      -name: Create database branch
+       uses: planetscale/create-branch-action@v1
+       with: 
+         org_name: driver-app
+         database_name: indycar
+         branch_name: ps_branch
