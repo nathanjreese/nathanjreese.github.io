@@ -5,7 +5,7 @@
       <title-page
       title-text="2024 Silly Season Predictor
 "
-      />testt {{ testEnv }}
+      />test2 {{ testEnv }}
     </div>
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
