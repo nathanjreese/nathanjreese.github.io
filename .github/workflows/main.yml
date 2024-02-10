@@ -6,11 +6,11 @@ env:
 
 jobs:
   create_a_branch:
-    runs_on: ubuntu_latest
-    steps: 
-      -name: Create database branch
-       uses: planetscale/create-branch-action@v1
-       with: 
-         org_name: driver-app
-         database_name: indycar
-         branch_name: ps_branch
+  runs_on: ubuntu_latest
+  steps: 
+    -name: Create database branch
+     uses: planetscale/create-branch-action@v4
+     with: 
+      org_name: driver-app
+      database_name: indycar
+      branch_name: ps_branch
