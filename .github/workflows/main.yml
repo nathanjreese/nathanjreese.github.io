@@ -1,8 +1,5 @@
 name: Create Branch
 on: create
-env:
-  PLANET_SCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANET_SCALE_SERVICE_TOKEN_ID }}
-  PLANET_SCALE_SERVICE_TOKEN: ${{ secrets.PLANET_SCALE_SERVICE_TOKEN }}
   
 jobs:
   create_a_branch:
@@ -14,4 +11,7 @@ jobs:
           database_name: indycar
           branch_name: ps_action
           org_name: nathanjreese
+        env:
+          PLANET_SCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANET_SCALE_SERVICE_TOKEN_ID }}
+          PLANET_SCALE_SERVICE_TOKEN: ${{ secrets.PLANET_SCALE_SERVICE_TOKEN }}
   
