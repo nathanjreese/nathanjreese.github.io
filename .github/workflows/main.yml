@@ -6,7 +6,7 @@ env:
   
 jobs:
   create_a_branch:
-    runs_on: ubuntu_latest
+    runs_on: ubuntu-latest
     steps: 
       - name: Create Database Branch 
         uses: planetscale/create-branch-action@v4
