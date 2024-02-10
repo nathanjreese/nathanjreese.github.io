@@ -1,5 +1,5 @@
-name: Indycar secrets
-run-name: Indycar Driver App 🚀
+name: IndyCar secrets
+run-name: IndyCar Driver App 🚀
 on: [push]
 env:
   VITE_DATABASE_URL: ${{ secrets.VITE_DATABASE_URL }}
