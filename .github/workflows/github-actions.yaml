@@ -1,6 +1,5 @@
 name: IndyCar secrets
 run-name: IndyCar Driver App 🚀
-aws-region: us-east-2
 on: [push]
 env:
   PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
@@ -28,6 +27,7 @@ jobs:
         uses: planetscale/create-branch-password-action@v1
         id: create_branch_password
         with:
+          aws-region: us-east-2
           org_name: nathanjreese
           database_name: indycar
           branch_name: testnathan
