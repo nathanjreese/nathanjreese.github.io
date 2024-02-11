@@ -4,12 +4,14 @@ on: create
 jobs:
   create_a_branch:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
       - name: Create Database Branch 
         uses: planetscale/create-branch-action@v4
         with:
           database_name: indycar
-          branch_name: ps_action
+          branch_name: mynewbranch
           org_name: nathanjreese
           from: main
         env:
