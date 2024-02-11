@@ -1,6 +1,9 @@
 name: IndyCar secrets
 run-name: IndyCar Driver App 🚀
 on: [push]
+env:
+  PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
+  PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
 permissions:
   contents: write
 jobs:
@@ -29,9 +32,6 @@ jobs:
           branch_name: main
           name: 'pass-main'
       - name: Get the credentials
-        env:
-          PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
-          PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
         run: |
           echo "HOSTNAME: ${{ steps.create_branch_password_outputs.hostname }}"
           
