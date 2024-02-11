@@ -29,5 +29,5 @@ jobs:
           branch_name: main
       - name: Get the credentials
         run: |
-          echo "HOSTNAME: ${{ sets.create_branch_password_outputs.hostname }}"
+          echo "HOSTNAME: ${{ steps.create_branch_password_outputs.hostname }}"
           
