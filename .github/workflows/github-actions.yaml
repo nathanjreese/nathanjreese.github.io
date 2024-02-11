@@ -27,6 +27,7 @@ jobs:
           org_name: nathanjreese
           database_name: indycar
           branch_name: main
+          name: 'pass-main'
       - name: Get the credentials
         run: |
           echo "HOSTNAME: ${{ steps.create_branch_password_outputs.hostname }}"
