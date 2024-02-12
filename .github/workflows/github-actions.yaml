@@ -17,12 +17,7 @@ jobs:
         run: |
           npm install
           npm run build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist
-          branch: gh-pages
+      
       - name: Create branch password
         uses: planetscale/create-branch-password-action@v1
         id: create_branch_password
@@ -30,10 +25,16 @@ jobs:
           org_name: nathanjreese
           database_name: indycar
           branch_name: testnathah
-          name: 'newpass1'
+          name: 'newpass2'
       - name: Get the credentials
         run: |
           echo "HOSTNAME: ${{ steps.create_branch_password.username }}"
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          branch: gh-pages
         env:
           VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.username }}
           VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
