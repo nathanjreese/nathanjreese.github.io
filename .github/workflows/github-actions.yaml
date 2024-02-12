@@ -27,7 +27,6 @@ jobs:
         uses: planetscale/create-branch-password-action@v1
         id: create_branch_password
         with:
-          aws-region: us-east-2
           org_name: nathanjreese
           database_name: indycar
           branch_name: testnathan
