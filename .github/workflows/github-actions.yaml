@@ -4,6 +4,9 @@ on: [push]
 env:
   PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
   PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
+  VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.username }}
+  VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
+  VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.username }}
 permissions:
   contents: write
 jobs:
@@ -24,8 +27,8 @@ jobs:
         with:
           org_name: nathanjreese
           database_name: indycar
-          branch_name: main
-          name: 'newpass2'
+          branch_name: mynewbranch
+          name: 'testpass'
       - name: Get the credentials
         run: |
           echo "HOSTNAME: ${{ steps.create_branch_password.username }}"
