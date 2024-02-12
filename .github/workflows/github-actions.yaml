@@ -23,13 +23,13 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
-      - name: Create deploy password
+      - name: Create branch password
         uses: planetscale/create-branch-password-action@v1
         id: create_branch_password
         with:
           org_name: nathanjreese
           database_name: indycar
-          branch_name: main
+          branch_name: testnathah
           name: 'pass-main'
       - name: Get the credentials
         run: |
