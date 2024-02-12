@@ -28,7 +28,7 @@ jobs:
           org_name: nathanjreese
           database_name: indycar
           branch_name: mynewbranch
-          name: 'testpass'
+          name: 'newpass3'
       - name: Get the credentials
         run: |
           echo "HOSTNAME: ${{ steps.create_branch_password.username }}"
