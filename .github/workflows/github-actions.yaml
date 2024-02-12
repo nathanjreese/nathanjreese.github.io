@@ -24,7 +24,7 @@ jobs:
         with:
           org_name: nathanjreese
           database_name: indycar
-          branch_name: testnathah
+          branch_name: main
           name: 'newpass2'
       - name: Get the credentials
         run: |
