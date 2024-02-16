@@ -7,6 +7,16 @@ env:
 permissions:
   contents: write
 jobs:
+  create_a_branch:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Create Database Branch 
+          uses: planetscale/create-branch-action@v4
+          with:
+            database_name: indycar
+            branch_name: mynewbranch
+            org_name: nathanjreese
+            from: main
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
