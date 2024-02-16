@@ -38,13 +38,13 @@ jobs:
       - name: Get the credentials
         run: |
           echo "USERNAME: ${{ steps.create_branch_password.username }}"
+        env:
+          - VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.username }}
+          - VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
+          - VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.username }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-        env:
-          VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.username }}
-          VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
-          VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.username }}
           
