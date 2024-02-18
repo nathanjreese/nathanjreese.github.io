@@ -10,6 +10,18 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Create branch password
+        uses: planetscale/create-branch-password-action@v1
+        id: create_branch_password
+        with:
+          org_name: nathanjreese
+          database_name: indycar
+          branch_name: test
+          name: 'newpass2'
+      - name: Get credentials
+        run: |
+          echo "VITE_DATABASE_URL=${{ steps.create_branch_password.outputs.hostname }} >> .env"
+          echo "VITE_DATABASE_USER=${{ steps.create_branch_password.outputs.username }} >> .env"
       - name: Checkout 🛎️
         uses: actions/checkout@v3
       - name: Install and Build 🔧
@@ -21,18 +33,3 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-      - name: Create branch password
-        uses: planetscale/create-branch-password-action@v1
-        id: create_branch_password
-        with:
-          org_name: nathanjreese
-          database_name: indycar
-          branch_name: test
-          name: 'pass-test'
-      - name: Get credentials
-        run: |
-          echo "VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.hostname }}"
-          echo "VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}"
-        env:
-          VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
-          
