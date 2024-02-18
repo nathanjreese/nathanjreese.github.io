@@ -17,7 +17,7 @@ jobs:
           org_name: nathanjreese
           database_name: indycar
           branch_name: main
-          name: 'newpass3'
+          name: 'newpass4'
       - name: Checkout 🛎️
         uses: actions/checkout@v3
       - name: Install and Build 🔧
@@ -31,4 +31,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          branch: gh-pages
+          branch: main
