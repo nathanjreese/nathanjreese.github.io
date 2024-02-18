@@ -30,7 +30,7 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
-          env:
-            VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.hostname }}
-            VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
-            VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.password }}
+        env:
+          VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.hostname }}
+          VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
+          VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.password }}
