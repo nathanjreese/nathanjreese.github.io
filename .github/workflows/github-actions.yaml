@@ -1,6 +1,7 @@
 name: IndyCar secrets
 run-name: IndyCar Driver App 🚀
 on: [push]
+branch_name: main
 env:
   PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
   PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
@@ -16,7 +17,7 @@ jobs:
         with:
           org_name: nathanjreese
           database_name: indycar
-          branch_name: test
+          branch_name: main
           name: 'newpass2'
       - name: Get credentials
         run: |
