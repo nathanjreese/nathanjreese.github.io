@@ -5,7 +5,7 @@
       <title-page
       title-text="2024 Silly Season Predictor
 "
-      />test2 {{ testEnv }}
+      />test3: {{ testEnv }}
     </div>
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
@@ -299,7 +299,7 @@ export default {
       isRemoveModalVisible: false,
       activeTeam: '',
       isLoaded: false,
-      testEnv: "33" + import.meta.env.VITE_DATABASE_USER,
+      testEnv: import.meta.env.VITE_DATABASE_USER,
       driverRemove: null,
       driverName: null,
       teamRemove: null,
