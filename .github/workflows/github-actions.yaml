@@ -17,7 +17,7 @@ jobs:
           org_name: nathanjreese
           database_name: indycar
           branch_name: main
-          name: 'newpassw9'
+          name: 'olpass'
       - name: Checkout 🛎️
         uses: actions/checkout@v3
       - name: Install and Build 🔧

@@ -301,7 +301,7 @@ export default {
       isRemoveModalVisible: false,
       activeTeam: '',
       isLoaded: false,
-      testEnv: import.meta.env.VITE_DATABASE_USER,
+      testEnv: import.meta.env.VITE_DATABASE_URL,
       driverRemove: null,
       driverName: null,
       teamRemove: null,
