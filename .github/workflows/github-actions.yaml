@@ -23,7 +23,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           echo "VITE_DATABASE_URL=testhost" >> .env
-          echo "VITE_DATABASE_USER=testuser" >> .env"
+          echo "VITE_DATABASE_USER=testuser" >> .env
           npm install
           npm run build
       - name: Deploy 🚀
