@@ -1,7 +1,7 @@
 name: IndyCar secrets
 run-name: IndyCar Driver App 🚀
 on: [push]
-branch_name: main
+branch: main
 env:
   PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
   PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
