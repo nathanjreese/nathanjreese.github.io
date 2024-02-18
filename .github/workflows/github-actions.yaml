@@ -7,42 +7,15 @@ env:
 permissions:
   contents: write
 jobs:
-  create_a_branch:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Create Database Branch 
-          uses: planetscale/create-branch-action@v4
-          with:
-            database_name: indycar
-            branch_name: mynewbranch
-            org_name: nathanjreese
-            from: main
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-
       - name: Install and Build 🔧
         run: |
           npm install
           npm run build
-      - name: Create branch password
-        uses: planetscale/create-branch-password-action@v1
-        id: create_branch_password
-        with:
-          org_name: nathanjreese
-          database_name: indycar
-          branch_name: mynewbranch
-          name: 'newpass4'
-      - name: Get the credentials
-        run: |
-          echo "USERNAME: ${{ steps.create_branch_password.username }}"
-        env:
-          - VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.hostname }}
-          - VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
-          - VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.password }}
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

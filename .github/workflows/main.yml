@@ -9,11 +9,15 @@ jobs:
   create_a_branch:
     runs-on: ubuntu-latest
     steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
+        id: extract_branch
       - name: Create Database Branch 
         uses: planetscale/create-branch-action@v4
         with:
           database_name: indycar
-          branch_name: mynewbranch
+          branch_name: ${{ steps.extract_branch.outputs.branch }}
           org_name: nathanjreese
           from: main
       - name: Create branch password
@@ -22,13 +26,10 @@ jobs:
         with:
           org_name: nathanjreese
           database_name: indycar
-          branch_name: mynewbranch
-          name: 'newpass'
+          branch_name: ${{ steps.extract_branch.outputs.branch }}
+          name: 'pass-${{ stesp.extract_branch.outputs.branch }}'
       - name: Get the credentials
         run: |
-          echo "Hostname: ${{ steps.create_branch_password.outputs.username }}"
-        env:
-          - VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.username }}
-          - VITE_DATABASE_USER: "testtttt"
-          - VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.password }}
-  
+          echo "VITE_DATABASE_URL: ${{ steps.create_branch_password.hostname }}"
+          echo "VITE_DATABASE_USER: ${{ steps.create_branch_password.username }}"
+          echo "VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.password }}"
