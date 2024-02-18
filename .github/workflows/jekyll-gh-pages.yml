@@ -53,13 +53,13 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Create branch password
-          uses: planetscale/create-branch-password-action@v1
-          id: create_branch_password
-          with:
-            org_name: nathanjreese
-            database_name: indycar
-            branch_name: test
-            name: 'pass-test2'
+        uses: planetscale/create-branch-password-action@v1
+        id: create_branch_password
+        with:
+          org_name: nathanjreese
+          database_name: indycar
+          branch_name: test
+          name: 'pass-test3'
       - name: Get credentials
         run: |
           echo "VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.hostname }}"
