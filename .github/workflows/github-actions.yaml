@@ -30,7 +30,7 @@ jobs:
           database_name: indycar
           branch_name: main
           name: 'pass-main'
-      - name: Get the credentials
+      - name: Get credentials
         run: |
           echo "VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.hostname }}"
           echo "VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}"
