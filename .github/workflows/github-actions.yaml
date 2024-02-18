@@ -23,7 +23,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           echo "VITE_DATABASE_URL=${{ steps.create_branch_password.outputs.hostname }} >> .env"
-          echo "VITE_DATABASE_USER=${{ steps.create_branch_password.outputs.username }} >> .env"
+          echo "VITE_DATABASE_USER=2222222 >> .env"
           npm install
           npm run build
 
