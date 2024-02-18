@@ -5,7 +5,7 @@
       <title-page
       title-text="2024 Silly Season Predictor
 "
-      />test3: {{ test_value }} {{ testEnv }}
+      />test3: {{ testEnv }}
     </div>
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
@@ -285,8 +285,6 @@ import SillyModal from './SillyModal'
 import driverData from "@/components/Helpers/driverData.json"
 import TitlePage from "@/components/Partials/Title"
 import RemoveModal from "./RemoveModal"
-
-const test_value = import.meta.env.VITE_DATABASE_USER
 
 export default {
   components: {
