@@ -17,15 +17,16 @@ jobs:
           org_name: nathanjreese
           database_name: indycar
           branch_name: main
-          name: 'newpass3'
+          name: 'newpass4'
       - name: Checkout 🛎️
         uses: actions/checkout@v3
       - name: Install and Build 🔧
         run: |
+          DATABASE_PASSWORD=${{ steps.create_branch_password.outputs.password }}"
+          echo ::add-mask::$DATABASE_PASSWORD
           echo "VITE_DATABASE_URL=${{ steps.create_branch_password.outputs.hostname }}" >> .env
           echo "VITE_DATABASE_USER=${{ steps.create_branch_password.outputs.username }}" >> .env
-          echo "VITE_DATABASE_PASSWORD=::add-mask:${{ steps.create_branch_password.outputs.password }}" >> .env
-          echo "${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}"
+          echo "VITE_DATABASE_PASSWORD=$DATABASE_PASSWORD" >> .env
           npm install
           npm run build
       - name: Deploy 🚀
