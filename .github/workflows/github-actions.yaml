@@ -18,14 +18,13 @@ jobs:
           database_name: indycar
           branch_name: main
           name: 'newpass2'
-      - name: Get credentials
-        run: |
-          echo "VITE_DATABASE_URL=${{ steps.create_branch_password.outputs.hostname }} >> .env"
-          echo "VITE_DATABASE_USER=${{ steps.create_branch_password.outputs.username }} >> .env"
       - name: Checkout 🛎️
         uses: actions/checkout@v3
       - name: Install and Build 🔧
         run: |
+          echo"OK HERE WE GO: ${{ steps.create_branch_password.outputs.hostname }}"
+          echo "VITE_DATABASE_URL=${{ steps.create_branch_password.outputs.hostname }} >> .env"
+          echo "VITE_DATABASE_USER=${{ steps.create_branch_password.outputs.username }} >> .env"
           npm install
           npm run build
       - name: Deploy 🚀
