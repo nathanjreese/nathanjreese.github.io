@@ -32,4 +32,5 @@ jobs:
         run: |
           echo "VITE_DATABASE_URL: ${{ steps.create_branch_password.outputs.hostname }}"
           echo "VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}"
-          echo "VITE_DATABASE_PASSWORD: ${{ steps.create_branch_password.outputs.password }}"
+        env:
+          VITE_DATABASE_USER: ${{ steps.create_branch_password.outputs.username }}
