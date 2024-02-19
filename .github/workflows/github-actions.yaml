@@ -4,28 +4,19 @@ on: [push]
 env:
   PLANETSCALE_SERVICE_TOKEN_ID: ${{ secrets.PLANETSCALE_SERVICE_TOKEN_ID }}
   PLANETSCALE_SERVICE_TOKEN: ${{ secrets.PLANETSCALE_SERVICE_TOKEN }}
+  VITE_DATABASE_PASSWORD: ${{ VITE_DATABASE_PASSWORD }}
+  VITE_DATABASE_USER: ${{ VITE_DATABASE_USER }}
+  VITE_DATABASE_HOSTNAME: ${{ VITE_DATABASE_HOSTNAME }}
 permissions:
   contents: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Create branch password
-        uses: planetscale/create-branch-password-action@v1
-        id: create_branch_password
-        with:
-          org_name: nathanjreese
-          database_name: indycar
-          branch_name: main
-          name: 'newpass7'
       - name: Checkout 🛎️
         uses: actions/checkout@v3
       - name: Install and Build 🔧
         run: |
-          echo "::add-mask::${{ steps.create_branch_password.outputs.hostname }}" 
-          echo "VITE_DATABASE_URL=${{ steps.create_branch_password.outputs.hostname }}" >> .env
-          echo "VITE_DATABASE_USER=${{ steps.create_branch_password.outputs.username }}" >> .env
-          echo "VITE_DATABASE_PASSWORD=$DATABASE_PASSWORD" >> .env
           npm install
           npm run build
       - name: Deploy 🚀
