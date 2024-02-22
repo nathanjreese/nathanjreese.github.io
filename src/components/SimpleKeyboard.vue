@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     onChange(input) {
-      console.log("METHOD: ", this.currentButton)
       if (input.length <= 5){
         this.$emit("onChange", input);
       }
@@ -72,8 +71,6 @@ export default {
   },
   watch: {
     input(input) {
-      console.log(">>>>", input)
-      console.log("GGGG", this.guessedLetters)
       if (input.length <= 5 || input === '{bksp}'){
       this.keyboard.setInput(input);
       }
@@ -84,7 +81,6 @@ export default {
       }
     },
     guessedLetters(guessedLetters){
-      console.log("GUESSED: ", guessedLetters)
       this.keyboard.addButtonTheme(
         guessedLetters.miss.join(" "),
         "miss"

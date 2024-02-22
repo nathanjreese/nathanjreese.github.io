@@ -11,6 +11,7 @@
     "deploy": "sh deploy.sh"
   },
   "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -18,15 +19,21 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@mdi/font": "7.0.96",
     "@planetscale/database": "^1.13.0",
+    "aes": "^0.1.0",
+    "aes-encryption": "^1.0.4",
     "axios": "^1.6.5",
+    "buffer": "^6.0.3",
     "convert-csv-to-json": "^2.0.0",
     "core-js": "^3.29.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "express": "^4.18.2",
+    "fernet": "^0.3.2",
+    "fernet-nodejs": "^1.0.6",
     "hapi": "^18.1.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.7.0",
+    "process": "^0.11.10",
     "roboto-fontface": "*",
     "simple-keyboard": "^3.7.14",
     "vue": "^3.2.0",
@@ -40,6 +47,8 @@
     "eslint-plugin-vue": "^9.3.0",
     "sass": "^1.60.0",
     "vite": "^4.2.0",
+    "vite-plugin-node-polyfills": "^0.21.0",
     "vite-plugin-vuetify": "^1.0.0"
-  }
+  },
+  "type": "module"
 }
