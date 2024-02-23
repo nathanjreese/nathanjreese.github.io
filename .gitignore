@@ -1,2 +1,15 @@
-node_modules/**
+# Node.js dependencies
+node_modules/
 package-lock.json
+
+# Environment variables
+.env*
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
