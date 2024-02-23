@@ -5,7 +5,7 @@
       <title-page
       title-text="2024 Silly Season Predictor
 "
-      />test3: {{ testEnv }}
+      />
     </div>
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
@@ -37,7 +37,6 @@
               class="silly-img"
               @click="removeDriver(item)"
               @load="onImgLoad"/>
-              <div class='bottom-text'> {{ item.name.split(" ")[1] }}</div>
             </div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el"
@@ -85,7 +84,6 @@
               class="silly-img"
               @load="onImgLoad"
               @click="removeDriver(item)"/>
-              <div class='bottom-text'> {{ item.name.split(" ")[1] }}</div>
           </div>
           </div>
           <div class="drag-el"
@@ -132,7 +130,6 @@
               class="silly-img"
               @load="onImgLoad"
               @click="removeDriver(item)">
-             <div class='bottom-text'> {{ item.name.split(" ")[1] }}</div>
           </div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el"
@@ -167,7 +164,6 @@
               contain
               class="silly-img"
               @load="onImgLoad"/>
-              <div class='bottom-text'> {{ item.name.split(" ")[1] }}</div>
           </div>
           </div>
       </div>
@@ -197,7 +193,6 @@
               class="silly-img-mobile"
               @load="onImgLoad"
               @click="removeDriver(item)"/>
-              <div class='bottom-text-mobile'> {{ item.name.split(" ")[1] }}</div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el-mobile"
           v-if="listTeam(team.name).length < team.size">
@@ -299,7 +294,6 @@ export default {
       isRemoveModalVisible: false,
       activeTeam: '',
       isLoaded: false,
-      testEnv: import.meta.env.VITE_DATABASE_URL,
       driverRemove: null,
       driverName: null,
       teamRemove: null,
@@ -365,7 +359,7 @@ export default {
         {id: 28, name: "Sting Ray Robb", original: 'foyt', team: 'foyt', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
         {id: 29, name: "Takuma Sato", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TakumaSato.jpeg', import.meta.url)},
         {id: 30, name: "Ryan Hunter-Reay", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RyanHunterReay.jpeg', import.meta.url)},
-        {id: 31, name: "Nolan Siegel (IndyNXT)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NolanSiegel.jpeg', import.meta.url)},
+        {id: 31, name: "Nolan Siegel (IndyNXT)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/NolanSiegel.jpeg', import.meta.url)},
         {id: 32, name: "Christian Rasmussen (IndyNXT)", original: 'ecr', team: 'ecr', pic: new URL('@/assets/SillyPhotos/ChristianRasmussen.jpeg', import.meta.url)},
         {id: 33, name: "Hunter McElrea (IndyNXT)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/HunterMcElrea.jpeg', import.meta.url)},
         {id: 34, name: "Louis Foster (IndyNXT)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/LouisFoster.jpeg', import.meta.url)},
@@ -374,7 +368,7 @@ export default {
         {id: 37, name: "Robert Shartzman (F2)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
         {id: 38, name: "Nyck de Vries (F1)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NyckdeVries.jpeg', import.meta.url)},
         {id: 39, name: "Oliver Askew (FE)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
-        {id: 40, name: "Felipe Drugovich (F2)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
+        {id: 40, name: "Felipe Drugovich (F2)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
         {id: 41, name: "Tatiana Colderón", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TatianaCalderon.jpeg', import.meta.url)},
         {id: 41, name: "Kyffin Simpson", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
         {id: 42, name: "Pietro Fittipaldi", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)}
@@ -805,15 +799,6 @@ export default {
   flex-direction: column;
 
 }
-.bottom-text-mobile {
-  position: relative;
-  bottom: 15px;
-  color: white;
-  max-height: 20px;
-  font-size: 12px;
-  font-weight: bold;
-  background-color: black;
-  }
 
 
 </style>

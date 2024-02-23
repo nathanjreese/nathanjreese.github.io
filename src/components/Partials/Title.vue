@@ -73,7 +73,7 @@ export default {
     text-shadow: 1px 1px 2px whitesmoke;
     }
     .title-class-mobile {
-      font-size: calc(10px + 2.3vw) !important;
+      font-size: calc(16px + 2.3vw) !important;
       font-weight:bold;
       font-family: Verdana;
       padding: 20px 10px;

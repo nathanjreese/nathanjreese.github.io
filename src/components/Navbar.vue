@@ -2,7 +2,7 @@
     <nav id="vue" class="nav">
         <div class="menu-item"><router-link class ="routlink" to="/wordle">Wordle</router-link></div>
         <div class="menu-item"><router-link to="/silly">Silly Season</router-link></div>
-        <div class="menu-item"><router-link to="/silly">Daytona Tracker</router-link></div>
+        <!-- <div class="menu-item"><router-link to="/silly">Daytona Tracker</router-link></div> -->
         <!-- <div class="menu-item"><router-link to="/selector">Driver Selector</router-link></div> -->
         <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div>
     </nav>

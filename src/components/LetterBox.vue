@@ -41,7 +41,7 @@ width: calc(20px + 3vw);
 height: calc(20px + 3vw);
 background-color: rgb(243, 243, 243);
 border: 2px solid #8b8b8b;
-font-size: 30px;
+font-size: calc(20px + 1.3vw);
 text-transform: uppercase;
 }
 .max{
