@@ -15,11 +15,18 @@
         :rowNum="index"
         :guesses="state.currentGuessIndex"
         />
-        <div v-if="this.wonGame" class="result">Congrats you won!
+        <div v-if="this.wonGame" class="result">
+          <button
+          type="button"
+          class="btn-close"
+          @click="close"
+        >
+        <font-awesome-icon icon="fa-solid fa-xmark"/>
+        </button>
           <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
         @click="this.resetGame"/></div>
-        <div v-else-if="this.lostGame" class="result">Sorry, the answer was: {{ this.state.solution.toUpperCase()  }}
+        <div v-else-if="this.lostGame" class="result">
           <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
         @click="this.resetGame"/></div>
@@ -62,7 +69,6 @@ export default {
     showInstructions: false,
     showWinModal: false,
     words: [
-    'alesi',
 'apron',
 'arrow',
 'askew',
@@ -108,7 +114,6 @@ export default {
 'josef',
 'jules',
 'karam',
-'knapp',
 'legge',
 'leigh',
 'leist',
@@ -2603,6 +2608,7 @@ export default {
   text-align: center;
   background-color:rgb(231, 231, 231);
   max-width: 95%;
+  max-height: calc(800px + 11.1vw);
 }
 .wordle-title{
   font-size: calc(14px + 2.1vw) !important;
@@ -2620,7 +2626,7 @@ export default {
   margin-bottom: 80px;
 }
 .keyboard-main {
-  padding-bottom: 40px;
+  padding-bottom: 100px;
 }
 .result{
   font-size: 20px;
