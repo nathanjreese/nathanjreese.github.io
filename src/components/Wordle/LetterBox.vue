@@ -35,13 +35,13 @@ methods: {
 
 <style>
 .letters{
-margin: 5px 5px;
+margin: 4px 4px;
 text-align: center;
-width: calc(20px + 3vw);
-height: calc(20px + 3vw);
+width: calc(18px + 3vw);
+height: calc(18px + 3vw);
 background-color: rgb(243, 243, 243);
 border: 2px solid #8b8b8b;
-font-size: calc(20px + 1.3vw);
+font-size: calc(18px + 1.3vw);
 text-transform: uppercase;
 }
 .max{

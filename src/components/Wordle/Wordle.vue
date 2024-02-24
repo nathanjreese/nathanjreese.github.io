@@ -29,6 +29,13 @@
           :drivers="test"
           @close="closeModal"
         />
+    <win-modal
+        v-show="this.showWinModal"
+        :answer=this.state.solution.toUpperCase()
+        :didWin=this.wonGame
+        @close="closeWinModal"
+        @replay="resetGame"
+    />
   </div>
 </template>
 
@@ -37,6 +44,7 @@ import WordleKeyboard from "./WordleKeyboard"
 import WordRow from "./WordRow"
 import InstructionsModal from "./InstructionsModal"
 import TitlePage from '@/components/Partials/Title'
+import WinModal from './WinModal'
 import axios from 'axios'
 
 export default {
@@ -45,12 +53,14 @@ export default {
     WordleKeyboard,
     WordRow,
     InstructionsModal,
-    TitlePage
+    TitlePage,
+    WinModal
   },
   data: () => ({
     input: "",
     testapi: null,
     showInstructions: false,
+    showWinModal: false,
     words: [
     'alesi',
 'apron',
@@ -2505,14 +2515,19 @@ export default {
   }),
   computed: {
     wonGame() {
-      return this.state.guesses[this.state.currentGuessIndex - 1] === this.state.solution
+      const wonGame = this.state.guesses[this.state.currentGuessIndex - 1] === this.state.solution
+      this.showWinModal = wonGame
+      return wonGame
     },
     lostGame() {
-      return !this.wonGame && this.state.currentGuessIndex > 5
+      const lostGame = !this.wonGame && this.state.currentGuessIndex > 5
+      this.showWinModal = lostGame
+      return lostGame
     }
   },
   methods: {
     resetGame(){
+      this.showWinModal = false
       location.reload()
       this.state.currentGuessIndex = 0
       this.state.guesses = ["", "", "", "", "", ""]
@@ -2524,6 +2539,9 @@ export default {
     },
     closeModal() {
       this.showInstructions = false
+    },
+    closeWinModal() {
+      this.showWinModal = false
     },
     instructions(){
       this.showInstructions = true
@@ -2584,11 +2602,12 @@ export default {
 .wordle-main {
   text-align: center;
   background-color:rgb(231, 231, 231);
+  max-width: 95%;
 }
 .wordle-title{
   font-size: calc(14px + 2.1vw) !important;
   color: black;
-  padding-bottom: calc(5px + 3vw);
+  padding-bottom: calc(3px + 1vw);
   text-shadow: 2px 1px 1px whitesmoke;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;

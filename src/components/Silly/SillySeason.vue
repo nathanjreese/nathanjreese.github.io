@@ -554,7 +554,7 @@ export default {
     right:30px;
     background-color:whitesmoke;
     color:#240000;
-    border-radius:50px;
+    border-radius:20px;
     text-align:center;
     box-shadow: 2px 2px 3px #3b3b3b;
   }
@@ -578,7 +578,7 @@ export default {
     border-left: 1px solid #2e2e2e;
     border-bottom: 3px solid #2e2e2e;
     display: flexbox;
-    border-radius: 11px;
+    border-radius: 3px;
     box-shadow: 3px 3px 3px gray;
   }
   .drop-zone.full{
@@ -663,7 +663,7 @@ export default {
     float: center;
     display: inline-flex;
     border: 1px solid #000000;
-    border-radius: 11px;
+    border-radius: 3px;
     box-shadow: 1px 1px 2px #000000;
   }
   .drag-el:hover{
@@ -690,7 +690,7 @@ export default {
 }
 .silly-img {
   height: 100%;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 .bottom-text {
   position: relative;
@@ -722,7 +722,7 @@ export default {
     border-left: .7px solid #2e2e2e;
     border-bottom: 2px solid #2e2e2e;
     display: flexbox;
-    border-radius: 11px;
+    border-radius: 3px;
     box-shadow: 5px 3px 3px #0943a7;
   }
   .drop-zone-mobile.full{
@@ -776,7 +776,7 @@ export default {
     display: inline-flex;
     flex-direction: row;
     border: 1px solid #000000;
-    border-radius: 11px;
+    border-radius: 3px;
     box-shadow: 3px 3px 4px #3a3a3ab8;
     align-items: left;
   }
@@ -794,7 +794,7 @@ export default {
     padding: 0px;
 }
 .silly-img-mobile {
-  border-radius: 8px;
+  border-radius: 3px;
   display: grid;
   flex-direction: column;
 

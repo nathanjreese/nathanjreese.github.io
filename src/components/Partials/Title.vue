@@ -24,7 +24,7 @@
   </div>
 </template>
 <script>
-import InstructionsModal from "@/components/InstructionsModal"
+import InstructionsModal from "@/components/Wordle/InstructionsModal"
 
 export default {
   name: 'title-page',

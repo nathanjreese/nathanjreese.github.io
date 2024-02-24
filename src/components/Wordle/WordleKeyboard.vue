@@ -101,6 +101,7 @@ export default {
   },
   mounted() {
 	window.addEventListener("keypress", e => {
+    console.log("KEYPRESS: ", e)
     if (e.key && e.key.match(/[a-z]/i)){
       this.onKeyPress(e.key.toLowerCase())
     }
@@ -113,7 +114,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .wordle-keyboard{
-  max-width: calc(360px + 20vw);
+  max-width: calc(320px + 20vw);
   margin: auto;
   padding-top: 30px;
 }
@@ -123,7 +124,6 @@ export default {
   border-radius:5px;
   box-sizing:border-box;
   font-family:HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
-  overflow:hidden;
   padding:2px;
   touch-action:manipulation;
   -webkit-user-select:none;
@@ -138,13 +138,13 @@ export default {
   margin: auto;
 }
 .key-class{
-  padding: calc(11px + .1vw) calc(1px + .8vw);
+  padding: calc(10px + .1vw) calc(1px + .8vw);
   margin: calc(0px + .2vw) calc(0px + .2vw);
   background-color:whitesmoke;
   border: 1px solid #3e3e3e;
   font-size: calc(9px + .8vw);
-  min-width: calc(28px + 2vw);
-  min-height: calc(28px + 2vw);
+  min-width: calc(25px + 2vw);
+  min-height: calc(25px + 2vw);
   text-align: center;
   text-transform: uppercase;
   border-radius: 7px;

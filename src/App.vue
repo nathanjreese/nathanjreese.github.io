@@ -116,8 +116,8 @@
     width: 100%;
     flex-direction: row;
     position: relative;
-    float: right;
-    padding-left: 100px;
+    float: center;
+    padding-left: 60px;
   }
   .mobile-nav-text{
     margin-top: 25px;

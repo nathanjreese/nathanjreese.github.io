@@ -4,7 +4,7 @@ import Selector from '../components/Selector/Selector.vue'
 import NotFoundComponent from '../components/NotFoundComponent.vue'
 import SillySeason from '../components/Silly/SillySeason.vue'
 import Rolex from '../components/Rolex.vue'
-import Wordle from '../components/Wordle.vue'
+import Wordle from '../components/Wordle/Wordle.vue'
 import LeadersCircle from '../components/LeadersCircle.vue'
 
 const routes = [
