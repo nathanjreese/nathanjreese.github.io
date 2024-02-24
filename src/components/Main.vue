@@ -28,8 +28,8 @@
 .container-main{
   display: grid;
   background-color: rgb(231, 231, 231);
-  border-left: 22px solid rgb(57, 118, 216);
-  border-right: 22px solid rgb(57, 118, 216);
+  border-left: calc(3px + 2vw) solid rgb(57, 118, 216);
+  border-right: calc(3px + 2vw) solid rgb(57, 118, 216);
   min-height: calc(518px + 5vw);
   width: 100%;
   padding: auto;

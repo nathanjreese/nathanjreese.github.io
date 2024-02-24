@@ -601,15 +601,16 @@ export default {
     box-shadow: 3px 3px 3px gray;
   }
   .fa-retweet {
-    color:  whitesmoke !important;
+    color:  rgb(65, 129, 200) !important;
     font-size: calc(2px + 1.3vw) !important;
     padding: 10px;
+    margin: calc(2px + 1.3vw);
     cursor: pointer;
-    background-color: rgb(57, 118, 216);
+    background-color: rgb();
   }
   .fa-retweet:hover {
-    color:  white !important;
-    background-color: rgb(65, 129, 200);
+    color:  rgb(109, 139, 222) !important;
+    background-color:whitesmoke;
   }
   .fa-plus {
     color: rgb(167, 167, 167) !important;

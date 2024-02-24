@@ -30,7 +30,12 @@
           <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
         @click="this.resetGame"/></div>
-        <wordle-keyboard class="keyboard-main" @onChange="onChange" @onKeyPress="onKeyPress" :input="input" :guessedLetters="state.guessedLetters" :solution="state.solution"/>
+        <wordle-keyboard class="keyboard-main" 
+        @onChange="onChange" 
+        @onKeyPress="onKeyPress" 
+        :input="input" 
+        :guessedLetters="state.guessedLetters" 
+        :solution="state.solution"/>
         <instructions-modal
           v-show="this.showInstructions"
           :drivers="test"
