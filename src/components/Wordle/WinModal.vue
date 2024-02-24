@@ -165,8 +165,6 @@
     },
     computed: {
       getDriverKey(){
-        // console.log("ANSWER: ", this.answer)
-        // console.log("111: ", this.answerKey[this.answer])
         return this.answerKey[this.answer.toLowerCase()]
       },
       getMessage(){

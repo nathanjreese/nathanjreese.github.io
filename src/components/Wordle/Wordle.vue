@@ -2607,7 +2607,7 @@ export default {
 .wordle-main {
   text-align: center;
   background-color:rgb(231, 231, 231);
-  max-width: 95%;
+  max-width: 100%;
   max-height: calc(800px + 11.1vw);
 }
 .wordle-title{

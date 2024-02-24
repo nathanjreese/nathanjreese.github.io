@@ -204,7 +204,6 @@
 
           
         const answers = this.questions[this.questionNumber]["answerKey"][value]
-        console.log(this.driverData)
         const title = this.questions[this.questionNumber]["title"]
         
         this.driverData.forEach(driver => {

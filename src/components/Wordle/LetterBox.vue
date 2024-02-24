@@ -37,11 +37,11 @@ methods: {
 .letters{
 margin: 4px 4px;
 text-align: center;
-width: calc(18px + 3vw);
-height: calc(18px + 3vw);
+width: calc(30px + 2.5vw);
+height: calc(30px + 2.5vw);
 background-color: rgb(243, 243, 243);
 border: 2px solid #8b8b8b;
-font-size: calc(18px + 1.3vw);
+font-size: calc(21px + 1.3vw);
 text-transform: uppercase;
 }
 .max{
