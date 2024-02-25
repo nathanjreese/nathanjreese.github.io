@@ -371,7 +371,9 @@ export default {
         {id: 40, name: "Felipe Drugovich (F2)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
         {id: 41, name: "Tatiana Colderón", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TatianaCalderon.jpeg', import.meta.url)},
         {id: 41, name: "Kyffin Simpson", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
-        {id: 42, name: "Pietro Fittipaldi", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)}
+        {id: 42, name: "Pietro Fittipaldi", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
+        {id: 43, name: "Katherine Legge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
+        {id: 44, name: "Colin Braun", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ColinBraun.jpeg', import.meta.url)}
 
 
       ]

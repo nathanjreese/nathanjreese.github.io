@@ -38,9 +38,6 @@
       data: () => ({
         questionNumber: 0,
       }),
-      props: {
-        drivers: String
-      },
       computed: {
       // a computed getter
       },

@@ -32,7 +32,8 @@ export default {
     solution: String,
     submitted: Boolean,
     rowNum: Number,
-    guesses: Number
+    guesses: Number,
+    resetRow: Boolean
   },
   methods: {
     validation(guesses) {
@@ -66,6 +67,13 @@ export default {
           this.colors[i] = temp[i]
         }
       }
+    },
+    resetRow(newVal, oldVal) {
+      console.log("NEW GUESS: ", newVal)
+      if(newVal){
+        this.colors = ["gray","gray","gray","gray","gray"]
+      }
+      
     }
   }
 }  

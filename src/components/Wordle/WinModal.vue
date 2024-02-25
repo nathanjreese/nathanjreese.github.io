@@ -17,7 +17,7 @@
           <br><br>
           {{ getDriverKey }}
           <br><br>
-          Play Again?
+          <i>Play Again?</i>
       </div>
       <div>
           <v-btn
@@ -147,7 +147,13 @@
           'tomas': 'Tomas Scheckter is a South African racing driver known for his aggressive driving style and performances in the IndyCar Series.',
           'track': 'Race Track is the circuit or course where motorsport events take place, featuring various turns, straights, and elevation changes.',
           'tracy': 'Paul Tracy is a Canadian racing driver and former IndyCar Series champion known for his aggressive driving style.',
-          'turbo': 'Turbocharger is a device used in racecar engines to increase power'
+          'turbo': 'Turbocharger is a device used in racecar engines to increase power',
+          'unser': 'Al Unser is a member of the legendary Unser racing family, winner of multiple Indianapolis 500 races and IndyCar championships.',
+          'veach': 'Zach Veach is an American racing driver who has competed in the IndyCar Series and now works for Arrow McLaren in a non driving role.',
+          'vitor': 'Vitor Meira is a Brazilian racing driver known for his consistency and speed in the IndyCar series.',
+          'wally': 'Wally Dallenbach Sr is a former IndyCar driver and race winner from the 1970s and 1980s.',
+          'wheel': 'Wheels are the circular components of a racecar that are mounted on axles and rotate to allow the vehicle to move, with tires mounted on them for traction and grip.',
+          'yeley': 'JJ Yeley is an American racing driver who has competed in various motorsport series, including NASCAR and the IndyCar Series.'
           }
       }
     },

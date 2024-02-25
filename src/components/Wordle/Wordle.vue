@@ -14,6 +14,7 @@
         :submitted="index < state.currentGuessIndex"
         :rowNum="index"
         :guesses="state.currentGuessIndex"
+        :reset-row="this.resetKeyboard"
         />
         <div v-if="this.wonGame" class="result">
           <button
@@ -32,13 +33,13 @@
         @click="this.resetGame"/></div>
         <wordle-keyboard class="keyboard-main" 
         @onChange="onChange" 
-        @onKeyPress="onKeyPress" 
+        @onKeyPress="onKeyPress"
+        :reset-keyboard='resetKeyboard'
         :input="input" 
         :guessedLetters="state.guessedLetters" 
         :solution="state.solution"/>
         <instructions-modal
           v-show="this.showInstructions"
-          :drivers="test"
           @close="closeModal"
         />
     <win-modal
@@ -73,6 +74,7 @@ export default {
     testapi: null,
     showInstructions: false,
     showWinModal: false,
+    resetKeyboard: false,
     words: [
 'apron',
 'arrow',
@@ -2537,9 +2539,10 @@ export default {
   },
   methods: {
     resetGame(){
+      this.resetKeyboard = true
       this.showWinModal = false
-      location.reload()
       this.state.currentGuessIndex = 0
+      // location.reload()
       this.state.guesses = ["", "", "", "", "", ""]
       this.state.guessedLetters = {
         miss: [],
@@ -2559,6 +2562,7 @@ export default {
     onChange(input) {
       if( !this.wonGame && !this.lostGame){
         if (input.length <= 5){
+          this.resetKeyboard = false
           this.input = input;
           this.state.guesses[this.state.currentGuessIndex] = input
       } 

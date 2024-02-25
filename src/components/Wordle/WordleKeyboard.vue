@@ -40,6 +40,9 @@ export default {
     },
     solution: {
       type: String
+    },
+    resetKeyboard: {
+      type: Boolean
     }
 
   },
@@ -74,30 +77,64 @@ export default {
         : this.input + button 
       this.onChange(input)
     },
-    handleShift() {
-      let currentLayout = this.keyboard.options.layoutName;
-      let shiftToggle = currentLayout === "default" ? "shift" : "default";
+    // resetAll(shouldReset) {
+    //   console.log("LLLL: ", shouldReset)
+    //   if (shouldReset){
+    //     this.guessedLetters.miss = []
+    //         this.guessedLetters.found = []
+    //       this.guessedLetters.hint = []
 
-      this.keyboard.setOptions({
-        layoutName: shiftToggle
-      });
-    }
+    //   }
+        
+    //       // this.keyboard1 = [ "q","w","e","r","t","y","u","i","o","p"]
+    //       // this.keyboard2 = ["a","s","d","f","g","h","j","k","l"]
+    //       // this.keyboard3 = ["enter","z","x","c","v","b","n","m","bksp"]
+
+    // }
+    // handleShift() {
+    //   let currentLayout = this.keyboard.options.layoutName;
+    //   let shiftToggle = currentLayout === "default" ? "shift" : "default";
+
+    //   this.keyboard.setOptions({
+    //     layoutName: shiftToggle
+    //   })
+    // }
   },
   watch: {
-    guessedLetters(guessedLetters){
-      this.keyboard.addButtonTheme(
-        guessedLetters.miss.join(" "),
-        "miss"
-      )
-      this.keyboard.addButtonTheme(
-        guessedLetters.found.join(" "),
-        "found"
-      )
-      this.keyboard.addButtonTheme(
-        guessedLetters.hint.join(" "),
-        "hint"
-      )
-    }
+    // resetKeyboard: { 
+    //   handler(newValue, oldValue) {
+    //       this.resetAll(newValue)
+            
+    //       }
+    //     }
+    // guessedLetters(guessedLetters){
+    //   console.log("4444: ", guessedLetters)
+    //   this.keyboard.addButtonTheme(
+    //     guessedLetters.miss.join(" "),
+    //     "miss"
+    //   )
+    //   this.keyboard.addButtonTheme(
+    //     guessedLetters.found.join(" "),
+    //     "found"
+    //   )
+    //   this.keyboard.addButtonTheme(
+    //     guessedLetters.hint.join(" "),
+    //     "hint"
+    //   )
+    //   console.log("11111111: ", resetKeyboard)
+    //   if(resetKeyboard){
+    //     this.miss = []
+    //     this.close = []
+    //     this.correct = []
+    //     this.guessedLetters.found = []
+    //     this.guessedLetters.hint = []
+    //     this.guessedLetters.miss = []
+    //     this.keyboard1 = [ "q","w","e","r","t","y","u","i","o","p"]
+    //     this.keyboard2 = ["a","s","d","f","g","h","j","k","l"]
+    //     this.keyboard3 = ["enter","z","x","c","v","b","n","m","bksp"]
+        
+    //   }
+    // }
   },
   mounted() {
 	window.addEventListener("keypress", e => {
