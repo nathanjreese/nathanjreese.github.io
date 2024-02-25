@@ -137,11 +137,11 @@ export default {
   margin: auto;
 }
 .key-class{
-  padding: calc(8px + .1vw) calc(.5px + .8vw);
+  padding: calc(12px + .1vw) calc(.9px + .8vw);
   margin: calc(0px + .2vw) calc(0px + .2vw);
   background-color:whitesmoke;
   border: 1px solid #3e3e3e;
-  font-size: calc(8px + .8vw);
+  font-size: calc(10px + .8vw);
   min-width: calc(25px + 2vw);
   min-height: calc(25px + 2vw);
   text-align: center;
