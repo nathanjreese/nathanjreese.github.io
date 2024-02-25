@@ -558,13 +558,14 @@ export default {
     color:#240000;
     border-radius:20px;
     text-align:center;
-    box-shadow: 2px 2px 3px #3b3b3b;
+    box-shadow: 3px 3px 5px #3b3b3b;
   }
   .float-container {
     padding: 35px 2px;
     min-height: 1000px;
     display: inline-flex;
     background-color:rgb(231, 231, 231);
+    border-radius: 3px;
 }
   .drop-zone {
     align-items: center;
