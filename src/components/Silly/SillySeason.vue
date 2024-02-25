@@ -556,9 +556,11 @@ export default {
     right:30px;
     background-color:whitesmoke;
     color:#240000;
-    border-radius:20px;
+    border-radius:40px;
     text-align:center;
-    box-shadow: 3px 3px 5px #3b3b3b;
+    margin: 24px;
+    padding: 20px;
+    box-shadow: 1px 4px 2px 1px #3b3b3b;
   }
   .float-container {
     padding: 35px 2px;
