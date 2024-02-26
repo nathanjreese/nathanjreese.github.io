@@ -4,18 +4,12 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // Utilities
 import { defineConfig } from 'vite'
-import { createVuePlugin } from 'vite-plugin-vue'
-import legacy from '@vitejs/plugin-legacy'
 import { fileURLToPath, URL } from 'node:url'
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    createVuePlugin(),
-    legacy({
-      targets: ['defaults', 'not IE 11'] // specify your target browsers
-    }),
     vue({ 
       template: { transformAssetUrls }
     }),
@@ -48,5 +42,5 @@ export default defineConfig({
     fs: {
       strict: false
     }
-  },
+  }
 })
