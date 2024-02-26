@@ -1,8 +1,8 @@
 <template>
   <div class="bio-backdrop">
-    <font-awesome-icon icon="fa-free fa-circle-chevron-left" 
+    <!-- <font-awesome-icon icon="fa-free fa-circle-chevron-left" 
     @click="changeDriver(-1)"
-    />
+    /> -->
     <div v-if="!this.isMobile" class="bio-main-desktop">
       <header class="bio-header-desktop">
         <button
@@ -213,8 +213,8 @@
         </div>
       </div>
     </div>
-    <font-awesome-icon icon="fa-free fa-circle-chevron-right"
-    @click="changeDriver(1)" />
+    <!-- <font-awesome-icon icon="fa-free fa-circle-chevron-right"
+    @click="changeDriver(1)" /> -->
   </div>
 </template>
 
