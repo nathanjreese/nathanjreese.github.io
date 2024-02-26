@@ -1,8 +1,11 @@
 <template>
-  <div class="bio-backdrop">
-    <!-- <font-awesome-icon icon="fa-free fa-circle-chevron-left" 
-    @click="changeDriver(-1)"
-    /> -->
+  
+  <div class="bio-backdrop"> 
+    <font-awesome-icon icon="fa-free fa-circle-chevron-left" 
+          @click="changeDriver(-1)"
+          />
+          <font-awesome-icon icon="fa-free fa-circle-chevron-right"
+            @click="changeDriver(1)" />
     <div v-if="!this.isMobile" class="bio-main-desktop">
       <header class="bio-header-desktop">
         <button
@@ -213,8 +216,6 @@
         </div>
       </div>
     </div>
-    <!-- <font-awesome-icon icon="fa-free fa-circle-chevron-right"
-    @click="changeDriver(1)" /> -->
   </div>
 </template>
 
@@ -349,12 +350,18 @@
   .fa-circle-chevron-left {
     color: silver;
     height: calc(20px + 5vw);
-    padding-right: calc(10px + 2vw);
+    padding-right: calc(190px + 2vw);
+    position: fixed;
+    top: 100;
+    left: 0;
   }
   .fa-circle-chevron-right {
     color: silver;
     height: calc(20px + 5vw);
-    padding-left: calc(10px + 2vw);
+    padding-left: calc(190px + 2vw);
+    position: fixed;
+    top: 100;
+    right: 0;
   }
   .fa-circle-chevron-left:hover {
     cursor: pointer;
