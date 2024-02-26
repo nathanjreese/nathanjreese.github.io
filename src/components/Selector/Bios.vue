@@ -1,5 +1,8 @@
 <template>
   <div class="bio-backdrop">
+    <font-awesome-icon icon="fa-free fa-circle-chevron-left" 
+    @click="changeDriver(-1)"
+    />
     <div v-if="!this.isMobile" class="bio-main-desktop">
       <header class="bio-header-desktop">
         <button
@@ -203,8 +206,6 @@
           <a :href=tweetText target="_blank">
             <v-btn
             class="btn-tweet-mobile"
-              color="primary"
-              dark
             >
               Tweet Results
             </v-btn>
@@ -212,6 +213,8 @@
         </div>
       </div>
     </div>
+    <font-awesome-icon icon="fa-free fa-circle-chevron-right"
+    @click="changeDriver(1)" />
   </div>
 </template>
 
@@ -221,6 +224,7 @@
     name: 'Bios',
     data () {
 	  return {
+      driverIndex: this.driverBios.findIndex(x => x.Name === this.highDriver)
     }},
     props: {
       highDriver: String,
@@ -228,9 +232,10 @@
     },
     computed: {
       driverInfo() {
-        const driver = this.driverBios.filter(driver => driver["Name"] === this.highDriver)
-
-        return driver[0]
+        // const driver = this.driverBios.filter(driver => driver["Name"] === this.highDriver)
+        // const driverIndex = this.driverBios.findIndex(x => x.Name === this.highDriver)
+        // console.log("driverIndex", driverIndex)
+        return this.driverBios[this.driverIndex]
       },
       isMobile() {
           if( screen.width <= 760 ) {
@@ -254,6 +259,20 @@
     methods: {
       close() {
         this.$emit('close')
+      },
+      changeDriver(updateNumber){
+        const totalDrivers = this.driverBios.length - 1
+        console.log("11111", this.driverIndex)
+        if(totalDrivers === this.driverIndex && updateNumber > 0){
+          this.driverIndex = 0
+        }
+        else if(this.driverIndex === 0 && updateNumber < 0){
+          this.driverIndex = totalDrivers
+        }
+        else{
+          this.driverIndex += updateNumber
+        }
+        console.log("11111", this.driverIndex)
       }
     }
   }
@@ -326,6 +345,24 @@
   }
   .fa-xmark:hover {
     color: rgb(183, 183, 183);
+  }
+  .fa-circle-chevron-left {
+    color: silver;
+    height: calc(20px + 5vw);
+    padding-right: calc(10px + 2vw);
+  }
+  .fa-circle-chevron-right {
+    color: silver;
+    height: calc(20px + 5vw);
+    padding-left: calc(10px + 2vw);
+  }
+  .fa-circle-chevron-left:hover {
+    cursor: pointer;
+    color: gray;
+  }
+  .fa-circle-chevron-right:hover {
+    cursor: pointer;
+    color: gray;
   }
   .modal-all-desktop {
     background-color: transparent;
@@ -638,14 +675,23 @@
   }
 
   .btn-tweet-mobile {
-    color: black;
-    border: 2px solid;
-    border-radius: 4px !important;
-    padding: calc(8px + 1vw) calc(60px + 1.4vw) !important;
-    font-size: calc(9px + .5vw) !important;
-    width: calc(70px + 6vw) !important;
+    width: calc(90px + 4vw);
+    height: 45px !important;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    font-size: calc(7px + .4vw);
+    margin: calc(16px + 2vw) calc(16px + 2vw);
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #288eec;
+    box-shadow: -2px 4px 16px #8bc3f6;
+    border-radius: 2px;
+    border: none;
+    color: whitesmoke !important;
+    font-weight: bold;
   }
   .twitter-share-mobile {
     padding: 25px;
+    padding-bottom: 50px;
   }
 </style>

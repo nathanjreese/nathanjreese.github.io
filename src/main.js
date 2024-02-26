@@ -18,11 +18,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faCartShopping, faUserSecret, faXmark, faFlag, faCaretRight, faIdCard, faRetweet, faCircleQuestion, faPlus, faListCheck} from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping, faUserSecret, faXmark, faFlag, faCaretRight, faIdCard, faRetweet, faCircleQuestion, faPlus, faListCheck, faCircleChevronLeft, faCircleChevronRight} from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faInstagram, faTwitter, faTwitch, faYoutube, faTiktok } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret, faListCheck, faXmark, faFlag, faCaretRight, faRetweet, faCircleQuestion, faTwitter, faTwitch, faYoutube, faTiktok, faFacebook, faInstagram, faCartShopping, faIdCard, faPlus)
+library.add(faUserSecret, faListCheck, faXmark, faFlag, faCaretRight, faRetweet, faCircleQuestion, faTwitter, faTwitch, faYoutube, faTiktok, faFacebook, faInstagram, faCartShopping, faIdCard, faPlus, faCircleChevronLeft, faCircleChevronRight)
 
 // Composables
 import { createApp } from 'vue'
