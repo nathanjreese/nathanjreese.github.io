@@ -147,18 +147,18 @@
           5: ['No preference']
           },
         },
-        // {
-        //   "title": "social",
-        //   "question": "How big of a Twitter presence would you like your driver to have?",
-        //   "answers": ['Social Media Influencer','Kind of a Big Deal', 'Respectable Following',`There are drivers' pets with more followers`,`No preference`],
-        //   "answerKey": {
-        //   0: [1397048],
-        //   1: [106278,123057,129940,138825,147623,171634,175491,239224],
-        //   2: [31592,33650,37574,41082,46835,54377,59463,76094,88762,92398,93614,95164,96052],
-        //   3: [1171,1483,3984,6793,7049,11260,17127,20129],
-        //   4: ['No preference']
-        //   },
-        // },
+        {
+          "title": "social",
+          "question": "How big of a Twitter presence would you like your driver to have?",
+          "answers": ['Social Media Influencer','Kind of a Big Deal', 'Respectable Following',`There are drivers' pets with more followers`,`No preference`],
+          "answerKey": {
+          0: [1000000,1000000000],
+          1: [200000,999999],
+          2: [60000,199999],
+          3: [0,59999],
+          4: ['No preference']
+          }
+        },
         {
           "title": "content",
           "question": "How do you feel about driver content? (videos, podcasts, twitch streams, etc)",
@@ -167,7 +167,7 @@
           0: ["yes"],
           1: ["no"],
           2: ['No preference']
-          },
+          }
         },
         {
           "title": "fulltime",
@@ -177,7 +177,7 @@
           0: ["yes"],
           1: ["no"],
           2: ['No preference']
-        },
+        }
         }
       ]
       }
@@ -207,9 +207,12 @@
         const title = this.questions[this.questionNumber]["title"]
         
         this.driverData.forEach(driver => {
-          if (answers.includes(driver[title])){
-
-            
+          if (title === 'social'){
+            if (driver[title] > answers[0] && driver[title] < answers[1]){
+            driver["points"] += 1
+          }
+          }
+          else if (answers.includes(driver[title])){
             driver["points"] = (title === "age") ? driver["points"] + 2 : driver["points"] + 1
           }
           

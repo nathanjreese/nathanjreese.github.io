@@ -140,6 +140,7 @@
     display: flex;
     flex-direction: column;
     max-height: 95%;
+    margin-top: calc(20px + 4vw);
   }
 
   .modal-footer {

@@ -902,8 +902,8 @@
       this.isModalVisible = true
       // this.currentDrivers = driverData
     },
-    closeModal() {
-      this.isModalVisible = false
+    closeResults() {
+      this.isResultsVisible = false
       this.driverData.forEach(driver => {
         driver["points"] = 0
       })

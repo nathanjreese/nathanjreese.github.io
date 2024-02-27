@@ -263,7 +263,6 @@
       },
       changeDriver(updateNumber){
         const totalDrivers = this.driverBios.length - 1
-        console.log("11111", this.driverIndex)
         if(totalDrivers === this.driverIndex && updateNumber > 0){
           this.driverIndex = 0
         }
@@ -273,7 +272,6 @@
         else{
           this.driverIndex += updateNumber
         }
-        console.log("11111", this.driverIndex)
       }
     }
   }
