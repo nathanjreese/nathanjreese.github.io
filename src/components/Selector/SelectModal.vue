@@ -149,7 +149,7 @@
         },
         {
           "title": "social",
-          "question": "How big of a Twitter presence would you like your driver to have?",
+          "question": "How big of a social media presence would you like your driver to have?",
           "answers": ['Social Media Influencer','Kind of a Big Deal', 'Respectable Following',`There are drivers' pets with more followers`,`No preference`],
           "answerKey": {
           0: [1000000,1000000000],
