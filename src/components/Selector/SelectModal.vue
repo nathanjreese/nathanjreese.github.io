@@ -186,6 +186,14 @@
       driverData: Object,
       numberQuestion: Number,
     },
+    mounted() {
+      window.addEventListener("keypress", e => {
+        if (e.key && e.key.match(/[a-z]/i)){
+         alert(e.key)
+        }
+        
+      })
+    },
     computed: {
       choices() {
         // `this` points to the component instance
@@ -260,7 +268,7 @@
     background: #FFFFFF;
     max-height: 900px;
     min-height: 400px;
-    width: 900px;
+    max-width: 900px;
     box-shadow: 2px 2px 20px 1px;
     display: inline-flex;
     flex-direction: column;
