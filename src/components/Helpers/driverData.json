@@ -5,7 +5,7 @@
     "team": "Front Runner",
     "manufacturer": "Honda",
     "nationality": "Spain",
-    "livery": "same",
+    "livery": "different",
     "aggressiveness": 2,
     "personality": "laid back",
     "colors": ["yellow","red"],

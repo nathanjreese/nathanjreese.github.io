@@ -96,15 +96,15 @@
           "answers": ['Yes, I prefer to root for an American', 'No, I prefer international drivers'],
           "answerKey": {
             0: ["USA","USA/Brazil"],
-            1: ["Denmark","France","Canada","Mexico","Sweden","New Zealand","Spain","Japan","Netherlands","United Kingdom","Argentina","Brazil","Australia","Switzerland"]
+            1: ["Denmark","France","Canada","Mexico","Sweden","New Zealand","Spain","Japan","Netherlands","United Kingdom","Argentina","Brazil","Australia","Switzerland","Denmark"]
           },
         },
         {
           "title": "livery",
           "question": "Do you like a car with consistent liveries or do you like a variety?",
-          "answers": ['Consistent', 'Different'],
+          "answers": ['Consistent', 'Variety'],
           "answerKey": {
-          0: ['ame'],
+          0: ['same'],
           1: ['different']
           },
         },
