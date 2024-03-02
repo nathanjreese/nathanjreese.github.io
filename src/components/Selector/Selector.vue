@@ -982,6 +982,15 @@
         this.threeDrivers = finalDrivers
         this.isResultsVisible = true
       },
+    closeModal() {
+      this.isModalVisible = false
+      this.randomNumber = null
+      this.currentDrivers = driverData
+      driverData.forEach(driver => {
+        driver["points"] = 0
+      })
+
+    },
     closeBios() {
         this.isBiosVisible = false
         this.randomNumber = null

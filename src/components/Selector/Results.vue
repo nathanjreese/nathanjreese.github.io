@@ -161,7 +161,7 @@
      width: calc(220px + 33vw);
   }
   .fa-xmark {
-    color: #3c3c3c !important;
+    color: whitesmoke !important;
     font-size: calc(8px + 1.5vw);
     padding-right:5px;
   }

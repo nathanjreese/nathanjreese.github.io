@@ -26,6 +26,22 @@
           </v-radio-group>
             
           </v-container>
+          <!-- <v-btn
+            class="v-btn"
+            @click="submit(radioGroup)"
+            color="primary"
+            dark
+          >
+            Skip
+          </v-btn>
+          <v-btn
+            class="v-btn"
+            @click="submit(radioGroup)"
+            color="primary"
+            dark
+          >
+            Submit
+          </v-btn> -->
           <v-btn
             class="v-btn"
             @click="submit(radioGroup)"
@@ -92,14 +108,13 @@
           },
         },
         {
-          "title": "ovals",
-          "question": "Do you have a preferred track type?",
-          "answers": ['Ovals are where the action is at.', 'Road and street courses take more skill.', 'I like a good balance.',`No preference`],
+          "title": "livery",
+          "question": "Do you like a car with consistent liveries or do you like a variety?",
+          "answers": ['same', 'different','No Preference'],
           "answerKey": {
-          0: ['ovals'],
-          1: ['road'],
-          2: ['both'],
-          3: ['No preference']
+          0: ['same'],
+          1: ['different'],
+          2: ['No preference']
           },
         },
         {
@@ -186,14 +201,6 @@
       driverData: Object,
       numberQuestion: Number,
     },
-    mounted() {
-      window.addEventListener("keypress", e => {
-        if (e.key && e.key.match(/[a-z]/i)){
-         alert(e.key)
-        }
-        
-      })
-    },
     computed: {
       choices() {
         // `this` points to the component instance
@@ -266,21 +273,23 @@
 
   .modal {
     background: #FFFFFF;
-    max-height: 900px;
     min-height: 400px;
-    max-width: 900px;
+    max-width: 100%;
     box-shadow: 2px 2px 20px 1px;
     display: inline-flex;
     flex-direction: column;
     max-height: 90%;
   }
   .fa-xmark {
-    color: #b7b7b7 !important;
-    font-size: calc(8px + 1.5vw);
-    padding-right:5px;
+    padding-left: 0px;
+    color: whitesmoke !important;
+    font-size: calc(12px + 1vw) !important;
+    margin-bottom: 300px;
+    float: right;
   }
   .fa-xmark:hover {
-    color: rgb(146, 146, 146) !important;
+    color: rgb(119, 119, 119) !important;
+    cursor: pointer !important;
   }
 
   .modal-footer {

@@ -207,7 +207,7 @@
     display: inline-flex;
     flex-direction: column;
     max-height: 90% !important;
-    max-width: 92% !important;
+    max-width: 100% !important;
   }
   .fa-xmark {
     color: #333333 !important;
@@ -236,7 +236,7 @@
     padding: 10px 10px;
     margin: 20px 10px;
     color: black !important;
-    width: calc(200px + 25vw);
+    width: calc(270px + 25vw);
     overflow-y:auto;
     font-size: 20px;
   }
