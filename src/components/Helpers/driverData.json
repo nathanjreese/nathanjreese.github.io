@@ -440,5 +440,22 @@
     "content": "yes",
     "fulltime": "yes",
     "points": 0
+  },
+  {
+    "name": "Dale Coyne TBD",
+    "age": 1,
+    "team": "",
+    "manufacturer": "",
+    "nationality": "",
+    "livery": "",
+    "aggressiveness": 0,
+    "personality": "",
+    "colors": [],
+    "f1": "",
+    "success": "",
+    "social": -11,
+    "content": "",
+    "fulltime": "",
+    "points": 0
   }
  ]
