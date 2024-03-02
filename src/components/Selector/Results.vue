@@ -158,7 +158,7 @@
     justify-content: space-between;
     font-size: calc(11px + 1.2vw);
     font-weight: bold;
-     width: calc(220px + 33vw);
+     width: calc(250px + 33vw);
   }
   .fa-xmark {
     color: whitesmoke !important;
@@ -172,7 +172,7 @@
     background: #2f589f;
     position: relative;
     padding: 15px 10px;
-    width: calc(220px + 33vw);
+    width: calc(240px + 33vw);
     color: rgb(42, 42, 42);
     overflow-y: auto;
   }

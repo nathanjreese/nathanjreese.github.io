@@ -30,7 +30,7 @@
       </div>
 		</div>
      <select-modal
-      v-show="isModalVisible"
+      v-if="isModalVisible"
       :driver-data="driverData"
       :number-question="this.questionNumber"
       @close="closeModal"
@@ -946,6 +946,10 @@
   },
   methods: {
     showModal() {
+      this.driverData.forEach(driver => {
+        driver["points"] = 0
+      })
+      this.questionNumber = 0 
       this.isModalVisible = true
       // this.currentDrivers = driverData
     },
@@ -1055,7 +1059,8 @@
   .button-21:hover{ 
     background: #356a9c;
     box-shadow: -5px 8px 18px #6599ca;
-    font-weight: bold;}
+    font-weight: bold;
+  }
         
         
         
