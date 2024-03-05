@@ -63,22 +63,6 @@
     "points": 0
   },
   {
-    "name": "Jack Harvey",
-    "age": 29,
-    "team": "Promising Future",
-    "manufacturer": "Honda",
-    "nationality": "United Kingdom",
-    "ovals": "no",
-    "aggressiveness": 1,
-    "personality": "friendly",
-    "f1": "no",
-    "success": "no wins",
-    "social": 17127,
-    "content": "yes",
-    "fulltime": "yes",
-    "points": 0
-  },
-  {
     "name": "Devlin DeFrancesco",
     "age": 23,
     "team": "Next Best Thing",
@@ -126,4 +110,21 @@
     "fulltime": "yes",
     "points": 0
   },
+  {
+    "name": "Dale Coyne TBD",
+    "age": 1,
+    "team": "",
+    "manufacturer": "",
+    "nationality": "",
+    "livery": "",
+    "aggressiveness": 0,
+    "personality": "",
+    "colors": [],
+    "f1": "",
+    "success": "",
+    "social": -11,
+    "content": "",
+    "fulltime": "",
+    "points": 0
+  }
  ]
