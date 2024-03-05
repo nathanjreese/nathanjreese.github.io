@@ -739,7 +739,7 @@
           "Summary": "After a few junior open wheel championships, Colin Braun has spent the majority of his career racing and winning in the IMSA Weathertech series, but he's also competed in NASCAR and Rallycross. Braun will finally realize his dream of driving in IndyCar as he runs a part-time schedule with Dale Coyne. The 35 year old rookie will be a popular underdog as he tries to prove he belongs in the series.",
           "picnum": new URL('@/assets/Numbers/BraunNumber.png', import.meta.url),
           "biopic": new URL('@/assets/Drivers/ColinBraun.jpeg', import.meta.url),
-          "teampic": new URL('@/assets/Teams/CoyneWithRWR.png', import.meta.url),
+          "teampic": new URL('@/assets/Teams/CoynewithRWR.png', import.meta.url),
           "picref": "Photo credit: Joe Skibinski | Indycar.com",
           "Profile": "https://www.indycar.com/Series/IndyCar-Series/Colin-Braun",
           "Twitter": "https://twitter.com/colinbraun",
