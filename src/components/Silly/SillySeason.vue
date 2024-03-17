@@ -3,7 +3,7 @@
   <div class="sillyseason">
     <div class="silly-title">	
       <title-page
-      title-text="2024 Silly Season Predictor
+      title-text="2025 Silly Season Predictor
 "
       />
     </div>
@@ -30,13 +30,15 @@
             draggable="true"
             @dragstart="startDrag($event, item)"
           >
-            <div>
-            <img
-            :src="isLoaded ? item.pic : nobodyLoading"
-              contain
-              class="silly-img"
-              @click="removeDriver(item)"
-              @load="onImgLoad"/>
+            <div class="img-main">
+              <img
+              :src="isLoaded ? item.pic : nobodyLoading"
+                contain
+                class="silly-img"
+                @click="removeDriver(item)"
+                @load="onImgLoad"
+                />
+             {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
             </div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el"
@@ -78,12 +80,16 @@
             @dragstart="startDrag($event, item)"
           >
           <div>
-          <img
-            :src="isLoaded ? item.pic : nobodyLoading"
-              contain
-              class="silly-img"
-              @load="onImgLoad"
-              @click="removeDriver(item)"/>
+            <div class="img-main">
+              <img
+              :src="isLoaded ? item.pic : nobodyLoading"
+                contain
+                class="silly-img"
+                @click="removeDriver(item)"
+                @load="onImgLoad"
+                />
+             {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+            </div>
           </div>
           </div>
           <div class="drag-el"
@@ -124,12 +130,16 @@
             @dragstart="startDrag($event, item)"
           >
           <div>
-            <img
-            :src="isLoaded ? item.pic : nobodyLoading"
-              contain
-              class="silly-img"
-              @load="onImgLoad"
-              @click="removeDriver(item)">
+            <div class="img-main">
+              <img
+              :src="isLoaded ? item.pic : nobodyLoading"
+                contain
+                class="silly-img"
+                @click="removeDriver(item)"
+                @load="onImgLoad"
+                />
+             {{ item.name[0] }}. {{ item.name.split(" ").pop()}}
+            </div>
           </div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el"
@@ -159,12 +169,26 @@
             @dragstart="startDrag($event, item)"
           >
           <div>
+            <div class="img-main">
             <img
             :src="isLoaded ? item.pic : nobodyLoading"
               contain
               class="silly-img"
               @load="onImgLoad"/>
+              {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+            </div>
           </div>
+          </div>
+          <div class="drag-el-add">
+           <div class="img-main">
+              <img
+              :src="isLoaded ? nobodyProfile : nobodyLoading"
+                contain
+                class="silly-img"
+                @load="onImgLoad"
+                @click="newDriver"/>
+                Add Driver
+            </div>
           </div>
       </div>
     </div>
@@ -187,20 +211,25 @@
             draggable="true"
             @dragstart="startDrag($event, item)"
           >
+          <div class="img-main-mobile">
             <img
             :src="isLoaded ? item.pic : nobodyLoading"
               contain
               class="silly-img-mobile"
               @load="onImgLoad"
               @click="removeDriver(item)"/>
+              {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+            </div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el-mobile"
           v-if="listTeam(team.name).length < team.size">
+          <div class="img-main-mobile">
           <img
           :src="isLoaded ? nobodyProfile : nobodyLoading"
               contain
               class="silly-img-mobile"
               @click="addDriver(team.name, team.title)">
+          </div>
             </div>
       </div>
       </div>    
@@ -256,6 +285,7 @@
       v-show="isSillyModalVisible"
       @close="closeModal"
       @end="showResults"
+      @addNewDriver="newMobileDriver"
       :drivers="listFreeAgents"
       :team="teamAdd"
       :team-name="teamName"
@@ -289,7 +319,7 @@ export default {
   },
   data () {
     return {
-      msg: '2024 Silly Season Predictor',
+      msg: '2025 Silly Season Predictor',
       isSillyModalVisible: false,
       isRemoveModalVisible: false,
       activeTeam: '',
@@ -322,58 +352,67 @@ export default {
         juncos: 2,
       },
       newTeamName: null,
+      newDriverName: null,
       fieldSize: 0,
       teamName: null,
       teamAdd: null,
       nobodyLoading: new URL('@/assets/SillyPhotos/NobodyLoading.jpeg', import.meta.url),
       nobodyProfile: new URL('@/assets/SillyPhotos/Nobody.jpeg', import.meta.url),
+      newProfile: new URL('@/assets/SillyPhotos/NewDriver.jpeg', import.meta.url),
       items: [
         {id: 0, name: "Alex Palou", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/AlexPalou.jpeg', import.meta.url)},
         {id: 1, name: "Scott Dixon", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/ScottDixon.jpeg', import.meta.url)},
-        {id: 2, name: "Josef Newgarden", original: 'penske', team: 'penske', pic: new URL('@/assets/SillyPhotos/JosefNewgarden.jpeg', import.meta.url)},
+        {id: 2, name: "Josef Newgarden", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JosefNewgarden.jpeg', import.meta.url)},
         {id: 3, name: "Pato O'Ward", original: 'mclaren', team: 'mclaren', pic: new URL('@/assets/SillyPhotos/PatricioOWard.jpeg', import.meta.url)},
         {id: 4, name: "Scott McLaughlin", original: 'penske', team: 'penske', pic: new URL('@/assets/SillyPhotos/ScottMcLaughlin.jpeg', import.meta.url)},
-        {id: 5, name: "Will Power", original: 'penske', team: 'penske', pic: new URL('@/assets/SillyPhotos/WillPower.jpeg', import.meta.url)},
-        {id: 6, name: "Alexander Rossi", original: 'mclaren', team: 'mclaren', pic: new URL('@/assets/SillyPhotos/AlexanderRossi.jpeg', import.meta.url)},
+        {id: 5, name: "Will Power", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/WillPower.jpeg', import.meta.url)},
+        {id: 6, name: "Alexander Rossi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/AlexanderRossi.jpeg', import.meta.url)},
         {id: 7, name: "Colton Herta", original: 'andretti', team: 'andretti', pic: new URL('@/assets/SillyPhotos/ColtonHerta.jpeg', import.meta.url)},
-        {id: 8, name: "Christian Lundgaard", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/ChristianLundgaard.jpeg', import.meta.url)},
+        {id: 8, name: "Christian Lundgaard", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ChristianLundgaard.jpeg', import.meta.url)},
         {id: 9, name: "Kyle Kirkwood", original: 'andretti', team: 'andretti', pic: new URL('@/assets/SillyPhotos/KyleKirkwood.jpeg', import.meta.url)},
-        {id: 10, name: "Rinus Veekay", original: 'ecr', team: 'ecr', pic: new URL('@/assets/SillyPhotos/RinusVeeKay.jpeg', import.meta.url)},
+        {id: 10, name: "Rinus Veekay", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RinusVeeKay.jpeg', import.meta.url)},
         {id: 11, name: "Ed Carpenter", original: 'ecr', team: 'ecr', pic: new URL('@/assets/SillyPhotos/EdCarpenter.jpeg', import.meta.url)},
         {id: 12, name: "Benjamin Pedersen", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/BenjaminPedersen.jpeg', import.meta.url)},
         {id: 13, name: "Marcus Ericsson", original: 'andretti', team: 'andretti', pic: new URL('@/assets/SillyPhotos/MarcusEricsson.jpeg', import.meta.url)},
-        {id: 14, name: "Tom Blomqvist", original: 'msr', team: 'msr', pic: new URL('@/assets/SillyPhotos/TomBlomqvist.jpeg', import.meta.url)},
+        {id: 14, name: "Tom Blomqvist", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TomBlomqvist.jpeg', import.meta.url)},
         {id: 15, name: "Linus Lundqvist", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/LinusLundqvist.jpeg', import.meta.url)},
-        {id: 16, name: "Romain Grosjean", original: 'juncos', team: 'juncos', pic: new URL('@/assets/SillyPhotos/RomainGrosjean.jpeg', import.meta.url)},
-        {id: 17, name: "Santino Ferrucci", original: 'foyt', team: 'foyt', pic: new URL('@/assets/SillyPhotos/SantinoFerrucci.jpeg', import.meta.url)},
+        {id: 16, name: "Romain Grosjean", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RomainGrosjean.jpeg', import.meta.url)},
+        {id: 17, name: "Santino Ferrucci", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/SantinoFerrucci.jpeg', import.meta.url)},
         {id: 18, name: "Felix Rosenqvist", original: 'msr', team: 'msr', pic: new URL('@/assets/SillyPhotos/FelixRosenqvist.jpeg', import.meta.url)},
         {id: 19, name: "Graham Rahal", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/GrahamRahal.jpeg', import.meta.url)},
         {id: 20, name: "Callum Ilott", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CallumIlott.jpeg', import.meta.url)},
         {id: 21, name: "Marcus Armstrong", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/MarcusArmstrong.jpeg', import.meta.url)},
-        {id: 22, name: "David Malukas", original: 'mclaren', team: 'mclaren', pic: new URL('@/assets/SillyPhotos/DavidMalukas.jpeg', import.meta.url)},
+        {id: 22, name: "David Malukas", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/DavidMalukas.jpeg', import.meta.url)},
         {id: 23, name: "Devlin DeFrancesco", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/DevlinDeFrancesco.jpeg', import.meta.url)},
         {id: 24, name: "Conor Daly", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ConorDaly.jpeg', import.meta.url)},
         {id: 25, name: "Jack Harvey", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JackHarvey.jpeg', import.meta.url)},
-        {id: 26, name: "Agustín Canapino", original: 'juncos', team: 'juncos', pic: new URL('@/assets/SillyPhotos/AgustinCanapino.jpeg', import.meta.url)},
+        {id: 26, name: "Agustín Canapino", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/AgustinCanapino.jpeg', import.meta.url)},
         {id: 27, name: "Simon Pagenaud", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/SimonPagenaud.jpeg', import.meta.url)},
-        {id: 28, name: "Sting Ray Robb", original: 'foyt', team: 'foyt', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
-        {id: 29, name: "Takuma Sato", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TakumaSato.jpeg', import.meta.url)},
-        {id: 30, name: "Ryan Hunter-Reay", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RyanHunterReay.jpeg', import.meta.url)},
-        {id: 31, name: "Nolan Siegel (IndyNXT)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/NolanSiegel.jpeg', import.meta.url)},
-        {id: 32, name: "Christian Rasmussen", original: 'ecr', team: 'ecr', pic: new URL('@/assets/SillyPhotos/ChristianRasmussen.jpeg', import.meta.url)},
-        {id: 33, name: "Hunter McElrea (IndyNXT)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/HunterMcElrea.jpeg', import.meta.url)},
-        {id: 34, name: "Louis Foster (IndyNXT)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/LouisFoster.jpeg', import.meta.url)},
-        {id: 35, name: "Danial Frost (IndyNXT)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
-        {id: 36, name: "Juri Vips (F2)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JuriVips.jpeg', import.meta.url)},
-        {id: 37, name: "Robert Shartzman (F2)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
-        {id: 38, name: "Nyck de Vries (F1)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NyckdeVries.jpeg', import.meta.url)},
-        {id: 39, name: "Oliver Askew (FE)", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
-        {id: 40, name: "Felipe Drugovich (F2)", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
+        {id: 28, name: "Sting Ray Robb", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
+        {id: 29, name: "Takuma Sato", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/TakumaSato.jpeg', import.meta.url)},
+        {id: 30, name: "Ryan Hunter-Reay", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/RyanHunterReay.jpeg', import.meta.url)},
+        {id: 31, name: "Nolan Siegel", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/NolanSiegel.jpeg', import.meta.url)},
+        {id: 32, name: "Christian Rasmussen", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ChristianRasmussen.jpeg', import.meta.url)},
+        {id: 33, name: "Hunter McElrea", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/HunterMcElrea.jpeg', import.meta.url)},
+        {id: 34, name: "Louis Foster", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LouisFoster.jpeg', import.meta.url)},
+        {id: 35, name: "Danial Frost", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
+        {id: 36, name: "Juri Vips", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JuriVips.jpeg', import.meta.url)},
+        {id: 37, name: "Robert Shartzman", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
+        {id: 38, name: "Nyck de Vries", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NyckdeVries.jpeg', import.meta.url)},
+        {id: 39, name: "Oliver Askew", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
+        {id: 40, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
         {id: 41, name: "Tatiana Colderón", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TatianaCalderon.jpeg', import.meta.url)},
-        {id: 41, name: "Kyffin Simpson", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
-        {id: 42, name: "Pietro Fittipaldi", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
+        {id: 41, name: "Kyffin Simpson", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
+        {id: 42, name: "Pietro Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
         {id: 43, name: "Katherine Legge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
-        {id: 44, name: "Colin Braun", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ColinBraun.jpeg', import.meta.url)}
+        {id: 44, name: "Colin Braun", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ColinBraun.jpeg', import.meta.url)},
+        {id: 44, name: "Myles Rowe", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MylesRowe.jpeg', import.meta.url)},
+        {id: 45, name: "Michael d'Orlando", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MichaeldOrlando.jpeg', import.meta.url)},
+        {id: 46, name: "Jamie Chadwick", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JamieChadwick.jpeg', import.meta.url)},
+        {id: 47, name: "Jacob Abel", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JacobAbel.jpeg', import.meta.url)},
+        {id: 48, name: "Callum Hedge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CallumHedge.jpeg', import.meta.url)},
+        {id: 49, name: "Caio Collet", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CaioCollet.jpeg', import.meta.url)},
+        {id: 50, name: "Enzo Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)}
 
 
       ]
@@ -387,9 +426,9 @@ export default {
     listNew() {
       return this.items.filter((item) => item.team === 'new')
     },
-    getName() {
+    getName(item) {
       // const nameArray = fullName.split(" ")
-      return "Fittipalid"
+      return `test`
     },
     listFreeAgents() {
       return this.items.filter((item) => item.team === 'fa')
@@ -447,6 +486,17 @@ export default {
     newTeam() {
       const teamName = prompt("Enter a New Team Name")
       this.newTeamName = teamName
+    },
+    newMobileDriver(value) {
+      const id = this.items.length
+      const newDriver = {id: id, name: value, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)}
+      this.items.push(newDriver)
+    },
+    newDriver() {
+      const driverName = prompt("Enter a New Driver Name")
+      const id = this.items.length
+      const newDriver = {id: id, name: driverName, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)}
+      this.items.push(newDriver)
     },
     removeDriver(driver) {    
       this.driverRemove = driver
@@ -660,7 +710,9 @@ export default {
     margin-bottom: 8px;
   }
   .drag-el {
-    height: calc(50px + 2.5vw);
+    height: calc(60px + 2.5vw);
+    padding-bottom: 17px;
+    background-color: black;
     margin-top: 2px;
     margin-bottom: 2px;
     margin-left: 8px;
@@ -671,10 +723,28 @@ export default {
     border: 1px solid #000000;
     border-radius: 3px;
     box-shadow: 1px 1px 2px #000000;
+    font-family: Tahoma;
   }
   .drag-el:hover{
     box-shadow: 1px 1px 5px 2px #000000;
     cursor:grab;
+  }
+  .drag-el-add {
+    height: calc(60px + 2.5vw);
+    padding-bottom: 17px;
+    background-color: black;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 8px;
+    margin-right: 8px;
+    align-items: left;
+    float: center;
+    display: inline-flex;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #000000;
+    font-family: Tahoma;
+    cursor: pointer;
   }
 .float-child-fa {
     width: 30%;
@@ -694,24 +764,18 @@ export default {
     padding: 2px;
     height: calc(800px + .8vw);
 }
-.silly-img {
-  height: 100%;
-  border-radius: 3px;
-}
-.bottom-text {
-  position: relative;
-  bottom: 20px;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
+.img-main{
   background-color: black;
-  }
-
-  hr.solid {
-  border-top: 8px solid rgb(76, 110, 177);
-  width: 100%;
-  margin: auto;
-  margin-bottom: 30px;
+  color: whitesmoke;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: Verdana;
+  font-weight: 500;
+  font-size: 12px;
+}
+.silly-img {
+  border-radius: 2px;
+  height: calc(66px + .8vw);
 }
 
 .drop-zone-mobile {
@@ -769,13 +833,13 @@ export default {
     padding-bottom: 8px;
     color: #240000;
     text-shadow: 1px 1px 1px whitesmoke;
-    font-family: Verdana;
     margin-bottom: 1px;
   }
   .drag-el-mobile {
+    background-color: black;
     height: calc(58px + 3vw);
     margin-top: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 16px;
     margin-left: 3px;
     margin-right: 3px;
     float: center;
@@ -787,11 +851,13 @@ export default {
     align-items: left;
   }
   .float-container-mobile {
+    min-height: calc(87px + .8vw);
     margin-top: 20px;
     padding: 2px 0px;
     display: inline-flex;
     float: center;
     width: 100%;
+    border-radius: 3px;
     min-height: 1500px;
 }
 .float-child-mobile {
@@ -799,11 +865,23 @@ export default {
     float: center;
     padding: 0px;
 }
-.silly-img-mobile {
+.img-main-mobile{
+  height: calc(83px + .8vw);
+  background-color: black;
+  color: whitesmoke;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: Verdana;
+  font-weight: 500;
+  font-size: 12px;
   border-radius: 3px;
+  box-shadow: 3px 3px 4px #3a3a3ab8;
+}
+.silly-img-mobile {
+  height: calc(66px + .8vw);
   display: grid;
   flex-direction: column;
-
+  border-radius: 3px;
 }
 
 

@@ -18,20 +18,34 @@
         <div class="silly-modal-body">
         <section class="drop-zone-fa">
           <slot name="body">
-              <div v-for="item in drivers" 
+            <div v-for="item in drivers" 
               :key="item.id"
               :title="item.name"
               class="drag-el-silly"
             >
-            <div>
-              <img
-              :src="item.pic"
-                contain
-                class="silly-img"
-                @click="addDriver(item)">
-                <div class='bottom-text'> {{ item.name.split(" ")[1] }}</div>
+              <div>
+                <div class="img-main-modal">
+                <img
+                :src="item.pic"
+                  contain
+                  class="silly-img-modal"
+                  @click="addDriver(item)">
+                  {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+                </div>
+              </div>
             </div>
+            <div class="drag-el-silly-add">
+              <div class="img-main-modal">
+                <img
+                src='@/assets/SillyPhotos/Nobody.jpeg'
+                  contain
+                  class="silly-img-modal"
+                  @load="onImgLoad"
+                  @click="newDriver"/>
+                  Add Driver
+                </div>
             </div>
+            
           </slot>
          </section>
         </div>
@@ -43,7 +57,7 @@
     export default {
       name: 'Modal',
       data: () => ({
-        questionNumber: 0,
+        questionNumber: 0
       }),
       props: {
         drivers: Object,
@@ -53,13 +67,16 @@
         teamName: String
       },
       computed: {
-      // a computed getter
       choices() {
         // `this` points to the component instance
         return this.questions[[this.questionNumber]]["answers"]
         }
       },
       methods: {
+        newDriver() {
+          const driverName = prompt("Enter a New Driver Name")
+          this.$emit('addNewDriver', driverName)
+        },
         close() {
           this.$emit('close')
           
@@ -211,25 +228,56 @@
       box-shadow: 5px 5px 5px #616161;
     }
     .drag-el-silly {
-      height: calc(61px + 3.5vw);
-      margin-top: 4px;
-      margin-bottom: 4px;
-      margin-left: 5px;
-      margin-right: 5px;
+      height: calc(85px + 1.5vw);
+      padding-bottom: 17px;
+      background-color: black;
+      margin-top: 2px;
+      margin-bottom: 9px;
+      margin-left: 8px;
+      margin-right: 8px;
       align-items: left;
       float: center;
       display: inline-flex;
       border: 1px solid #000000;
-      border-radius: 11px;
-      box-shadow: 2px 2px 2px #3d3d3d;
+      border-radius: 3px;
+      box-shadow: 1px 1px 2px #000000;
+      font-family: Tahoma;
+      font-size: 12px;
     }
-    .silly-img {
-      height: 100%;
-      border-radius: 8px;
+    .drag-el-silly-add {
+      height: calc(85px + 1.5vw);
+      padding-bottom: 17px;
+      background-color: black;
+      margin-top: 2px;
+      margin-bottom: 9px;
+      margin-left: 8px;
+      margin-right: 8px;
+      align-items: left;
+      float: center;
+      display: inline-flex;
+      border: 1px solid #000000;
+      border-radius: 3px;
+      box-shadow: 1px 1px 2px #000000;
+      font-family: Tahoma;
+      font-size: 12px;
+    }
+    .img-main-modal{
+      background-color: black;
+      color: whitesmoke;
+      display: inline-flex;
+      flex-direction: column;
+      font-family: Verdana;
+      font-weight: 500;
+      font-size: 13px;
+    }
+    .silly-img-modal {
+      border-radius: 3px;
+      height: calc(75px + .8vw);
       cursor: pointer !important;
   }
   .bottom-text {
   position: relative;
+  margin-top: 10px;
   bottom: 20px;
   color: white;
   font-size: 12px;
