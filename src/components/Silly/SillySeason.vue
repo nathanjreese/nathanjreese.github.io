@@ -495,7 +495,7 @@ export default {
         this.items.push({id: id, name: value, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MarioAndretti.jpeg', import.meta.url)})
       }
       else {
-        this.items.push({id: id, name: value, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)})
+        this.items.push({id: id, name: value, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/NewDriver.jpeg', import.meta.url)})
       }
     },
     newDriver() {
@@ -505,7 +505,7 @@ export default {
         this.items.push({id: id, name: driverName, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MarioAndretti.jpeg', import.meta.url)})
       }
       else {
-        this.items.push({id: id, name: driverName, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)})
+        this.items.push({id: id, name: driverName, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/NewDriver.jpeg', import.meta.url)})
       }
   
     },
