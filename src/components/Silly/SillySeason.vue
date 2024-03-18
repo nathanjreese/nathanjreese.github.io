@@ -3,9 +3,10 @@
   <div class="sillyseason">
     <div class="silly-title">	
       <title-page
-      title-text="2025 Silly Season Predictor
-"
-      />
+      title-text="2025 Silly Season Predictor"
+      /><div class='subtext-info'>
+      *Most IndyCar contracts are not public, so the starting point is a best guess based on different articles and press releases.
+      </div>
     </div>
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
@@ -359,6 +360,7 @@ export default {
       nobodyLoading: new URL('@/assets/SillyPhotos/NobodyLoading.jpeg', import.meta.url),
       nobodyProfile: new URL('@/assets/SillyPhotos/Nobody.jpeg', import.meta.url),
       newProfile: new URL('@/assets/SillyPhotos/NewDriver.jpeg', import.meta.url),
+      marioProfile: new URL('@/assets/SillyPhotos/MarioAndretti.jpeg', import.meta.url),
       items: [
         {id: 0, name: "Alex Palou", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/AlexPalou.jpeg', import.meta.url)},
         {id: 1, name: "Scott Dixon", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/ScottDixon.jpeg', import.meta.url)},
@@ -387,7 +389,7 @@ export default {
         {id: 24, name: "Conor Daly", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ConorDaly.jpeg', import.meta.url)},
         {id: 25, name: "Jack Harvey", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JackHarvey.jpeg', import.meta.url)},
         {id: 26, name: "Agustín Canapino", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/AgustinCanapino.jpeg', import.meta.url)},
-        {id: 27, name: "Simon Pagenaud", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/SimonPagenaud.jpeg', import.meta.url)},
+        {id: 27, name: "Simon Pagenaud", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/SimonPagenaud.jpeg', import.meta.url)},
         {id: 28, name: "Sting Ray Robb", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
         {id: 29, name: "Takuma Sato", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/TakumaSato.jpeg', import.meta.url)},
         {id: 30, name: "Ryan Hunter-Reay", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/RyanHunterReay.jpeg', import.meta.url)},
@@ -401,7 +403,7 @@ export default {
         {id: 38, name: "Nyck de Vries", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NyckdeVries.jpeg', import.meta.url)},
         {id: 39, name: "Oliver Askew", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
         {id: 40, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
-        {id: 41, name: "Tatiana Colderón", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TatianaCalderon.jpeg', import.meta.url)},
+        {id: 41, name: "Tatiana Colderón", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/TatianaCalderon.jpeg', import.meta.url)},
         {id: 41, name: "Kyffin Simpson", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
         {id: 42, name: "Pietro Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
         {id: 43, name: "Katherine Legge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
@@ -489,14 +491,23 @@ export default {
     },
     newMobileDriver(value) {
       const id = this.items.length
-      const newDriver = {id: id, name: value, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)}
-      this.items.push(newDriver)
+      if (value === 'Mario Andretti'){
+        this.items.push({id: id, name: value, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MarioAndretti.jpeg', import.meta.url)})
+      }
+      else {
+        this.items.push({id: id, name: value, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)})
+      }
     },
     newDriver() {
       const driverName = prompt("Enter a New Driver Name")
       const id = this.items.length
-      const newDriver = {id: id, name: driverName, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)}
-      this.items.push(newDriver)
+      if (driverName === 'Mario Andretti'){
+        this.items.push({id: id, name: driverName, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MarioAndretti.jpeg', import.meta.url)})
+      }
+      else {
+        this.items.push({id: id, name: driverName, original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/newDriver.jpeg', import.meta.url)})
+      }
+  
     },
     removeDriver(driver) {    
       this.driverRemove = driver
@@ -597,6 +608,11 @@ export default {
   }
   .silly-title{
     background-color:rgb(231, 231, 231);
+    font-size: 24;
+  }
+  .subtext-info{
+    font-size: calc(9px + .5vw);
+    font-style: italic;
   }
   .float-icon{
     position:fixed;

@@ -132,7 +132,7 @@
   
   <style>
     .silly-modal-backdrop {
-      padding-top:calc(40px + 1.5vw) ;
+      padding-top: calc(55px + .1vw);
       position: fixed;
       top: 0;
       bottom: 0;
@@ -151,7 +151,7 @@
       display: inline-flex;
       flex-direction: column;
       max-height: 90% !important;
-      max-width: 92% !important;
+      max-width: 1000px !important;
     }
     .fa-xmark {
       color: #333333 !important;
@@ -211,7 +211,7 @@
       
     }
     .drop-zone-fa {
-      width: 98%;
+      width: 99%;
       font-size: 15px;
       text-align: center;
       min-height: 790px;
@@ -228,13 +228,13 @@
       box-shadow: 5px 5px 5px #616161;
     }
     .drag-el-silly {
-      height: calc(85px + 1.5vw);
+      height: calc(80px + 1.5vw);
       padding-bottom: 17px;
       background-color: black;
       margin-top: 2px;
       margin-bottom: 9px;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 3px;
+      margin-right: 3px;
       align-items: left;
       float: center;
       display: inline-flex;
@@ -242,10 +242,10 @@
       border-radius: 3px;
       box-shadow: 1px 1px 2px #000000;
       font-family: Tahoma;
-      font-size: 12px;
+      font-size: 10px;
     }
     .drag-el-silly-add {
-      height: calc(85px + 1.5vw);
+      height: calc(84px + 1.2vw);
       padding-bottom: 17px;
       background-color: black;
       margin-top: 2px;
@@ -259,7 +259,7 @@
       border-radius: 3px;
       box-shadow: 1px 1px 2px #000000;
       font-family: Tahoma;
-      font-size: 12px;
+      font-size: 10px;
     }
     .img-main-modal{
       background-color: black;
@@ -268,11 +268,11 @@
       flex-direction: column;
       font-family: Verdana;
       font-weight: 500;
-      font-size: 13px;
+      font-size: 11px;
     }
     .silly-img-modal {
       border-radius: 3px;
-      height: calc(75px + .8vw);
+      height: calc(70px + .8vw);
       cursor: pointer !important;
   }
   .bottom-text {
@@ -280,7 +280,7 @@
   margin-top: 10px;
   bottom: 20px;
   color: white;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   background-color: black;
   }
