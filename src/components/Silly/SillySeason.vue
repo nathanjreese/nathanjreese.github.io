@@ -235,7 +235,7 @@
       </div>
       </div>    
 
-      <div class="drop-team-mobile"> {{ this.newTeamName }} 
+      <div class="drop-team-mobile"> {{ this.newTeamName }}
         <font-awesome-icon icon="fa-solid fa-xmark " 
         v-if="this.newTeamName"
         @click="removeNewTeam()"/></div>
@@ -257,27 +257,34 @@
             draggable="true"
             @dragstart="startDrag($event, item)"
           >
+          <div class="img-main-mobile">
             <img
             :src="item.pic"
               contain
               class="silly-img-mobile"
               @click="removeDriver(item)">
+              {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+          </div>
           </div>
           <div class="drag-el-mobile"
           v-if="listNew.length < 2">
+          <div class="img-main-mobile">
           <img
             :src="isLoaded ? nobodyProfile : nobodyLoading"
               contain
               class="silly-img-mobile"
               @click="addNew">
+          </div>
             </div>
             <div class="drag-el-mobile"
           v-if="listNew.length < 1">
+          <div class="img-main-mobile">
           <img
             :src="isLoaded ? nobodyProfile : nobodyLoading"
               contain
               class="silly-img-mobile"
               @click="addNew">
+          </div>
             </div>
       </div>
     </div>
