@@ -1,8 +1,8 @@
 <ifModule mod_rewrite.c>
 
-Options All -Indexes
-DirectoryIndex index.html
-    RewriteEngine On
+  Options All -Indexes
+  DirectoryIndex index.html
+  RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
