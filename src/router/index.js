@@ -1,11 +1,12 @@
 // Composables
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Selector from '../components/Selector/Selector.vue'
 import NotFoundComponent from '../components/NotFoundComponent.vue'
 import SillySeason from '../components/Silly/SillySeason.vue'
 import Rolex from '../components/Rolex.vue'
 import Wordle from '../components/Wordle/Wordle.vue'
 import LeadersCircle from '../components/LeadersCircle.vue'
+import Ladder from '../components/Ladder.vue'
 
 const routes = [
   {
@@ -54,6 +55,14 @@ const routes = [
         component: Wordle
       },
       {
+        path: '/ladder',
+        name: 'Ladder',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: Ladder
+      },
+      {
         path: '/selector',
         name: 'Selector',
         // route level code-splitting
@@ -71,7 +80,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
