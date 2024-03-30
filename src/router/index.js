@@ -6,7 +6,7 @@ import SillySeason from '../components/Silly/SillySeason.vue'
 import Rolex from '../components/Rolex.vue'
 import Wordle from '../components/Wordle/Wordle.vue'
 import LeadersCircle from '../components/LeadersCircle.vue'
-import Ladder from '../components/Ladder.vue'
+// import Ladder from '../components/Ladder.vue'
 
 const routes = [
   {
@@ -53,14 +53,6 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: Wordle
-      },
-      {
-        path: '/ladder',
-        name: 'Ladder',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: Ladder
       },
       {
         path: '/selector',
