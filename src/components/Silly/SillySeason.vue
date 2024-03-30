@@ -4,9 +4,7 @@
     <div class="silly-title">	
       <title-page
       title-text="2025 Silly Season Predictor"
-      /><div class='subtext-info'>
-      *Most IndyCar contracts are not public, so the starting point is a best guess based on different articles and press releases.
-      </div>
+      />
     </div>
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
