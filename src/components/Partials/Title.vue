@@ -1,39 +1,55 @@
 <template>
 	<div>
 		<div class="title-class" v-if="!isMobile">
-      <span style='padding-left: 40px' v-if="this.titleText.includes('ordle')"></span>
+      <span style='padding-left: 40px'></span>
       {{ this.titleText }} 
-      <font-awesome-icon icon="fa-solid fa-circle-question" 
-      v-if="this.titleText.includes('ordle')"
+      <div v-if="this.titleText.includes('ordle')">
+      <font-awesome-icon icon="fa-solid fa-circle-question"
         class="circle-icon"
-        @click="this.instructions">
+        @click="this.showWordleInstructions = true">
       </font-awesome-icon>
+      </div>
+      <div v-if="this.titleText.includes('Silly')">
+      <font-awesome-icon icon="fa-solid fa-circle-question"
+        class="circle-icon"
+        @click="this.showSillyInstructions = true">
+      </font-awesome-icon>
+      </div>
+      
     </div>
     <div class="title-class-mobile" v-if="isMobile">
       {{ this.titleText }} 
       <font-awesome-icon icon="fa-solid fa-circle-question" 
       v-if="this.titleText.includes('ordle')"
         class="circle-icon"
-        @click="this.instructions">
+        @click="this.showSillyInstructions = true">
       </font-awesome-icon>
     </div>
-    <instructions-modal
-          v-show="this.showInstructions"
+    <WordleInstructionsModal
+          v-show="this.showWordleInstructions"
+          @close="closeModal"
+        />
+      <SillyInstructionsModal
+          v-show="this.showSillyInstructions"
           @close="closeModal"
         />
   </div>
 </template>
 <script>
-import InstructionsModal from "@/components/Wordle/InstructionsModal"
+import WordleInstructionsModal from "@/components/Wordle/InstructionsModal"
+import SillyInstructionsModal from "@/components/Silly/InstructionsModal"
 
 export default {
   name: 'title-page',
   data () {
 	  return {
-      showInstructions: null}
+      showWordleInstructions: null,
+      showSillyInstructions: null
+    }
     },
   components: {
-    InstructionsModal
+    WordleInstructionsModal,
+    SillyInstructionsModal
   },
   props: {
     titleText: String
@@ -50,10 +66,14 @@ export default {
     },
   methods: {
     closeModal() {
-      this.showInstructions = false
+      this.showWordleInstructions = false
+      this.showSillyInstructions = false
     },
-    instructions(){
-      this.showInstructions = true
+    wordleInstructions(){
+      this.showWordleInstructions = true
+    },
+    sillyInstructions(){
+      this.showSillyInstructions = true
     },
   }
 }
