@@ -2,7 +2,7 @@
     <div class="silly-instructions-modal-backdrop">
       <div class="silly-instructions-modal">
         <header class="silly-instructions-modal-header">
-           Silly Season Instructions
+           Silly Season Help
           <div>
             <button
               type="button"
@@ -25,7 +25,7 @@
             <li>Add free agents to a team</li>
             <li>Remove drivers from a team</li>
             <li>Create one new team</li>
-            <li>Create a free agent that's not listed</li>
+            <li>Create free agents that aren't listed</li>
             <br>
             <p class="note-class">*Most IndyCar contracts are not public, so the starting point is a best guess based on different articles and press releases.</p>
             <br>

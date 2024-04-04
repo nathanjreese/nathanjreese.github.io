@@ -239,7 +239,7 @@
         return this.driverBios[this.driverIndex]
       },
       isMobile() {
-          if( screen.width <= 760 ) {
+          if( screen.width <= 1000 ) {
               return true;
           }
           else {

@@ -406,20 +406,21 @@ export default {
         {id: 36, name: "Juri Vips", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JuriVips.jpeg', import.meta.url)},
         {id: 37, name: "Robert Shartzman", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
         {id: 38, name: "Nyck de Vries", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NyckdeVries.jpeg', import.meta.url)},
-        {id: 39, name: "Oliver Askew", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
+        {id: 39, name: "Oliver Askew", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
         {id: 40, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
         {id: 41, name: "Tatiana Colderón", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/TatianaCalderon.jpeg', import.meta.url)},
-        {id: 41, name: "Kyffin Simpson", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
-        {id: 42, name: "Pietro Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
-        {id: 43, name: "Katherine Legge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
-        {id: 44, name: "Colin Braun", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ColinBraun.jpeg', import.meta.url)},
-        {id: 44, name: "Myles Rowe", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MylesRowe.jpeg', import.meta.url)},
-        {id: 45, name: "Michael d'Orlando", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MichaeldOrlando.jpeg', import.meta.url)},
-        {id: 46, name: "Jamie Chadwick", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JamieChadwick.jpeg', import.meta.url)},
-        {id: 47, name: "Jacob Abel", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JacobAbel.jpeg', import.meta.url)},
-        {id: 48, name: "Callum Hedge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CallumHedge.jpeg', import.meta.url)},
-        {id: 49, name: "Caio Collet", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CaioCollet.jpeg', import.meta.url)},
-        {id: 50, name: "Enzo Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)}
+        {id: 42, name: "Kyffin Simpson", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
+        {id: 43, name: "Pietro Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
+        {id: 44, name: "Katherine Legge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
+        {id: 45, name: "Colin Braun", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ColinBraun.jpeg', import.meta.url)},
+        {id: 46, name: "Myles Rowe", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MylesRowe.jpeg', import.meta.url)},
+        {id: 47, name: "Michael d'Orlando", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MichaeldOrlando.jpeg', import.meta.url)},
+        {id: 48, name: "Jamie Chadwick", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JamieChadwick.jpeg', import.meta.url)},
+        {id: 49, name: "Jacob Abel", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JacobAbel.jpeg', import.meta.url)},
+        {id: 50, name: "Callum Hedge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CallumHedge.jpeg', import.meta.url)},
+        {id: 51, name: "Caio Collet", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CaioCollet.jpeg', import.meta.url)},
+        {id: 52, name: "Enzo Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)},
+        {id: 53, name: "Théo Pourchaire", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TheoPourchaire.jpeg', import.meta.url)}
 
 
       ]
@@ -445,7 +446,7 @@ export default {
       return nonFreeAgents.length
     },
     isMobile() {
-          if( screen.width <= 760 ) {
+          if( screen.width <= 1000 ) {
               return true;
           }
           else {
