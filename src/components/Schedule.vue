@@ -36,14 +36,14 @@
         <td class="text-left">
           <img ref="image" 
           v-if="item.series.includes('IndyCar')"
-          src="@/assets/IndycarWords.png"
+          src="../assets/IndycarWords.png"
           alt="IndyCar Logo"
           contain
           class="series-words"
           >
           <img ref="image" 
           v-if="item.series.includes('NXT')"
-          src="@/assets/IndyNxtWords.png"
+          src="../assets/IndyNxtWords.png"
           alt="IndyCar Logo"
           contain
           class="series-words"
