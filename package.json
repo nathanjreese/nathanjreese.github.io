@@ -36,6 +36,8 @@
     "process": "^0.11.10",
     "roboto-fontface": "*",
     "simple-keyboard": "^3.7.14",
+    "vite-plugin-legacy": "^2.1.0",
+    "vite-plugin-vue": "^0.0.1",
     "vue": "^3.2.0",
     "vue-router": "^4.2.4",
     "vuetify": "^3.0.0",

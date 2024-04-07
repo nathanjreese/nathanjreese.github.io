@@ -26,7 +26,6 @@ library.add(faUserSecret, faListCheck, faXmark, faFlag, faCaretRight, faRetweet,
 
 // Composables
 import { createApp } from 'vue'
-import VueTippy from 'vue-tippy'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
@@ -37,7 +36,6 @@ registerPlugins(app)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.mount('#app')
-app.use(VueTippy)
 
 // new Vue({
 //     router,
