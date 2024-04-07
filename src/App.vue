@@ -30,6 +30,7 @@
           <v-list>
             <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-account-group" title="Silly Season" to="/silly" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-grid" title="Indycar Wordle" to="/wordle" color="blue"></v-list-item>
        </v-list>
@@ -61,7 +62,7 @@
       }),
       computed: {
         isMobile() {
-          if( screen.width <= 760 ) {
+          if( screen.width <= 1000 ) {
               return true;
           }
           else {
