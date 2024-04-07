@@ -1,7 +1,7 @@
 <template>
-  <div class="modal-backdrop">
-    <div class="modal">
-      <header class="modal-header">
+  <div class="select-modal-backdrop">
+    <div class="select-modal">
+      <header class="select-modal-header">
         <slot name="header">
          Question {{ questionNumber + 1 }} of {{ questions.length }}
         </slot>
@@ -10,9 +10,9 @@
         </button>
       </header>
       
-      <section class="modal-body">
+      <section class="select-modal-body">
         <slot name="body">
-          <div class="modal-question">
+          <div class="select-modal-question">
             {{questions[questionNumber]["question"]}}
           </div>
           <v-container fluid>
@@ -240,7 +240,7 @@
 </script>
 
 <style>
-  .modal-backdrop {
+  .select-modal-backdrop {
     padding-top:20px;
     position: fixed;
     top: 0;
@@ -253,7 +253,7 @@
     align-items: center;
   }
 
-  .modal {
+  .select-modal {
     background: #FFFFFF;
     min-height: 400px;
     width: calc(380px + 17vw) !important;
@@ -262,24 +262,13 @@
     flex-direction: column;
     max-height: 90%;
   }
-  .fa-xmark {
-    padding-left: 0px;
-    color: whitesmoke !important;
-    font-size: calc(12px + 1vw) !important;
-    margin-bottom: 300px;
-    float: right;
-  }
-  .fa-xmark:hover {
-    color: rgb(119, 119, 119) !important;
-    cursor: pointer !important;
-  }
 
-  .modal-footer {
+  .select-modal-footer {
     padding: 15px;
     display: flex;
   }
 
-  .modal-header {
+  .select-modal-header {
     padding-left: 10px;
     padding-top: calc(2px + .5vw);
     height: 45px;
@@ -290,16 +279,27 @@
     color: white;
     justify-content: space-between;
     font-size: calc(13px + .5vw);
+
+    .fa-xmark {
+    padding-bottom: 20px;
+    color: lightgray !important;
+    font-size: calc(15px + 1vw) !important;
+    float: right;
+  }
+  .fa-xmark:hover {
+    color: rgb(119, 119, 119) !important;
+    cursor: pointer !important;
+  }
   }
 
-  .modal-body {
+  .select-modal-body {
     position: relative;
     padding: 10px 10px;
     color: rgb(42, 42, 42);
     min-width: calc(200px + 25vw);
   }
 
-  .modal-question {
+  .select-modal-question {
     position: relative;
     padding: 0px 10px !important;
     padding-top: 10px !important;;
@@ -352,7 +352,7 @@
     font-weight: bold;
   }
   .v-btn-submit {
-    margin: 20px 10px;
+    margin: 20px 10px !important;
     color: whitesmoke !important;
     background: #288eec;
     width: calc(80px + 3vw);
