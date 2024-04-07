@@ -36,14 +36,14 @@
         <td class="text-left">
           <img ref="image" 
           v-if="item.series.includes('IndyCar')"
-          :src="IndyNxtLogoPic"
+          :src="IndyCarLogoPic"
           alt="IndyCar Logo"
           contain
           class="series-words"
           >
           <img ref="image" 
           v-if="item.series.includes('NXT')"
-          :src="IndyCarLogoPic"
+          :src="IndyNxtLogoPic"
           alt="IndyCar Logo"
           contain
           class="series-words"
@@ -72,7 +72,7 @@ import TitlePage from '@/components/Partials/Title'
         events: [],
         uniqueEvents: [],
         checkedEvents: ['IndyCar', 'IndyNXT'],
-        IndyCarLogoPic: new URL('@/assets/IndycarWords.png', import.meta.url),
+        IndyCarLogoPic: new URL('@/assets/IndyCarWords.png', import.meta.url),
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
       }
     },
