@@ -76,22 +76,10 @@ import TitlePage from '@/components/Partials/Title'
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
       }
     },
-    // watch: {
-    //     checkedEvents () {
-    //       alert("CHECKED", checkedEvents[0])
-    //     },
-    // },
     mounted() {
       getSeasonSchedule()
       .then((results) => { 
-        console.log(results)
-        this.uniqueEvents = [...new Set(results.map(event => event.event))]
         
-        // console.log("111111", this.uniqueEvents)
-        // console.log("MMMM: ", this.checkedEvents)
-
-        // this.events = this.events.filter(event => this.checkedEvents.includes(event.series));
-
         this.events = results
       })
     },
@@ -105,6 +93,8 @@ import TitlePage from '@/components/Partials/Title'
       },
       filteredEvents(){
         const events = this.events.filter(event => this.checkedEvents.includes(event.series))
+        this.uniqueEvents = [...new Set(events.map(event => event.event))]
+
         return events
       }
     },
