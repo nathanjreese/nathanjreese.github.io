@@ -5,6 +5,9 @@
       />
   <div class="table-holder">
     <div class="schedule-options">
+      <input class="checkbox-class" type="checkbox" :value=!showPast id="checkbox" :checked="false" v-model="showPast"/>
+      <label class="past-label" for="checkbox"> Show Past Events </label>
+
       <input class="checkbox-class" type="checkbox" value="IndyCar" id="checkbox" :checked="true" v-model="checkedEvents"/>
       <label for="checkbox"> IndyCar </label>
       <input class="checkbox-class" type="checkbox"  value="IndyNXT" id="checkbox" :checked="true" v-model="checkedEvents"/>
@@ -74,6 +77,7 @@ import TitlePage from '@/components/Partials/Title'
         checkedEvents: ['IndyCar', 'IndyNXT'],
         IndyCarLogoPic: new URL('@/assets/IndyCarWords.png', import.meta.url),
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
+        showPast: false
       }
     },
     mounted() {
@@ -92,19 +96,35 @@ import TitlePage from '@/components/Partials/Title'
         return jsonData
       },
       filteredEvents(){
-        const events = this.events.filter(event => this.checkedEvents.includes(event.series))
-        this.uniqueEvents = [...new Set(events.map(event => event.event))]
 
+        let events = this.events.filter(event => this.checkedEvents.includes(event.series))
+        events = events.filter(event => this.timeStatus(event) === true)
+        
+        this.uniqueEvents = [...new Set(events.map(event => event.event))]
         return events
       }
     },
     methods: {
-      filterSeries(series){
-        alert(series)
-        console.log("lPPPP")
-        this.events.filter(event => event.series === 'IndyNXT')
-        console.log("3333: ", this.events)
-      }
+      timeStatus(event){
+        let filterPast = false
+        if (this.showPast) {
+          filterPast = true
+        }
+        else{
+          const givenDatetime = new Date(event.date)
+          const currentTime = new Date()
+          filterPast = currentTime < givenDatetime
+        }
+
+        return filterPast
+      },
+      // filterSeries(series){
+      //   const currentDate = Date.now()
+    
+      //   this.events.filter(event => event.series === 'IndyNXT')
+        
+      //   console.log("3333: ", this.events)
+      // }
     }
   }
 </script>
@@ -127,6 +147,9 @@ import TitlePage from '@/components/Partials/Title'
     font-weight: bold;
     margin: auto;
     padding: 10px;
+  }
+  .past-label{
+    margin: 0px 95px 0 0px;
   }
   .checkbox-class{
     margin: 0 5px 0 20px;
