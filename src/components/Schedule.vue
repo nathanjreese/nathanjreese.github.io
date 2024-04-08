@@ -5,13 +5,13 @@
       />
   <div class="table-holder">
     <div class="schedule-options">
-      <input class="checkbox-class" type="checkbox" :value=!showPast id="checkbox" :checked="false" v-model="showPast"/>
+      <input class="past-checkbox" type="checkbox" :value=!showPast id="checkbox" :checked="false" v-model="showPast"/>
       <label class="past-label" for="checkbox"> Show Past Events </label>
 
-      <input class="checkbox-class" type="checkbox" value="IndyCar" id="checkbox" :checked="true" v-model="checkedEvents"/>
-      <label for="checkbox"> IndyCar </label>
-      <input class="checkbox-class" type="checkbox"  value="IndyNXT" id="checkbox" :checked="true" v-model="checkedEvents"/>
-      <label for="checkbox"> IndyNXT </label>
+      <input class="type-checkbox" type="checkbox" value="IndyCar" id="checkbox" :checked="true" v-model="checkedEvents"/>
+      <label class="type-label" for="checkbox"> IndyCar </label>
+      <input class="type-checkbox" type="checkbox"  value="IndyNXT" id="checkbox" :checked="true" v-model="checkedEvents"/>
+      <label class="type-label" for="checkbox"> IndyNXT </label>
     </div>
   <v-table class="schedule-table" density="compact">
     <thead>
@@ -52,9 +52,12 @@
           class="series-words"
           >
         </td>
-        <td class="text-left">{{ item.date }} {{ item.time}}</td>
-        <td class="text-left">{{ item.description }}</td>
-        <td class="text-left">{{ item.event }}</td>
+        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.date }} {{ item.time}}</td>
+        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.description }}</td>
+        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.event }}</td>
       </tr>
     </tbody>
   </v-table>
@@ -102,7 +105,31 @@ import TitlePage from '@/components/Partials/Title'
         
         this.uniqueEvents = [...new Set(events.map(event => event.event))]
         return events
-      }
+      },
+      // format12HourTime(date) {
+      //   console.log("DATE: ", date)
+      //   const givenDatetime = new Date(event.date)
+      //   // Extract hours, minutes, and seconds
+      //   let hours = date.getHours();
+      //   let minutes = date.getMinutes();
+      //   let seconds = date.getSeconds();
+
+      //   // Determine AM/PM
+      //   const ampm = hours >= 12 ? 'PM' : 'AM';
+
+      //   // Convert hours to 12-hour format
+      //   hours = hours % 12;
+      //   hours = hours ? hours : 12; // Handle midnight (0 hours) as 12 AM
+
+      //   // Add leading zero to minutes and seconds if needed
+      //   minutes = minutes < 10 ? '0' + minutes : minutes
+      //   seconds = seconds < 10 ? '0' + seconds : seconds
+
+      //   // Formatted 12-hour time string
+      //   const time12Hour = hours + ':' + minutes + ':' + seconds + ' ' + ampm
+
+      //   return time12Hour
+      // }
     },
     methods: {
       timeStatus(event){
@@ -117,14 +144,7 @@ import TitlePage from '@/components/Partials/Title'
         }
 
         return filterPast
-      },
-      // filterSeries(series){
-      //   const currentDate = Date.now()
-    
-      //   this.events.filter(event => event.series === 'IndyNXT')
-        
-      //   console.log("3333: ", this.events)
-      // }
+      }
     }
   }
 </script>
@@ -149,10 +169,20 @@ import TitlePage from '@/components/Partials/Title'
     padding: 10px;
   }
   .past-label{
-    margin: 0px 95px 0 0px;
+    margin: 0px calc(8px + 5vw) 0px 0px;
+    font-size: calc(12px + .4vw);
   }
-  .checkbox-class{
-    margin: 0 5px 0 20px;
+  .type-label{
+    margin: 0px calc(3px + .4vw) 0px 0px;
+    font-size: calc(12px + .4vw);
+  }
+  .past-checkbox{
+    margin: 5px 5px 10px calc(4px + .4vw);
+    font-size: calc(10px + .4vw);
+  }
+  .type-checkbox{
+    margin: 5px 5px 10px calc(4px + .4vw);
+    font-size: calc(10px + .4vw);
   }
   }
   .series-words{
@@ -176,6 +206,13 @@ import TitlePage from '@/components/Partials/Title'
 }
 .orow{
   background-color: #dbdbdb;
+}
+.israce{
+  font-weight: bold;
+  text-align: left;
+}
+.notrace{
+  text-align: left;
 }
 /* .erow{
   background-color: whitesmoke;
