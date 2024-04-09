@@ -113,7 +113,7 @@
     <!-- Right Container -->
     <div class="float-child-2">
 
-      <div v-for="team in teamData.slice(5,10)">
+      <div v-for="team in teamData.slice(5,11)">
         <div class="drop-team">{{ team.title }}</div>
       <div class="drop-zone"
       :class="{ full: (listTeam(team.name).length >= team.size)}"
@@ -195,7 +195,7 @@
   <div v-if="this.isMobile" class="float-container-mobile">
       <div class="float-child-mobile">
 
-        <div v-for="team in teamData.slice(0,10)">
+        <div v-for="team in teamData.slice(0,11)">
         <div class="drop-team-mobile">{{ team.title }}</div>
       <div class="drop-zone-mobile"
       :class="{ full: (listTeam(team.name).length >= team.size)}"
@@ -343,7 +343,8 @@ export default {
       { name:'coyne', size: 2, title: 'Dale Coyne Racing'},
       { name:'msr', size: 2, title: 'Meyer Shank Racing'},
       { name:'foyt', size: 2, title: 'A.J. Foyt Racing'},
-      { name:'juncos', size: 2, title: 'Juncos Hollinger Racing'}
+      { name:'juncos', size: 2, title: 'Juncos Hollinger Racing'},
+      { name:'prema', size: 2, title: 'Prema Racing'}
       ],
       teams: {
         andretti: 3,
@@ -356,6 +357,7 @@ export default {
         msr: 2,
         foyt: 2,
         juncos: 2,
+        prema: 2
       },
       newTeamName: null,
       newDriverName: null,
@@ -557,6 +559,11 @@ export default {
       this.isSillyModalVisible = true
       this.teamAdd = 'juncos'
       this.teamName = 'Juncos Hollinger Racing'  
+    },
+    addPrema() {
+      this.isSillyModalVisible = true
+      this.teamAdd = 'prema'
+      this.teamName = 'PREMA Racing'  
     },
     addFoyt() {
       this.isSillyModalVisible = true
