@@ -649,13 +649,12 @@ export default {
     height:25px;
     bottom:30px;
     right:30px;
-    background-color:whitesmoke;
+    background-color:#240000;
     color:#240000;
     border-radius:80px;
     text-align:center;
-    margin: 24px;
+    margin: 44px;
     padding: 20px;
-    box-shadow: 1px 4px 2px 1px #3b3b3b;
   }
   .float-container {
     padding: 35px 2px;
@@ -706,12 +705,11 @@ export default {
     padding: 10px;
     margin: calc(2px + 1.3vw);
     cursor: pointer;
-    background-color: whitesmoke;
-    box-shadow: 2px 2px 4px #000000;
+    background-color: lightgrey;
   }
   .fa-retweet:hover {
     color:  rgb(109, 139, 222) !important;
-    background-color:whitesmoke;
+    background-color:rgb(231, 231, 231)
   }
   .fa-plus {
     color: rgb(167, 167, 167) !important;
