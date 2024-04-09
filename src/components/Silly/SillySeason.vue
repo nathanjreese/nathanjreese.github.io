@@ -690,7 +690,8 @@ export default {
     padding: 10px;
     margin: calc(2px + 1.3vw);
     cursor: pointer;
-    background-color: rgb();
+    background-color: whitesmoke;
+    box-shadow: 2px 2px 4px #000000;
   }
   .fa-retweet:hover {
     color:  rgb(109, 139, 222) !important;
