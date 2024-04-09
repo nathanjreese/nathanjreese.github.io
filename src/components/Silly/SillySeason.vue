@@ -819,6 +819,7 @@ export default {
     padding: 4px;
     background-color: #929292;
     margin-bottom: 8px;
+    margin-left: 2px;
     border-top: .7px solid #2e2e2e;
     border-right: 2px solid #2e2e2e;
     border-left: .7px solid #2e2e2e;
