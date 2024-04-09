@@ -655,6 +655,8 @@ export default {
     text-align:center;
     margin: 44px;
     padding: 20px;
+    box-shadow: 1px 1px 1px 1px #3b3b3b;
+    
   }
   .float-container {
     padding: 35px 2px;
