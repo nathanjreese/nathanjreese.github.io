@@ -629,20 +629,6 @@ export default {
     font-size: calc(9px + .5vw);
     font-style: italic;
   }
-  /* .float-icon-div{
-    position:fixed;
-    width:135px;
-    height:135px;
-    bottom:30px;
-    right:30px;
-    background-color:whitesmoke;
-    color:#240000;
-    border-radius:80px;
-    text-align:center;
-    margin: 24px;
-    padding: 20px;
-    box-shadow: 1px 4px 2px 1px #3b3b3b;
-  } */
   .float-icon{
     position:fixed;
     width:25px;
@@ -655,7 +641,7 @@ export default {
     text-align:center;
     margin: 44px;
     padding: 20px;
-    box-shadow: 1px 1px 1px 1px #3b3b3b;
+    box-shadow: 0px 0px 0px 0px #3b3b3b;
     
   }
   .float-container {
