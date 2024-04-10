@@ -4,7 +4,7 @@
       title-text="2024 Leader's Circle"
       />
   <div class="table-holder">
-  <v-table theme="dark" class="leaders-table" density="compact">
+  <v-table class="leaders-table" density="compact">
     <thead>
       <tr>
         <th class="text-left">
@@ -105,11 +105,24 @@ import TitlePage from '@/components/Partials/Title'
 .leaders-table{
   max-width: 900px;
   height: 80%;
-  font-size: calc(8px + 1vw);
+  font-size: calc(8px + .8vw);
   float: center;
   margin-left: auto;
   margin-right: auto;
+  background-color: #cfcfcf;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px #616161;
+  color: black;
+  thead{
+    color: whitesmoke;
+    background-color: #323232;
+  }
 }
+tr:nth-child(even)
+{
+  background-color: #dbdbdb;
+}
+
 .leaders-title{
     font-size: calc(10px + 2.5vw) !important;
     padding-bottom: calc(20px + 3vw);
@@ -118,9 +131,9 @@ import TitlePage from '@/components/Partials/Title'
     font-weight: bold;
   }
   .points-col{
-    color: rgb(0, 196, 55);
+    color: darkgreen;
   }
   .points-col.out{
-    color: red;
+    color: #a30707;
   }
   </style>
