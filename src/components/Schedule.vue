@@ -68,6 +68,7 @@
 
 import getSeasonSchedule from '@/utils/schedule.js'
 import TitlePage from '@/components/Partials/Title'
+import scheduleData from "@/components/Helpers/Schedule.json"
 
   export default {
     components: {
@@ -75,35 +76,32 @@ import TitlePage from '@/components/Partials/Title'
     },
     data () {
       return {
-        events: [],
         uniqueEvents: [],
         checkedEvents: ['IndyCar', 'IndyNXT'],
         IndyCarLogoPic: new URL('@/assets/IndyCarWords.png', import.meta.url),
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
-        showPast: false
+        showPast: false,
+        events: scheduleData
       }
     },
-    mounted() {
-      getSeasonSchedule()
-      .then((results) => { 
+    // mounted() {
+    //   getSeasonSchedule()
+    //   .then((results) => { 
         
-        this.events = results
-      })
-    },
+    //     this.events = results
+    //   })
+    // },
     computed: {
-      csvJSON() {
-        const csvToJson = require('convert-csv-to-json')
-
-        const jsonData = csvToJson.getJsonFromCsv('@/components/Helpers/scheduleCircle.csv')
-        
-        return jsonData
-      },
       filteredEvents(){
+        console.log("EVENTS: ", this.events[0].series)
 
         let events = this.events.filter(event => this.checkedEvents.includes(event.series))
+        console.log("cccc: ", events)
         events = events.filter(event => this.timeStatus(event) === true)
+        console.log("LKJH: ", events)
         
         this.uniqueEvents = [...new Set(events.map(event => event.event))]
+        console.log("11111: ", events)
         return events
       },
       // format12HourTime(date) {
@@ -139,6 +137,7 @@ import TitlePage from '@/components/Partials/Title'
         }
         else{
           const givenDatetime = new Date(event.date)
+          console.log("GIVEN DATE: ", givenDatetime)
           const currentTime = new Date()
           filterPast = currentTime < givenDatetime
         }
