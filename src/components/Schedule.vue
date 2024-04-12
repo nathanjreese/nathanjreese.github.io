@@ -5,6 +5,19 @@
       />
   <div class="table-holder">
     <div class="schedule-options">
+    <div class="time-label">Time Zone: </div>
+      <select class="dropdown-tz" v-model="selectedTime">V
+        <option value="US/Eastern" >US/Eastern</option>
+        <option value="US/Central">US/Central</option>
+        <option value="US/Mountain">US/Mountain</option>
+        <option value="US/Pacific">US/Pacific</option>
+        <option value="US/Alaska">US/Alaska</option>
+        <option value="US/Hawaii">US/Hawaii</option>
+        <option value="UTC">UTC</option>
+        
+      </select>
+    </div>
+    <div class="schedule-options">
       <input class="past-checkbox" type="checkbox" :value=!showPast id="checkbox" :checked="false" v-model="showPast"/>
       <label class="past-label" for="checkbox"> Show Past Events </label>
 
@@ -53,7 +66,7 @@
           >
         </td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.date }} {{ item.time}}</td>
+        >{{ item.datetime }}</td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.description }}</td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
@@ -69,6 +82,9 @@
 import getSeasonSchedule from '@/utils/schedule.js'
 import TitlePage from '@/components/Partials/Title'
 import scheduleData from "@/components/Helpers/Schedule.json"
+import moment from 'moment-timezone'
+import timezones from 'timezones-list'
+import Dropdown from 'v-dropdown'
 
   export default {
     components: {
@@ -81,7 +97,8 @@ import scheduleData from "@/components/Helpers/Schedule.json"
         IndyCarLogoPic: new URL('@/assets/IndyCarWords.png', import.meta.url),
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
         showPast: false,
-        events: scheduleData
+        events: scheduleData,
+        selectedTime: 'US/Eastern'
       }
     },
     // mounted() {
@@ -102,6 +119,11 @@ import scheduleData from "@/components/Helpers/Schedule.json"
         
         this.uniqueEvents = [...new Set(events.map(event => event.event))]
         console.log("11111: ", events)
+
+        this.setTimeZone(events)
+
+        
+
         return events
       },
       // format12HourTime(date) {
@@ -130,14 +152,27 @@ import scheduleData from "@/components/Helpers/Schedule.json"
       // }
     },
     methods: {
+      setTimeZone(events){
+        const targetTimezone = this.selectedTime;
+        this.events.forEach(item => {
+          // Combine date and time strings into a single datetime string
+          const datetimeStr = item.date + ' ' + item.time
+          const dtObj = moment.tz(datetimeStr, 'YYYY-MM-DD hh:mm A', 'US/Eastern')
+          const convertedDatetime = dtObj.clone().tz(targetTimezone)
+          // item.datetime = convertedDatetime.format('YYYY-MM-DD HH:mm:ss')
+        
+          item.datetime = targetTimezone === 'UTC' ? convertedDatetime.format('YYYY-MM-DD HH:mm') : convertedDatetime.format('YYYY-MM-DD hh:mm A')
+          
+      })
+      },
       timeStatus(event){
+        
         let filterPast = false
         if (this.showPast) {
           filterPast = true
         }
         else{
           const givenDatetime = new Date(event.date)
-          console.log("GIVEN DATE: ", givenDatetime)
           const currentTime = new Date()
           filterPast = currentTime < givenDatetime
         }
@@ -154,12 +189,23 @@ import scheduleData from "@/components/Helpers/Schedule.json"
   background-color:rgb(231, 231, 231);
   padding-bottom: 50px;
   }
+  .dropdown-tz{
+    width: calc(200px + 2vw);;
+    padding-left: 10px;
+    margin-left: calc(2px + 3vw);
+    border: 2px solid rgb(57, 118, 216);
+    font-weight: normal;
+  }
   .table-holder{
     display: flex;
     float: center;
     flex-direction: column;
-    
+    .time-label{
+      font-size: calc(12px + .4vw);
+      padding-top: 2px;
+    }
     .schedule-options{
+    font-size: calc(12px + .4vw);
     display: flex;
     float: center;
     flex-direction: row;
