@@ -21,6 +21,9 @@
       <input class="past-checkbox" type="checkbox" :value=!showPast id="checkbox" :checked="false" v-model="showPast"/>
       <label class="past-label" for="checkbox"> Show Past Events </label>
 
+      <input class="race-checkbox" type="checkbox" :value=!showRaces id="checkbox" :checked="false" v-model="showRaces"/>
+      <label class="race-label" for="checkbox"> Races Only </label>
+
       <input class="type-checkbox" type="checkbox" value="IndyCar" id="checkbox" :checked="true" v-model="checkedEvents"/>
       <label class="type-label" for="checkbox"> IndyCar </label>
       <input class="type-checkbox" type="checkbox"  value="IndyNXT" id="checkbox" :checked="true" v-model="checkedEvents"/>
@@ -97,6 +100,7 @@ import Dropdown from 'v-dropdown'
         IndyCarLogoPic: new URL('@/assets/IndyCarWords.png', import.meta.url),
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
         showPast: false,
+        showRaces: false,
         events: scheduleData,
         selectedTime: 'US/Eastern'
       }
@@ -110,46 +114,16 @@ import Dropdown from 'v-dropdown'
     // },
     computed: {
       filteredEvents(){
-        console.log("EVENTS: ", this.events[0].series)
-
         let events = this.events.filter(event => this.checkedEvents.includes(event.series))
-        console.log("cccc: ", events)
         events = events.filter(event => this.timeStatus(event) === true)
-        console.log("LKJH: ", events)
+        events = this.showRaces ? events.filter(event => event.type === 'Race') : events
         
         this.uniqueEvents = [...new Set(events.map(event => event.event))]
-        console.log("11111: ", events)
 
         this.setTimeZone(events)
 
-        
-
         return events
-      },
-      // format12HourTime(date) {
-      //   console.log("DATE: ", date)
-      //   const givenDatetime = new Date(event.date)
-      //   // Extract hours, minutes, and seconds
-      //   let hours = date.getHours();
-      //   let minutes = date.getMinutes();
-      //   let seconds = date.getSeconds();
-
-      //   // Determine AM/PM
-      //   const ampm = hours >= 12 ? 'PM' : 'AM';
-
-      //   // Convert hours to 12-hour format
-      //   hours = hours % 12;
-      //   hours = hours ? hours : 12; // Handle midnight (0 hours) as 12 AM
-
-      //   // Add leading zero to minutes and seconds if needed
-      //   minutes = minutes < 10 ? '0' + minutes : minutes
-      //   seconds = seconds < 10 ? '0' + seconds : seconds
-
-      //   // Formatted 12-hour time string
-      //   const time12Hour = hours + ':' + minutes + ':' + seconds + ' ' + ampm
-
-      //   return time12Hour
-      // }
+      }
     },
     methods: {
       setTimeZone(events){
@@ -214,20 +188,25 @@ import Dropdown from 'v-dropdown'
     padding: 10px;
   }
   .past-label{
-    margin: 0px calc(8px + 5vw) 0px 0px;
-    font-size: calc(12px + .4vw);
+    margin: 0px calc(3px + 1vw) 0px 0px;
+    font-size: calc(10px + .4vw);
+  }
+  .race-label{
+    margin: 0px calc(5px + 5vw) 0px 0px;
+    font-size: calc(10px + .4vw);
   }
   .type-label{
     margin: 0px calc(3px + .4vw) 0px 0px;
-    font-size: calc(12px + .4vw);
+    font-size: calc(10px + .4vw);
   }
   .past-checkbox{
-    margin: 5px 5px 10px calc(4px + .4vw);
-    font-size: calc(10px + .4vw);
+    margin: calc(2px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
+  }
+  .race-checkbox{
+    margin: calc(2px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
   }
   .type-checkbox{
-    margin: 5px 5px 10px calc(4px + .4vw);
-    font-size: calc(10px + .4vw);
+    margin: calc(2px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
   }
   }
   .series-words{
