@@ -32,7 +32,7 @@
         <th class="text-left">
           Series
         </th>
-        <th class="text-left">
+        <th width=25% class="text-left">
           Date
         </th>
         <th class="text-left">
@@ -161,7 +161,7 @@ import Dropdown from 'v-dropdown'
           const convertedDatetime = dtObj.clone().tz(targetTimezone)
           // item.datetime = convertedDatetime.format('YYYY-MM-DD HH:mm:ss')
         
-          item.datetime = targetTimezone === 'UTC' ? convertedDatetime.format('YYYY-MM-DD HH:mm') : convertedDatetime.format('YYYY-MM-DD hh:mm A')
+          item.datetime = targetTimezone === 'UTC' ? convertedDatetime.format('MM/DD HH:mm') : convertedDatetime.format('MM/DD hh:mm A')
           
       })
       },
@@ -231,7 +231,7 @@ import Dropdown from 'v-dropdown'
   }
   }
   .series-words{
-    height:18px;
+    height: calc(11px + .8vw);
   }
 .schedule-table{
   max-width: 900px;
