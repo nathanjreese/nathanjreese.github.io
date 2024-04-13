@@ -18,15 +18,15 @@
       </select>
     </div>
     <div class="schedule-options">
-      <input class="past-checkbox" type="checkbox" :value=!showPast id="checkbox" :checked="false" v-model="showPast"/>
+      <input class="past-checkbox" type="checkbox" :value=!showPast id="pastCheckbox" :checked="false" v-model="showPast"/>
       <label class="past-label" for="checkbox"> Show Past Events </label>
 
-      <input class="race-checkbox" type="checkbox" :value=!showRaces id="checkbox" :checked="false" v-model="showRaces"/>
+      <input class="race-checkbox" type="checkbox" :value=!showRaces id="raceCheckbox" :checked="false" v-model="showRaces"/>
       <label class="race-label" for="checkbox"> Races Only </label>
 
-      <input class="type-checkbox" type="checkbox" value="IndyCar" id="checkbox" :checked="true" v-model="checkedEvents"/>
+      <input class="type-checkbox" type="checkbox" value="IndyCar" id="IndyCarCheckbox" :checked="true" v-model="checkedEvents"/>
       <label class="type-label" for="checkbox"> IndyCar </label>
-      <input class="type-checkbox" type="checkbox"  value="IndyNXT" id="checkbox" :checked="true" v-model="checkedEvents"/>
+      <input class="type-checkbox" type="checkbox"  value="IndyNXT" id="IndyNxtCheckbox" :checked="true" v-model="checkedEvents"/>
       <label class="type-label" for="checkbox"> IndyNXT </label>
     </div>
   <v-table class="schedule-table" density="compact">
@@ -35,20 +35,25 @@
         <th class="text-left">
           Series
         </th>
-        <th width=25% class="text-left">
-          Date
-        </th>
         <th class="text-left">
           Description
         </th>
         <th class="text-left">
-          Event
+          Date
         </th>
+        <!-- <th class="text-left">
+          Event
+        </th> -->
       </tr>
     </thead>
-    <tbody>
+    <tbody
+      v-for="(weekend, i) in getUnique"
+    >
+      <tr class='weekend-header'>
+        <td colspan="3">{{weekend}}</td>
+        </tr>
       <tr
-        v-for="(item, index) in filteredEvents"
+        v-for="(item, index) in filteredEvents.filter(item => item.event === weekend)"
         :key="item.name"
         :class="{orow: this.uniqueEvents.indexOf(item.event) % 2 === 0, erow: this.uniqueEvents.indexOf(item.event) % 2 !== 0}"
       >
@@ -69,11 +74,11 @@
           >
         </td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.datetime }}</td>
-        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.description }}</td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.event }}</td>
+        >{{ item.datetime }}</td>
+        <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.event }}</td> -->
       </tr>
     </tbody>
   </v-table>
@@ -123,7 +128,12 @@ import Dropdown from 'v-dropdown'
         this.setTimeZone(events)
 
         return events
-      }
+      },
+      getUnique(){
+        const uniqueEvents = [...new Set(this.filteredEvents.map(event => event.event))]
+        return uniqueEvents
+
+      },
     },
     methods: {
       setTimeZone(events){
@@ -135,7 +145,7 @@ import Dropdown from 'v-dropdown'
           const convertedDatetime = dtObj.clone().tz(targetTimezone)
           // item.datetime = convertedDatetime.format('YYYY-MM-DD HH:mm:ss')
         
-          item.datetime = targetTimezone === 'UTC' ? convertedDatetime.format('MM/DD HH:mm') : convertedDatetime.format('MM/DD hh:mm A')
+          item.datetime = targetTimezone === 'UTC' ? convertedDatetime.format('YYYY-MM-DD HH:mm') : convertedDatetime.format('YYYY-MM-DD hh:mm A')
           
       })
       },
@@ -215,7 +225,7 @@ import Dropdown from 'v-dropdown'
 .schedule-table{
   max-width: 900px;
   height: 80%;
-  font-size: calc(8px + .4vw);
+  font-size: calc(10px + .4vw);
   float: center;
   margin-left: auto;
   margin-right: auto;
@@ -228,6 +238,13 @@ import Dropdown from 'v-dropdown'
     background-color: #323232;
   }
 }
+.weekend-header{
+    color: whitesmoke;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: rgb(57, 118, 216);
+  }
 .orow{
   background-color: #dbdbdb;
 }
@@ -252,11 +269,5 @@ import Dropdown from 'v-dropdown'
     text-shadow: 2px 1px 1px #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-  }
-  .points-col{
-    color: darkgreen;
-  }
-  .points-col.out{
-    color: #a30707;
   }
   </style>
