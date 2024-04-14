@@ -35,11 +35,14 @@
         <th class="text-left">
           Series
         </th>
-        <th class="text-left">
+        <th class="text-left" width=32%>
           Description
         </th>
         <th class="text-left">
           Date
+        </th>
+        <th class="text-left">
+          Time
         </th>
         <!-- <th class="text-left">
           Event
@@ -50,7 +53,7 @@
       v-for="(weekend, i) in getUnique"
     >
       <tr class='weekend-header'>
-        <td colspan="3">{{weekend}}</td>
+        <td colspan="4">{{weekend}}</td>
         </tr>
       <tr
         v-for="(item, index) in filteredEvents.filter(item => item.event === weekend)"
@@ -76,7 +79,9 @@
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.description }}</td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.datetime }}</td>
+        >{{ item.newdate }}</td>
+        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.newtime }}</td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.event }}</td> -->
       </tr>
@@ -143,9 +148,38 @@ import Dropdown from 'v-dropdown'
           const datetimeStr = item.date + ' ' + item.time
           const dtObj = moment.tz(datetimeStr, 'YYYY-MM-DD hh:mm A', 'US/Eastern')
           const convertedDatetime = dtObj.clone().tz(targetTimezone)
-          // item.datetime = convertedDatetime.format('YYYY-MM-DD HH:mm:ss')
-        
-          item.datetime = targetTimezone === 'UTC' ? convertedDatetime.format('YYYY-MM-DD HH:mm') : convertedDatetime.format('YYYY-MM-DD hh:mm A')
+          
+          if(targetTimezone === 'UTC'){
+            const newDateTime = convertedDatetime.format('YYYY-MM-DD HH:mm')
+            const newDateString = newDateTime.toString()
+            const [newDate, newtime] = newDateString.split(' ')
+
+            // Parse the date string
+            const finalDate = new Date(newDate);
+
+            // Get the month and day
+            const month = finalDate.toLocaleString('default', { month: 'long' })
+            const day = finalDate.getDate();
+            const formattedDate = `${month} ${day}`
+            item.newdate = formattedDate
+            item.newtime = newtime
+          }
+          else{
+            const newDateTime = convertedDatetime.format('YYYY-MM-DD hh:mm A')
+            const newDateString = newDateTime.toString()
+            const [newDate, timePart, ampm] = newDateString.split(' ')
+            const finalTime = timePart.startsWith('0') ? timePart.substring(1): timePart
+            // Parse the date string
+            const finalDate = new Date(newDate);
+
+            // Get the month and day
+            const month = finalDate.toLocaleString('default', { month: 'long' })
+            const day = finalDate.getDate();
+            const formattedDate = `${month} ${day}`
+            item.newdate = formattedDate
+            item.newtime = finalTime + ' ' + ampm
+
+          }
           
       })
       },
