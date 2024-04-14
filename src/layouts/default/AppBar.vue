@@ -17,8 +17,9 @@
       <div class="menu-item"><router-link to="/selector">Driver Selector</router-link></div>
       <div class="menu-item"><router-link to="/silly">Silly Season</router-link></div>
       <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div>
-      <div class="menu-item"><router-link class ="routlink" to="/wordle">Wordle</router-link></div>
+      <div class="menu-item"><router-link to="/frequencies">Frequencies</router-link></div>
         <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div>
+        <div class="menu-item"><router-link class ="routlink" to="/wordle">Wordle</router-link></div>
         <!-- <div class="menu-item"><router-link to="/ladder">Ladder</router-link></div> -->
     </div>
   </nav>
