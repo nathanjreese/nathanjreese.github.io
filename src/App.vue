@@ -25,13 +25,15 @@
           color="primary"
           location="top"
           temporary
-          style="width: 225px"
+          class='drawer-menu'
+          style="width: 225px; height: 310px"
         >
           <v-list>
             <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-account-group" title="Silly Season" to="/silly" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-grid" title="Indycar Wordle" to="/wordle" color="blue"></v-list-item>
        </v-list>
         </v-navigation-drawer> 
@@ -129,5 +131,8 @@
     margin-top: 18px;
     padding-right: 20px;
     font-size: 20px;
+  }
+  .drawer-menu{
+    height: 900px;
   }
   </style>
