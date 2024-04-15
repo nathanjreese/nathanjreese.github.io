@@ -28,9 +28,9 @@
         :class="{broadcast: item.series === 'Broadcast'}"
       >
         <td>{{ item.number }}</td>
-        <td class="text-left">{{ item.name }}</td>
-        <td class="text-left">{{ item.team }}</td>
-        <td class="text-left">{{ Number(item.frequency).toFixed(4) }}</td>
+        <td class="td-fields">{{ item.name }}</td>
+        <td class="td-fields">{{ item.team }}</td>
+        <td class="td-fields">{{ Number(item.frequency).toFixed(4) }}</td>
       </tr>
     </tbody>
   </v-table>
@@ -68,10 +68,17 @@ import frequencies from "@/components/Helpers/Frequencies.json"
   background-color:rgb(231, 231, 231);
   padding-bottom: 50px;
   }
+  .v-table{
+    td{padding: 4px;}
+  }
   .table-holder{
     display: flex;
     float: center;
     flex-direction: column;
+  }
+  .td-fields{
+    text-align: left;
+    padding: 0px;
   }
 .frequency-table{
   max-width: 900px;
