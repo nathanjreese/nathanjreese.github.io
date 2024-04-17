@@ -162,7 +162,7 @@ import Dropdown from 'v-dropdown'
             const day = finalDate.getDate();
             const formattedDate = `${month} ${day}`
             item.newdate = formattedDate
-            item.newtime = newtime
+            item.newtime = newtime + ' UTC'
           }
           else{
             const newDateTime = convertedDatetime.format('YYYY-MM-DD hh:mm A')
@@ -257,7 +257,7 @@ import Dropdown from 'v-dropdown'
     height: calc(11px + .8vw);
   }
 .schedule-table{
-  max-width: 900px;
+  width: calc(310px + 24vw);
   height: 80%;
   font-size: calc(10px + .4vw);
   float: center;
