@@ -73,7 +73,15 @@
     },
     {
       "number": 6,
-      "name": "Callum Ilott",
+      "name": "David Malukas",
+      "team": "Arrow McLaren",
+      "frequency": "462.7875",
+      "secondary": "461.7250",
+      "series": "IndyCar"
+    },
+    {
+      "number": 6,
+      "name": "Theo Pourchaire",
       "team": "Arrow McLaren",
       "frequency": "462.7875",
       "secondary": "461.7250",
