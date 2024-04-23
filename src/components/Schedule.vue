@@ -191,8 +191,13 @@ import Dropdown from 'v-dropdown'
         }
         else{
           const givenDatetime = new Date(event.date)
-          const currentTime = new Date()
-          filterPast = currentTime < givenDatetime
+          // Get today's date
+          const today = new Date();
+
+          // Subtract one day
+          const tomorrow = new Date(today);
+          tomorrow.setDate(today.getDate() + 1);
+          filterPast = tomorrow < givenDatetime
         }
 
         return filterPast
