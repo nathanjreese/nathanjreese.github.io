@@ -161,7 +161,7 @@ import Dropdown from 'v-dropdown'
             const month = finalDate.toLocaleString('default', { month: 'long' })
             const day = finalDate.getDate();
             const formattedDate = `${month} ${day}`
-            item.newdate = formattedDate
+            item.newdate = newDate
             item.newtime = newtime + ' UTC'
           }
           else{
@@ -180,7 +180,7 @@ import Dropdown from 'v-dropdown'
             const day = finalDate.getDate();
 
             const formattedDate = `${month} ${day}`
-            item.newdate = formattedDate
+            item.newdate = newDate
             item.newtime = finalTime + ' ' + ampm
           }
           
