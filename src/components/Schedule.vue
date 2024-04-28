@@ -168,17 +168,18 @@ import Dropdown from 'v-dropdown'
             const newDateTime = convertedDatetime.format('YYYY-MM-DD hh:mm A')
             const newDateString = newDateTime.toString()
             const [newDate, timePart, ampm] = newDateString.split(' ')
+          
             const finalTime = timePart.startsWith('0') ? timePart.substring(1): timePart
             // Parse the date string
-            const finalDate = new Date(newDate);
+            const finalDate = new Date(newDateString);
 
             // Get the month and day
             const month = finalDate.toLocaleString('default', { month: 'long' })
             const day = finalDate.getDate();
+
             const formattedDate = `${month} ${day}`
             item.newdate = formattedDate
             item.newtime = finalTime + ' ' + ampm
-
           }
           
       })
@@ -196,7 +197,7 @@ import Dropdown from 'v-dropdown'
 
           // Subtract one day
           const tomorrow = new Date(today);
-          tomorrow.setDate(today.getDate() + 1);
+          tomorrow.setDate(today.getDate() - 1);
           filterPast = tomorrow < givenDatetime
         }
 
