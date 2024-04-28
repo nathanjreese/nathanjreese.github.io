@@ -155,7 +155,7 @@ import Dropdown from 'v-dropdown'
             const [newDate, newtime] = newDateString.split(' ')
 
             // Parse the date string
-            const finalDate = new Date(newDate);
+            const finalDate = new Date(newDateString)
 
             // Get the month and day
             const month = finalDate.toLocaleString('default', { month: 'long' })
