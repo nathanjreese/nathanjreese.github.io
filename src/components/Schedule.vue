@@ -1,7 +1,7 @@
 <template>
   <div class="main-schedule">
     <title-page
-      title-text="2024 Schedule"
+      title-text="2024 IndyCar Schedule"
       />
   <div class="schedule-table-holder">
     <div class="schedule-options">
@@ -170,6 +170,8 @@ import Dropdown from 'v-dropdown'
             const [newDate, timePart, ampm] = newDateString.split(' ')
           
             const finalTime = timePart.startsWith('0') ? timePart.substring(1): timePart
+            console.log("DATE 1 ", newDate)
+            console.log("DATE 2 ", newDateString)
             // Parse the date string
             const finalDate = new Date(newDateString);
 
@@ -222,7 +224,7 @@ import Dropdown from 'v-dropdown'
   }
   .schedule-table-holder{
     display: flex;
-    width: 97%;
+    width: 90%;
     margin: auto;
     float: center;
     flex-direction: column;
