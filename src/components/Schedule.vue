@@ -211,12 +211,13 @@ import Dropdown from 'v-dropdown'
 
 <style scoped>
 .main-schedule {
+  width: 100%;
   text-align: center;
   background-color:rgb(231, 231, 231);
   padding-bottom: 50px;
   }
   .dropdown-tz{
-    width: calc(200px + 2vw);;
+    width: calc(200px + 2vw);
     padding-left: 10px;
     margin-left: calc(2px + 3vw);
     border: 2px solid rgb(57, 118, 216);
@@ -224,7 +225,7 @@ import Dropdown from 'v-dropdown'
   }
   .schedule-table-holder{
     display: flex;
-    width: 90%;
+    width: 97%;
     margin: auto;
     float: center;
     flex-direction: column;
@@ -240,6 +241,7 @@ import Dropdown from 'v-dropdown'
     font-weight: bold;
     margin: auto;
     padding: 10px;
+    width: 90%;
   }
   .past-label{
     margin: 0px calc(3px + 1vw) 0px 0px;
@@ -267,7 +269,7 @@ import Dropdown from 'v-dropdown'
     height: calc(11px + .8vw);
   }
 .schedule-table{
-  width: calc(310px + 24vw);
+  width: 99%;
   height: 80%;
   font-size: calc(10px + .4vw);
   float: center;
