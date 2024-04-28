@@ -3,7 +3,7 @@
     <title-page
       title-text="2024 Schedule"
       />
-  <div class="table-holder">
+  <div class="schedule-table-holder">
     <div class="schedule-options">
     <div class="time-label">Time Zone: </div>
       <select class="dropdown-tz" v-model="selectedTime">V
@@ -220,8 +220,10 @@ import Dropdown from 'v-dropdown'
     border: 2px solid rgb(57, 118, 216);
     font-weight: normal;
   }
-  .table-holder{
+  .schedule-table-holder{
     display: flex;
+    width: 97%;
+    margin: auto;
     float: center;
     flex-direction: column;
     .time-label{
