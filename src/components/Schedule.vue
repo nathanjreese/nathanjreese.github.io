@@ -225,7 +225,7 @@ import Dropdown from 'v-dropdown'
   }
   .schedule-table-holder{
     display: flex;
-    width: 97%;
+    max-width: 800px;
     margin: auto;
     float: center;
     flex-direction: column;
@@ -241,7 +241,7 @@ import Dropdown from 'v-dropdown'
     font-weight: bold;
     margin: auto;
     padding: 10px;
-    width: 90%;
+    max-width: 90%;
   }
   .past-label{
     margin: 0px calc(3px + 1vw) 0px 0px;
@@ -269,7 +269,7 @@ import Dropdown from 'v-dropdown'
     height: calc(11px + .8vw);
   }
 .schedule-table{
-  width: 99%;
+  width: 97%;
   height: 80%;
   font-size: calc(10px + .4vw);
   float: center;
