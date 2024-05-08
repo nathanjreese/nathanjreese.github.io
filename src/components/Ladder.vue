@@ -1,0 +1,240 @@
+<template>
+  <div class="main-ladder">
+    <title-page
+      title-text="IndyCar Ladder Rankings"
+      />
+  <!-- <div class="main-cards">
+    <div v-for="image in images" class="card-img-holder">
+    <img :src="image.url" :alt="image.alt" class="card-img" @click="showCard(image.back)">
+    <img
+        src="@/assets/Ladder/CardOutline.png"
+        class="card-img"
+      >
+      <div class="driver-series">{{ image.series }}</div>
+      <div class="driver-first-name">{{ image.fname }}</div>
+      <div class="driver-last-name">{{ image.lname }}</div>
+  </img>
+  </div>
+  </div> -->
+  <ladder-modal
+      v-show=isLadderModalVisible
+      @close="closeModal"
+      :card="driverBack"
+    />
+    <div class="table-holder">
+  <v-table class="ladder-table" density="compact">
+    <thead>
+      <tr>
+        <th class="text-left">
+          Rank
+        </th>
+        <th class="text-left">
+          Driver
+        </th>
+        <th class="text-left">
+          Series
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        v-for="(item, index) in driverRanks"
+        :key="item.name"
+      >
+        <td>{{ item.rank }}</td>
+        <td class="text-left">{{ item.name }}</td>
+        <td class="text-left">{{ item.series }}</td>
+      </tr>
+    </tbody>
+  </v-table>
+  <div class="explanation">*The rankings are based off a formula using current standings, wins, and USF championships.</div>
+  </div>
+  </div>
+</template>
+
+<script>
+import LadderModal from './LadderModal'
+import TitlePage from "@/components/Partials/Title"
+
+export default {
+  name: 'home',
+  components: {
+      LadderModal,
+      TitlePage
+  },
+  data () {
+    return {
+      home_msg: 'IndyCar Ladder',
+      isLadderModalVisible: false,
+      driverBack: '',
+      images: [ 
+                { fname: 'Louis', lname: 'Foster', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
+                { fname: 'Myles', lname: 'Rowe', series: 'IndyNXT',url: new URL('@/assets/Ladder/MylesRoweCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
+                { fname: 'Jacob', lname: 'Abel', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
+                { fname: 'Nolan', lname: 'Siegel', series: 'IndyNXT',url: new URL('@/assets/Ladder/NolanSiegelCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
+                { fname: 'Jamie', lname: 'Chadwick', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
+                { fname: 'Louis', lname: 'Foster', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
+                { fname: 'Louis', lname: 'Foster', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)}
+            ],
+      driverRanks: [
+            { rank: 1, name: 'Nolan Siegel', series: 'IndyNXT'},
+            { rank: 2, name: 'Jacob Abel', series: 'IndyNXT'},
+            { rank: 3, name: 'Louis Foster', series: 'IndyNXT'},
+            { rank: 4, name: `Michael d'Orlando`, series: 'IndyNXT'},
+            { rank: 5, name: 'Myles Rowe', series: 'IndyNXT'},
+            { rank: 6, name: 'Nikita Johnson', series: 'USF Pro 2000'},
+            { rank: 7, name: 'Hunter Yeany', series: 'USF Pro 2000'},
+            { rank: 8, name: 'Reece Gold', series: 'IndyNXT'},
+            { rank: 9, name: 'Mac Clark', series: 'USF Pro 2000'},
+            { rank: 10, name: 'Jonathan Browne', series: 'IndyNXT'},
+            { rank: 11, name: 'Max Garcia', series: 'USF 2000'},
+            { rank: 12, name: 'Lochie Hughes',series: 'USF Pro 2000'},
+            { rank: 13, name: 'Sam Corry', series: 'USF 2000'},
+            { rank: 14, name: 'Sebastian Wheldon', series: 'USF Juniors'},
+            { rank: 15, name: 'Nico Christodoulou', series: 'USF 2000'},
+            { rank: 16, name: 'Ariel Elkin', series: 'USF Juniors'}
+          ]
+    }
+  },
+  methods: {
+    showCard(driver) {
+      this.driverBack = driver
+      this.isLadderModalVisible = true
+    },
+    closeModal() {
+      this.isLadderModalVisible = false
+    },
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h1, h2 {
+  font-weight: bold;
+}
+ul {
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+.main-ladder{
+  text-align: center;
+  background-color:rgb(231, 231, 231);
+  padding-bottom: 50px;
+  }
+.title{
+    font-size: calc(8px + 3vw);
+    padding-bottom: calc(1px + 1vw);
+    text-shadow: 2px 1px 1px #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-weight: bold;
+    color: whitesmoke;
+  }
+  .ladder-table{
+  max-width: 600px;
+  height: 80%;
+  font-size: calc(9px + .6vw);
+  float: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  background-color: #cfcfcf;
+  border: 2px solid black;
+  box-shadow: 5px 5px 5px #616161;
+  color: black;
+  thead{
+    color: whitesmoke;
+    background-color: #323232;
+  }
+  tr:nth-child(even)
+{
+  background-color: #dbdbdb;
+}
+}
+.main-cards {
+/* background-image: url("../assets/Ladder/CardSleeve.png"); */
+background-repeat: no-repeat;
+background-size: 100%;
+ min-height: 1200px;
+ float: center;
+ max-width: 90%;
+ display: inline-gridbox;
+ margin: auto;
+ padding-left: 39px;
+ margin-top: 20px;
+}
+.card-img {
+  position: absolute;
+  height: 350px;
+  object-fit: contain;
+
+}
+.card-img-holder {
+  margin: calc(7px + 3vw) calc(2px + 1vw) calc(7px + 3vw) calc(2px + 1vw);
+  height: 360px;
+  width: 260px;;
+  display: inline-flex;
+  flex-direction: row;
+  object-fit: contain;
+}
+.card-img:hover {
+  cursor: pointer !important;
+}
+.driver-series{
+  position: relative;
+  color: red;
+  font-family: Times;
+  -webkit-text-stroke: 1px black;
+  font-weight: bold;
+  font-size: 27px;
+  text-align: center;
+  margin: 10px auto 0px auto;
+  
+
+}
+.driver-first-name{
+  position: absolute;
+  padding-top: 326px;
+  padding-left: 0px;
+  font-size: 15px;
+  font-family: Times;
+  transform: rotate(-43deg);
+  width: 140px;
+  text-align: center;
+}
+.driver-last-name{
+  position: absolute;
+  padding-top: 342px;
+  padding-left: 8px;
+  margin: auto;
+  font-size: 15px;
+  font-family: Times;
+  transform: rotate(-43deg);
+  text-align: center;
+  width: 140px;
+}
+
+.home-route {
+  padding: 20px;
+  float: center;
+  align-items: center;
+  text-align: center;
+}
+
+p {
+  padding: 10px;
+}
+.explanation{
+  font-style: italic;
+  font-size: calc(7px + .7vw);
+  margin: auto;
+  margin-bottom: 40px;
+  width: 80%
+}
+</style>
