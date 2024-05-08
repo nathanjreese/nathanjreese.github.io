@@ -34,7 +34,7 @@
             <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
-            <v-list-item prepend-icon="mdi-grid" title="Indycar Wordle" to="/wordle" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-ladder" title="Ladder Rankings" to="/ladder" color="blue"></v-list-item>
        </v-list>
         </v-navigation-drawer> 
         <router-view />
@@ -91,6 +91,7 @@
 }
 .app-bar {
   padding: 20px 0px;
+  width: 100%;
   text-align: center;
   font-weight: bold;
   color: whitesmoke;
@@ -100,6 +101,7 @@
   }
   .app-bar-mobile {
   margin-bottom: 110px;
+  width: 100%;
   text-align: center;
   font-weight: bold;
   color: whitesmoke;
@@ -125,7 +127,7 @@
   .mobile-nav-text{
     margin-top: 25px;
     padding-right: 20px;
-    font-size: 20px;
+    font-size: calc(15px + 1vw);
   }
   .mobile-nav-img{
     margin-top: 18px;
