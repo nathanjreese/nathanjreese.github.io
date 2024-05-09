@@ -3,24 +3,6 @@
     <title-page
       title-text="IndyCar Ladder Rankings"
       />
-  <!-- <div class="main-cards">
-    <div v-for="image in images" class="card-img-holder">
-    <img :src="image.url" :alt="image.alt" class="card-img" @click="showCard(image.back)">
-    <img
-        src="@/assets/Ladder/CardOutline.png"
-        class="card-img"
-      >
-      <div class="driver-series">{{ image.series }}</div>
-      <div class="driver-first-name">{{ image.fname }}</div>
-      <div class="driver-last-name">{{ image.lname }}</div>
-  </img>
-  </div>
-  </div> -->
-  <ladder-modal
-      v-show=isLadderModalVisible
-      @close="closeModal"
-      :card="driverBack"
-    />
     <div class="table-holder">
   <v-table class="ladder-table" density="compact">
     <thead>
@@ -53,19 +35,16 @@
 </template>
 
 <script>
-import LadderModal from './LadderModal'
 import TitlePage from "@/components/Partials/Title"
 
 export default {
   name: 'home',
   components: {
-      LadderModal,
       TitlePage
   },
   data () {
     return {
       home_msg: 'IndyCar Ladder',
-      isLadderModalVisible: false,
       driverRanks: [
             { rank: 1, name: 'Nolan Siegel', series: 'IndyNXT', wins: 1, titles: 'None'},
             { rank: 2, name: 'Jacob Abel', series: 'IndyNXT', wins: 1, titles: 'None'},
@@ -85,15 +64,6 @@ export default {
             { rank: 16, name: 'Ariel Elkin', series: 'USF Juniors', wins: 0, titles: 'None'},
           ]
     }
-  },
-  methods: {
-    showCard(driver) {
-      this.driverBack = driver
-      this.isLadderModalVisible = true
-    },
-    closeModal() {
-      this.isLadderModalVisible = false
-    },
   }
 }
 </script>
