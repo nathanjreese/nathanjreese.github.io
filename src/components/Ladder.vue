@@ -66,15 +66,6 @@ export default {
     return {
       home_msg: 'IndyCar Ladder',
       isLadderModalVisible: false,
-      driverBack: '',
-                { fname: 'Louis', lname: 'Foster', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
-                { fname: 'Myles', lname: 'Rowe', series: 'IndyNXT',url: new URL('@/assets/Ladder/MylesRoweCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
-                { fname: 'Jacob', lname: 'Abel', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
-                { fname: 'Nolan', lname: 'Siegel', series: 'IndyNXT',url: new URL('@/assets/Ladder/NolanSiegelCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
-                { fname: 'Jamie', lname: 'Chadwick', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
-                { fname: 'Louis', lname: 'Foster', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)},
-                { fname: 'Louis', lname: 'Foster', series: 'IndyNXT',url: new URL('@/assets/Ladder/LouisFosterCardPhoto.png', import.meta.url), back: new URL('@/assets/Ladder/BackMyles.png', import.meta.url)}
-            ],
       driverRanks: [
             { rank: 1, name: 'Nolan Siegel', series: 'IndyNXT', wins: 1, titles: 'None'},
             { rank: 2, name: 'Jacob Abel', series: 'IndyNXT', wins: 1, titles: 'None'},
