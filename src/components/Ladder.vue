@@ -53,7 +53,7 @@ export default {
             { rank: 5, name: 'Myles Rowe', series: 'IndyNXT', wins: 0, titles: 'USF Pro'},
             { rank: 6, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 0, titles: 'None'},
             { rank: 7, name: 'Hunter Yeany', series: 'USF Pro 2000', wins: 0, titles: 'None'},
-            { rank: 8, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'None'},
+            { rank: 8, name: 'Caio Collet', series: 'IndyNXT', wins: 0, titles: 'None'},
             { rank: 9, name: 'Mac Clark', series: 'USF Pro 2000', wins: 0, titles: 'None'},
             { rank: 10, name: 'Jonathan Browne', series: 'IndyNXT', wins: 0, titles: 'None'},
             { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 0, titles: 'None'},
