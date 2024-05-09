@@ -1,7 +1,7 @@
 <template>
   <div class="main-ladder">
     <title-page
-      title-text="IndyCar Ladder Rankings"
+      title-text="Ladder Power Rankings"
       />
     <div class="table-holder">
   <v-table class="ladder-table" density="compact">
@@ -55,7 +55,7 @@ export default {
             { rank: 7, name: 'Hunter Yeany', series: 'USF Pro 2000', wins: 0, titles: 'None'},
             { rank: 8, name: 'Caio Collet', series: 'IndyNXT', wins: 0, titles: 'None'},
             { rank: 9, name: 'Mac Clark', series: 'USF Pro 2000', wins: 0, titles: 'None'},
-            { rank: 10, name: 'Jonathan Browne', series: 'IndyNXT', wins: 0, titles: 'None'},
+            { rank: 10, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'None'},
             { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 0, titles: 'None'},
             { rank: 12, name: 'Lochie Hughes',series: 'USF Pro 2000', wins: 0, titles: 'None'},
             { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 0, titles: 'None'},
