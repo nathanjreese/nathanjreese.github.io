@@ -16,6 +16,9 @@
         <th class="text-left">
           Series
         </th>
+        <th class="text-left">
+          Previous
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -26,6 +29,7 @@
         <td>{{ item.rank }}</td>
         <td class="text-left">{{ item.name }}</td>
         <td class="text-left">{{ item.series }}</td>
+        <td class="text-left" :class="{ moveup: item.previous > item.rank || item.previous === 'Unranked', movedown: item.previous < item.rank}">{{ item.previous }}</td>
       </tr>
     </tbody>
   </v-table>
@@ -46,22 +50,22 @@ export default {
     return {
       home_msg: 'IndyCar Ladder',
       driverRanks: [
-            { rank: 1, name: 'Nolan Siegel', series: 'IndyNXT', wins: 1, titles: 'None'},
-            { rank: 2, name: 'Jacob Abel', series: 'IndyNXT', wins: 1, titles: 'None'},
-            { rank: 3, name: 'Louis Foster', series: 'IndyNXT', wins: 0, titles: 'None'},
-            { rank: 4, name: `Michael d'Orlando`, series: 'IndyNXT', wins: 0, titles: 'USF2000'},
-            { rank: 5, name: 'Myles Rowe', series: 'IndyNXT', wins: 0, titles: 'USF Pro'},
-            { rank: 6, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 0, titles: 'None'},
-            { rank: 7, name: 'Hunter Yeany', series: 'USF Pro 2000', wins: 0, titles: 'None'},
-            { rank: 8, name: 'Caio Collet', series: 'IndyNXT', wins: 0, titles: 'None'},
-            { rank: 9, name: 'Mac Clark', series: 'USF Pro 2000', wins: 0, titles: 'None'},
-            { rank: 10, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'None'},
-            { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 0, titles: 'None'},
-            { rank: 12, name: 'Lochie Hughes',series: 'USF Pro 2000', wins: 0, titles: 'None'},
-            { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 0, titles: 'None'},
-            { rank: 14, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 0, titles: 'None'},
-            { rank: 15, name: 'Nico Christodoulou', series: 'USF 2000', wins: 0, titles: 'None'},
-            { rank: 16, name: 'Ariel Elkin', series: 'USF Juniors', wins: 0, titles: 'None'},
+            { rank: 1, name: 'Jacob Abel', series: 'IndyNXT', wins: 1, titles: 'None', previous: 2},
+            { rank: 2, name: 'Louis Foster', series: 'IndyNXT', wins: 1, titles: 'None', previous: 3},
+            { rank: 3, name: 'Nolan Siegel', series: 'IndyNXT', wins: 0, titles: 'None', previous: 1},
+            { rank: 4, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: 5},
+            { rank: 5, name: `Michael d'Orlando`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: 4},
+            { rank: 6, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 0, titles: 'None', previous: 6},
+            { rank: 7, name: 'Hunter Yeany', series: 'USF Pro 2000', wins: 0, titles: 'None', previous: 7},
+            { rank: 8, name: 'Caio Collet', series: 'IndyNXT', wins: 0, titles: 'None', previous: 8},
+            { rank: 9, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 0, titles: 'None', previous: 12},
+            { rank: 10, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'None', previous: 10},
+            { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 0, titles: 'None', previous: 11},
+            { rank: 12, name: 'Simon Sikes',series: 'USF Pro 2000', wins: 0, titles: 'None', previous: 'Unranked'},
+            { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 0, titles: 'None', previous: 'Unranked'},
+            { rank: 14, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 0, titles: 'None', previous: 14},
+            { rank: 15, name: 'Max Taylor', series: 'USF 2000', wins: 0, titles: 'None', previous: 'Unranked'},
+            { rank: 16, name: 'Ariel Elkin', series: 'USF Juniors', wins: 0, titles: 'None', previous: 16},
           ]
     }
   }
@@ -185,6 +189,12 @@ background-size: 100%;
   float: center;
   align-items: center;
   text-align: center;
+}
+.moveup{
+  color: green;
+}
+.movedown{
+  color: red;
 }
 
 p {
