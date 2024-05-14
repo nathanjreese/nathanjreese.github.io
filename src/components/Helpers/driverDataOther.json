@@ -126,5 +126,21 @@
     "content": "",
     "fulltime": "",
     "points": 0
+  },
+  {
+    "name": "Colin Braun",
+    "age": 35,
+    "team": "Underdog",
+    "manufacturer": "Honda",
+    "nationality": "USA",
+    "ovals": "no",
+    "aggressiveness": 2,
+    "personality": "friendly",
+    "f1": "no",
+    "success": "rookie",
+    "social": 22670,
+    "content": "no",
+    "fulltime": "no",
+    "points": 0
   }
  ]
