@@ -73,14 +73,6 @@
     },
     {
       "number": 6,
-      "name": "David Malukas",
-      "team": "Arrow McLaren",
-      "frequency": "462.7875",
-      "secondary": "461.7250",
-      "series": "IndyCar"
-    },
-    {
-      "number": 6,
       "name": "Theo Pourchaire",
       "team": "Arrow McLaren",
       "frequency": "462.7875",
@@ -168,18 +160,10 @@
       "series": "IndyCar"
     },
     {
-      "number": 51,
-      "name": "Nolan Siegel",
-      "team": "Dale Coyne Racing",
-      "frequency": "463.6000",
-      "secondary": "464.9375",
-      "series": "IndyCar"
-    },
-    {
       "number": 20,
       "name": "Ed Carpenter",
       "team": "Ed Carpenter Racing",
-      "frequency": "",
+      "frequency": "469.1125",
       "secondary": "457.6750",
       "series": "IndyCar"
     },
@@ -259,7 +243,7 @@
         "number": "06",
         "name": "*Helio Castroneves",
         "team": "Meyer Shank Racing",
-        "frequency": "",
+        "frequency": "460.3375",
         "secondary": "",
         "series": "IndyCar"
     },
@@ -291,17 +275,9 @@
         "number": 33,
         "name": "*Chris Rasmussen",
         "team": "Ed Carpenter Racing",
-        "frequency": "",
+        "frequency": "467.7125",
         "secondary": "457.6750",
         "series": "IndyCar"
-    },
-    {
-      "number": 50,
-      "name": "*TBD",
-      "team": "Abel Motorsports",
-      "frequency": "459.4500",
-      "secondary": "",
-      "series": "IndyCar"
     },
     {
       "number": 51,
@@ -315,7 +291,7 @@
       "number": 75,
       "name": "*Takuma Sato",
       "team": "Rahal Letterman Lanigan",
-      "frequency": "",
+      "frequency": "460.4250",
       "secondary": "",
       "series": "IndyCar"
     },
