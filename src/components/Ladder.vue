@@ -17,6 +17,9 @@
           Series
         </th>
         <th class="text-left">
+          Wins
+        </th>
+        <th class="text-left">
           Change
         </th>
       </tr>
@@ -29,7 +32,8 @@
         <td>{{ item.rank }}</td>
         <td class="text-left">{{ item.name }}</td>
         <td class="text-left">{{ item.series }}</td>
-        <td class="text-left" :class="{ moveup: item.previous.includes('↑') || item.previous === 'Unranked', movedown: item.previous.includes('↓')}">{{ item.previous }}</td>
+        <td >{{ item.wins }}</td>
+        <td :class="{ moveup: item.previous.includes('↑') || item.previous === 'Unranked', movedown: item.previous.includes('↓')}">{{ item.previous }}</td>
       </tr>
     </tbody>
   </v-table>
@@ -50,22 +54,22 @@ export default {
     return {
       home_msg: 'IndyCar Ladder',
       driverRanks: [
-            { rank: 1, name: 'Jacob Abel', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
+            { rank: 1, name: 'Jacob Abel', series: 'IndyNXT', wins: 2, titles: 'None', previous: '-'},
             { rank: 2, name: 'Louis Foster', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
-            { rank: 3, name: 'Nolan Siegel', series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
+            { rank: 3, name: 'Nolan Siegel', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
             { rank: 4, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '-'},
             { rank: 5, name: `Michael d'Orlando`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '-'},
-            { rank: 6, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 0, titles: 'None', previous: '-'},
-            { rank: 7, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 0, titles: 'None', previous: '↑ 2'},
+            { rank: 6, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 4, titles: 'None', previous: '-'},
+            { rank: 7, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: '↑ 2'},
             { rank: 8, name: 'Caio Collet', series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
-            { rank: 9, name: 'Liam Sceats', series: 'USF Pro 2000', wins: 0, titles: 'None', previous: 'Unranked'},
+            { rank: 9, name: 'Liam Sceats', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: 'Unranked'},
             { rank: 10, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
-            { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 0, titles: 'None', previous: '-'},
+            { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 4, titles: 'None', previous: '-'},
             { rank: 12, name: 'Braden Eves',series: 'USF Pro 2000', wins: 1, titles: 'None', previous: 'Unranked'},
-            { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 0, titles: 'None', previous: '-'},
-            { rank: 14, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 0, titles: 'None', previous: '-'},
-            { rank: 15, name: 'Max Taylor', series: 'USF 2000', wins: 0, titles: 'None', previous: '-'},
-            { rank: 16, name: 'Ariel Elkin', series: 'USF Juniors', wins: 0, titles: 'None', previous: '-'},
+            { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 1, titles: 'None', previous: '-'},
+            { rank: 14, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 2, titles: 'None', previous: '-'},
+            { rank: 15, name: 'Max Taylor', series: 'USF 2000', wins: 1, titles: 'None', previous: '-'},
+            { rank: 16, name: 'Ariel Elkin', series: 'USF Juniors', wins: 2, titles: 'None', previous: '-'},
           ]
     }
   }
