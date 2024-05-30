@@ -424,7 +424,8 @@ export default {
         {id: 50, name: "Callum Hedge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CallumHedge.jpeg', import.meta.url)},
         {id: 51, name: "Caio Collet", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/CaioCollet.jpeg', import.meta.url)},
         {id: 52, name: "Enzo Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)},
-        {id: 53, name: "Théo Pourchaire", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TheoPourchaire.jpeg', import.meta.url)}
+        {id: 53, name: "Théo Pourchaire", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TheoPourchaire.jpeg', import.meta.url)},
+        {id: 53, name: "Mick Schumacher", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MickSchumacher.jpeg', import.meta.url)}
 
 
       ]
