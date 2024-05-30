@@ -408,7 +408,7 @@ export default {
         {id: 34, name: "Louis Foster", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LouisFoster.jpeg', import.meta.url)},
         {id: 35, name: "Danial Frost", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
         {id: 36, name: "Juri Vips", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JuriVips.jpeg', import.meta.url)},
-        {id: 37, name: "Robert Shartzman", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
+        {id: 37, name: "Robert Shwartzman", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
         {id: 38, name: "Nyck de Vries", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NyckdeVries.jpeg', import.meta.url)},
         {id: 39, name: "Oliver Askew", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
         {id: 40, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
