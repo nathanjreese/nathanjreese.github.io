@@ -376,7 +376,7 @@ export default {
         {id: 2, name: "Josef Newgarden", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JosefNewgarden.jpeg', import.meta.url)},
         {id: 3, name: "Pato O'Ward", original: 'mclaren', team: 'mclaren', pic: new URL('@/assets/SillyPhotos/PatricioOWard.jpeg', import.meta.url)},
         {id: 4, name: "Scott McLaughlin", original: 'penske', team: 'penske', pic: new URL('@/assets/SillyPhotos/ScottMcLaughlin.jpeg', import.meta.url)},
-        {id: 5, name: "Will Power", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/WillPower.jpeg', import.meta.url)},
+        {id: 5, name: "Will Power", original: 'penske', team: 'penske', pic: new URL('@/assets/SillyPhotos/WillPower.jpeg', import.meta.url)},
         {id: 6, name: "Alexander Rossi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/AlexanderRossi.jpeg', import.meta.url)},
         {id: 7, name: "Colton Herta", original: 'andretti', team: 'andretti', pic: new URL('@/assets/SillyPhotos/ColtonHerta.jpeg', import.meta.url)},
         {id: 8, name: "Christian Lundgaard", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ChristianLundgaard.jpeg', import.meta.url)},
