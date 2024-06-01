@@ -33,13 +33,13 @@
     <thead>
       <tr>
         <th class="text-left">
+          Date
+        </th>
+        <th class="text-left">
           Series
         </th>
         <th class="text-left" width=32%>
           Description
-        </th>
-        <th class="text-left">
-          Date
         </th>
         <th class="text-left">
           Time
@@ -60,6 +60,8 @@
         :key="item.name"
         :class="{orow: this.uniqueEvents.indexOf(item.event) % 2 === 0, erow: this.uniqueEvents.indexOf(item.event) % 2 !== 0}"
       >
+      <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.newdate }}</td>
         <td class="text-left">
           <img ref="image" 
           v-if="item.series.includes('IndyCar')"
@@ -78,8 +80,6 @@
         </td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.description }}</td>
-        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.newdate }}</td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.newtime }}</td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
