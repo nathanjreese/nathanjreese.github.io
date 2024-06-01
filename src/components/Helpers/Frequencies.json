@@ -80,14 +80,6 @@
       "series": "IndyCar"
     },
     {
-      "number": 6,
-      "name": "Callum Ilott",
-      "team": "Arrow McLaren",
-      "frequency": "462.7875",
-      "secondary": "461.7250",
-      "series": "IndyCar"
-    },
-    {
       "number": 7,
       "name": "Alexander Rossi",
       "team": "Arrow McLaren",
@@ -153,7 +145,7 @@
     },
     {
       "number": 51,
-      "name": "Colin Braun",
+      "name": "Tristan Vautier",
       "team": "Dale Coyne Racing",
       "frequency": "463.6000",
       "secondary": "464.9375",
@@ -217,9 +209,9 @@
     },
     {
       "number": 66,
-      "name": "Tom Blomqvist",
+      "name": "Helio Castroneves",
       "team": "Meyer Shank Racing",
-      "frequency": "452.8000",
+      "frequency": "460.3375",
       "secondary": "",
       "series": "IndyCar"
     },
@@ -239,70 +231,6 @@
       "secondary": "455.1500",
       "series": "IndyCar"
     },
-    {
-        "number": "06",
-        "name": "*Helio Castroneves",
-        "team": "Meyer Shank Racing",
-        "frequency": "460.3375",
-        "secondary": "",
-        "series": "IndyCar"
-    },
-    {
-      "number": 17,
-      "name": "*Kyle Larson",
-      "team": "Arrow McLaren",
-      "frequency": "456.1375",
-      "secondary": "",
-      "series": "IndyCar"
-    },
-    {
-      "number": 23,
-      "name": "*Ryan Hunter-Reay",
-      "team": "Dreyer Reinbold Racing",
-      "frequency": "453.3750",
-      "secondary": "",
-      "series": "IndyCar"
-    },
-    {
-      "number": 24,
-      "name": "*Conor Daly",
-      "team": "Dreyer Reinbold Racing",
-      "frequency": "461.0125",
-      "secondary": "",
-      "series": "IndyCar"
-    },
-    {
-        "number": 33,
-        "name": "*Chris Rasmussen",
-        "team": "Ed Carpenter Racing",
-        "frequency": "467.7125",
-        "secondary": "457.6750",
-        "series": "IndyCar"
-    },
-    {
-      "number": 51,
-      "name": "*Katherine Legge",
-      "team": "Dale Coyne Racing",
-      "frequency": "463.6000",
-      "secondary": "464.9375",
-      "series": "IndyCar"
-    },
-    {
-      "number": 75,
-      "name": "*Takuma Sato",
-      "team": "Rahal Letterman Lanigan",
-      "frequency": "460.4250",
-      "secondary": "",
-      "series": "IndyCar"
-    },
-    {
-        "number": 98,
-        "name": "*Marco Andretti",
-        "team": "Andretti Global",
-        "frequency": "468.4875",
-        "secondary": "",
-        "series": "IndyCar"
-      },
     {
       "number": "",
       "name": "NBC 1",
