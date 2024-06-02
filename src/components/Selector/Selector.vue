@@ -163,7 +163,7 @@
           "Color": "#f78000",
           "Summary": "The popular Mexican driver has established himself as one of the top young talents in IndyCar and a threat to win on every type of track. Pato wasn't able to secure a win in 2023 in part due to some bad luck, but he was one of the most consistent drivers and the clear leader of Arrow McLaren. After just signing a contract extension, Pato hopes this is the year his team can challenge Penske and Ganassi for the championship.",
           "picnum": new URL('@/assets/Numbers/PatoNumber.png', import.meta.url),
-          "biopic": new URL('@/assets/Drivers/PatricioOWardProfile.jpeg', import.meta.url),
+          "biopic": new URL('@/assets/Drivers/PatricioOwardProfile.jpeg', import.meta.url),
           "teampic": new URL('@/assets/Teams/ArrowMcLaren.png', import.meta.url),
           "picref": "Photo credit: James Black | Indycar.com",
           "Profile": "https://www.indycar.com/Series/IndyCar-Series/Patricio-OWard",
