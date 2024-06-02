@@ -3,6 +3,7 @@
     <title-page
       title-text="Ladder Power Rankings"
       />
+      <div class="last-update"><b>Last Updated:</b> June 2, 2024</div>
     <div class="table-holder">
   <v-table class="ladder-table" density="compact">
     <thead>
@@ -55,17 +56,17 @@ export default {
       home_msg: 'IndyCar Ladder',
       driverRanks: [
             { rank: 1, name: 'Jacob Abel', series: 'IndyNXT', wins: 2, titles: 'None', previous: '-'},
-            { rank: 2, name: 'Louis Foster', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
+            { rank: 2, name: 'Louis Foster', series: 'IndyNXT', wins: 2, titles: 'USF Pro', previous: '-'},
             { rank: 3, name: 'Nolan Siegel', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
-            { rank: 4, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '-'},
-            { rank: 5, name: `Michael d'Orlando`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '-'},
+            { rank: 4, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '-'},
+            { rank: 5, name: `Caio Collet`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '↑ 3'},
             { rank: 6, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 4, titles: 'None', previous: '-'},
-            { rank: 7, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: '↑ 2'},
-            { rank: 8, name: 'Caio Collet', series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
-            { rank: 9, name: 'Liam Sceats', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: 'Unranked'},
-            { rank: 10, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
+            { rank: 7, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: '-'},
+            { rank: 8, name: `Michael d'Orlando`, series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '↓ 3'},
+            { rank: 9, name: 'Liam Sceats', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: '-'},
+            { rank: 10, name: 'Callum Hedge', series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
             { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 4, titles: 'None', previous: '-'},
-            { rank: 12, name: 'Braden Eves',series: 'USF Pro 2000', wins: 1, titles: 'None', previous: 'Unranked'},
+            { rank: 12, name: 'Braden Eves',series: 'USF Pro 2000', wins: 1, titles: 'USF2000', previous: '-'},
             { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 1, titles: 'None', previous: '-'},
             { rank: 14, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 2, titles: 'None', previous: '-'},
             { rank: 15, name: 'Max Taylor', series: 'USF 2000', wins: 1, titles: 'None', previous: '-'},
@@ -139,6 +140,9 @@ background-size: 100%;
  margin: auto;
  padding-left: 39px;
  margin-top: 20px;
+}
+.last-update{
+  padding-bottom: 20px;
 }
 .card-img {
   position: absolute;
