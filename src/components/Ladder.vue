@@ -124,6 +124,9 @@ a {
 {
   background-color: #dbdbdb;
 }
+  td{
+    padding: 5px 1px;
+  }
 }
 .main-cards {
 /* background-image: url("../assets/Ladder/CardSleeve.png"); */

@@ -27,7 +27,7 @@
         :key="item.name"
       >
         <td>{{ index + 1 }}</td>
-        <td class="text-left">{{ item.team }} #{{ item.number }}</td>
+        <td class="text-left"> #{{ item.number }} {{ item.team }}</td>
         <td>{{ item.points }}</td>
         <td class="points-col" :class="{ out: item.points < standings[21].points}"
         >{{ item.points - standings[21].points }}</td>
