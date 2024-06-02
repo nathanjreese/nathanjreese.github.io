@@ -90,20 +90,26 @@ div .logo-title{
 }
 nav .menu-item {
 color: rgb(194, 194, 194);
-padding: 0px 30px;
+padding: 5px 3px;
+height: 50px;
 margin: 0px 0px;
+width: 145px;
 position: relative;
+font-size: 16px;
 text-align: center;
 border-bottom: 5px solid transparent;
 display: flex;
 transition: 0.4s;
-padding-bottom: 20px;
+/* border-right: 2px solid #b7b7b7; */
+padding-top: 7px;
+border-left: 1px solid rgb(99, 99, 99);
+border-right: 1px solid rgb(99, 99, 99);
 }
 nav .menu-item .router-link-active {
  cursor: pointer;
  border-bottom-color: #cd7904 !important;
  font-weight: bold;
- color: whitesmoke
+ color: whitesmoke;
 }
 
 nav .menu-item:hover {
@@ -112,6 +118,8 @@ border-bottom-color: #cd7904;
 nav .menu-item a {
 color: inherit;
 text-decoration: none;
+padding: 0px 3px 0px 4px;
+margin: auto;
 }
 
 

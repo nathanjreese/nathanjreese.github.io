@@ -733,12 +733,11 @@ export default {
   }
   .drop-team{
     font-size: 19px;
-    font-weight: Bold;
+    font-weight: 500;
     text-align: left;
     height: 18px;
     padding-bottom: 8px;
-    color: black;
-    text-shadow: 1px 1px 1px #gray;
+    color: rgb(0, 0, 0);
     font-family: Verdana;
     margin-bottom: 8px;
   }
@@ -765,7 +764,7 @@ export default {
   .drag-el-add {
     height: calc(60px + 2.5vw);
     padding-bottom: 17px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     margin-top: 2px;
     margin-bottom: 2px;
     margin-left: 8px;
