@@ -305,7 +305,7 @@ import Dropdown from 'v-dropdown'
     color: whitesmoke;
     background-color: #323232;
   }
-  td{padding: 4px;}
+  td{padding: 1px;}
 }
 .weekend-header{
     color: whitesmoke;
