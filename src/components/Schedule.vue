@@ -19,15 +19,17 @@
     </div>
     <div class="schedule-options">
       <input class="past-checkbox" type="checkbox" :value=!showPast id="pastCheckbox" :checked="false" v-model="showPast"/>
-      <label class="past-label" for="checkbox"> Show Past Events </label>
+      <label class="past-label" for="checkbox">Past </label>
 
       <input class="race-checkbox" type="checkbox" :value=!showRaces id="raceCheckbox" :checked="false" v-model="showRaces"/>
-      <label class="race-label" for="checkbox"> Races Only </label>
+      <label class="race-label" for="checkbox"> Races </label>
 
       <input class="type-checkbox" type="checkbox" value="IndyCar" id="IndyCarCheckbox" :checked="true" v-model="checkedEvents"/>
       <label class="type-label" for="checkbox"> IndyCar </label>
       <input class="type-checkbox" type="checkbox"  value="IndyNXT" id="IndyNxtCheckbox" :checked="true" v-model="checkedEvents"/>
       <label class="type-label" for="checkbox"> IndyNXT </label>
+      <input class="type-checkbox" type="checkbox"  value="USF" id="USFCheckbox" :checked="false" v-model="checkedEvents"/>
+      <label class="type-label" for="checkbox">USF</label>
     </div>
   <v-table class="schedule-table" density="compact">
     <thead>
@@ -53,7 +55,7 @@
       v-for="(weekend, i) in getUnique"
     >
       <tr class='weekend-header'>
-        <td colspan="4">{{weekend}}</td>
+        <td colspan="4" @click="">{{weekend}}</td>
         </tr>
       <tr
         v-for="(item, index) in filteredEvents.filter(item => item.event === weekend)"
@@ -73,6 +75,20 @@
           <img ref="image" 
           v-if="item.series.includes('NXT')"
           :src="IndyNxtLogoPic"
+          alt="IndyNXT Logo"
+          contain
+          class="series-words"
+          >
+          <img ref="image" 
+          v-if="item.series.includes('Pro200')"
+          :src="USFProLogoPic"
+          alt="IndyCar Logo"
+          contain
+          class="series-words"
+          >
+          <img ref="image" 
+          v-if="item.series.includes('USF2000')"
+          :src="USF2000LogoPic"
           alt="IndyCar Logo"
           contain
           class="series-words"
@@ -109,6 +125,8 @@ import Dropdown from 'v-dropdown'
         checkedEvents: ['IndyCar', 'IndyNXT'],
         IndyCarLogoPic: new URL('@/assets/IndyCarWords.png', import.meta.url),
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
+        USFProLogoPic: new URL('@/assets/USFProWords.png', import.meta.url),
+        USF2000LogoPic: new URL('@/assets/USF2000Words.png', import.meta.url),
         showPast: false,
         showRaces: false,
         events: scheduleData,
@@ -124,7 +142,11 @@ import Dropdown from 'v-dropdown'
     // },
     computed: {
       filteredEvents(){
-        let events = this.events.filter(event => this.checkedEvents.includes(event.series))
+        let events = this.events.filter(event => 
+          this.checkedEvents.includes(event.series) || 
+          (this.checkedEvents.includes('USF') && event.series.includes('USF'))
+
+          )
         events = events.filter(event => this.timeStatus(event) === true)
         events = this.showRaces ? events.filter(event => event.type === 'Race') : events
         
@@ -244,15 +266,15 @@ import Dropdown from 'v-dropdown'
     max-width: 90%;
   }
   .past-label{
-    margin: 0px calc(3px + 1vw) 0px 0px;
+    margin: 0px calc(2px + 1vw) 0px 0px;
     font-size: calc(10px + .4vw);
   }
   .race-label{
-    margin: 0px calc(5px + 5vw) 0px 0px;
+    margin: 0px calc(3px + 5vw) 0px 0px;
     font-size: calc(10px + .4vw);
   }
   .type-label{
-    margin: 0px calc(3px + .4vw) 0px 0px;
+    margin: 0px calc(2px + .4vw) 0px 0px;
     font-size: calc(10px + .4vw);
   }
   .past-checkbox{
