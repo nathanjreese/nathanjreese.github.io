@@ -3,7 +3,7 @@
     <title-page
       title-text="Ladder Power Rankings"
       />
-      <div class="last-update"><b>Last Updated:</b> June 2, 2024</div>
+      <div class="last-update"><b>Last Updated:</b> June 10, 2024</div>
     <div class="table-holder">
   <v-table class="ladder-table" density="compact">
     <thead>
