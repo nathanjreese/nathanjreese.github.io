@@ -42,6 +42,23 @@
         index: this.photoIndex
       }
     },
+    mounted() {
+      getAllDrivers()
+      .then((results) => { 
+        this.standings = results
+      })
+    },
+    mounted() {
+	window.addEventListener("keydown", e => {
+        console.log("KE: ", e)
+        if (e.key && e.key.match('ArrowRight')){
+            this.changePhoto(1)
+        }
+        if (e.key && e.key.match('ArrowLeft')){
+            this.changePhoto(-1)
+        }
+	    })
+    },
     methods: {
       close() {
         this.$emit('close');
