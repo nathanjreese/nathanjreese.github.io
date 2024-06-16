@@ -106,7 +106,7 @@
     display: flex;
     flex-wrap: wrap;
   .image-mobile {
-    max-width: 40%;
+    max-width: 29%;
     margin: auto;
     margin-bottom: 20px;
     border: 1px solid black;
