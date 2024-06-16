@@ -9,6 +9,7 @@ import LeadersCircle from '../components/LeadersCircle.vue'
 import Schedule from '../components/Schedule.vue'
 import Frequencies from '../components/Frequencies.vue'
 import Ladder from '../components/Ladder.vue'
+import Photos from '../components/Photos/Photos.vue'
 
 const routes = [
   {
@@ -71,6 +72,14 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: Wordle
+      },
+      {
+        path: '/photos',
+        name: 'Photos',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: Photos
       },
       {
         path: '/selector',
