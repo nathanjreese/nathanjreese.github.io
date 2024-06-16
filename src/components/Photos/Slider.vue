@@ -1,11 +1,11 @@
 <template>
     <div>
-      <h2>Road America</h2>
+      <!-- <h2>{{ this.race }}</h2> -->
       <div class="image-list" v-if="!isMobile">
-        <img class="image-desk" v-for="(imageName, index) in imageNames" :key="index" :src="imageName" alt="Image" @click="showImage(index)">
+        <img class="image-desk" v-for="(imageName, index) in getImages" :key="index" :src="imageName" alt="Image" @click="showImage(index)">
       </div>
       <div class="image-list-mobile" v-if="isMobile">
-        <img class="image-mobile" v-for="(imageName, index) in imageNames" :key="index" :src="imageName" alt="Image" @click="showImage(index)">
+        <img class="image-mobile" v-for="(imageName, index) in getImages" :key="index" :src="imageName" alt="Image" @click="showImage(index)">
       </div>
       <ImageViewer 
         v-if="selectedImage !== null" 
@@ -22,14 +22,19 @@
 
 
   export default {
+    props: {
+      race: String,
+      default: 'stpete'
+    },
     components: {
     ImageViewer
     },
     data() {
       return {
         selectedImage: null,
+        selectedPhotos: 'roadamerica',
         index: null,
-        imageNames: images
+        imageNames: images[this.race]
         // imageNames: [
         // new URL('@/assets/RacePhotos/IMG_7800.JPG', import.meta.url),
         // new URL('@/assets/RacePhotos/IMG_7800.JPG', import.meta.url),
@@ -48,12 +53,6 @@
       }
     },
     methods: {
-      getImagePath(imageName) {
-        const path = `/assets/Numbers/${imageName}`
-        // Assuming your images are located in src/assets/images/
-        // return new URL(path, import.meta.url)
-        return new URL('@/assets/Numbers/KirkwoodNumber.png', import.meta.url)
-      },
       showImage(index) {
         console.log("INDEX: ", index)
         this.index=index
@@ -85,7 +84,11 @@
           else {
               return false;
           }
-      },
+        },
+        getImages(){
+            console.log("jjjjj")
+            return images[this.race]
+        }
       },
 }
 </script>
