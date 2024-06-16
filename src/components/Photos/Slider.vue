@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2>Images from Array</h2>
+      <h2>Road America</h2>
       <div class="image-list" v-if="!isMobile">
         <img class="image-desk" v-for="(imageName, index) in imageNames" :key="index" :src="imageName" alt="Image" @click="showImage(index)">
       </div>
