@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2>{{ this.selectedRace }}</h2>
+      <!-- <h2>{{ this.selectedRace }}</h2> -->
       <div class="image-list" v-if="!isMobile">
         <img class="image-desk" v-for="(imageName, index) in getImages" :key="index" :src="imageName" alt="Image" @click="showImage(index)">
       </div>
