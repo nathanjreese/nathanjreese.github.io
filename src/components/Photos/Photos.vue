@@ -15,7 +15,7 @@
       </select>
     </div>
       <Slider
-        :race="this.selectedRace" 
+        :selected-race="this.getRace" 
         />
   </div>
 </template>
@@ -34,6 +34,12 @@ export default {
     return {
       home_msg: 'IndyCar Ladder',
       selectedRace: 'stpete'
+    }
+  },
+  computed: {
+    getRace(){
+      console.log("GET RACE: ", this.selectedRace)
+      return this.selectedRace
     }
   }
 }

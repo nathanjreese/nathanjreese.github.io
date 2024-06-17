@@ -1,6 +1,6 @@
 <template>
     <div>
-      <!-- <h2>{{ this.race }}</h2> -->
+      <h2>{{ this.selectedRace }}</h2>
       <div class="image-list" v-if="!isMobile">
         <img class="image-desk" v-for="(imageName, index) in getImages" :key="index" :src="imageName" alt="Image" @click="showImage(index)">
       </div>
@@ -10,7 +10,7 @@
       <ImageViewer 
         v-if="selectedImage !== null" 
         :photo-index="this.index" 
-        :images="this.imageNames"
+        :images="this.getImages"
         @close="closeImageViewer"
         @changePhoto="changePhoto" />
     </div>
@@ -23,8 +23,7 @@
 
   export default {
     props: {
-      race: String,
-      default: 'stpete'
+      selectedRace: String,
     },
     components: {
     ImageViewer
@@ -32,31 +31,16 @@
     data() {
       return {
         selectedImage: null,
-        selectedPhotos: 'roadamerica',
+        selectedPhotos: this.selectedRace,
         index: null,
-        imageNames: images[this.race]
-        // imageNames: [
-        // new URL('@/assets/RacePhotos/IMG_7800.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7800.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7800.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7801.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7802.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7803.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7804.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7805.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7806.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7810.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7812.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7814.JPG', import.meta.url),
-        // new URL('@/assets/RacePhotos/IMG_7815.JPG', import.meta.url)
-        // ]
+        imageNames: images[this.selectedRace]
       }
     },
     methods: {
       showImage(index) {
-        console.log("INDEX: ", index)
+        const raceImages = images[this.selectedRace]
         this.index=index
-        this.selectedImage = this.imageNames[index];
+        this.selectedImage = raceImages[index];
         },
         closeImageViewer() {
             this.selectedImage = null;
@@ -87,7 +71,7 @@
         },
         getImages(){
             console.log("jjjjj")
-            return images[this.race]
+            return images[this.selectedRace]
         }
       },
 }

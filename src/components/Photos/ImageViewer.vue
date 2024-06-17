@@ -9,8 +9,8 @@
         <font-awesome-icon icon="fa-free fa-circle-chevron-right"
             @click="changePhoto(1)" />
         <div class="image-holder">
-            <img class="full-image-view" :src="images[index]" alt="Full Size Image">
-            Image {{ index + 1 }} of {{ images.length }}
+            <img class="full-image-view" :src="raceImages[index]" alt="Full Size Image">
+            Image {{ index + 1 }} of {{ raceImages.length }}
         </div>
       </div>
       <div v-if="isMobile" class="image-viewer-modal-mobile">
@@ -22,8 +22,8 @@
         <font-awesome-icon icon="fa-free fa-circle-chevron-right"
             @click="changePhoto(1)"/>
         <div class="image-holder">
-            <img class="full-image-view" :src="images[index]" alt="Full Size Image">
-            Image {{ index + 1 }} of {{ images.length + 1 }}
+            <img class="full-image-view" :src="raceImages[index]" alt="Full Size Image">
+            Image {{ index + 1 }} of {{ raceImages.length + 1 }}
         </div>
       </div>
     </div>
@@ -39,7 +39,8 @@
     data() {
       return {
         selectedImage: null,
-        index: this.photoIndex
+        index: this.photoIndex,
+        raceImages: this.images
       }
     },
     mounted() {
@@ -65,7 +66,7 @@
       },
       changePhoto(updateNumber){
             console.log("UPDATE NUMBER: ", updateNumber)
-        const totalPhotos = this.images.length - 1
+        const totalPhotos = this.raceImages.length - 1
         if(totalPhotos === this.index && updateNumber > 0){
           this.index = 0
         }
