@@ -6,8 +6,11 @@
       <div class="photo-options">
     <div class="time-label">Race: </div>
       <select class="dropdown-tz" v-model="selectedRace">
-        <option value="roadamerica" >Road America</option>
         <option value="stpete">St Pete</option>
+        <option value="longbeach" >Long Beach</option>
+        <option value="indygp" >Indy GP</option>
+        <option value="indy500" >Indy 500</option>
+        <option value="roadamerica" >Road America</option>
         
       </select>
     </div>
