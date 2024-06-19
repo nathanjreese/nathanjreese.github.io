@@ -58,7 +58,7 @@ export default {
             { rank: 1, name: 'Jacob Abel', series: 'IndyNXT', wins: 2, titles: 'None', previous: '-'},
             { rank: 2, name: 'Louis Foster', series: 'IndyNXT', wins: 2, titles: 'USF Pro', previous: '-'},
             { rank: 3, name: 'Nolan Siegel', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
-            { rank: 4, name: `Jamie Chadwick`, series: 'IndyNXT', wins: 1, titles: 'None', previous: 'Unranked'},
+            { rank: 4, name: `Jamie Chadwick`, series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
             { rank: 5, name: `Caio Collet`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
             { rank: 6, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 4, titles: 'None', previous: '-'},
             { rank: 7, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: '-'},
