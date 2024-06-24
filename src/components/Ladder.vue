@@ -3,7 +3,7 @@
     <title-page
       title-text="Ladder Power Rankings"
       />
-      <div class="last-update"><b>Last Updated:</b> June 17, 2024</div>
+      <div class="last-update"><b>Last Updated:</b> June 24, 2024</div>
     <div class="table-holder">
   <v-table class="ladder-table" density="compact">
     <thead>
@@ -32,7 +32,40 @@
       >
         <td>{{ item.rank }}</td>
         <td class="text-left">{{ item.name }}</td>
-        <td class="text-left">{{ item.series }}</td>
+        
+        <td class="text-left">
+          <img ref="image" 
+          v-if="item.series.includes('IndyNXT')"
+          :src="IndyNxtLogoPic"
+          title:="IndyNXT"
+          alt="IndyNXT Logo"
+          contain
+          class="series-words"
+          >
+          <img ref="image" 
+          v-if="item.series.includes('Pro 200')"
+          title:="USF Pro 2000"
+          :src="USFProLogoPic"
+          alt="IndyCar Logo"
+          contain
+          class="series-words"
+          >
+          <img ref="image" 
+          v-if="item.series.includes('USF 2000')"
+          :src="USF2000LogoPic"
+          alt="IndyCar Logo"
+          contain
+          class="series-words"
+          >
+          <img ref="image" 
+          v-if="item.series.includes('USF Juniors')"
+          :src="USFJuniorsLogoPic"
+          alt="IndyCar Logo"
+          contain
+          class="series-words"
+          >
+        </td>
+
         <td >{{ item.wins }}</td>
         <td :class="{ moveup: item.previous.includes('↑') || item.previous === 'Unranked', movedown: item.previous.includes('↓')}">{{ item.previous }}</td>
       </tr>
@@ -55,23 +88,27 @@ export default {
     return {
       home_msg: 'IndyCar Ladder',
       driverRanks: [
-            { rank: 1, name: 'Jacob Abel', series: 'IndyNXT', wins: 2, titles: 'None', previous: '-'},
-            { rank: 2, name: 'Louis Foster', series: 'IndyNXT', wins: 2, titles: 'USF Pro', previous: '-'},
+            { rank: 1, name: 'Louis Foster', series: 'IndyNXT', wins: 4, titles: 'USF Pro', previous: '↑ 1'},
+            { rank: 2, name: 'Jacob Abel', series: 'IndyNXT', wins: 2, titles: 'None', previous: '↓ 1'},
             { rank: 3, name: `Jamie Chadwick`, series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
             { rank: 4, name: `Caio Collet`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
             { rank: 5, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '-'},
             { rank: 6, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 4, titles: 'None', previous: '-'},
             { rank: 7, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 1, titles: 'None', previous: '-'},
-            { rank: 8, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
+            { rank: 8, name: 'Callum Hedge', series: 'IndyNXT', wins: 0, titles: 'None', previous: '↑ 2'},
             { rank: 9, name: 'Jace Denmark', series: 'USF Pro 2000', wins: 0, titles: 'None', previous: '-'},
-            { rank: 10, name: `Michael d'Orlando`, series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '-'},
+            { rank: 10, name: `Reece Gold`, series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '↓ 2'},
             { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 4, titles: 'None', previous: '-'},
             { rank: 12, name: 'Braden Eves',series: 'USF Pro 2000', wins: 1, titles: 'USF2000', previous: '-'},
             { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 2, titles: 'None', previous: '-'},
-            { rank: 14, name: 'Ariel Elkin', series: 'USF Juniors', wins: 2, titles: 'None', previous: '↑ 2'},
+            { rank: 14, name: 'Ariel Elkin', series: 'USF Juniors', wins: 2, titles: 'None', previous: '-'},
             { rank: 15, name: 'Max Taylor', series: 'USF 2000', wins: 2, titles: 'None', previous: '-'},
-            { rank: 16, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 3, titles: 'None', previous: '↓ 2'},
-          ]
+            { rank: 16, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 3, titles: 'None', previous: '-'},
+          ],
+        IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
+        USFProLogoPic: new URL('@/assets/USFProWords.png', import.meta.url),
+        USF2000LogoPic: new URL('@/assets/USF2000Words.png', import.meta.url),
+        USFJuniorsLogoPic: new URL('@/assets/USFJuniorsWords.png', import.meta.url),
     }
   }
 }
@@ -126,7 +163,7 @@ a {
   background-color: #dbdbdb;
 }
   td{
-    padding: 5px 1px;
+    padding: 3px 1px;
   }
 }
 .main-cards {
@@ -161,6 +198,9 @@ background-size: 100%;
 .card-img:hover {
   cursor: pointer !important;
 }
+.series-words{
+    height: calc(11px + .8vw);
+  }
 .driver-series{
   position: relative;
   color: red;
