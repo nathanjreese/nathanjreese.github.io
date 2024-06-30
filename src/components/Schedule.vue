@@ -93,6 +93,13 @@
           contain
           class="series-words"
           >
+          <img ref="image" 
+          v-if="item.series.includes('USFJuniors')"
+          :src="USFJuniorsLogoPic"
+          alt="IndyCar Logo"
+          contain
+          class="series-words"
+          >
         </td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.description }}</td>
@@ -127,6 +134,7 @@ import Dropdown from 'v-dropdown'
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
         USFProLogoPic: new URL('@/assets/USFProWords.png', import.meta.url),
         USF2000LogoPic: new URL('@/assets/USF2000Words.png', import.meta.url),
+        USFJuniorsLogoPic: new URL('@/assets/USFJuniorsWords.png', import.meta.url),
         showPast: false,
         showRaces: false,
         events: scheduleData,
