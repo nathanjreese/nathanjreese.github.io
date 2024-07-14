@@ -73,7 +73,7 @@
     },
     {
       "number": 6,
-      "name": "Theo Pourchaire",
+      "name": "Nolan Siegel",
       "team": "Arrow McLaren",
       "frequency": "462.7875",
       "secondary": "461.7250",
@@ -136,16 +136,8 @@
       "series": "IndyCar"
     },
     {
-      "number": 18,
-      "name": "Nolan Siegel",
-      "team": "Dale Coyne Racing",
-      "frequency": "467.2000",
-      "secondary": "469.9375",
-      "series": "IndyCar"
-    },
-    {
       "number": 51,
-      "name": "Tristan Vautier",
+      "name": "Multiple Drivers",
       "team": "Dale Coyne Racing",
       "frequency": "463.6000",
       "secondary": "464.9375",
