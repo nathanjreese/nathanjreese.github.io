@@ -1,5 +1,6 @@
 <template>
     <v-card>
+      <default-bar v-if="!isMobile"/>
       <v-layout>
         <v-app-bar 
           color="primary"
@@ -26,7 +27,7 @@
           location="top"
           temporary
           class='drawer-menu'
-          style="width: 225px; height: 310px"
+          style="width: 225px; height: 350px"
         >
           <v-list>
             <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
@@ -35,15 +36,21 @@
             <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-ladder" title="Ladder Rankings" to="/ladder" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-earth" title="Nation's Cup" to="/nations" color="blue"></v-list-item>
        </v-list>
         </v-navigation-drawer> 
         <router-view />
       </v-layout>
     </v-card>
   </template>
-  
+
   <script>
+    import DefaultBar from './layouts/default/AppBar.vue'
+
     export default {
+      components: {
+      DefaultBar
+      },
       data: () => ({
         drawer: false,
         group: null,

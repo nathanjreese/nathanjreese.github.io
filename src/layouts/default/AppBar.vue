@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <nav id="vue" v-if="!isMobile">
     <div class="left-nav">
       <router-link class ="routlink" to="/">
@@ -13,13 +13,102 @@
           <div class="logo-title"><b>IndyCar</b> Drivers App</div>
     </div>
     <div class="right-nav">
-      <!-- <div class="menu-item"><router-link to="/daytona">Daytona Tracker</router-link></div> -->
+      <div class="menu-item"><router-link to="/daytona">Daytona Tracker</router-link></div>
       <div class="menu-item"><router-link to="/selector">Driver Selector</router-link></div>
       <div class="menu-item"><router-link to="/silly">Silly Season</router-link></div>
+      <div class="menu-item" @click="infoActive=!infoActive">
+          Info
+        <div v-if="infoActive">
+          <router-link to="/silly">Test</router-link>
+          </div>
+      </div>
       <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div>
       <div class="menu-item"><router-link to="/frequencies">Frequencies</router-link></div>
         <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div>
         <div class="menu-item"><router-link to="/ladder">Ladder Rankings</router-link></div>
+    </div>
+  </nav>
+</template> -->
+<template>
+  <nav id="vue" v-if="!isMobile">
+  <!-- <div class="d-flex justify-space-around"> -->
+    <div class="left-nav">
+    <router-link class ="routlink" to="/">
+      <img ref="image" 
+          src="@/assets/DriverLogo.png"
+          alt="Driver Logo"
+          
+          contain
+          class="main-logo-img"
+          >
+        </router-link>
+          <div class="logo-title"><b>IndyCar</b> Drivers App</div>
+    </div>
+    <div class="right-nav">
+    <v-menu>
+      <template v-slot:activator="{ props }">
+        <v-btn
+          class="menu-button"
+          color="primary"
+          v-bind="props"
+        >
+          Interactive
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in menuItems.interactive"
+          :key="index"
+          :value="index"
+        >
+          <v-list-item-title>
+            <router-link :to=item.route>{{ item.title }}</router-link>
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+    <v-btn
+      class="menu-button"
+      color="primary"
+    >
+      Rankings
+
+      <v-menu activator="parent">
+        <v-list>
+          <v-list-item
+            v-for="(item, index) in menuItems.rankings"
+            :key="index"
+            :value="index"
+          >
+            <v-list-item-title>
+              <router-link :to=item.route>{{ item.title }}</router-link>
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </v-btn>
+
+    <v-btn
+    class="menu-button"
+      id="menu-activator"
+      color="primary"
+    >
+      Information
+    </v-btn>
+
+    <v-menu activator="#menu-activator">
+      <v-list>
+        <v-list-item
+          v-for="(item, index) in menuItems.information"
+          :key="index"
+          :value="index"
+        >
+          <v-list-item-title>
+            <router-link :to=item.route>{{ item.title }}</router-link>
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
     </div>
   </nav>
 </template>
@@ -28,6 +117,26 @@
 
 export default {
 name: 'appbar',
+data () {
+      return {
+        infoActive: false,
+        menuItems: {
+          interactive: [
+            { title: `Driver Selector`, route: 'selector' },
+            { title: `Silly Season`, route: 'silly' }
+          ],
+          rankings: [
+            { title: `Leader's Circle`, route: 'leaders' },
+            { title: `Ladder Rankings`, route: 'ladder' },
+            { title: `Nation's Cup`, route: 'nations' }
+          ],
+          information: [
+            { title: `Schedule`, route: 'schedule' },
+            { title: `Frequencies`, route: 'frequencies' },
+          ]
+        }
+  }
+},
 components: {
 },
 methods: {
@@ -49,7 +158,7 @@ watch: {
         group () {
           this.drawer = false
         },
-      },
+      }
 
 }
 </script>
@@ -63,29 +172,41 @@ justify-content: center;
 flex-direction: row;
 font-size: 17px;
 }
+a{
+  text-decoration: none;
+
+}
 nav .main-logo-img{
-  height: 70px;
+  height: 60px;
   margin-right: 20px;
 }
 nav .left-nav{
-  width: 40%;
+  width: 35%;
   padding-left: 30px;
   margin-right: 10px;
   color: white;
   font-size: 25px;
   display: inline-flex;
 }
-div .right-nav{
-  width: 900px;
-  margin: 0px 30px;
-  padding-top: 50px;
+nav .right-nav{
+  width: 70%;
+  margin: 20px 30px;
   background-color: #323232;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  .menu-button{
+    height: 50px;
+    margin: 00px 10px;
+    .a {
+      text-decoration: none;
+      color: black;
+    }
+  }
 }
-div .logo-title{
+nav .logo-title{
+  color: whitesmoke;
   margin-top: 10px;
 }
 nav .menu-item {
@@ -122,27 +243,6 @@ padding: 0px 3px 0px 4px;
 margin: auto;
 }
 
-
-nav-mobile {
-width: 100%;
-background-color: #323232;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-flex-direction: row;
-}
-nav-mobile .main-logo-img{
-  height: 70px;
-  margin-right: 20px;
-}
-nav-mobile .left-nav{
-  width: 40%;
-  padding-left: 30px;
-  margin-right: 10px;
-  color: white;
-  font-size: 25px;
-  display: inline-flex;
-}
 div .right-nav{
   width: 900px;
   margin: 0px 30px;
@@ -155,30 +255,5 @@ div .right-nav{
 }
 div .logo-title{
   margin-top: 10px;
-}
-nav-mobile .menu-item {
-color: rgb(194, 194, 194);
-padding: 0px 30px;
-margin: 0px 0px;
-position: relative;
-text-align: center;
-border-bottom: 5px solid transparent;
-display: flex;
-transition: 0.4s;
-padding-bottom: 20px;
-}
-nav-mobile .menu-item .router-link-active {
- cursor: pointer;
- border-bottom-color: #cd7904 !important;
- font-weight: bold;
- color: whitesmoke
-}
-
-nav-mobile .menu-item:hover {
-border-bottom-color: #cd7904;
-}
-nav-mobile .menu-item a {
-color: inherit;
-text-decoration: none;
 }
 </style>

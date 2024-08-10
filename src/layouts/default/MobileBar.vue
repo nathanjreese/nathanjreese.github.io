@@ -1,97 +1,141 @@
 <template>
+    <v-app-bar 
+          color="primary"
+          class="app-bar-mobile"
+          v-if="isMobile"
+        >
+          <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+          <div class="text-no-wrap">
+            <div class="mobile-nav-text">IndyCar Drivers App</div>
+            <div class="mobile-nav-img">
+              <img ref="image" 
+                src="@/assets/DriverLogo.png"
+                alt="Driver Logo"
+                
+                contain
+                class="mobile-logo-img"
+                >
+            </div>
+          </div>
+        </v-app-bar> 
+        <v-navigation-drawer
+          v-model="drawer"
+          color="primary"
+          location="top"
+          temporary
+          class='drawer-menu'
+          style="width: 225px; height: 310px"
+        >
+          <v-list>
+            <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-account-group" title="Silly Season" to="/silly" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-ladder" title="Ladder Rankings" to="/ladder" color="blue"></v-list-item>
+       </v-list>
+        </v-navigation-drawer> 
+  </template>
   
-  <nav id="vue">
-    <div class="left-nav">
-      <img ref="image" 
-          src="@/assets/DriverLogo.png"
-          alt="Driver Logo"
-          
-          contain
-          class="main-logo-img"
-          >
-          <div class="logo-title"><b>IndyCar</b> Drivers App</div>
-    </div>
-    <div class="right-nav">
-      <div class="menu-item"><router-link class ="routlink" to="/wordle">Wordle</router-link></div>
-        <div class="menu-item"><router-link to="/silly">Silly Season</router-link></div>
-        <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div>
-        <div class="menu-item"><router-link to="/selector">Driver Selector</router-link></div>
-        <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div>
-    </div>
-  </nav>
-</template>
+  <script>
 
-<script>
-
-export default {
-name: 'appbar',
-components: {
-},
-methods: {
-  showPage() {
-    this.$emit('close')
+  export default {
+    name: 'appbar',
+    components: {
+    DefaultBar,
+    MobileBar
+    },
+    data: () => ({
+      drawer: false,
+      group: null,
+      items: [
+        {
+          title: 'Silly Season',
+          value: '/silly',
+        },
+        {
+          title: 'Rolex 24 Tracker',
+          value: '/rolex',
+        },
+        {
+          title: 'Leaders Circle',
+          value: '/leaders',
+        }
+      ],
+    }),
+    computed: {
+      isMobile() {
+        if( screen.width <= 1000 ) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    },
+    },
+    watch: {
+      group () {
+        this.drawer = false
+      },
+    },
   }
-}
-
-}
 </script>
-<style>
-nav {
-width: 100%;
-background-color: #323232;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-flex-direction: row;
+
+<style scoped>
+.v-toolbar {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  transition: inherit;
+  width: 100%;
 }
-nav .main-logo-img{
-  height: 70px;
+.app-bar {
+padding: 20px 0px;
+width: 100%;
+text-align: center;
+font-weight: bold;
+color: whitesmoke;
+height: 90px;
+overflow-y: auto;
+overflow-x: visible;
+}
+.app-bar-mobile {
+margin-bottom: 110px;
+width: 100%;
+text-align: center;
+font-weight: bold;
+color: whitesmoke;
+}
+.mobile-logo-img{
+  height: 40px;
   margin-right: 20px;
 }
-nav .left-nav{
-  width: 40%;
-  padding-left: 30px;
-  margin-right: 10px;
-  color: white;
-  font-size: 25px;
-  display: inline-flex;
-}
-div .right-nav{
-  width: 900px;
-  margin: 0px 30px;
-  padding-top: 50px;
-  background-color: #323232;
-  display: inline-flex;
+.headline {
+  text-align: center;
   align-items: center;
-  justify-content: center;
+  font-size: 30px;
+}
+.text-no-wrap{
+  display: inline-flex;
+  margin-bottom: 15px;
+  width: 100%;
   flex-direction: row;
+  position: relative;
+  float: center;
+  padding-left: 60px;
 }
-div .logo-title{
-  margin-top: 10px;
+.mobile-nav-text{
+  margin-top: 25px;
+  padding-right: 20px;
+  font-size: calc(15px + 1vw);
 }
-nav .menu-item {
-color: rgb(194, 194, 194);
-padding: 0px 30px;
-margin: 0px 0px;
-position: relative;
-text-align: center;
-border-bottom: 5px solid transparent;
-display: flex;
-transition: 0.4s;
-padding-bottom: 20px;
+.mobile-nav-img{
+  margin-top: 18px;
+  padding-right: 20px;
+  font-size: 20px;
 }
-nav .menu-item .router-link-active {
- cursor: pointer;
- border-bottom-color: #cd7904 !important;
- font-weight: bold;
- color: whitesmoke
-}
-
-nav .menu-item:hover {
-border-bottom-color: #cd7904;
-}
-nav .menu-item a {
-color: inherit;
-text-decoration: none;
+.drawer-menu{
+  height: 900px;
 }
 </style>

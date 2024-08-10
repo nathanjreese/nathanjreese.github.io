@@ -1,11 +1,15 @@
 <template>
   <v-app>
-    <default-bar />
-    <default-view />
+    <main-page />
   </v-app>
 </template>
 
-<script setup>
-  import DefaultBar from './AppBar.vue'
-  import DefaultView from './View.vue'
+<script>
+  import MainPage from '@/components/Main.vue'
+
+  export default {
+  components: {
+    MainPage
+    }
+  }
 </script>
