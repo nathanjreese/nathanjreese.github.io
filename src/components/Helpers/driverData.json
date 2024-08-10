@@ -1,7 +1,7 @@
 [
   {
     "name": "Álex Palou",
-    "age": 26,
+    "age": 1997,
     "team": "Front Runner",
     "manufacturer": "Honda",
     "nationality": "Spain",
@@ -18,7 +18,7 @@
   },
   {
     "name": "Scott Dixon",
-    "age": 43,
+    "age": 1980,
     "team": "Front Runner",
     "manufacturer": "Honda",
     "nationality": "New Zealand",
@@ -35,7 +35,7 @@
   },
   {
     "name": "Scott McLaughlin",
-    "age": 30,
+    "age": 1993,
     "team": "Front Runner",
     "manufacturer": "Chevy",
     "nationality": "New Zealand",
@@ -52,7 +52,7 @@
   },
   {
     "name": "Pato O'Ward",
-    "age": 24,
+    "age": 1999,
     "team": "Next Best Thing",
     "manufacturer": "Chevy",
     "nationality": "Mexico",
@@ -69,7 +69,7 @@
   },
   {
     "name": "Josef Newgarden",
-    "age": 33,
+    "age": 1990,
     "team": "Front Runner",
     "manufacturer": "Chevy",
     "nationality": "USA",
@@ -86,7 +86,7 @@
   },
   {
     "name": "Marcus Ericsson",
-    "age": 33,
+    "age": 1990,
     "team": "Next Best Thing",
     "manufacturer": "Honda",
     "nationality": "Sweden",
@@ -103,7 +103,7 @@
   },
   {
     "name": "Will Power",
-    "age": 43,
+    "age": 1981,
     "team": "Front Runner",
     "manufacturer": "Chevy",
     "nationality": "Australia",
@@ -120,7 +120,7 @@
   },
   {
     "name": "Christian Lundgaard",
-    "age": 22,
+    "age": 2001,
     "team": "Promising Future",
     "manufacturer": "Honda",
     "nationality": "Denmark",
@@ -137,7 +137,7 @@
   },
   {
     "name": "Alexander Rossi",
-    "age": 32,
+    "age": 1991,
     "team": "Next Best Thing",
     "manufacturer": "Chevy",
     "nationality": "USA",
@@ -154,7 +154,7 @@
   },
   {
     "name": "Colton Herta",
-    "age": 23,
+    "age": 2000,
     "team": "Next Best Thing",
     "manufacturer": "Honda",
     "nationality": "USA",
@@ -171,7 +171,7 @@
   },
   {
     "name": "Kyle Kirkwood",
-    "age": 25,
+    "age": 1998,
     "team": "Next Best Thing",
     "manufacturer": "Honda",
     "nationality": "USA",
@@ -188,7 +188,7 @@
   },
   {
     "name": "Felix Rosenqvist",
-    "age": 32,
+    "age": 1991,
     "team": "Promising Future",
     "manufacturer": "Honda",
     "nationality": "Sweden",
@@ -205,7 +205,7 @@
   },
   {
     "name": "Romain Grosjean",
-    "age": 37,
+    "age": 1986,
     "team": "Underdog",
     "manufacturer": "Honda",
     "nationality": "France",
@@ -222,7 +222,7 @@
   },
   {
     "name": "Rinus VeeKay",
-    "age": 23,
+    "age": 2000,
     "team": "Underdog",
     "manufacturer": "Chevy",
     "nationality": "Netherlands",
@@ -239,7 +239,7 @@
   },
   {
     "name": "Graham Rahal",
-    "age": 35,
+    "age": 1989,
     "team": "Promising Future",
     "nationality": "USA",
     "manufacturer": "Honda",
@@ -256,7 +256,7 @@
   },
   {
     "name": "David Malukas",
-    "age": 22,
+    "age": 2001,
     "team": "Next Best Thing",
     "manufacturer": "Honda",
     "nationality": "USA",
@@ -273,7 +273,7 @@
   },
   {
     "name": "Santino Ferrucci",
-    "age": 25,
+    "age": 1998,
     "team": "Underdog",
     "manufacturer": "Chevy",
     "nationality": "USA",
@@ -290,7 +290,7 @@
   },
   {
     "name": "Marcus Armstrong",
-    "age": 23,
+    "age": 2000,
     "team": "Front Runner",
     "manufacturer": "Honda",
     "nationality": "New Zealand",
@@ -307,7 +307,7 @@
   },
   {
     "name": "Agustín Canapino",
-    "age": 34,
+    "age": 1990,
     "team": "Underdog",
     "manufacturer": "Chevy",
     "nationality": "Argentina",
@@ -324,7 +324,7 @@
   },
   {
     "name": "Sting Ray Robb",
-    "age": 22,
+    "age": 2001,
     "team": "Underdog",
     "manufacturer": "Honda",
     "nationality": "USA",
@@ -341,7 +341,7 @@
   },
   {
     "name": "Ed Carpenter",
-    "age": 42,
+    "age": 1981,
     "team": "Underdog",
     "manufacturer": "Chevy",
     "nationality": "USA",
@@ -358,7 +358,7 @@
   },
   {
     "name": "Linus Lundqvist",
-    "age": 24,
+    "age": 1999,
     "team": "Front Runner",
     "manufacturer": "Honda",
     "nationality": "Sweden",
@@ -374,25 +374,8 @@
     "points": 0
   },
   {
-    "name": "Tom Blomqvist",
-    "age": 30,
-    "team": "Promising Future",
-    "manufacturer": "Honda",
-    "nationality": "United Kingdom",
-    "livery": "same",
-    "aggressiveness": 2,
-    "personality": "friendly",
-    "colors": ["white", "black"],
-    "f1": "no",
-    "success": "rookie",
-    "social": 51668,
-    "content": "no",
-    "fulltime": "yes",
-    "points": 0
-  },
-  {
     "name": "Kyffin Simpson",
-    "age": 19,
+    "age": 2004,
     "team": "Front Runner",
     "manufacturer": "Honda",
     "nationality": "Barbados",
@@ -409,7 +392,7 @@
   },
   {
     "name": "Christian Rasmussen",
-    "age": 23,
+    "age": 2000,
     "team": "Underdog",
     "manufacturer": "Chevy",
     "nationality": "Denmark",
@@ -426,7 +409,7 @@
   },
   {
     "name": "Pietro Fittipaldi",
-    "age": 27,
+    "age": 1996,
     "team": "Promising Future",
     "manufacturer": "Honda",
     "nationality": "USA/Brazil",
@@ -443,7 +426,7 @@
   },
   {
     "name": "Jack Harvey",
-    "age": 30,
+    "age": 1993,
     "team": "Underdog",
     "manufacturer": "Honda",
     "nationality": "United Kingdom",
@@ -459,9 +442,9 @@
   },
   {
     "name": "Nolan Siegel",
-    "age": 19,
-    "team": "Underdog",
-    "manufacturer": "Honda",
+    "age": 2004,
+    "team": "Next Best Thing",
+    "manufacturer": "Chevy",
     "nationality": "USA",
     "ovals": "no",
     "aggressiveness": 2,
@@ -469,22 +452,6 @@
     "f1": "no",
     "success": "rookie",
     "social": 4897,
-    "content": "no",
-    "fulltime": "no",
-    "points": 0
-  },
-  {
-    "name": "Théo Pourchaire",
-    "age": 20,
-    "team": "Next Best Thing",
-    "manufacturer": "Chevy",
-    "nationality": "France",
-    "ovals": "no",
-    "aggressiveness": 2,
-    "personality": "friendly",
-    "f1": "no",
-    "success": "rookie",
-    "social": 260000,
     "content": "no",
     "fulltime": "no",
     "points": 0

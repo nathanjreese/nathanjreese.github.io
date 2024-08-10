@@ -126,5 +126,38 @@
     "content": "no",
     "fulltime": "no",
     "points": 0
+  },
+  {
+    "name": "Théo Pourchaire",
+    "age": 2003,
+    "team": "Next Best Thing",
+    "manufacturer": "Chevy",
+    "nationality": "France",
+    "ovals": "no",
+    "aggressiveness": 2,
+    "personality": "friendly",
+    "f1": "no",
+    "success": "rookie",
+    "social": 260000,
+    "content": "no",
+    "fulltime": "no",
+    "points": 0
+  },
+  {
+    "name": "Tom Blomqvist",
+    "age": 1993,
+    "team": "Promising Future",
+    "manufacturer": "Honda",
+    "nationality": "United Kingdom",
+    "livery": "same",
+    "aggressiveness": 2,
+    "personality": "friendly",
+    "colors": ["white", "black"],
+    "f1": "no",
+    "success": "rookie",
+    "social": 51668,
+    "content": "no",
+    "fulltime": "yes",
+    "points": 0
   }
  ]
