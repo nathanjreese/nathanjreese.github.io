@@ -1188,6 +1188,9 @@ import TitlePage from '@/components/Partials/Title'
     color: whitesmoke;
     background-color: #323232;
   }
+  tr{
+    height: 38px;
+  }
   td{padding: 4px;}
   td.text-country{
     padding-left: 20px;
@@ -1203,7 +1206,7 @@ tr:nth-child(even)
   background-color: #dbdbdb;
 }
 .flag-images{
-  width: 40px;
+  width: 30px;
 }
 
 .nations-title{
