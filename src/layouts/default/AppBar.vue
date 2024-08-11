@@ -128,7 +128,7 @@ data () {
           rankings: [
             { title: `Leader's Circle`, route: 'leaders' },
             { title: `Ladder Rankings`, route: 'ladder' },
-            { title: `Nation's Cup`, route: 'nations' }
+            { title: `Nations Cup`, route: 'nations' }
           ],
           information: [
             { title: `Schedule`, route: 'schedule' },

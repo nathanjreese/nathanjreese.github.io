@@ -1,7 +1,7 @@
 <template>
   <div class="main-nations">
     <title-page
-      title-text="2024 Nation's Cup"
+      title-text="2024 Nations Cup"
       />
   <div class="table-holder">
   <v-table class="nations-table" density="compact">
