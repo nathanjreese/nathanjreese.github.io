@@ -1,4 +1,4 @@
- [
+[
         {
           "series": "IndyNXT",
           "date": "2024-03-08",
@@ -1314,6 +1314,186 @@
           "track": "World Wide Technology Raceway"
         },
         {
+          "series": "USFJuniors",
+          "date": "2024-08-23",
+          "time": "12:00:00 PM",
+          "type": "Qualifying",
+          "description": "USF Juniors Qualifying",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USF2000",
+          "date": "2024-08-23",
+          "time": "12:45:00 PM",
+          "type": "Practice",
+          "description": "USF2000 Practice 1",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFPro2000",
+          "date": "2024-08-23",
+          "time": "1:30:00 PM",
+          "type": "Practice",
+          "description": "USF Pro 2000 Practice 1",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFJuniors",
+          "date": "2024-08-23",
+          "time": "2:15:00 PM",
+          "type": "Race",
+          "description": "USF Juniors Race 1",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USF2000",
+          "date": "2024-08-23",
+          "time": "3:10:00 PM",
+          "type": "Qualifying",
+          "description": "USF2000 Qualifying",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFPro2000",
+          "date": "2024-08-23",
+          "time": "3:55:00 PM",
+          "type": "Qualifying",
+          "description": "USF Pro 2000 Qualifying",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "IndyNXT",
+          "date": "2024-08-23",
+          "time": "4:45:00 PM",
+          "type": "Practice",
+          "description": "IndyNXT Practice 1",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "IndyCar",
+          "date": "2024-08-23",
+          "time": "5:55:00 PM",
+          "type": "Practice",
+          "description": "IndyCar Practice 1",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USF2000",
+          "date": "2024-08-23",
+          "time": "7:30:00 PM",
+          "type": "Race",
+          "description": "USF2000 Race 1 ",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFPro2000",
+          "date": "2024-08-23",
+          "time": "8:25:00 PM",
+          "type": "Race",
+          "description": "USF Pro 2000 Race 1",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFJuniors",
+          "date": "2024-08-23",
+          "time": "9:20:00 PM",
+          "type": "Race",
+          "description": "USF Juniors Race 2",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "IndyCar",
+          "date": "2024-08-24",
+          "time": "12:00:00 PM",
+          "type": "Practice",
+          "description": "IndyCar Practice 2",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFPro2000",
+          "date": "2024-08-24",
+          "time": "1:20:00 PM",
+          "type": "Race",
+          "description": "USF Pro 2000 Race 1",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "IndyNXT",
+          "date": "2024-08-24",
+          "time": "2:20:00 PM",
+          "type": "Practice",
+          "description": "IndyNXT Practice 2",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "IndyCar",
+          "date": "2024-08-24",
+          "time": "3:30:00 PM",
+          "type": "Qualifying",
+          "description": "IndyCar Qualifying",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFJuniors",
+          "date": "2024-08-24",
+          "time": "5:15:00 PM",
+          "type": "Race",
+          "description": "USF Juniors Race 3",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USFPro2000",
+          "date": "2024-08-24",
+          "time": "6:10:00 PM",
+          "type": "Race",
+          "description": "USF Pro 2000 Race 2",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "IndyNXT",
+          "date": "2024-08-24",
+          "time": "7:20:00 PM",
+          "type": "Qualifying",
+          "description": "IndyNXT Qualifying",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "IndyCar",
+          "date": "2024-08-24",
+          "time": "8:15:00 PM",
+          "type": "Practice",
+          "description": "IndyCar Practice 3",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
+          "series": "USF2000",
+          "date": "2024-08-24",
+          "time": "9:05:00 PM",
+          "type": "Race",
+          "description": "USF2000 Race 3",
+          "event": "Bitnile.com Grand Prix of Portland",
+          "track": "Portland International Raceway"
+        },
+        {
           "series": "IndyNXT",
           "date": "2024-08-25",
           "time": "1:10:00 PM",
@@ -1325,7 +1505,7 @@
         {
           "series": "IndyCar",
           "date": "2024-08-25",
-          "time": "3:00:00 PM",
+          "time": "3:30:00 PM",
           "type": "Race",
           "description": "IndyCar Race",
           "event": "Bitnile.com Grand Prix of Portland",
@@ -1377,3 +1557,4 @@
           "track": "Nashville Super Speedway"
         }
       ]
+ 
