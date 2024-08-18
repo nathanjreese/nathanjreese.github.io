@@ -3,6 +3,7 @@
     <title-page
       title-text="2024 Nations Cup"
       />
+      <div class="last-update"><b>Last Updated:</b> August 18, 2024</div>
   <div class="table-holder">
   <v-table class="nations-table" density="compact">
     <thead>
@@ -1167,6 +1168,9 @@ import TitlePage from '@/components/Partials/Title'
   background-color:rgb(231, 231, 231);
   padding-bottom: 50px;
   }
+  .last-update{
+  padding-bottom: 20px;
+}
   .table-holder{
     display: flex;
     float: center;

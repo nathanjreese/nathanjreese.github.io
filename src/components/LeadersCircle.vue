@@ -120,6 +120,9 @@ import TitlePage from '@/components/Partials/Title'
   background-color:rgb(231, 231, 231);
   padding-bottom: 50px;
   }
+  .last-update{
+  padding-bottom: 20px;
+}
   .table-holder{
     display: flex;
     float: center;
