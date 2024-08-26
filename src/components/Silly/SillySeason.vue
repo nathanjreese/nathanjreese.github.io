@@ -39,7 +39,7 @@
                 @click="removeDriver(item)"
                 @load="onImgLoad"
                 />
-             {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+             {{ item.name[0] }}. {{ item.name.split(" ")[item.name.split(" ").length - 1]}}
             </div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el"
@@ -89,7 +89,7 @@
                 @click="removeDriver(item)"
                 @load="onImgLoad"
                 />
-             {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+             {{ item.name[0] }}. {{ item.name.split(" ")[item.name.split(" ").length - 1]}}
             </div>
           </div>
           </div>
@@ -139,7 +139,7 @@
                 @click="removeDriver(item)"
                 @load="onImgLoad"
                 />
-             {{ item.name[0] }}. {{ item.name.split(" ").pop()}}
+             {{ item.name[0] }}. {{ item.name.split(" ")[item.name.split(" ").length - 1]}}
             </div>
           </div>
           </div>
@@ -176,7 +176,7 @@
               contain
               class="silly-img"
               @load="onImgLoad"/>
-              {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+              {{ item.name[0] }}. {{ item.name.split(" ")[item.name.split(" ").length - 1]}}
             </div>
           </div>
           </div>
@@ -219,7 +219,7 @@
               class="silly-img-mobile"
               @load="onImgLoad"
               @click="removeDriver(item)"/>
-              {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+              {{ item.name[0] }}. {{ item.name.split(" ")[item.name.split(" ").length - 1]}}
             </div>
           </div>
           <div v-for="n in (team.size - listTeam(team.name).length )" class="drag-el-mobile"
@@ -263,7 +263,7 @@
               contain
               class="silly-img-mobile"
               @click="removeDriver(item)">
-              {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+              {{ item.name[0] }}. {{ item.name.split(" ")[item.name.split(" ").length - 1]}}
           </div>
           </div>
           <div class="drag-el-mobile"
