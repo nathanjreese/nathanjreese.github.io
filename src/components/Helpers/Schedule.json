@@ -1512,6 +1512,42 @@
           "track": "Portland International Raceway"
         },
         {
+            "series": "IndyNXT",
+            "date": "2024-08-30",
+            "time": "2:30:00 PM",
+            "type": "Practice",
+            "description": "IndyNXT Practice",
+            "event": "Hy-Vee Milwaukee Mile 250",
+            "track": "The Milwaukee Mile"
+        },
+        {
+            "series": "IndyCar",
+            "date": "2024-08-30",
+            "time": "3:35:00 PM",
+            "type": "Practice",
+            "description": "IndyCar Practice",
+            "event": "Hy-Vee Milwaukee Mile 250",
+            "track": "The Milwaukee Mile"
+        },
+        {
+            "series": "IndyNXT",
+            "date": "2024-08-31",
+            "time": "1:00:00 PM",
+            "type": "Qualifying",
+            "description": "IndyNXT Qualifying",
+            "event": "Hy-Vee Milwaukee Mile 250",
+            "track": "The Milwaukee Mile"
+        },
+        {
+            "series": "IndyCar",
+            "date": "2024-08-31",
+            "time": "2:15:00 PM",
+            "type": "Qualifying",
+            "description": "IndyCar Qualifying",
+            "event": "Hy-Vee Milwaukee Mile 250",
+            "track": "The Milwaukee Mile"
+        },
+        {
           "series": "IndyNXT",
           "date": "2024-08-31",
           "time": "3:50:00 PM",
@@ -1523,7 +1559,7 @@
         {
           "series": "IndyCar",
           "date": "2024-08-31",
-          "time": "6:00:00 PM",
+          "time": "5:40:00 PM",
           "type": "Race",
           "description": "IndyCar Race 1",
           "event": "Hy-Vee Milwaukee Mile 250",
