@@ -3,7 +3,7 @@
     <title-page
       title-text="2024 Nations Cup"
       />
-      <div class="last-update"><b>Last Updated:</b> August 18, 2024</div>
+      <div class="last-update"><b>Last Updated:</b> August 29, 2024</div>
   <div class="table-holder">
   <v-table class="nations-table" density="compact">
     <thead>
@@ -111,7 +111,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 26,
     "toronto": 19,
     "gateway": 51,
-    "portland": 0,
+    "portland": 36,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -135,7 +135,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 37,
     "toronto": 14,
     "gateway": 42,
-    "portland": 0,
+    "portland": 26,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -159,7 +159,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 28,
     "toronto": 13,
     "gateway": 5,
-    "portland": 0,
+    "portland": 15,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -183,7 +183,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 16,
     "toronto": 9,
     "gateway": 27,
-    "portland": 0,
+    "portland": 9,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -207,7 +207,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 15,
     "toronto": 0,
     "gateway": 12,
-    "portland": 0,
+    "portland": 18,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -231,7 +231,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 19,
     "toronto": 17,
     "gateway": 36,
-    "portland": 0,
+    "portland": 7,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -255,7 +255,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 32,
     "toronto": 36,
     "gateway": 20,
-    "portland": 0,
+    "portland": 5,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -279,7 +279,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 43,
     "toronto": 32,
     "gateway": 32,
-    "portland": 0,
+    "portland": 41,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -303,7 +303,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 51,
     "toronto": 18,
     "gateway": 15,
-    "portland": 0,
+    "portland": 53,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -327,7 +327,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 19,
     "toronto": 10,
     "gateway": 18,
-    "portland": 0,
+    "portland": 25,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -351,7 +351,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 24,
     "toronto": 20,
     "gateway": 8,
-    "portland": 0,
+    "portland": 22,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -375,7 +375,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 0,
     "toronto": 0,
     "gateway": 10,
-    "portland": 0,
+    "portland": 6,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -399,7 +399,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 0,
     "toronto": 5,
     "gateway": 0,
-    "portland": 0,
+    "portland": 5,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -447,7 +447,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 22,
     "toronto": 24,
     "gateway": 20,
-    "portland": 0,
+    "portland": 19,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -471,7 +471,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 30,
     "toronto": 54,
     "gateway": 30,
-    "portland": 0,
+    "portland": 33,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -495,7 +495,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 14,
     "toronto": 40,
     "gateway": 8,
-    "portland": 0,
+    "portland": 20,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -519,7 +519,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 7,
     "toronto": 13,
     "gateway": 7,
-    "portland": 0,
+    "portland": 28,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -543,7 +543,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 10,
     "toronto": 11,
     "gateway": 16,
-    "portland": 0,
+    "portland": 5,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -567,7 +567,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 9,
     "toronto": 5,
     "gateway": 23,
-    "portland": 0,
+    "portland": 12,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -591,7 +591,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 13,
     "toronto": 26,
     "gateway": 15,
-    "portland": 0,
+    "portland": 17,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -639,7 +639,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 5,
     "toronto": 7,
     "gateway": 28,
-    "portland": 0,
+    "portland": 16,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -663,7 +663,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 17,
     "toronto": 28,
     "gateway": 10,
-    "portland": 0,
+    "portland": 10,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -687,7 +687,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 20,
     "toronto": 22,
     "gateway": 14,
-    "portland": 0,
+    "portland": 5,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -735,7 +735,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 11,
     "toronto": 30,
     "gateway": 24,
-    "portland": 0,
+    "portland": 31,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -759,7 +759,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 12,
     "toronto": 8,
     "gateway": 5,
-    "portland": 0,
+    "portland": 14,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -855,7 +855,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 0,
     "toronto": 15,
     "gateway": 0,
-    "portland": 0,
+    "portland": 13,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -903,7 +903,7 @@ import TitlePage from '@/components/Partials/Title'
     "iowa2": 5,
     "toronto": 0,
     "gateway": 17,
-    "portland": 0,
+    "portland": 8,
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
@@ -1099,31 +1099,31 @@ import TitlePage from '@/components/Partials/Title'
     "milwaukee1": 0,
     "milwaukee2": 0,
     "nashville": 0
+  },
+  {
+    "Driver": "Juri Vips",
+    "number": 75,
+    "Country": "Estonia",
+    "flag": new URL('@/assets/Flags/NewZealand.png', import.meta.url),
+    "points": 0,
+    "stpete": 0,
+    "longbeach": 0,
+    "barber": 0,
+    "indygp": 0,
+    "indy500": 0,
+    "detroit": 0,
+    "roadamerica": 0,
+    "laguna": 0,
+    "midohio": 0,
+    "iowa1": 0,
+    "iowa2": 0,
+    "toronto": 0,
+    "gateway": 0,
+    "portland": 11,
+    "milwaukee1": 0,
+    "milwaukee2": 0,
+    "nashville": 0
   }
-  // {
-  //   "Driver": "Juri Vips",
-  //   "number": 75,
-  //   "Country": "Estonia",
-  //   "flag": new URL('@/assets/Flags/NewZealand.png', import.meta.url),
-  //   "points": 0,
-  //   "stpete": 0,
-  //   "longbeach": 0,
-  //   "barber": 0,
-  //   "indygp": 0,
-  //   "indy500": 0,
-  //   "detroit": 0,
-  //   "roadamerica": 0,
-  //   "laguna": 0,
-  //   "midohio": 0,
-  //   "iowa1": 0,
-  //   "iowa2": 0,
-  //   "toronto": 0,
-  //   "gateway": 0,
-  //   "portland": 0,
-  //   "milwaukee1": 0,
-  //   "milwaukee2": 0,
-  //   "nashville": 0
-  // }
 ]
       }
     },
