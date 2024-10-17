@@ -1,4 +1,4 @@
-import { decryptSymmetric } from './encryption'
+// import { decryptSymmetric } from './encryption'
 import axios from 'axios';
 
 async function getSeasonSchedule() {
