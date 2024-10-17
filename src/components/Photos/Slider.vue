@@ -17,7 +17,6 @@
   </template>
   
   <script>
-  import images from './images'
   import ImageViewer from './ImageViewer'
 
 
