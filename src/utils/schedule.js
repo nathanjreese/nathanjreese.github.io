@@ -3,10 +3,13 @@ import axios from 'axios';
 
 async function getSeasonSchedule() {
   try {
-    console.log("TRYGET")
+    // Define URLs based on the environment
+    const apiUrl = process.env.NODE_ENV === 'production'
+    ? 'https://indycardrivers.com'  // Use production URL
+    : 'http://localhost:3001' // Use localhost URL during development
     const response = await axios({
       method: 'get',
-      url: 'http://localhost:3001/api/schedule'})
+      url: `${apiUrl}/api/schedule`})
     console.log("Schedule Data: ", response);
     return response;
   } catch (error) {

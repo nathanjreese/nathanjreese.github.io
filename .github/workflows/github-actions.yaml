@@ -7,6 +7,7 @@ env:
   VITE_DATABASE_URL: ${{ secrets.VITE_DATABASE_URL }}
   VITE_ENCRYPT_IV: ${{ secrets.VITE_ENCRYPT_IV }}
   VITE_ENCRYPT_KEY: ${{ secrets.VITE_ENCRYPT_KEY }}
+  NODE_ENV: production
 permissions:
   contents: write
 jobs:
