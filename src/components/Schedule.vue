@@ -1,7 +1,7 @@
 <template>
   <div class="main-schedule">
     <title-page
-      title-text="2024 Schedule"
+      title-text="2025 Schedule"
       />
   <div class="schedule-table-holder">
     <div class="schedule-options">
@@ -137,17 +137,23 @@ import Dropdown from 'v-dropdown'
         USFJuniorsLogoPic: new URL('@/assets/USFJuniorsWords.png', import.meta.url),
         showPast: false,
         showRaces: false,
-        events: scheduleData,
+        events: [],
         selectedTime: 'US/Eastern'
       }
     },
-    // mounted() {
-    //   getSeasonSchedule()
-    //   .then((results) => { 
-        
-    //     this.events = results
-    //   })
-    // },
+    created() {
+      getSeasonSchedule()
+        .then((results) => { 
+          const {data} = results
+          console.log("RRRRR: ", data);
+          this.events = data
+        })
+        .catch((error) => {
+          console.error("Error fetching schedule:", error);
+        });
+      
+      console.log("43211111");
+    },
     computed: {
       filteredEvents(){
         let events = this.events.filter(event => 
@@ -192,7 +198,7 @@ import Dropdown from 'v-dropdown'
             const day = finalDate.getDate();
             const formattedDate = `${month} ${day}`
             item.newdate = newDate
-            item.newtime = newtime + ' UTC'
+            item.newtime = datetimeStr.includes('12:00 AM') ? 'TBD' : newtime + ' UTC'
           }
           else{
             const newDateTime = convertedDatetime.format('YYYY-MM-DD hh:mm A')
@@ -200,8 +206,6 @@ import Dropdown from 'v-dropdown'
             const [newDate, timePart, ampm] = newDateString.split(' ')
           
             const finalTime = timePart.startsWith('0') ? timePart.substring(1): timePart
-            console.log("DATE 1 ", newDate)
-            console.log("DATE 2 ", newDateString)
             // Parse the date string
             const finalDate = new Date(newDateString);
 
@@ -211,7 +215,7 @@ import Dropdown from 'v-dropdown'
 
             const formattedDate = `${month} ${day}`
             item.newdate = newDate
-            item.newtime = finalTime + ' ' + ampm
+            item.newtime = datetimeStr.includes('12:00 AM') ? 'TBD' : finalTime + ' ' + ampm
           }
           
       })
