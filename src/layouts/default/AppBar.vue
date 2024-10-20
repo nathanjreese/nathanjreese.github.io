@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <nav id="vue" v-if="!isMobile">
     <div class="left-nav">
       <router-link class ="routlink" to="/">
@@ -13,25 +13,18 @@
           <div class="logo-title"><b>IndyCar</b> Drivers App</div>
     </div>
     <div class="right-nav">
-      <div class="menu-item"><router-link to="/daytona">Daytona Tracker</router-link></div>
+      <!-- <div class="menu-item"><router-link to="/daytona">Daytona Tracker</router-link></div> -->
       <div class="menu-item"><router-link to="/selector">Driver Selector</router-link></div>
       <div class="menu-item"><router-link to="/silly">Silly Season</router-link></div>
-      <div class="menu-item" @click="infoActive=!infoActive">
-          Info
-        <div v-if="infoActive">
-          <router-link to="/silly">Test</router-link>
-          </div>
-      </div>
-      <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div>
+      <!-- <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div> -->
       <div class="menu-item"><router-link to="/frequencies">Frequencies</router-link></div>
         <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div>
-        <div class="menu-item"><router-link to="/ladder">Ladder Rankings</router-link></div>
+        <!-- <div class="menu-item"><router-link to="/ladder">Ladder Rankings</router-link></div> -->
     </div>
   </nav>
-</template> -->
-<template>
+</template>
+<!-- <template>
   <nav id="vue" v-if="!isMobile">
-  <!-- <div class="d-flex justify-space-around"> -->
     <div class="left-nav">
     <router-link class ="routlink" to="/">
       <img ref="image" 
@@ -111,7 +104,7 @@
     </v-menu>
     </div>
   </nav>
-</template>
+</template> -->
 
 <script>
 
@@ -128,7 +121,7 @@ data () {
           rankings: [
             { title: `Leader's Circle`, route: 'leaders' },
             { title: `Ladder Rankings`, route: 'ladder' },
-            { title: `Nations Cup`, route: 'nations' }
+            // { title: `Nations Cup`, route: 'nations' }
           ],
           information: [
             { title: `Schedule`, route: 'schedule' },

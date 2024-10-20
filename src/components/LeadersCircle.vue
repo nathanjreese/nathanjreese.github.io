@@ -3,7 +3,7 @@
     <title-page
       title-text="2024 Leader's Circle"
       />
-      <div class="last-update"><b>Last Updated:</b> September 1st, 2024</div>
+      <div class="last-update"><b>Last Updated:</b> September 16th, 2024</div>
   <div class="table-holder">
   <v-table class="leaders-table" density="compact">
     <thead>

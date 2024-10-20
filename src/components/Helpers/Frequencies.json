@@ -32,14 +32,6 @@
       "series": "IndyCar"
     },
     {
-      "number": 8,
-      "name": "Linus Lundqvist",
-      "team": "Chip Ganassi Racing",
-      "frequency": "457.0250",
-      "secondary": "461.1125",
-      "series": "IndyCar"
-    },
-    {
       "number": 9,
       "name": "Scott Dixon",
       "team": "Chip Ganassi Racing",
@@ -53,14 +45,6 @@
       "team": "Chip Ganassi Racing",
       "frequency": "467.0375",
       "secondary": "464.0375",
-      "series": "IndyCar"
-    },
-    {
-      "number": 11,
-      "name": "Marcus Armstrong",
-      "team": "Chip Ganassi Racing",
-      "frequency": "466.1000",
-      "secondary": "461.3750",
       "series": "IndyCar"
     },
     {
@@ -81,7 +65,7 @@
     },
     {
       "number": 7,
-      "name": "Alexander Rossi",
+      "name": "Christian Lundgaard",
       "team": "Arrow McLaren",
       "frequency": "464.4625",
       "secondary": "464.5625",
@@ -97,7 +81,7 @@
     },
     {
       "number": 41,
-      "name": "Sting Ray Robb",
+      "name": "David Malukas",
       "team": "AJ Foyt Racing",
       "frequency": "463.0125",
       "secondary": "465.0375",
@@ -113,7 +97,7 @@
     },
     {
       "number": 30,
-      "name": "Pietro Fittipaldi",
+      "name": "Driver TBA",
       "team": "Rahal Letterman Lanigan",
       "frequency": "468.2625",
       "secondary": "469.2625",
@@ -121,7 +105,7 @@
     },
     {
       "number": 45,
-      "name": "Christian Lundgaard",
+      "name": "Driver TBA",
       "team": "Rahal Letterman Lanigan",
       "frequency": "466.3125",
       "secondary": "467.8375",
@@ -129,7 +113,7 @@
     },
     {
       "number": 18,
-      "name": "Jack Harvey",
+      "name": "Driver TBA",
       "team": "Dale Coyne Racing",
       "frequency": "467.2000",
       "secondary": "469.9375",
@@ -137,7 +121,7 @@
     },
     {
       "number": 51,
-      "name": "Multiple Drivers",
+      "name": "Driver TBA",
       "team": "Dale Coyne Racing",
       "frequency": "463.6000",
       "secondary": "464.9375",
@@ -145,15 +129,7 @@
     },
     {
       "number": 20,
-      "name": "Ed Carpenter",
-      "team": "Ed Carpenter Racing",
-      "frequency": "469.1125",
-      "secondary": "457.6750",
-      "series": "IndyCar"
-    },
-    {
-      "number": 20,
-      "name": "Chris Rasmussen (road)",
+      "name": "Alexander Rossi",
       "team": "Ed Carpenter Racing",
       "frequency": "469.1125",
       "secondary": "457.6750",
@@ -161,7 +137,7 @@
     },
     {
       "number": 21,
-      "name": "Rinus VeeKay",
+      "name": "Christian Rasmussesn",
       "team": "Ed Carpenter Racing",
       "frequency": "469.9250",
       "secondary": "465.9625",
@@ -201,7 +177,7 @@
     },
     {
       "number": 66,
-      "name": "Helio Castroneves",
+      "name": "Marcus Armstrong",
       "team": "Meyer Shank Racing",
       "frequency": "460.3375",
       "secondary": "",
@@ -209,7 +185,7 @@
     },
     {
       "number": 77,
-      "name": "Romain Grosjean",
+      "name": "Driver TBA",
       "team": "Juncos Hollinger Racing",
       "frequency": "459.6500",
       "secondary": "454.6500",
@@ -217,27 +193,11 @@
     },
     {
       "number": 78,
-      "name": "Agustin Canapino",
+      "name": "Driver TBA",
       "team": "Juncos Hollinger Racing",
       "frequency": "458.1000",
       "secondary": "455.1500",
       "series": "IndyCar"
-    },
-    {
-      "number": "",
-      "name": "NBC 1",
-      "team": "",
-      "frequency": "450.1625",
-      "secondary": "",
-      "series": "Broadcast"
-    },
-    {
-      "number": "",
-      "name": "NBC 2",
-      "team": "",
-      "frequency": "450.3625",
-      "secondary": "",
-      "series": "Broadcast"
     },
     {
       "number": "",
@@ -254,181 +214,5 @@
       "frequency": "450.7375",
       "secondary": "",
       "series": "Broadcast"
-    },
-    {
-      "number": 3,
-      "name": "Michael d'Orlando",
-      "team": "Cape",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 11,
-      "name": "Nolan Allaer",
-      "team": "HMD",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 7,
-      "name": "Chris Bogle",
-      "team": "HMD",
-      "frequency": "453.3000",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 10,
-      "name": "Reece Gold",
-      "team": "HMD",
-      "frequency": "463.3750",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 14,
-      "name": "Josh Pierson",
-      "team": "HMD",
-      "frequency": "458.6375",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 23,
-      "name": "Jonathan Browne",
-      "team": "HMD",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 26,
-      "name": "Louis Foster",
-      "team": "Andretti",
-      "frequency": "469.5375",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 17,
-      "name": "Callum Hedge",
-      "team": "Andretti",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 28,
-      "name": "Jamie Chadwick",
-      "team": "Andretti",
-      "frequency": "464.5375",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 29,
-      "name": "James Roe Jr.",
-      "team": "Andretti",
-      "frequency": "469.8375",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 39,
-      "name": "Nolan Siegel",
-      "team": "HMD",
-      "frequency": "460.3875",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 2,
-      "name": "Salvador de Alba",
-      "team": "Cape",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 51,
-      "name": "Jacob Abel",
-      "team": "Abel",
-      "frequency": "459.4500",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 22,
-      "name": "Yuven Sundaramoorthy",
-      "team": "Abel",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 18,
-      "name": "Caio Collet",
-      "team": "HMD",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 21,
-      "name": "Josh Mason",
-      "team": "Abel",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 76,
-      "name": "Lindsay Brewer",
-      "team": "Juncos",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 40,
-      "name": "Jack William Miller",
-      "team": "Miller Viatieri",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 99,
-      "name": "Myles Rowe",
-      "team": "HMD",
-      "frequency": "456.8500",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 27,
-      "name": "Bryce Aron",
-      "team": "Andretti",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 33,
-      "name": "Niels Koolean",
-      "team": "HMD",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
-    },
-    {
-      "number": 22,
-      "name": "Taylor Ferns",
-      "team": "Abel",
-      "frequency": "",
-      "secondary": "",
-      "series": "IndyNXT"
     }
   ]
