@@ -16,7 +16,7 @@
       <!-- <div class="menu-item"><router-link to="/daytona">Daytona Tracker</router-link></div> -->
       <div class="menu-item"><router-link to="/selector">Driver Selector</router-link></div>
       <div class="menu-item"><router-link to="/silly">Silly Season</router-link></div>
-      <!-- <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div> -->
+      <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div>
       <div class="menu-item"><router-link to="/frequencies">Frequencies</router-link></div>
         <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div>
         <!-- <div class="menu-item"><router-link to="/ladder">Ladder Rankings</router-link></div> -->

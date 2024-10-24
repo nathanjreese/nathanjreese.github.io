@@ -10,6 +10,7 @@ import router from './router'
 // import dotenv from 'dotenv'
 
 // dotenv.config()
+// import VuePictureSwipe from 'vue3-picture-swipe'
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -29,12 +30,14 @@ import { createApp } from 'vue'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
+import "@egjs/vue-flicking/dist/flicking.css";
 
 const app = createApp(App, router)
 
 registerPlugins(app)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
+// app.component('vue-picture-swipe', VuePictureSwipe)
 app.mount('#app')
 
 // new Vue({

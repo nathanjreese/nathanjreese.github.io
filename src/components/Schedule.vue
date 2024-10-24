@@ -141,18 +141,14 @@ import Dropdown from 'v-dropdown'
         selectedTime: 'US/Eastern'
       }
     },
-    created() {
-      getSeasonSchedule()
-        .then((results) => { 
-          const {data} = results
-          console.log("RRRRR: ", data);
-          this.events = data
-        })
-        .catch((error) => {
-          console.error("Error fetching schedule:", error);
-        });
+    mounted() {
+        const sortedByDate = scheduleData.sort((a, b) => new Date(a.date) - new Date(b.date))
+
+        console.log("SORTED: ", sortedByDate)
+        this.events = sortedByDate.filter(event =>
+          event.date.includes('2025')
+        )
       
-      console.log("43211111");
     },
     computed: {
       filteredEvents(){
@@ -198,7 +194,8 @@ import Dropdown from 'v-dropdown'
             const day = finalDate.getDate();
             const formattedDate = `${month} ${day}`
             item.newdate = newDate
-            item.newtime = datetimeStr.includes('12:00 AM') ? 'TBD' : newtime + ' UTC'
+            console.log("NEWTIME: ", item.newtime)
+            item.newtime = datetimeStr.includes('44') ? 'TBD' : newtime + ' UTC'
           }
           else{
             const newDateTime = convertedDatetime.format('YYYY-MM-DD hh:mm A')
@@ -215,7 +212,8 @@ import Dropdown from 'v-dropdown'
 
             const formattedDate = `${month} ${day}`
             item.newdate = newDate
-            item.newtime = datetimeStr.includes('12:00 AM') ? 'TBD' : finalTime + ' ' + ampm
+            console.log("NEWTIME: ", item.newtime)
+            item.newtime = datetimeStr.includes('44') ? 'TBD' : finalTime + ' ' + ampm
           }
           
       })
