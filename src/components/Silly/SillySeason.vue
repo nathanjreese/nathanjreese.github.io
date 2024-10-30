@@ -396,7 +396,7 @@ export default {
         {id: 22, name: "Devlin DeFrancesco", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/DevlinDeFrancesco.jpeg', import.meta.url)},
         {id: 23, name: "Conor Daly", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ConorDaly.jpeg', import.meta.url)},
         {id: 24, name: "Jack Harvey", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JackHarvey.jpeg', import.meta.url)},
-        {id: 25, name: "Kyffin Simpson", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
+        {id: 25, name: "Kyffin Simpson", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
         {id: 26, name: "Pietro Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
         {id: 27, name: "Louis Foster", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/LouisFoster.jpeg', import.meta.url)},
         {id: 28, name: "Sting Ray Robb", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
