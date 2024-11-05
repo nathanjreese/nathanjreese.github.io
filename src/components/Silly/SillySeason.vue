@@ -351,7 +351,7 @@ export default {
       teams: {
         andretti: 3,
         penske: 3,
-        ganassi: 5,
+        ganassi: 3,
         mclaren: 3,
         ecr: 3,
         rahal: 3,
@@ -413,7 +413,7 @@ export default {
         {id: 39, name: "Ryan Hunter-Reay", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/RyanHunterReay.jpeg', import.meta.url)},
         {id: 40, name: "Hunter McElrea", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/HunterMcElrea.jpeg', import.meta.url)},
         {id: 41, name: "Danial Frost", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
-        {id: 42, name: "Robert Shwartzman", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
+        {id: 42, name: "Robert Shwartzman", original: 'prema', team: 'prema', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
         {id: 43, name: "Nyck de Vries", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NyckdeVries.jpeg', import.meta.url)},
         {id: 44, name: "Oliver Askew", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/OliverAskew.jpeg', import.meta.url)},
         {id: 45, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
