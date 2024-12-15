@@ -30,7 +30,7 @@
                   contain
                   class="silly-img-modal"
                   @click="addDriver(item)">
-                  {{ item.name[0] }}. {{ item.name.split(" ")[1]}}
+                  {{ item.name[0] }}. {{ item.name.split(" ")[item.name.split(" ").length - 1]}}
                 </div>
               </div>
             </div>
