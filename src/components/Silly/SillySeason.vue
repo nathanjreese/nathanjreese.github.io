@@ -17,13 +17,22 @@
       <div class="float-child-1">
 
         <div v-for="team in teamData.slice(0,5)">
-        <div class="drop-team">{{ team.title }}</div>
+        <!-- <div class="drop-team">{{ team.title }}</div> -->
       <div class="drop-zone"
       :class="{ full: (listTeam(team.name).length >= team.size)}"
         @drop="onDrop($event, team.name)"
         @dragenter.prevent
         @dragover.prevent
         >
+        <div
+          class="team-whole">
+          <img
+            :src="isLoaded ? team.teampic : nobodyLoading"
+              contain
+              class="silly-team"
+              @load="onImgLoad"
+              />
+        </div>
         <div v-for="item in listTeam(team.name)" 
             :key="item.id"
             :title="item.name"
@@ -116,13 +125,22 @@
     <div class="float-child-2">
 
       <div v-for="team in teamData.slice(5,11)">
-        <div class="drop-team">{{ team.title }}</div>
+        <!-- <div class="drop-team">{{ team.title }}</div> -->
       <div class="drop-zone"
       :class="{ full: (listTeam(team.name).length >= team.size)}"
         @drop="onDrop($event, team.name)"
         @dragenter.prevent
         @dragover.prevent
         >
+        <div
+          class="team-whole">
+          <img
+            :src="isLoaded ? team.teampic : nobodyLoading"
+              contain
+              class="silly-team"
+              @load="onImgLoad"
+              />
+        </div>
         <div v-for="item in listTeam(team.name)" 
             :key="item.id"
             :title="item.name"
@@ -156,12 +174,12 @@
 
     </div>
     <div class="float-child-fa">
-      <div class="drop-team">Free Agents</div>
       <div class="drop-zone-fa"
         @drop="onDrop($event, 'fa')"
         @dragenter.prevent
         @dragover.prevent
-        >
+        >      <div class="drop-team">Free Agents</div>
+
           <div v-for="item in listFreeAgents" 
             :key="item.id"
             :title="item.name"
@@ -198,13 +216,22 @@
       <div class="float-child-mobile">
 
         <div v-for="team in teamData.slice(0,11)">
-        <div class="drop-team-mobile">{{ team.title }}</div>
+        <!-- <div class="drop-team-mobile">{{ team.title }}</div> -->
       <div class="drop-zone-mobile"
       :class="{ full: (listTeam(team.name).length >= team.size)}"
         @drop="onDrop($event, team.name)"
         @dragenter.prevent
         @dragover.prevent
         >
+        <div
+          class="team-whole-mobile">
+          <img
+            :src="isLoaded ? team.teampic : nobodyLoading"
+              contain
+              class="silly-team-mobile"
+              @load="onImgLoad"
+              />
+        </div>
         <div v-for="item in listTeam(team.name)" 
             :key="item.id"
             :title="item.name"
@@ -336,17 +363,17 @@ export default {
       driverName: null,
       teamRemove: null,
       teamData: [ 
-      { name:'andretti', size: 3, title: 'Andretti Global'},
-      { name:'penske', size: 3, title: 'Team Penske'},
-      { name:'ganassi', size: 3, title: 'Chip Ganassi Racing'},
-      { name:'mclaren', size: 3, title: 'Arrow McLaren'},
-      { name:'ecr', size: 2, title: 'Ed Carpenter Racing'},
-      { name:'rahal', size: 3, title: 'Rahal Letterman Lanigan'},
-      { name:'coyne', size: 2, title: 'Dale Coyne Racing'},
-      { name:'msr', size: 2, title: 'Meyer Shank Racing'},
-      { name:'foyt', size: 2, title: 'A.J. Foyt Racing'},
-      { name:'juncos', size: 2, title: 'Juncos Hollinger Racing'},
-      { name:'prema', size: 2, title: 'Prema Racing'}
+      { name:'andretti', size: 3, title: 'Andretti Global', teampic: new URL('@/assets/Teams/AndrettiGlobal.png', import.meta.url)},
+      { name:'penske', size: 3, title: 'Team Penske', teampic: new URL('@/assets/Teams/TeamPenske.png', import.meta.url)},
+      { name:'ganassi', size: 3, title: 'Chip Ganassi Racing', teampic: new URL('@/assets/Teams/ChipGanassiRacing.png', import.meta.url)},
+      { name:'mclaren', size: 3, title: 'Arrow McLaren', teampic: new URL('@/assets/Teams/ArrowMcLaren.png', import.meta.url)},
+      { name:'rahal', size: 3, title: 'Rahal Letterman Lanigan', teampic: new URL('@/assets/Teams/RahalLetterman.png', import.meta.url)},
+      { name:'ecr', size: 2, title: 'Ed Carpenter Racing', teampic: new URL('@/assets/Teams/EdCarpenterRacing.png', import.meta.url)},
+      { name:'coyne', size: 2, title: 'Dale Coyne Racing', teampic: new URL('@/assets/Teams/DaleCoyneRacing.png', import.meta.url)},
+      { name:'msr', size: 2, title: 'Meyer Shank Racing', teampic: new URL('@/assets/Teams/MeyerShankRacing.png', import.meta.url)},
+      { name:'foyt', size: 2, title: 'A.J. Foyt Racing', teampic: new URL('@/assets/Teams/AJFoytRacing.png', import.meta.url)},
+      { name:'juncos', size: 2, title: 'Juncos Hollinger Racing', teampic: new URL('@/assets/Teams/JuncosHollinger.png', import.meta.url)},
+      { name:'prema', size: 2, title: 'Prema Racing', teampic: new URL('@/assets/Teams/PremaRacing.png', import.meta.url)},
       ],
       teams: {
         andretti: 3,
@@ -620,7 +647,7 @@ export default {
 <style scoped>
 .sillyseason {
   text-align: center;
-  background-color:rgb(231, 231, 231);
+  background-color:rgb(188, 188, 188);
   }
   .silly-title{
     background-color:rgb(231, 231, 231);
@@ -649,7 +676,7 @@ export default {
     padding: 35px 2px;
     min-height: 1000px;
     display: inline-flex;
-    background-color:rgb(231, 231, 231);
+    background-color: rgb(57, 118, 216);
     border-radius: 3px;
 }
   .drop-zone {
@@ -670,7 +697,7 @@ export default {
     box-shadow: 3px 3px 3px gray;
   }
   .drop-zone.full{
-    background-color:#ffbb00;
+    background-color:#ececec;
   }
   .drop-zone-fa {
     width: 99%;
@@ -732,14 +759,15 @@ export default {
     margin-bottom: 10px;
   }
   .drop-team{
-    font-size: 19px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 700;
     text-align: left;
     height: 18px;
-    padding-bottom: 8px;
+    padding-bottom: 23px;
     color: rgb(0, 0, 0);
     font-family: Verdana;
     margin-bottom: 8px;
+    margin-left: 40px;
   }
   .drag-el {
     height: calc(60px + 2.5vw);
@@ -778,6 +806,19 @@ export default {
     font-family: Tahoma;
     cursor: pointer;
   }
+  .team-whole{
+    height: calc(22px + 3vw);
+    margin-top: 2px;
+    margin-bottom: 16px;
+    margin-left: 1px;
+    margin-right: 1px;
+    float: left;
+    display: inline-flex;
+    flex-direction: row;
+    border-radius: 1px;
+    align-items: left;
+
+  }
 .float-child-fa {
     width: 30%;
     float: left;
@@ -810,6 +851,13 @@ export default {
   height: calc(66px + .8vw);
 }
 
+.silly-team {
+  height: calc(30px + 1.2vw);
+  display: grid;
+  flex-direction: column;
+  border-radius: 1px;
+}
+
 .drop-zone-mobile {
     align-items: center;
     width: 98%;
@@ -829,7 +877,8 @@ export default {
     box-shadow: 5px 3px 3px #0943a7;
   }
   .drop-zone-mobile.full{
-    background-color:#ffbb00;
+    background-color:#ececec;
+    margin-bottom: 17px;
   }
   /* .drop-zone-mobile-2 {
     float: center;
@@ -883,15 +932,30 @@ export default {
     box-shadow: 3px 3px 4px #3a3a3ab8;
     align-items: left;
   }
+  .team-whole-mobile{
+    height: calc(58px + 3vw);
+    margin-top: 2px;
+    margin-bottom: 16px;
+    margin-left: 1px;
+    margin-right: 1px;
+    float: left;
+    display: inline-flex;
+    flex-direction: row;
+    border-radius: 1px;
+    align-items: left;
+
+  }
   .float-container-mobile {
     min-height: calc(87px + .8vw);
-    margin-top: 20px;
     padding: 2px 0px;
+    padding-top: 31px;
     display: inline-flex;
     float: center;
     width: 100%;
     border-radius: 3px;
     min-height: 1500px;
+    background-color: rgb(57, 118, 216);
+
 }
 .float-child-mobile {
     min-width: 100%;
@@ -912,6 +976,12 @@ export default {
 }
 .silly-img-mobile {
   height: calc(66px + .8vw);
+  display: grid;
+  flex-direction: column;
+  border-radius: 3px;
+}
+.silly-team-mobile {
+  height: calc(40px + .8vw);
   display: grid;
   flex-direction: column;
   border-radius: 3px;
