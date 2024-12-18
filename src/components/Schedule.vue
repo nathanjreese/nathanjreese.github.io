@@ -144,7 +144,6 @@ import Dropdown from 'v-dropdown'
     mounted() {
         const sortedByDate = scheduleData.sort((a, b) => new Date(a.date) - new Date(b.date))
 
-        console.log("SORTED: ", sortedByDate)
         this.events = sortedByDate.filter(event =>
           event.date.includes('2025')
         )
@@ -194,7 +193,6 @@ import Dropdown from 'v-dropdown'
             const day = finalDate.getDate();
             const formattedDate = `${month} ${day}`
             item.newdate = newDate
-            console.log("NEWTIME: ", item.newtime)
             item.newtime = datetimeStr.includes('44') ? 'TBD' : newtime + ' UTC'
           }
           else{
@@ -212,7 +210,6 @@ import Dropdown from 'v-dropdown'
 
             const formattedDate = `${month} ${day}`
             item.newdate = newDate
-            console.log("NEWTIME: ", item.newtime)
             item.newtime = datetimeStr.includes('44') ? 'TBD' : finalTime + ' ' + ampm
           }
           
