@@ -970,7 +970,7 @@ export default {
   flex-direction: column;
   font-family: Verdana;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 10px;
   border-radius: 3px;
   box-shadow: 3px 3px 4px #3a3a3ab8;
 }
@@ -981,7 +981,7 @@ export default {
   border-radius: 3px;
 }
 .silly-team-mobile {
-  height: calc(40px + .8vw);
+  height: calc(28px + .8vw);
   display: grid;
   flex-direction: column;
   border-radius: 3px;
