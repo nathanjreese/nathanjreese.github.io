@@ -184,6 +184,7 @@ import Dropdown from 'v-dropdown'
             const newDateTime = convertedDatetime.format('YYYY-MM-DD HH:mm')
             const newDateString = newDateTime.toString()
             const [newDate, newtime] = newDateString.split(' ')
+            const newDateDay = newDate.split('-')
 
             // Parse the date string
             const finalDate = new Date(newDateString)
@@ -192,13 +193,14 @@ import Dropdown from 'v-dropdown'
             const month = finalDate.toLocaleString('default', { month: 'long' })
             const day = finalDate.getDate();
             const formattedDate = `${month} ${day}`
-            item.newdate = newDate
+            item.newdate = `${newDateDay[1].replace(/^0+/, '')}/${newDateDay[2]}`
             item.newtime = datetimeStr.includes('44') ? 'TBD' : newtime + ' UTC'
           }
           else{
             const newDateTime = convertedDatetime.format('YYYY-MM-DD hh:mm A')
             const newDateString = newDateTime.toString()
             const [newDate, timePart, ampm] = newDateString.split(' ')
+            const newDateDay = newDate.split('-')
           
             const finalTime = timePart.startsWith('0') ? timePart.substring(1): timePart
             // Parse the date string
@@ -209,7 +211,7 @@ import Dropdown from 'v-dropdown'
             const day = finalDate.getDate();
 
             const formattedDate = `${month} ${day}`
-            item.newdate = newDate
+            item.newdate = `${newDateDay[1].replace(/^0+/, '')}/${newDateDay[2]}`
             item.newtime = datetimeStr.includes('44') ? 'TBD' : finalTime + ' ' + ampm
           }
           
