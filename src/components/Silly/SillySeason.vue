@@ -860,25 +860,24 @@ export default {
 
 .drop-zone-mobile {
     align-items: center;
-    width: 98%;
+    width: 100%;
     font-size: 15px;
     text-align: center;
     min-height: calc(65px + 2.2vw);
     padding: 4px;
     background-color: #929292;
-    margin-bottom: 8px;
-    margin-left: 2px;
     border-top: .7px solid #2e2e2e;
-    border-right: 2px solid #2e2e2e;
+    border-right: 1px solid #2e2e2e;
     border-left: .7px solid #2e2e2e;
-    border-bottom: 2px solid #2e2e2e;
+    border-bottom: 1px solid #2e2e2e;
     display: flexbox;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 5px 3px 3px #0943a7;
+    margin-bottom: 9px;
   }
   .drop-zone-mobile.full{
     background-color:#ececec;
-    margin-bottom: 17px;
+    margin-bottom: 9px;
   }
   /* .drop-zone-mobile-2 {
     float: center;
@@ -921,14 +920,14 @@ export default {
     background-color: black;
     height: calc(58px + 3vw);
     margin-top: 2px;
-    margin-bottom: 16px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-bottom: 19px;
+    margin-left: 2px;
+    margin-right: 2px;
     float: center;
     display: inline-flex;
     flex-direction: row;
     border: 1px solid #000000;
-    border-radius: 3px;
+    border-radius: 5px;
     box-shadow: 3px 3px 4px #3a3a3ab8;
     align-items: left;
   }
@@ -941,19 +940,17 @@ export default {
     float: left;
     display: inline-flex;
     flex-direction: row;
-    border-radius: 1px;
-    align-items: left;
-
+    border-radius: 5px;
   }
   .float-container-mobile {
     min-height: calc(87px + .8vw);
     padding: 2px 0px;
-    padding-top: 31px;
+    padding-top: 12px;
     display: inline-flex;
     float: center;
     width: 100%;
-    border-radius: 3px;
-    min-height: 1500px;
+    border-radius: 5px;
+    min-height: 1300px;
     background-color: rgb(57, 118, 216);
 
 }
@@ -963,7 +960,7 @@ export default {
     padding: 0px;
 }
 .img-main-mobile{
-  height: calc(83px + .8vw);
+  height: calc(73px + 1.5vw);
   background-color: black;
   color: whitesmoke;
   display: inline-flex;
@@ -975,7 +972,7 @@ export default {
   box-shadow: 3px 3px 4px #3a3a3ab8;
 }
 .silly-img-mobile {
-  height: calc(66px + .8vw);
+  height: calc(56px + 1.5vw);
   display: grid;
   flex-direction: column;
   border-radius: 3px;
