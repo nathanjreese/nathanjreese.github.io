@@ -434,7 +434,7 @@ export default {
         {id: 33, name: "Zane Maloney", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/ZaneMaloney.jpeg', import.meta.url)},
         {id: 34, name: "Katherine Legge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
         {id: 35, name: "Jamie Chadwick", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JamieChadwick.jpeg', import.meta.url)},
-        {id: 36, name: "Jacob Abel", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JacobAbel.jpeg', import.meta.url)},
+        {id: 36, name: "Jacob Abel", original: 'coyne', team: 'coyne', pic: new URL('@/assets/SillyPhotos/JacobAbel.jpeg', import.meta.url)},
         {id: 37, name: "Simon Pagenaud", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/SimonPagenaud.jpeg', import.meta.url)},
         {id: 38, name: "Takuma Sato", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/TakumaSato.jpeg', import.meta.url)},
         {id: 39, name: "Ryan Hunter-Reay", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/RyanHunterReay.jpeg', import.meta.url)},
