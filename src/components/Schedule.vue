@@ -301,13 +301,13 @@ import Dropdown from 'v-dropdown'
     font-size: calc(10px + .4vw);
   }
   .past-checkbox{
-    margin: calc(2px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
+    margin: calc(1px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
   }
   .race-checkbox{
-    margin: calc(2px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
+    margin: calc(1px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
   }
   .type-checkbox{
-    margin: calc(2px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
+    margin: calc(1px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
   }
   }
   .series-words{
