@@ -34,7 +34,7 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-left">
+        <th class="text-center">
           Date
         </th>
         <th class="text-left">
@@ -328,7 +328,7 @@ import Dropdown from 'v-dropdown'
     color: whitesmoke;
     background-color: #323232;
   }
-  td{padding: calc(.1px + .3vw) 0px calc(.1px + .3vw) calc(2px + 1.5vw)}
+  td{padding: calc(.1px + .3vw) 0px calc(.1px + .3vw) calc(0px + 1.5vw)}
 }
 .weekend-header{
     color: whitesmoke;
