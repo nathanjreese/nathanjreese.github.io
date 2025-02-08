@@ -60,7 +60,7 @@
       <tr
         v-for="(item, index) in filteredEvents.filter(item => item.event === weekend)"
         :key="item.name"
-        :class="{orow: this.uniqueEvents.indexOf(item.event) % 2 === 0, erow: this.uniqueEvents.indexOf(item.event) % 2 !== 0}"
+        :class="{orow: this.uniqueDates.indexOf(item.date) % 2 === 0, erow: this.uniqueDates.indexOf(item.date) % 2 !== 0}"
       >
       <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.newdate }}</td>
@@ -129,6 +129,7 @@ import Dropdown from 'v-dropdown'
     data () {
       return {
         uniqueEvents: [],
+        uniqueDates: [],
         checkedEvents: ['IndyCar', 'IndyNXT'],
         IndyCarLogoPic: new URL('@/assets/IndyCarWords.png', import.meta.url),
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
@@ -160,6 +161,7 @@ import Dropdown from 'v-dropdown'
         events = this.showRaces ? events.filter(event => event.type === 'Race') : events
         
         this.uniqueEvents = [...new Set(events.map(event => event.event))]
+        this.uniqueDates = [...new Set(events.map(event => event.date))]
 
         this.setTimeZone(events)
 
