@@ -314,6 +314,7 @@ import Dropdown from 'v-dropdown'
     height: calc(11px + .8vw);
   }
 .schedule-table{
+  white-space:nowrap;
   width: 97%;
   height: 80%;
   font-size: calc(10px + .4vw);
