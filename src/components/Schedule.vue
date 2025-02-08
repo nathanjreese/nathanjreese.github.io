@@ -34,10 +34,10 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-left" width="15%">
+        <th class="text-left" width=10%>
           Date
         </th>
-        <th class="text-left">
+        <th class="text-left" width="21%">
           Time
         </th>
         <th class="text-left">
