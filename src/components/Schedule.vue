@@ -316,7 +316,7 @@ import Dropdown from 'v-dropdown'
 .schedule-table{
   width: 99%;
   height: 80%;
-  font-size: calc(9px + .6vw);
+  font-size: calc(8px + .6vw);
   float: center;
   margin-left: auto;
   margin-right: auto;
