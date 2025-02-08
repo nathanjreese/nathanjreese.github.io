@@ -189,7 +189,7 @@
   text-align: center;
 }
   .name-results{
-    font-size: calc(5px + 2vw);
+    font-size: calc(9px + 1.3vw);
     text-align: center;
     white-space: nowrap;
     font-weight: bold;

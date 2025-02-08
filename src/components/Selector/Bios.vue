@@ -54,7 +54,7 @@
               <template v-slot:default>
                 <tbody>
                     <tr>
-                    <td class="table-key-desktop">2023 Finish:</td><td class="table-value-desktop">{{ driverInfo["2023 Finish"] }}</td>
+                    <td class="table-key-desktop">2024 Finish:</td><td class="table-value-desktop">{{ driverInfo["2024 Finish"] }}</td>
                     </tr>
                     <tr>
                     <td class="table-key-desktop">Team:</td><td class="table-value-desktop">{{ driverInfo["Team"] }}</td>
@@ -85,7 +85,7 @@
             </v-simple-table>
           </div>
         </div>   
-          <v-simple-table>
+          <!-- <v-simple-table>
             <template v-slot:default>
               <tbody>
                   <tr>
@@ -99,13 +99,20 @@
                 </tr>
               </tbody>
             </template>
-          </v-simple-table>
+          </v-simple-table> -->
           <div class="twitter-share-desktop">
           <a :href=tweetText target="_blank">
             <v-btn
               class="btn-tweet-desktop"
             >
-              Tweet Results
+              Twitter
+            </v-btn>
+          </a>
+          <a :href=bskyText target="_blank">
+            <v-btn
+              class="btn-tweet-desktop"
+            >
+              Bluesky
             </v-btn>
           </a>
         </div>
@@ -159,7 +166,7 @@
               <template v-slot:default>
                 <tbody>
                     <tr>
-                    <td class="table-key-mobile">2023 Finish:</td><td class="table-value-mobile">{{ driverInfo["2023 Finish"] }}</td>
+                    <td class="table-key-mobile">2024:</td><td class="table-value-mobile">{{ driverInfo["2024 Finish"] }}</td>
                     </tr>
                     <tr>
                     <td class="table-key-mobile">Team:</td><td class="table-value-mobile">{{ driverInfo["Team"] }}</td>
@@ -190,7 +197,7 @@
             </v-simple-table>
           </div>
         </div>   
-          <v-simple-table>
+          <!-- <v-simple-table>
             <template v-slot:default>
               <tbody>
                   <tr>
@@ -204,13 +211,20 @@
                 </tr>
               </tbody>
             </template>
-          </v-simple-table>
+          </v-simple-table> -->
           <div class="twitter-share-mobile">
           <a :href=tweetText target="_blank">
             <v-btn
             class="btn-tweet-mobile"
             >
-              Tweet Results
+              Twitter
+            </v-btn>
+          </a>
+          <a :href=tweetText target="_blank">
+            <v-btn
+            class="btn-tweet-mobile"
+            >
+              Bluesky
             </v-btn>
           </a>
         </div>
@@ -254,8 +268,11 @@
       tweetText() {
       const tweet = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(`My #Indycar Driver is ${this.tweetHandle}. Who will you get?`) + '%0a' + "&url=indycardrivers.com"
       return tweet
+      },
+      bskyText() {
+      const tweet = "https://bsky.app/intent/compose?text=" + encodeURIComponent(`My #Indycar Driver is ${this.driverInfo["Name"]}. Who will you get? indycardrivers.com`) + '%0a' + "&url=indycardrivers.com"
+      return tweet
       }
-  
     },
     methods: {
       close() {
@@ -680,11 +697,11 @@
   }
 
   .btn-tweet-mobile {
-    width: calc(90px + 4vw);
-    height: 45px !important;
+    width: calc(80px + 4vw);
+    height: 40px !important;
     padding: 1rem 1.5rem;
     text-align: center;
-    font-size: calc(7px + .4vw);
+    font-size: calc(6px + .4vw);
     margin: calc(16px + 2vw) calc(16px + 2vw);
     text-transform: uppercase;
     cursor: pointer;
@@ -696,7 +713,7 @@
     font-weight: bold;
   }
   .twitter-share-mobile {
-    padding: 25px;
-    padding-bottom: 50px;
+    padding: 0px;
+    padding-bottom: 60px;
   }
 </style>

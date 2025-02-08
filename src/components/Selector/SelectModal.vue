@@ -2,9 +2,9 @@
   <div class="select-modal-backdrop">
     <div class="select-modal">
       <header class="select-modal-header">
-        <slot name="header">
+        <div class="header-text">
          Question {{ questionNumber + 1 }} of {{ questions.length }}
-        </slot>
+        </div>
         <button @click="$emit('close')">
         <font-awesome-icon icon="fa-solid fa-xmark"/>
         </button>
@@ -24,27 +24,29 @@
                 :value="index"></v-radio>
             </div>
           </v-radio-group>
-            
+            <div class="importance-class">
+            How Important is this to you?
+            </div>
           </v-container>
+          <v-btn
+            class="v-btn-submit"
+            @click="submit(radioGroup, 2)"
+          >
+            Very
+          </v-btn>
+          <v-btn
+            class="v-btn-submit"
+            @click="submit(radioGroup, 1)"
+          >
+            Somewhat
+          </v-btn>
           <v-btn
             class="v-btn-skip"
             @click="submit(0, 0)"
             color="primary"
             dark
           >
-            Skip
-          </v-btn>
-          <v-btn
-            class="v-btn-submit"
-            @click="submit(radioGroup, 1)"
-          >
-            1 Point
-          </v-btn>
-          <v-btn
-            class="v-btn-submit"
-            @click="submit(radioGroup, 2)"
-          >
-            2 Points
+            Not at all
           </v-btn>
         </slot>
       </section>
@@ -60,28 +62,7 @@
       radioGroup: [],
       questionNumber: this.numberQuestion,
       questions: [
-        {
-          "title": "age",
-          "question": "What age range are you looking for in a driver?",
-          "answers": ['Young Gun (18-25)', 'Just hitting their stride (26-34)', 'Not old, just experienced (35 and over)'],
-          "answerKey": {
-          0: [2005,2004,2003,2002,2001,2000,1999,1998],
-          1: [1997,1996,1995,1994,1993,1992,1991,1990,1989],
-          2: [1988,1987,1986,1985,1984,1983,1982,1981,1980,1979,1978,1977,1976,1975,1974]
-          },
-        },
-        {
-          "title": "team",
-          "question": "What are you looking for in a race team?",
-          "answers": ['Front Runners', 'Next Best Thing', 'Promising Future', 'Underdogs'],
-          "answerKey": {
-          0: ['Front Runner'],
-          1: ['Next Best Thing'],
-          2: ['Promising Future'],
-          3: ['Underdog']
-          },
-        },
-        {
+      {
         "title": "manufacturer",
           "question": "Do you have a manufacturer preference?",
           "answers": ['Chevy', 'Honda'],
@@ -91,30 +72,66 @@
           },
         },
         {
+          "title": "age",
+          "question": "What age range are you looking for in a driver?",
+          "answers": ['Young Gun (18-25)', 'Just hitting their stride (26-34)', 'Not old, just experienced (35 and over)'],
+          "answerKey": {
+          0: [2006,2005,2004,2003,2002,2001,2000,1999],
+          1: [1998,1997,1996,1995,1994,1993,1992,1991,1990],
+          2: [1989,1988,1987,1986,1985,1984,1983,1982,1981,1980,1979,1978,1977,1976,1975,1974]
+          },
+        },
+        {
+          "title": "team",
+          "question": "What are you looking for in a race team?",
+          "answers": ['Front Runner', 'Next Best Thing', 'Solid', 'Underdog'],
+          "answerKey": {
+          0: ['Front Runner'],
+          1: ['Next Best Thing'],
+          2: ['Solid'],
+          3: ['Underdog']
+          },
+        },
+        {
+          "title": "success",
+          "question": "What kind of past success are you looking for in a driver?",
+          "answers": ['Past Champion', 'Race Winner', 'Searching for first win', 'Rookie'],
+          "answerKey": {
+          0: ['champion'],
+          1: ['winner'],
+          2: ['no wins'],
+          3: ['rookie']
+          },
+        },
+        {
           "title": "nationality",
-          "question": "Do you prefer American Drivers?",
-          "answers": ['Yes, I prefer to root for an American', 'No, I prefer international drivers'],
+          "question": "Do you have a Nationality preference?",
+          "answers": ['USA', 'North or South America (excluding USA)', 'Europe','Other'],
           "answerKey": {
             0: ["USA","USA/Brazil"],
-            1: ["Denmark","France","Canada","Mexico","Sweden","New Zealand","Spain","Japan","Netherlands","United Kingdom","Argentina","Brazil","Australia","Switzerland","Denmark"]
+            1: ["Canada","Mexico","Cayman Islands","Brazil"],
+            2: ["Denmark","France","Sweden","Spain","Netherlands","United Kingdom","Switzerland","Denmark"],
+            3: ["Australia","New Zealand","Israel"]
           },
         },
+        // {
+        //   "title": "livery",
+        //   "question": "Do you like a car with consistent liveries or do you like a variety?",
+        //   "answers": ['Consistent', 'Variety'],
+        //   "answerKey": {
+        //   0: ['same'],
+        //   1: ['different']
+        //   },
+        // },
         {
-          "title": "livery",
-          "question": "Do you like a car with consistent liveries or do you like a variety?",
-          "answers": ['Consistent', 'Variety'],
+          "title": "crossover",
+          "question": "Do you prefer drivers who race in other series?",
+          "answers": ['Yes, sportscar', 'Yes, NASCAR', 'Yes, dirt racing', 'I only care about IndyCar'],
           "answerKey": {
-          0: ['same'],
-          1: ['different']
-          },
-        },
-        {
-          "title": "f1",
-          "question": "What is your opinion on F1 drivers in IndyCar?",
-          "answers": ['I like drivers with F1 experience.', 'I am not a fan of F1 drivers in IndyCar.'],
-          "answerKey": {
-            0: ["yes"],
-            1: ["no"]
+            0: ["sportscar"],
+            1: ["nascar"],
+            2: ["dirt"],
+            3: ['none']
           },
         },
         {
@@ -138,17 +155,6 @@
         },
         },
         {
-          "title": "success",
-          "question": "What kind of past success are you looking for in a driver?",
-          "answers": ['Past Champion', 'Race Winner', 'Searching for first win', 'Rookie'],
-          "answerKey": {
-          0: ['champion'],
-          1: ['winner'],
-          2: ['no wins'],
-          3: ['rookie']
-          },
-        },
-        {
           "title": "social",
           "question": "How big of a social media presence would you like your driver to have?",
           "answers": ['Social Media Influencer','Kind of a Big Deal', 'Respectable Following',`I don't care about social media anyway`],
@@ -168,15 +174,15 @@
           1: ["no"]
           }
         },
-        {
-          "title": "fulltime",
-          "question": "How do you feel about part time drivers?",
-          "answers": ['I wanna cheer for them every race','Part time is cool too'],
-          "answerKey": {
-          0: ["yes"],
-          1: ["no"]
-        }
-        }
+        // {
+        //   "title": "fulltime",
+        //   "question": "How do you feel about part time drivers?",
+        //   "answers": ['I wanna cheer for them every race','Part time is cool too'],
+        //   "answerKey": {
+        //   0: ["yes"],
+        //   1: ["no"]
+        // }
+        // }
       ]
       }
     },
@@ -204,19 +210,30 @@
         const title = this.questions[this.questionNumber]["title"]
         
         this.driverData.forEach(driver => {
+          console.log("ANSWERS: ", answers)
+          console.log("DDDD: ", driver[title])
           if (title === 'social'){
             if (driver[title] > answers[0] && driver[title] < answers[1]){
             driver["points"] += points
           }
           }
+          else if (title === 'crossover'){
+            if (driver[title].includes(answers[0])){
+              console.log("DRIVER: ", driver.name)
+
+            driver["points"] += points
+          }
+          }
           else if (answers.includes(driver[title])){
+            console.log("NAME: ", driver.name)
+            console.log(this.driverData)
             driver["points"] += points
           }
           
           
         });
 
-        if(title==="fulltime"){
+        if(title==="content"){
           this.driverData.sort((a, b) => {
               return b.points - a.points})
 
@@ -270,7 +287,6 @@
 
   .select-modal-header {
     padding-left: 10px;
-    padding-top: calc(2px + .5vw);
     height: 45px;
     display: flex;
     position: relative;
@@ -280,10 +296,13 @@
     justify-content: space-between;
     font-size: calc(13px + .5vw);
 
+    .header-text{
+      padding-top: 10px;
+    }
+
     .fa-xmark {
-    padding-bottom: 20px;
     color: lightgray !important;
-    font-size: calc(15px + 1vw) !important;
+    font-size: calc(10px + 1vw) !important;
     float: right;
   }
   .fa-xmark:hover {
@@ -312,6 +331,11 @@
   }
   .radio .v-label {
     font-size: calc(12px + .4vw);
+    color: rgb(0, 0, 0);
+  }
+  .importance-class{
+    font-size: calc(12px + .4vw);
+    font-weight: bold;
   }
   
 
@@ -356,11 +380,15 @@
     color: whitesmoke !important;
     background: #288eec;
     width: calc(80px + 3vw);
+    font-size: calc(8px + .5vw);
     font-weight: bold;
+    height: calc(30px + 1vw) !important;
   }
   .v-btn-skip {
     margin: 20px 10px;
     width: calc(80px + 3vw);
     font-weight: bold;
+    font-size: calc(8px + .5vw);
+    height: calc(30px + 1vw) !important;
   }
 </style>
