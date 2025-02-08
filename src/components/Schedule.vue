@@ -314,10 +314,9 @@ import Dropdown from 'v-dropdown'
     height: calc(11px + .8vw);
   }
 .schedule-table{
-  white-space:nowrap;
   width: 97%;
   height: 80%;
-  font-size: calc(10px + .4vw);
+  font-size: calc(9px + .6vw);
   float: center;
   margin-left: auto;
   margin-right: auto;
@@ -329,7 +328,7 @@ import Dropdown from 'v-dropdown'
     color: whitesmoke;
     background-color: #323232;
   }
-  td{padding: calc(.1px + .3vw) 0px calc(.1px + .3vw) calc(0px + 1.5vw)}
+  td{padding: calc(.1px + .3vw) 0px calc(.1px + .3vw) calc(.2px + .5vw)}
 }
 .weekend-header{
     color: whitesmoke;
