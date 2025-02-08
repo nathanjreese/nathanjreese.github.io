@@ -34,7 +34,7 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-left">
+        <th class="text-left" width="15%">
           Date
         </th>
         <th class="text-left">
@@ -65,9 +65,9 @@
         :key="item.name"
         :class="{orow: this.uniqueDates.indexOf(item.date) % 2 === 0, erow: this.uniqueDates.indexOf(item.date) % 2 !== 0}"
       >
-      <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+      <td :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
         >{{ item.newdate }}</td>
-      <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+      <td width=20% :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.newtime }}</td>
         <td class="text-left">
           <img ref="image" 
@@ -115,7 +115,7 @@
         >{{ item.series }}</td> -->
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.type }}</td>
-        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        <td width=10% :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.airing }}</td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.event }}</td> -->
@@ -314,7 +314,7 @@ import Dropdown from 'v-dropdown'
     height: calc(11px + .8vw);
   }
 .schedule-table{
-  width: 97%;
+  width: 99%;
   height: 80%;
   font-size: calc(9px + .6vw);
   float: center;
@@ -328,7 +328,7 @@ import Dropdown from 'v-dropdown'
     color: whitesmoke;
     background-color: #323232;
   }
-  td{padding: calc(.1px + .3vw) 0px calc(.1px + .3vw) calc(.2px + .5vw)}
+  td{padding: calc(.1px + .3vw) calc(.0px + .8vw) calc(.1px + .3vw) calc(.2px + .5vw)}
 }
 .weekend-header{
     color: whitesmoke;
@@ -340,6 +340,13 @@ import Dropdown from 'v-dropdown'
   }
 .orow{
   background-color: #dbdbdb;
+}
+.isracecenter{
+  font-weight: bold;
+  text-align: center;
+}
+.notracecenter{
+  text-align: center;
 }
 .israce{
   font-weight: bold;
