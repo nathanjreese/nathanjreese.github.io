@@ -34,17 +34,17 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-center">
-          Date-Time
+        <th class="text-left">
+          Date
         </th>
-        <!-- <th class="text-left">
+        <th class="text-left">
           Time
-        </th> -->
+        </th>
         <th class="text-left">
           Series
         </th>
         <th class="text-left">
-          Description
+          Session
         </th>
         <th class="text-left">
           TV (US)
@@ -58,7 +58,7 @@
       v-for="(weekend, i) in getUnique"
     >
       <tr class='weekend-header'>
-        <td colspan="4" @click="">{{weekend}}</td>
+        <td colspan="5" @click="">{{weekend}}</td>
         </tr>
       <tr
         v-for="(item, index) in filteredEvents.filter(item => item.event === weekend)"
@@ -66,9 +66,9 @@
         :class="{orow: this.uniqueDates.indexOf(item.date) % 2 === 0, erow: this.uniqueDates.indexOf(item.date) % 2 !== 0}"
       >
       <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.newdate }} - {{ item.newtime }}</td>
-      <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.newtime }}</td> -->
+        >{{ item.newdate }}</td>
+      <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.newtime }}</td>
         <td class="text-left">
           <img ref="image" 
           v-if="item.series.includes('IndyCar')"
@@ -347,6 +347,9 @@ import Dropdown from 'v-dropdown'
 }
 .notrace{
   text-align: left;
+}
+.text-center{
+  text-align: center;
 }
 /* .erow{
   background-color: whitesmoke;
