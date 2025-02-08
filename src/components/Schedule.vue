@@ -38,13 +38,16 @@
           Date
         </th>
         <th class="text-left">
+          Time
+        </th>
+        <th class="text-left">
           Series
         </th>
-        <th class="text-left" width=32%>
+        <th class="text-left">
           Description
         </th>
         <th class="text-left">
-          Time
+          TV (US)
         </th>
         <!-- <th class="text-left">
           Event
@@ -55,7 +58,7 @@
       v-for="(weekend, i) in getUnique"
     >
       <tr class='weekend-header'>
-        <td colspan="4" @click="">{{weekend}}</td>
+        <td colspan="5" @click="">{{weekend}}</td>
         </tr>
       <tr
         v-for="(item, index) in filteredEvents.filter(item => item.event === weekend)"
@@ -64,10 +67,13 @@
       >
       <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.newdate }}</td>
+      <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.newtime }}</td>
         <td class="text-left">
           <img ref="image" 
           v-if="item.series.includes('IndyCar')"
           :src="IndyCarLogoPic"
+          title="IndyCar"
           alt="IndyCar Logo"
           contain
           class="series-words"
@@ -75,6 +81,7 @@
           <img ref="image" 
           v-if="item.series.includes('NXT')"
           :src="IndyNxtLogoPic"
+          title="IndyNXT"
           alt="IndyNXT Logo"
           contain
           class="series-words"
@@ -82,29 +89,34 @@
           <img ref="image" 
           v-if="item.series.includes('Pro200')"
           :src="USFProLogoPic"
-          alt="IndyCar Logo"
+          title="USF Pro 2000"
+          alt="USF Pro 2000 Logo"
           contain
           class="series-words"
           >
           <img ref="image" 
           v-if="item.series.includes('USF2000')"
           :src="USF2000LogoPic"
-          alt="IndyCar Logo"
+          title="USF2000"
+          alt="USF2000 Logo"
           contain
           class="series-words"
           >
           <img ref="image" 
           v-if="item.series.includes('USFJuniors')"
           :src="USFJuniorsLogoPic"
-          alt="IndyCar Logo"
+          title="USF Jniors"
+          alt="USF Juniors Logo"
           contain
           class="series-words"
           >
         </td>
+        <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        >{{ item.series }}</td> -->
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.description }}</td>
+        >{{ item.type }}</td>
         <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
-        >{{ item.newtime }}</td>
+        >{{ item.airing }}</td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.event }}</td> -->
       </tr>
@@ -316,13 +328,14 @@ import Dropdown from 'v-dropdown'
     color: whitesmoke;
     background-color: #323232;
   }
-  td{padding: calc(.2px + .5vw)}
+  td{padding: calc(.1px + .3vw) 0px calc(.1px + .3vw) calc(7px + .7vw)}
 }
 .weekend-header{
     color: whitesmoke;
-    font-size: 16px;
+    font-size: calc(10px + .5vw);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    font-weight: bold;
     background-color: rgb(57, 118, 216);
   }
 .orow{
