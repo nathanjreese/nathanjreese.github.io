@@ -11,7 +11,7 @@
     "colors": ["yellow","red"],
     "crossover": "sportscar",
     "success": "champion",
-    "social": 155380,
+    "social": 164543,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -28,7 +28,7 @@
     "colors": ["yellow", "black"],
     "crossover": "sportscar",
     "success": "winner",
-    "social": 113176,
+    "social": 122139,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -45,7 +45,7 @@
     "colors": ["red", "white"],
     "crossover": "sportscar",
     "success": "winner",
-    "social": 248471,
+    "social": 261150,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -62,7 +62,7 @@
     "colors": ["white", "black"],
     "crossover": "none",
     "success": "champion",
-    "social": 216990,
+    "social": 223418,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -79,7 +79,7 @@
     "colors": ["orange", "black"],
     "crossover": "sportscar",
     "success": "winner",
-    "social": 815250,
+    "social": 1006639,
     "content": "yes",
     "fulltime": "yes",
     "points": 0
@@ -96,7 +96,7 @@
     "colors": ["orange", "blue"],
     "crossover": "sportscar",
     "success": "champion",
-    "social": 299300,
+    "social": 299561,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -113,7 +113,7 @@
     "colors": ["black", "pink"],
     "crossover": "sportscar",
     "success": "winner",
-    "social": 31480,
+    "social": 38939,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -130,7 +130,7 @@
     "colors": ["white", "black"],
     "crossover": "sportscar",
     "success": "champion",
-    "social": 234656,
+    "social": 250304,
     "content": "yes",
     "fulltime": "yes",
     "points": 0
@@ -147,7 +147,7 @@
     "colors": ["white", "black"],
     "crossover": "dirt",
     "success": "no wins",
-    "social": 43699,
+    "social": 48351,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -164,7 +164,7 @@
     "colors": ["white", "orange"],
     "crossover": "yes",
     "success": "winner",
-    "social": 216990,
+    "social": 218186,
     "content": "yes",
     "fulltime": "yes",
     "points": 0
@@ -181,7 +181,7 @@
     "colors": ["red", "black"],
     "crossover": "none",
     "success": "winner",
-    "social": 93694,
+    "social": 97920,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -198,7 +198,7 @@
     "colors": ["pink", "blue"],
     "crossover": "sportscar",
     "success": "winner",
-    "social": 96516,
+    "social": 98843,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -215,7 +215,7 @@
     "colors": ["white", "black"],
     "crossover": "none",
     "success": "no wins",
-    "social": 189865,
+    "social": 184309,
     "content": "yes",
     "fulltime": "yes",
     "points": 0
@@ -232,7 +232,7 @@
     "colors": ["blue", "teal"],
     "crossover": "yes",
     "success": "winner",
-    "social": 518486,
+    "social": 508844,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -249,7 +249,7 @@
     "colors": ["white", "black"],
     "crossover": "none",
     "success": "winner",
-    "social": 240888,
+    "social": 241924,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -266,7 +266,7 @@
     "colors": ["white", "black"],
     "crossover": "none",
     "success": "no wins",
-    "social": 104901,
+    "social": 113386,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -283,7 +283,7 @@
     "colors": ["white", "black"],
     "crossover": "sportscar",
     "success": "no wins",
-    "social": 7850,
+    "social": 11404,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -300,7 +300,7 @@
     "colors": ["white", "black"],
     "crossover": "sportscar",
     "success": "no wins",
-    "social": 6765,
+    "social": 9077,
     "content": "no",
     "fulltime": "no",
     "points": 0
@@ -316,7 +316,7 @@
     "personality": "friendly",
     "crossover": "sportscar",
     "success": "no wins",
-    "social": 4897,
+    "social": 24135,
     "content": "no",
     "fulltime": "no",
     "points": 0
@@ -333,7 +333,7 @@
     "colors": ["white", "black"],
     "crossover": "none",
     "success": "no wins",
-    "social": 50976,
+    "social": 70175,
     "content": "yes",
     "fulltime": "yes",
     "points": 0
@@ -350,7 +350,7 @@
     "colors": ["green", "black"],
     "crossover": "nascar,sportscar,dirt",
     "success": "no wins",
-    "social": 50976,
+    "social": 206577,
     "content": "yes",
     "fulltime": "yes",
     "points": 0
@@ -367,7 +367,7 @@
     "colors": ["red", "green"],
     "crossover": "sportscar",
     "success": "no wins",
-    "social": 50976,
+    "social": 264574,
     "content": "yes",
     "fulltime": "yes",
     "points": 0
@@ -384,8 +384,8 @@
     "colors": ["red", "green"],
     "crossover": "sportscar",
     "success": "rookie",
-    "social": 50976,
-    "content": "yes",
+    "social": 1680484,
+    "content": "no",
     "fulltime": "yes",
     "points": 0
   },
@@ -400,7 +400,7 @@
     "personality": "laid back",
     "crossover": "sportscar",
     "success": "no wins",
-    "social": 3984,
+    "social": 49646,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -416,7 +416,7 @@
     "personality": "laid back",
     "crossover": "sportscar",
     "success": "rookie",
-    "social": 3984,
+    "social": 14214,
     "content": "no",
     "fulltime": "yes",
     "points": 0
@@ -432,7 +432,7 @@
     "personality": "friendly",
     "crossover": "none",
     "success": "rookie",
-    "social": 3984,
+    "social": 10528,
     "content": "no",
     "fulltime": "yes",
     "points": 0
