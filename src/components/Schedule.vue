@@ -37,7 +37,7 @@
         <th class="text-left" width=10%>
           Date
         </th>
-        <th class="text-left" width="21%">
+        <th class="text-left" width="25%">
           Time
         </th>
         <th class="text-left">
