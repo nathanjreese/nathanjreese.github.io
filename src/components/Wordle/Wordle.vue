@@ -24,9 +24,10 @@
         >
         <font-awesome-icon icon="fa-solid fa-xmark"/>
         </button>
-          <font-awesome-icon icon="fa-solid fa-retweet " 
-        class="float-icon"
-        @click="this.resetGame"/></div>
+        <font-awesome-icon icon="fa-solid fa-retweet " 
+          class="float-icon"
+          @click="this.resetGame"/>
+        </div>
         <div v-else-if="this.lostGame" class="result">
           <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
@@ -116,6 +117,7 @@ export default {
 'huski',
 'hyvee',
 'ilott',
+'jacob',
 'jimmy',
 'jones',
 'josef',
@@ -126,6 +128,7 @@ export default {
 'leist',
 'linus',
 'loose',
+'louis',
 'lotus',
 'march',
 'marco',
@@ -140,6 +143,7 @@ export default {
 'munoz',
 'mutoh',
 'nigel',
+'nolan',
 'oriol',
 'oward',
 'palou',
@@ -148,6 +152,7 @@ export default {
 'pippa',
 'posey',
 'power',
+'prema',
 'rahal',
 'ratio',
 'renna',

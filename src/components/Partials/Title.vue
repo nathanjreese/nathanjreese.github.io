@@ -22,7 +22,7 @@
       <font-awesome-icon icon="fa-solid fa-circle-question" 
       v-if="this.titleText.includes('ordle')"
         class="circle-icon"
-        @click="this.showSillyInstructions = true">
+        @click="this.showWordleInstructions = true">
       </font-awesome-icon>
     </div>
     <WordleInstructionsModal

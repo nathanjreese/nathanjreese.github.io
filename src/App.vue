@@ -36,7 +36,7 @@
             <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
             <!-- <v-list-item prepend-icon="mdi-ladder" title="Ladder Rankings" to="/ladder" color="blue"></v-list-item> -->
-            <!-- <v-list-item prepend-icon="mdi-earth" title="Nations Cup" to="/nations" color="blue"></v-list-item> -->
+            <v-list-item prepend-icon="mdi-alphabetical-variant" title="Wordle" to="/wordle" color="blue"></v-list-item>
        </v-list>
         </v-navigation-drawer> 
         <router-view />

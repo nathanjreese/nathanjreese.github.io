@@ -19,7 +19,7 @@ export default {
 
 }
 </script>
-<style>
+<!-- <style>
 div{
   font-size: 20px !important;
 }
@@ -66,4 +66,4 @@ nav .menu-item a {
 color: inherit;
 text-decoration: none;
 }
-</style>
+</style> -->

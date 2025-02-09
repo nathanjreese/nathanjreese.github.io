@@ -1,7 +1,7 @@
 <template>
-    <div class="instructions-modal-backdrop">
-      <div class="instructions-modal">
-        <header class="instructions-modal-header">
+    <div class="wordle-instructions-backdrop">
+      <div class="wordle-instructions">
+        <header class="wordle-instructions-header">
            How To Play?
           <div>
             <button
@@ -51,7 +51,7 @@
   </script>
   
   <style>
-    .instructions-modal-backdrop {
+    .wordle-instructions-backdrop {
       padding-top:20px;
       position: fixed;
       top: 0;
@@ -64,7 +64,7 @@
       align-items: center;
     }
   
-    .instructions-modal {
+    .wordle-instructions {
       color: rgba(24, 24, 24, 0.68) !important;
       background-color: whitesmoke;
       box-shadow: 6px 2px 4px 4px !important;
@@ -88,7 +88,7 @@
       padding-right:5px;
       padding-top: 5px;
     }
-    .instructions-modal-header {
+    .wordle-instructions-header {
       padding-left: 13px;
       padding-top: calc(5px + .5vw);
       padding-bottom: calc(1px + .5vw);
@@ -104,7 +104,7 @@
       max-width: 100%;
     }
   
-    .instructions-modal-body {
+    .wordle-instructions-body {
       position: relative;
       padding: 10px 10px;
       color: rgb(233, 233, 233) !important;
