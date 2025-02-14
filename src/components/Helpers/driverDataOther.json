@@ -230,23 +230,6 @@
     "points": 0
   },
   {
-    "name": "Rinus VeeKay",
-    "age": 2000,
-    "team": "Underdog",
-    "manufacturer": "Chevy",
-    "nationality": "Netherlands",
-    "livery": "same",
-    "aggressiveness": 3,
-    "personality": "friendly",
-    "colors": ["white", "black"],
-    "f1": "no",
-    "success": "winner",
-    "social": 88334,
-    "content": "no",
-    "fulltime": "yes",
-    "points": 0
-  },
-  {
     "name": "Romain Grosjean",
     "age": 1986,
     "team": "Underdog",

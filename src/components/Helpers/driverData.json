@@ -204,6 +204,23 @@
     "points": 0
   },
   {
+    "name": "Rinus VeeKay",
+    "age": 2000,
+    "team": "Underdog",
+    "manufacturer": "Honda",
+    "nationality": "Netherlands",
+    "livery": "same",
+    "aggressiveness": 3,
+    "personality": "friendly",
+    "colors": ["white", "black"],
+    "crossover": "sportscar",
+    "success": "winner",
+    "social": 90063,
+    "content": "no",
+    "fulltime": "yes",
+    "points": 0
+  },
+  {
     "name": "Marcus Armstrong",
     "age": 2000,
     "team": "Solid",
