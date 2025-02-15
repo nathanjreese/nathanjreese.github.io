@@ -103,10 +103,13 @@
           </v-simple-table> -->
           <div class="twitter-share-desktop">
           <a :href=tweetText target="_blank">
-            <Btn @click="showModal()">Twitter</Btn>
+            <Btn>Twitter</Btn>
           </a>
           <a :href=bskyText target="_blank">
-            <Btn @click="showModal()">Bluesky</Btn>
+            <Btn>Bluesky</Btn>
+          </a>
+          <a :href=threadsText target="_blank">
+            <Btn>Threads</Btn>
           </a>
         </div>
       </div>
@@ -220,6 +223,13 @@
               Bluesky
             </v-btn>
           </a>
+          <a :href=threadsText target="_blank">
+            <v-btn
+            class="btn-tweet-mobile"
+            >
+              Threads
+            </v-btn>
+          </a>
         </div>
       </div>
     </div>
@@ -268,6 +278,10 @@ import Btn from '@/components/Partials/Btn'
       },
       bskyText() {
       const tweet = "https://bsky.app/intent/compose?text=" + encodeURIComponent(`My #Indycar Driver is ${this.driverInfo["Name"]}. Who will you get? indycardrivers.com`) + '%0a' + "&url=indycardrivers.com"
+      return tweet
+      },
+      threadsText() {
+      const tweet = "https://threads.net/intent/post?text=" + encodeURIComponent(`My #Indycar Driver is ${this.driverInfo["Name"]}. Who will you get? indycardrivers.com`) + '%0a' + "&url=indycardrivers.com"
       return tweet
       }
     },
