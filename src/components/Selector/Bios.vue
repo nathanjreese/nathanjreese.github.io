@@ -8,6 +8,7 @@
             @click="changeDriver(1)" />
     <div v-if="!this.isMobile" class="bio-main-desktop">
       <header class="bio-header-desktop">
+        
         <button
           type="button"
           class="btn-close-desktop"
@@ -102,18 +103,10 @@
           </v-simple-table> -->
           <div class="twitter-share-desktop">
           <a :href=tweetText target="_blank">
-            <v-btn
-              class="btn-tweet-desktop"
-            >
-              Twitter
-            </v-btn>
+            <Btn @click="showModal()">Twitter</Btn>
           </a>
           <a :href=bskyText target="_blank">
-            <v-btn
-              class="btn-tweet-desktop"
-            >
-              Bluesky
-            </v-btn>
+            <Btn @click="showModal()">Bluesky</Btn>
           </a>
         </div>
       </div>
@@ -220,7 +213,7 @@
               Twitter
             </v-btn>
           </a>
-          <a :href=tweetText target="_blank">
+          <a :href=bskyText target="_blank">
             <v-btn
             class="btn-tweet-mobile"
             >
@@ -234,9 +227,13 @@
 </template>
 
 <script>
+import Btn from '@/components/Partials/Btn'
 
   export default {
     name: 'Bios',
+    components: {
+      Btn
+    },
     data () {
 	  return {
       driverIndex: this.driverBios.findIndex(x => x.Name === this.highDriver)
@@ -697,20 +694,13 @@
   }
 
   .btn-tweet-mobile {
-    width: calc(80px + 4vw);
-    height: 40px !important;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    font-size: calc(6px + .4vw);
-    margin: calc(16px + 2vw) calc(16px + 2vw);
-    text-transform: uppercase;
-    cursor: pointer;
-    background: #288eec;
-    box-shadow: -2px 4px 16px #8bc3f6;
-    border-radius: 2px;
-    border: none;
+    margin: 20px 10px !important;
     color: whitesmoke !important;
+    background: #288eec;
+    width: calc(80px + 3vw);
+    font-size: calc(8px + .5vw);
     font-weight: bold;
+    height: calc(35px + 1vw) !important;
   }
   .twitter-share-mobile {
     padding: 0px;

@@ -19,28 +19,21 @@
             Would you like to remove {{ this.driverName }} from {{ this.teamRemove }}?
         </div>
         <div>
-            <v-btn
-            class="yes-btn"
-            @click="submit"
-            dark
-          >
-            Yes
-          </v-btn>
-          <v-btn
-            class="no-btn"
-            @click="close"
-            dark
-          >
-            No
-          </v-btn>
+          <Btn @click="submit">Yes</Btn>
+          <Btn @click="close" button-type="secondary">No</Btn>
         </div>
       </div>
     </div>
   </template>
   
   <script>
+    import Btn from '@/components/Partials/Btn'
+
     export default {
       name: 'Modal',
+      components: {
+      Btn
+      },
       data: () => ({
         questionNumber: 0
       }),

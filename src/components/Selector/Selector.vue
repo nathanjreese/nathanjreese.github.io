@@ -15,18 +15,8 @@
           >
       </div>
       <div class="button55">
-            <button
-              class="button-21"
-                @click="showModal()"
-              >
-                Start
-            </button>
-              <button
-                class="button-21"
-                @click="showBios(randomDriver)"
-              >
-                Random
-              </button>
+        <Btn @click="showModal()">Start</Btn>
+        <Btn @click="showBios(randomDriver)">Random</Btn>
       </div>
 		</div>
      <select-modal
@@ -59,7 +49,8 @@
   import Results from './Results'
   import TitlePage from '@/components/Partials/Title'
   import driversAnswers from "@/components/Helpers/driverData.json"
-  import axios from 'axios'
+  import Btn from '@/components/Partials/Btn'
+
 
   export default {
 	name: 'selector',
@@ -67,7 +58,8 @@
     SelectModal,
     TitlePage,
     Bios,
-    Results
+    Results,
+    Btn
     },
     data () {
 	  return {
@@ -1179,38 +1171,5 @@
   height: calc(95px + 9vw);
   margin: auto;
 }
-.button55{
-  padding: auto;
-  margin: auto;
-  display: inline-flex;
-  padding: 30px 0px;
-
-  }
-  .button-21{ 
-    width: calc(90px + 4vw);
-    padding: 1rem 1.5rem;
-    text-align: center;
-    font-size: calc(8px + .4vw);
-    margin: calc(16px + 2vw) calc(16px + 2vw);
-    text-transform: uppercase;
-    cursor: pointer;
-    background: #288eec;
-    box-shadow: -2px 4px 16px #8bc3f6;
-    border-radius: 2px;
-    border: none;
-    color: whitesmoke;
-    font-weight: bold;
-  }
-  .button-21:hover{ 
-    background: #356a9c;
-    box-shadow: -5px 8px 18px #6599ca;
-    font-weight: bold;
-  }
-        
-        
-        
-        
-  
-  
   </style>
   

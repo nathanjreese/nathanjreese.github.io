@@ -28,26 +28,9 @@
             How Important is this to you?
             </div>
           </v-container>
-          <v-btn
-            class="v-btn-submit"
-            @click="submit(radioGroup, 2)"
-          >
-            Very
-          </v-btn>
-          <v-btn
-            class="v-btn-submit"
-            @click="submit(radioGroup, 1)"
-          >
-            Somewhat
-          </v-btn>
-          <v-btn
-            class="v-btn-skip"
-            @click="submit(0, 0)"
-            color="primary"
-            dark
-          >
-            Not at all
-          </v-btn>
+          <Btn @click="submit(radioGroup, 2)">Very</Btn>
+          <Btn @click="submit(radioGroup, 1)">Somewhat</Btn>
+          <Btn @click="submit(0, 20)" button-type="secondary">Not at all</Btn>
         </slot>
       </section>
     </div>
@@ -55,7 +38,12 @@
 </template>
 
 <script>
+import Btn from '@/components/Partials/Btn'
+
   export default {
+    components: {
+      Btn
+    },
     name: 'Modal',
     data () {
     return {
