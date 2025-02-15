@@ -238,7 +238,7 @@
     text-align: left;
     color: black;
     background: whitesmoke;
-    border: calc(8px) solid cornflowerblue;
+    border: calc(2px + .4vw) solid cornflowerblue;
     border-radius: 4px;
     outline-width: 20px;
     box-shadow: 0px 5px 15px 8px;
