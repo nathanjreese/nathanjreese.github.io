@@ -156,7 +156,7 @@ import Btn from '@/components/Partials/Btn'
         {
           "title": "content",
           "question": "How do you feel about driver content? (videos, podcasts, twitch streams, etc)",
-          "answers": ['I love driver produced content','The actual races are the only content I care about'],
+          "answers": ['I love driver produced content','Just focus on racing'],
           "answerKey": {
           0: ["yes"],
           1: ["no"]
