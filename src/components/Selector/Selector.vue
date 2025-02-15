@@ -251,7 +251,7 @@
           "Championships": "'17, '19",
           "Indy500s": "'23, '24'",
           "Color": "#d21c2a",
-          "Summary": "After some questioned whether he would ever get a win at the Indy 500, Newgarden became the first back to back Indy winner in over 20 years. Outside of Indy though, the season didn't go as planned for the Nashville native as he finished 8th after an up and down season that included a DQ at St Pete and several bad finishes down the stretch. Newgarden will try to be the first driver to ever win 3 in a row at Indy this season, and hopes to challenge for his 3rd IndyCar championship in 2025.",
+          "Summary": "After some questioned whether he would ever get a win at the Indy 500, last year Newgarden became the first back to back Indy winner in over 20 years. Outside of Indy though, the season didn't go as planned for the Nashville native as he finished 8th after an up and down season that included a DQ at St Pete and several bad finishes down the stretch. Newgarden will try to be the first driver to ever win 3 in a row at Indy this season, and hopes to challenge for his 3rd IndyCar championship in 2025.",
           "picnum": new URL('@/assets/Numbers/2Number.png', import.meta.url),
           "biopic": new URL('@/assets/Drivers/JosefNewgardenProfileBlur.jpeg', import.meta.url),
           "teampic": new URL('@/assets/Teams/TeamPenske.png', import.meta.url),
