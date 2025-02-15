@@ -260,8 +260,8 @@ import Btn from '@/components/Partials/Btn'
 
   .select-modal {
     background: #FFFFFF;
-    min-height: 400px;
-    width: calc(380px + 17vw) !important;
+    min-height: 350px;
+    width: calc(310px + 22vw) !important;
     box-shadow: 2px 2px 20px 1px;
     display: inline-flex;
     flex-direction: column;
