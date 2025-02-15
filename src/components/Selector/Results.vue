@@ -244,7 +244,7 @@
     box-shadow: 0px 5px 15px 8px;
   }
   .driver-section:hover {
-    border: 8px solid #ffbb00;
+    border: calc(2.5px + .4vw) solid #ffbb00;
     box-shadow: -5px 15px 15px 8px;
     cursor: pointer
     

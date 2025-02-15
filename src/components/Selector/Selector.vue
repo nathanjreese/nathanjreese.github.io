@@ -1152,7 +1152,6 @@
   <style>
 .select-main{
   text-align: center;
-  min-height: 700px;;
 }
 .body-img{
   padding: auto;
@@ -1171,5 +1170,8 @@
   height: calc(95px + 9vw);
   margin: auto;
 }
+  .button55{
+    margin: 60px 0px 150px 0px;
+  }
   </style>
   
