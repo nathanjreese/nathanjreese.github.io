@@ -19,7 +19,7 @@ export default {
   .button {
     display: inline-block;
     margin: 0.5em 0;
-    padding: calc(11px + .5vw) calc(2px + .5vw);
+    padding: calc(11px + .5vw) calc(0px + .5vw);
     background: #288eec;
     border: 2px solid rgb(119, 119, 119);
     border-radius: 3px;
@@ -33,7 +33,7 @@ export default {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    min-width: calc(100px + 2.9vw);
+    min-width: calc(80px + 2.9vw);
     margin: calc(.1em + 1.3vw);
   }
 
@@ -44,7 +44,7 @@ export default {
   .secondary {
     display: inline-block;
     margin: 0.5em 0;
-    padding: calc(11px + .5vw) calc(2px + .5vw);
+    padding: calc(11px + .5vw) calc(0px + .5vw);
     background: #535353;
     border: 2px solid rgb(119, 119, 119);
     border-radius: 3px;
@@ -58,7 +58,7 @@ export default {
     text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
-    min-width: calc(100px + 2.9vw);
+    min-width: calc(90px + 2.9vw);
     margin: calc(.1em + 1.3vw);
   }
   .secondary:hover {
