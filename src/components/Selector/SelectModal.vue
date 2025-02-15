@@ -30,7 +30,7 @@
           </v-container>
           <Btn @click="submit(radioGroup, 2)">Very</Btn>
           <Btn @click="submit(radioGroup, 1)">Somewhat</Btn>
-          <Btn @click="submit(0, 20)" button-type="secondary">Not at all</Btn>
+          <Btn @click="submit(0, 0)" button-type="secondary">Not at all</Btn>
         </slot>
       </section>
     </div>
