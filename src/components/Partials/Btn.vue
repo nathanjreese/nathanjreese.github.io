@@ -12,6 +12,16 @@ export default {
       type: String
     }
   },
+  computed:{
+    isMobile() {
+          if( screen.width <= 1000 ) {
+              return true;
+          }
+          else {
+              return false;
+          }
+        },
+  }
 }
 </script>
 
@@ -36,10 +46,11 @@ export default {
     min-width: calc(80px + 2.9vw);
     margin: calc(.1em + 1.3vw);
   }
-
-  .button:hover {
+  @media (hover: hover) {
+    .button:hover {
     background: #175186;
     color: #fff;
+  }
   }
   .secondary {
     display: inline-block;
@@ -61,8 +72,10 @@ export default {
     min-width: calc(90px + 2.9vw);
     margin: calc(.1em + 1.3vw);
   }
-  .secondary:hover {
-    background: #0e0e0e;
-    color: #fff;
-  }
+  @media (hover: hover) {
+    .secondary:hover {
+      background: #0e0e0e;
+      color: #fff;
+    }
+}
 </style>
