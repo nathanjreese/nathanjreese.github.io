@@ -30,7 +30,7 @@
           </v-container>
           <Btn @click="submit(radioGroup, 2)">Very</Btn>
           <Btn @click="submit(radioGroup, 1)">Somewhat</Btn>
-          <Btn @click="submit(0, 0)" button-type="secondary">Not at all</Btn>
+          <Btn @click="submit(0, 0)" button-type="secondary">Skip</Btn>
         </slot>
       </section>
     </div>
@@ -145,7 +145,7 @@ import Btn from '@/components/Partials/Btn'
         {
           "title": "social",
           "question": "How big of a social media presence would you like your driver to have?",
-          "answers": ['Social Media Influencer','Kind of a Big Deal', 'Respectable Following',`I don't care about social media anyway`],
+          "answers": ['Social Media Influencer','Kind of a Big Deal', 'Respectable Following',`Keep a Low Profile`],
           "answerKey": {
           0: [1000000,1000000000],
           1: [200000,999999],
