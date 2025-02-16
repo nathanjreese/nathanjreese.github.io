@@ -241,7 +241,7 @@
       border: 1px solid #000000;
       border-radius: 3px;
       box-shadow: 1px 1px 2px #000000;
-      font-family: Tahoma;
+      font-family: Verdana;
       font-size: 10px;
     }
     .drag-el-silly-add {
@@ -258,7 +258,7 @@
       border: 1px solid #000000;
       border-radius: 3px;
       box-shadow: 1px 1px 2px #000000;
-      font-family: Tahoma;
+      font-family: Verdana;
       font-size: 10px;
     }
     .img-main-modal{

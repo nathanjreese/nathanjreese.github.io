@@ -155,7 +155,7 @@ tr:nth-child(even)
     font-size: calc(10px + 2.5vw) !important;
     padding-bottom: calc(20px + 3vw);
     text-shadow: 2px 1px 1px #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana;
     font-weight: bold;
   }
   .points-col{

@@ -333,7 +333,7 @@ import Dropdown from 'v-dropdown'
 .weekend-header{
     color: whitesmoke;
     font-size: calc(10px + .5vw);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana;
     text-align: center;
     font-weight: bold;
     background-color: rgb(57, 118, 216);
@@ -366,11 +366,5 @@ import Dropdown from 'v-dropdown'
   background-color: #dbdbdb;
 } */
 
-.schedule-title{
-    font-size: calc(10px + 2.5vw) !important;
-    padding-bottom: calc(20px + 3vw);
-    text-shadow: 2px 1px 1px #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-  }
+
   </style>

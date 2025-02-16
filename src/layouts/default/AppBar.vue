@@ -205,10 +205,10 @@ nav .logo-title{
 }
 nav .menu-item {
 color: rgb(194, 194, 194);
-padding: 5px 3px;
+padding: 35px 3px;
 height: 50px;
 margin: 0px 0px;
-width: 145px;
+width: 155px;
 position: relative;
 font-size: 16px;
 text-align: center;
@@ -219,22 +219,24 @@ transition: 0.4s;
 padding-top: 7px;
 border-left: 1px solid rgb(99, 99, 99);
 border-right: 1px solid rgb(99, 99, 99);
+font-family: Verdana;
 }
 nav .menu-item .router-link-active {
  cursor: pointer;
- border-bottom-color: #cd7904 !important;
+ border-bottom-color: #ffbb00 !important;
  font-weight: bold;
  color: whitesmoke;
 }
 
 nav .menu-item:hover {
-border-bottom-color: #cd7904;
+border-bottom-color: #ffbb00;
 }
 nav .menu-item a {
 color: inherit;
 text-decoration: none;
 padding: 0px 3px 0px 4px;
 margin: auto;
+font-weight: 550;
 }
 
 div .right-nav{

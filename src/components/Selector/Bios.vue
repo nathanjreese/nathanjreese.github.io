@@ -453,7 +453,7 @@ import Btn from '@/components/Partials/Btn'
     float: left !important;
     padding: 10px 10px;
     color: black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana;
   }
   .team-img-bios-desktop {
     padding-top: 1px;
@@ -629,7 +629,7 @@ import Btn from '@/components/Partials/Btn'
     float: center !important;
     padding-bottom: 10px;
     color: black;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Verdana;
   }
   .team-img-bios-mobile {
     padding-top: 1px;

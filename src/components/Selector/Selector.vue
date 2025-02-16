@@ -586,7 +586,7 @@
           "Championships": "0",
           "Indy500s": "0",
           "Color": "green",
-          "Summary": "Conor Daly will drive for Juncos Hollinger Racing in 2025, the team he filled in for last year to help secure a top 22 position in the standings and the team he won a Star Mazda championship with way back in 2010. The popular Hoosier has become one the most vocal proponents of IndyCar, using his Speed Street podcast as his platform. Daly hopes to prove he's more than just a serviceable fill-in and oval specialist this season. Any win would help him stay in the series but a win at the Indy 500, a short distance from where he grew up, would be life changing. It may seem unlikely, but Daly is coming off 3 top 10 finishes there with a lot of laps led over the last 4 years.",
+          "Summary": "Conor Daly will drive for Juncos Hollinger Racing in 2025 after filling in for the team last year to help secure a top 22 position in the standings and the team he won a Star Mazda championship with way back in 2010. The popular Hoosier has become one the most vocal proponents of IndyCar, using his Speed Street podcast as his platform. Daly, a native Hoosier, is coming off 3 top 10 finishes and a lot of laps led the last 4 years at the Indy 500..",
           "picnum": new URL('@/assets/Numbers/78Number.png', import.meta.url),
           "biopic": new URL('@/assets/Drivers/ConorDalyProfileBlur.jpeg', import.meta.url),
           "teampic": new URL('@/assets/Teams/JuncosHollinger.png', import.meta.url),
@@ -1152,6 +1152,7 @@
   <style>
 .select-main{
   text-align: center;
+  font-family: Verdana;
 }
 .body-img{
   padding: auto;
