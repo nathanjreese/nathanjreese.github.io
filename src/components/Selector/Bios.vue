@@ -482,8 +482,9 @@ import Btn from '@/components/Partials/Btn'
   .summary-desktop {
     max-width: calc(170px + 23vw);
     font-size: calc(12px + .5vw);
-    text-align: left;
+    text-align: justify;
     padding-top: 25px;
+    font-family:'Times New Roman', Times, serif;
   }
   .social-class-desktop {
     font-weight: bold;
@@ -662,10 +663,11 @@ import Btn from '@/components/Partials/Btn'
     padding-top: 25px;
   }
   .summary-mobile {
-    max-width: calc(170px + 23vw);
-    font-size: calc(12px + .5vw);
-    text-align: left;
+    max-width: calc(200px + 23vw);
+    font-size: calc(13px + .5vw);
+    text-align: justify;
     padding-top: 25px;
+    font-family:'Times New Roman', Times, serif;
   }
   .social-class-mobile {
     font-weight: bold;

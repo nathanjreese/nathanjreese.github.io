@@ -370,7 +370,7 @@
           "Championships": "0",
           "Indy500s": "0",
           "Color": "orange",
-          "Summary": "The young Dutchman has an aggressive style on track and unique personality off track that makes him easy to root for. After spending the first 5 years of his career with Ed Carpenter Racing, Veekay moves over to Daly Coyne Racing in 2025. Dale Coyne cycled through several drivers in 2024, but they hope Veekay can provide them a little bit of stability this season, especially at the Indy 500 where Veekay has been one of the best qualifiers on the grid since coming into the series.",
+          "Summary": "After spending the first 5 years of his career with Ed Carpenter Racing, Veekay moves over to Dale Coyne Racing in 2025. Dale Coyne cycled through several drivers in 2024, but they hope Veekay can provide them a little bit of stability this season, especially at the Indy 500 where Veekay has been one of the best qualifiers on the grid since coming into the series. The young Dutchman has an aggressive style on track and unique personality off track that makes him easy to root for. ",
           "picnum": new URL('@/assets/Numbers/18Number.png', import.meta.url),
           "biopic": new URL('@/assets/Drivers/RinusVeekayProfileBlur.jpeg', import.meta.url),
           "teampic": new URL('@/assets/Teams/DaleCoyneRacing.png', import.meta.url),
