@@ -570,7 +570,7 @@ import Btn from '@/components/Partials/Btn'
   }
   .bio-header-mobile {
     padding: 10px 15px;
-    background-color: #2f589f;;
+    background-color: #2f589f;
     height: calc(37px + 2vw);
     display: flex;
     position: relative;

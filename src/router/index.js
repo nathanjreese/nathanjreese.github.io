@@ -6,6 +6,7 @@ import SillySeason from '../components/Silly/SillySeason.vue'
 import Rolex from '../components/Rolex.vue'
 import Wordle from '../components/Wordle/Wordle.vue'
 import LeadersCircle from '../components/LeadersCircle.vue'
+import Teams from '../components/Teams/Teams.vue'
 import NationsCup from '../components/NationsCup.vue'
 import Schedule from '../components/Schedule.vue'
 import Frequencies from '../components/Frequencies.vue'
@@ -33,6 +34,14 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: LeadersCircle
+      },
+      {
+        path: '/teams',
+        name: 'Teams',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: Teams
       },
       {
         path: '/nations',
