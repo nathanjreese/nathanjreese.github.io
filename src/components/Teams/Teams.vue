@@ -231,18 +231,18 @@ export default {
         {id: 157, name: "Dennis Hauger", team: 'na', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/DennisHauger.png', import.meta.url)}
       ],
       teamData: [ 
-      { name:'andretti', manuf: new URL('@/assets/teams/Honda.png', import.meta.url), size: 3, title: 'Andretti Global', teampic: new URL('@/assets/Teams/AndrettiGlobal.png', import.meta.url)},
-      { name:'penske', manuf: new URL('@/assets/teams/Chevy.png', import.meta.url), size: 3, title: 'Team Penske', teampic: new URL('@/assets/Teams/TeamPenske.png', import.meta.url)},
-      { name:'ganassi', manuf: new URL('@/assets/teams/Honda.png', import.meta.url), size: 3, title: 'Chip Ganassi Racing', teampic: new URL('@/assets/Teams/ChipGanassiRacing.png', import.meta.url)},
-      { name:'mclaren', manuf: new URL('@/assets/teams/Chevy.png', import.meta.url), size: 3, title: 'Arrow McLaren', teampic: new URL('@/assets/Teams/ArrowMcLaren.png', import.meta.url)},
-      { name:'rahal', manuf: new URL('@/assets/teams/Honda.png', import.meta.url), size: 3, title: 'Rahal Letterman Lanigan', teampic: new URL('@/assets/Teams/RahalLetterman.png', import.meta.url)},
-      { name:'ecr', manuf: new URL('@/assets/teams/Chevy.png', import.meta.url), size: 2, title: 'Ed Carpenter Racing', teampic: new URL('@/assets/Teams/EdCarpenterRacing.png', import.meta.url)},
-      { name:'coyne', manuf: new URL('@/assets/teams/Honda.png', import.meta.url), size: 2, title: 'Dale Coyne Racing', teampic: new URL('@/assets/Teams/DaleCoyneRacing.png', import.meta.url)},
-      { name:'msr', manuf: new URL('@/assets/teams/Honda.png', import.meta.url), size: 2, title: 'Meyer Shank Racing', teampic: new URL('@/assets/Teams/MeyerShankRacing.png', import.meta.url)},
-      { name:'foyt', manuf: new URL('@/assets/teams/Chevy.png', import.meta.url), size: 2, title: 'A.J. Foyt Racing', teampic: new URL('@/assets/Teams/AJFoytRacing.png', import.meta.url)},
-      { name:'juncos', manuf: new URL('@/assets/teams/Chevy.png', import.meta.url), size: 2, title: 'Juncos Hollinger Racing', teampic: new URL('@/assets/Teams/JuncosHollinger.png', import.meta.url)},
-      { name:'prema', manuf: new URL('@/assets/teams/Chevy.png', import.meta.url), size: 2, title: 'Prema Racing', teampic: new URL('@/assets/Teams/PremaRacing.png', import.meta.url)},
-      // { name:'drr', manuf: new URL('@/assets/teams/Chevy.png', import.meta.url), size: 2, title: 'Dreyer Reinbold/Cusick Motorsports', teampic: new URL('@/assets/Teams/DRRCusick.png', import.meta.url)},
+      { name:'andretti', manuf: new URL('@/assets/Teams/Honda.png', import.meta.url), size: 3, title: 'Andretti Global', teampic: new URL('@/assets/Teams/AndrettiGlobal.png', import.meta.url)},
+      { name:'penske', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 3, title: 'Team Penske', teampic: new URL('@/assets/Teams/TeamPenske.png', import.meta.url)},
+      { name:'ganassi', manuf: new URL('@/assets/Teams/Honda.png', import.meta.url), size: 3, title: 'Chip Ganassi Racing', teampic: new URL('@/assets/Teams/ChipGanassiRacing.png', import.meta.url)},
+      { name:'mclaren', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 3, title: 'Arrow McLaren', teampic: new URL('@/assets/Teams/ArrowMcLaren.png', import.meta.url)},
+      { name:'rahal', manuf: new URL('@/assets/Teams/Honda.png', import.meta.url), size: 3, title: 'Rahal Letterman Lanigan', teampic: new URL('@/assets/Teams/RahalLetterman.png', import.meta.url)},
+      { name:'ecr', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Ed Carpenter Racing', teampic: new URL('@/assets/Teams/EdCarpenterRacing.png', import.meta.url)},
+      { name:'coyne', manuf: new URL('@/assets/Teams/Honda.png', import.meta.url), size: 2, title: 'Dale Coyne Racing', teampic: new URL('@/assets/Teams/DaleCoyneRacing.png', import.meta.url)},
+      { name:'msr', manuf: new URL('@/assets/Teams/Honda.png', import.meta.url), size: 2, title: 'Meyer Shank Racing', teampic: new URL('@/assets/Teams/MeyerShankRacing.png', import.meta.url)},
+      { name:'foyt', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'A.J. Foyt Racing', teampic: new URL('@/assets/Teams/AJFoytRacing.png', import.meta.url)},
+      { name:'juncos', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Juncos Hollinger Racing', teampic: new URL('@/assets/Teams/JuncosHollinger.png', import.meta.url)},
+      { name:'prema', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Prema Racing', teampic: new URL('@/assets/Teams/PremaRacing.png', import.meta.url)},
+      // { name:'drr', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Dreyer Reinbold/Cusick Motorsports', teampic: new URL('@/assets/Teams/DRRCusick.png', import.meta.url)},
       ],
     }
   },
@@ -310,7 +310,7 @@ export default {
   .team-holder{
   /* text-align: left; */
   height: calc(79px + 2vw);
-  width: 90%;
+  width: 94%;
   border-radius: 6px;
   border: 2px solid black;
   margin: auto;
@@ -356,7 +356,7 @@ export default {
 }
 .driver-box{
   background-color:rgb(56, 56, 56);
-  width: 60%;
+  width: 65%;
   margin: auto;
   margin-bottom: 20px;
   padding-top: 20px;
@@ -367,12 +367,12 @@ export default {
 .driver-top{
   flex-direction: row;
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 28px;
 }
 .driver-top-left{
   color: rgb(29, 29, 29);
   background-color:rgb(199, 199, 199);
-  width: 50%;
+  width: 55%;
   padding: 6px 0px;
   border-radius: 0 50px 50px 0;
   font-size: 24px;
@@ -389,7 +389,7 @@ export default {
   padding-left: calc(.5px + 1vw);
 }
 .driver-top-right{
-  width: 50%;
+  width: 40%;
   color: whitesmoke;
   font-size: 18px;
   align-items: center;
@@ -403,7 +403,7 @@ export default {
   align-items: flex-end;
 }
 .driver-picture{
-  height: 130px;
+  height: 140px;
   margin: 0px 100px 0px 20px;
 
 }
@@ -513,7 +513,8 @@ export default {
 .driver-picture-mobile{
   /* height: 100px; */
   margin: 0px 10px 0px 0px;
-  width: 40%;
+  max-width: 40%;
+  max-height: 130px;
 }
 .driver-stats-mobile{
   color: whitesmoke;
