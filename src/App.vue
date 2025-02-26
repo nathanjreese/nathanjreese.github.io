@@ -27,12 +27,12 @@
           location="top"
           temporary
           class='drawer-menu'
-          style="width: 225px; height: 350px"
+          style="width: 225px; height: 250px"
         >
           <v-list>
             <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-racing-helmet" title="Silly Season" to="/silly" color="blue"></v-list-item>
-            <!-- <v-list-item prepend-icon="mdi-account-group" title="Teams" to="/teams" color="blue"></v-list-item> -->
+            <v-list-item prepend-icon="mdi-account-group" title="Teams" to="/teams" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item>
             <!-- <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item> -->
             <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
