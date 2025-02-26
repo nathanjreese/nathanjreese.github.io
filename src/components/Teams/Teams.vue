@@ -112,7 +112,7 @@
         <div 
           v-for="(driver, index) in items.filter(item => item.team === currentTeam.name)"
         >
-        <div class="driver-box-mobile">
+        <div class="driver-box-mobile" :style="{ border: `3px solid ${driver.color}` }">
           <div class="driver-top-mobile">
             <div class="driver-top-left-mobile" :style="{ border: `5px solid ${driver.color}` }">
               <div class="top-left-segs"> <img
