@@ -284,7 +284,7 @@ export default {
   .blue-container{
     background-color: rgb(57, 118, 216);
     min-height: 900px;
-    padding-top: 50px;
+    padding-top: calc(10px + 2vw);
   }
   .allteams{
     max-width: 100%;
@@ -301,8 +301,8 @@ export default {
     max-width: 95%;
     align-items: center;
     min-height: 600px;
-    margin: 10px auto 10px auto;
-    padding: 10px 2% 2px 2%;
+    margin: 0px auto 10px auto;
+    padding: 0px 2% 2px 2%;
     background-color: rgb(57, 118, 216);
     display: grid;
     grid-template-columns: 50% 50%;
