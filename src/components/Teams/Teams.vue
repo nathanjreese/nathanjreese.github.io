@@ -91,6 +91,9 @@
         <div class="team-view-mobile" v-if="isTeamShown && isMobile">
         
         <div class="team-info-mobile">
+          <div class="back-to-teams-mobile" @click="isTeamShown = false">
+            Back to Teams
+          </div>
           <div class="team-info2-mobile">
           <div>
             <img ref="image" 
@@ -104,17 +107,13 @@
             {{ this.currentTeam.title }}
           </div>
         </div>
-          <div class="back-to-teams-mobile" @click="isTeamShown = false">
-            Back to Teams
-          </div>
-
         </div>
         <div 
           v-for="(driver, index) in items.filter(item => item.team === currentTeam.name)"
         >
         <div class="driver-box-mobile" :style="{ border: `3px solid ${driver.color}` }">
           <div class="driver-top-mobile">
-            <div class="driver-top-left-mobile" :style="{ border: `5px solid ${driver.color}` }">
+            <div class="driver-top-left-mobile" :style="{ border: `3px solid ${driver.color}` }">
               <div class="top-left-segs"> <img
                 :src="driver['flag']"
                 contain
@@ -435,7 +434,7 @@ export default {
 
 
 .team-view-mobile{
-  padding-top: 40px;
+  padding-top: 20px;
   background-color:rgb(231, 231, 231);
   width: 100%;
   padding-bottom: 60px;
@@ -445,26 +444,28 @@ export default {
   font-size: calc(8px + 2vw);
   padding-bottom: 20px;
   font-weight: bold;
-  grid-template-columns: 60% 50%;
   width: 90%;
-  display: inline-flex;
-  flex-direction: row;
+  display:flexbox;
+  margin: auto;
 }
 .team-info2-mobile{
   display: flex;
-  text-align: left;
-  width: 60%;
+  text-align: center;
+  margin-left: 40px;
+  width: 100%;
 }
 .back-to-teams-mobile{
   text-decoration: underline;
   font-size: calc(8px + 1vw);
+  margin-bottom: 20px;
   float: right;
   text-align: right;
   cursor: pointer;
-  width: 30%;
+  width: 100%;
 }
 .mfg-img-mobile{
-  height: 35px;
+  height: calc(19px + 1.5vw);
+  padding-right: 12px;
 }
 .driver-box-mobile{
   background-color:rgb(56, 56, 56);
@@ -505,7 +506,7 @@ export default {
   padding-left: 20px;
 }
 .driver-bottom-mobile{
-  height: 120px;
+  height: 100px;
   display: flex;
   grid-template-columns: 30% 70%;
   align-items: flex-end;
@@ -522,7 +523,7 @@ export default {
   margin-left: -20px;
   display: grid;
   grid-template-columns: 24% 25% 24% 27%;
-  padding-bottom: 0px;
+  padding-bottom: 15px;
   margin-bottom: 30px;
 }
 .stats-title-mobile{
