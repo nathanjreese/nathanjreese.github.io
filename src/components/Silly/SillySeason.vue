@@ -438,10 +438,10 @@ export default {
         {id: 31, name: "Théo Pourchaire", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/TheoPourchaire.jpeg', import.meta.url)},
         {id: 32, name: "Juri Vips", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JuriVips.jpeg', import.meta.url)},
         {id: 33, name: "Zane Maloney", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ZaneMaloney.jpeg', import.meta.url)},
-        {id: 34, name: "Katherine Legge", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
-        {id: 35, name: "Jamie Chadwick", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/JamieChadwick.jpeg', import.meta.url)},
+        {id: 34, name: "Katherine Legge", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/KatherineLegge.jpeg', import.meta.url)},
+        {id: 35, name: "Jamie Chadwick", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JamieChadwick.jpeg', import.meta.url)},
         {id: 37, name: "Simon Pagenaud", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/SimonPagenaud.jpeg', import.meta.url)},
-        {id: 41, name: "Danial Frost", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
+        {id: 41, name: "Danial Frost", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
         {id: 45, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
         {id: 52, name: "Enzo Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)},
         {id: 53, name: "Mick Schumacher", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MickSchumacher.jpeg', import.meta.url)},
@@ -668,7 +668,7 @@ export default {
     text-align:center;
     margin: 44px;
     padding: 20px;
-    box-shadow: 0px 0px 0px 0px #3b3b3b;
+    box-shadow: 0px 0px 0px 0px rgb(48, 48, 48);
     
   }
   .float-container {
@@ -693,7 +693,7 @@ export default {
     border-bottom: 3px solid #2e2e2e;
     display: flexbox;
     border-radius: 3px;
-    box-shadow: 3px 3px 3px gray;
+    box-shadow: 3px 3px 3px rgb(48, 48, 48);
   }
   .drop-zone.full{
     background-color:#ececec;
@@ -707,12 +707,12 @@ export default {
     background-color: rgb(136, 136, 136);
     margin-bottom: 20px;
     display: flexbox;
-    border-top: 1px solid #2e2e2e;
-    border-right: 2px solid #2e2e2e;
-    border-left: 1px solid #2e2e2e;
-    border-bottom: 2px solid #2e2e2e;
+    border-top: 1px solid #131313;
+    border-right: 2px solid #131313;
+    border-left: 1px solid #131313;
+    border-bottom: 2px solid #131313;
     display: inline-block;
-    box-shadow: 3px 3px 3px gray;
+    box-shadow: 3px 3px 3px rgb(48, 48, 48);
   }
   .fa-retweet {
     color:  rgb(65, 129, 200) !important;
@@ -781,11 +781,11 @@ export default {
     display: inline-flex;
     border: 1px solid #000000;
     border-radius: 3px;
-    box-shadow: 1px 1px 2px #000000;
+    box-shadow: 1px 1px 2px rgb(48, 48, 48);
     font-family: Tahoma;
   }
   .drag-el:hover{
-    box-shadow: 1px 1px 5px 2px #000000;
+    box-shadow: 1px 1px 5px 2px rgb(48, 48, 48);
     cursor:grab;
   }
   .drag-el-add {
@@ -871,7 +871,7 @@ export default {
     border-bottom: 1px solid #2e2e2e;
     display: flexbox;
     border-radius: 5px;
-    box-shadow: 5px 3px 3px #0943a7;
+    box-shadow: 5px 3px 3px rgb(48, 48, 48);
     margin-bottom: 9px;
   }
   .drop-zone-mobile.full{
@@ -927,7 +927,7 @@ export default {
     flex-direction: row;
     border: 1px solid #000000;
     border-radius: 5px;
-    box-shadow: 3px 3px 4px #3a3a3ab8;
+    box-shadow: 3px 3px 4px rgb(48, 48, 48);
     align-items: left;
   }
   .team-whole-mobile{
@@ -968,7 +968,7 @@ export default {
   font-weight: 500;
   font-size: 10px;
   border-radius: 3px;
-  box-shadow: 3px 3px 4px #3a3a3ab8;
+  box-shadow: 3px 3px 4px rgb(48, 48, 48);
 }
 .silly-img-mobile {
   height: calc(56px + 1.5vw);
