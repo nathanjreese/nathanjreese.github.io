@@ -434,7 +434,7 @@ import Btn from '@/components/Partials/Btn'
   .driver-name-bios-desktop {
     text-align: center !important;
     padding: 20px 10px;
-    font-size: calc(14px + 1.5vw);
+    font-size: calc(12px + 1.5vw);
     font-weight: bold;
   }
   .bio-img-desktop {

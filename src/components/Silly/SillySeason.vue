@@ -685,7 +685,7 @@ export default {
     text-align: center;
     min-height: calc(65px + 2.2vw);
     padding: 5px;
-    background-color: #929292;
+    background-color: #ababab;
     margin-bottom: 10px;
     border-top: 1px solid #2e2e2e;
     border-right: 3px solid #2e2e2e;
