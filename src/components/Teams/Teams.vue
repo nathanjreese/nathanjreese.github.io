@@ -51,7 +51,7 @@
               <div class="top-left-segs">{{ driver.id }}</div>
               <div class="top-left-segs">{{ driver.name }}</div>
             </div>
-            <div class="driver-top-right">{{ driver.status }}</div>
+            <!-- <div class="driver-top-right">{{ driver.status }}</div> -->
           </div>
           <div class="driver-bottom">
               <img
@@ -122,7 +122,7 @@
               <div class="top-left-segs">{{ driver.id }}</div>
               <div class="top-left-segs">{{ driver.name }}</div>
             </div>
-            <div class="driver-top-right-mobile">{{ driver.statusmobile }}</div>
+            <!-- <div class="driver-top-right-mobile">{{ driver.statusmobile }}</div> -->
           </div>
           <div class="driver-bottom-mobile">
               <img
@@ -204,9 +204,11 @@ export default {
         {id: '17', name: "Kyle Larson   *", team: 'mclaren', statusmobile: 'Indy', status: 'Indy Only - Returns for a 2nd Indy 500 with McLaren', color: '#F57634', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/KyleLarson.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedStates.png', import.meta.url)},
         {id: '28', name: "Marco Andretti   *", team: 'andretti', statusmobile: 'Indy', status: 'Indy Only - 20th Indy 500 Start', color: '#0c7cc4', color2: "whitesmoke", wins: 2, podiums: 20, champs: 0, poles: 6, pic: new URL('@/assets/TeamDrivers/MarcoAndretti.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedStates.png', import.meta.url)},
         {id: '06', name: "Helio Castroneves   *", team: 'msr', statusmobile: 'Indy', status: 'Indy Only - 25th Indy 500 Start', color: '#155196', color2: "black", wins: 31, podiums: 94, champs: 0, poles: 50, pic: new URL('@/assets/TeamDrivers/HelioCastroneves.png', import.meta.url), flag: new URL('@/assets/Flags/Sweden.png', import.meta.url)},
+        {id: '23', name: "Ryan Hunter-Reay   *", team: 'drr', statusmobile: 'Indy', status: 'Indy Only - 17th Indy 500 Start', color: '#00235d', color2: "black", wins: 18, podiums: 47, champs: 1, poles: 7, pic: new URL('@/assets/TeamDrivers/RyanHunterReay.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedStates.png', import.meta.url)},
+        {id: '24', name: "Jack Harvey   *", team: 'drr', statusmobile: 'Indy', status: 'Indy Only - 8th Indy 500 Start', color: '#afcf4d', color2: "black", wins: 0, podiums: 1, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/JackHarvey.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedKingdom.png', import.meta.url)},
+        // {id: '75', name: "Takuma Sato", team: 'rahal', statusmobile: 'Indy', status: 'Indy Only - 17th Indy 500 Start', color: '#007b84', color2: "black", wins: 6, podiums: 14, champs: 0, poles: 10, pic: new URL('@/assets/TeamDrivers/TakumaSato.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedStates.png', import.meta.url)},
         {id: '101', name: "Romain Grosjean", team: 'na', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/RomainGrosjean.png', import.meta.url), flag: new URL('@/assets/Flags/France.png', import.meta.url)},
         {id: '102', name: "Linus Lundqvist", team: 'fa', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/LinusLundqvist.png', import.meta.url), flag: new URL('@/assets/Flags/Sweden.png', import.meta.url)},
-        {id: '103', name: "Jack Harvey   *", team: 'fa', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/JackHarvey.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedKingdom.png', import.meta.url)},
         {id: '104', name: "Pietro Fittipaldi", team: 'fa', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/PietroFittipaldi.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedStates.png', import.meta.url)},
         {id: '131', name: "Théo Pourchaire", team: 'fa', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/TheoPourchaire.png', import.meta.url), flag: new URL('@/assets/Flags/France.png', import.meta.url)},
         {id: '132', name: "Juri Vips", team: 'fa', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/JuriVips.png', import.meta.url), flag: new URL('@/assets/Flags/NewZealand.png', import.meta.url)},
@@ -215,7 +217,6 @@ export default {
         {id: '135', name: "Jamie Chadwick", team: 'na', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/JamieChadwick.png', import.meta.url), flag: new URL('@/assets/Flags/NewZealand.png', import.meta.url)},
         {id: '137', name: "Simon Pagenaud", team: 'na', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/SimonPagenaud.png', import.meta.url), flag: new URL('@/assets/Flags/NewZealand.png', import.meta.url)},
         {id: '138', name: "Takuma Sato   *", team: 'na', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/TakumaSato.png', import.meta.url), flag: new URL('@/assets/Flags/Japan.png', import.meta.url)},
-        {id: '139', name: "Ryan Hunter-Reay   *", team: 'na', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/RyanHunterReay.png', import.meta.url), flag: new URL('@/assets/Flags/UnitedStates.png', import.meta.url)},
         {id: '140', name: "Hunter McElrea", team: 'fa', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/HunterMcElrea.png', import.meta.url), flag: new URL('@/assets/Flags/NewZealand.png', import.meta.url)},
         {id: '141', name: "Danial Frost", team: 'na', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/DanialFrost.png', import.meta.url), flag: new URL('@/assets/Flags/Singapore.png', import.meta.url)},
         {id: '145', name: "Felipe Drugovich", team: 'fa', statusmobile: 'Fulltime', status: 'Fulltime - 6th year with RLL', color: '#2f589f', color2: "black", wins: 0, podiums: 0, champs: 0, poles: 0, pic: new URL('@/assets/TeamDrivers/FelipeDrugovich.png', import.meta.url), flag: new URL('@/assets/Flags/NewZealand.png', import.meta.url)},
@@ -242,7 +243,7 @@ export default {
       { name:'foyt', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'A.J. Foyt Racing', teampic: new URL('@/assets/Teams/AJFoytRacing.png', import.meta.url)},
       { name:'juncos', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Juncos Hollinger Racing', teampic: new URL('@/assets/Teams/JuncosHollinger.png', import.meta.url)},
       { name:'prema', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Prema Racing', teampic: new URL('@/assets/Teams/PremaRacing.png', import.meta.url)},
-      // { name:'drr', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Dreyer Reinbold/Cusick Motorsports', teampic: new URL('@/assets/Teams/DRRCusick.png', import.meta.url)},
+      { name:'drr', manuf: new URL('@/assets/Teams/Chevy.png', import.meta.url), size: 2, title: 'Dreyer Reinbold/Cusick Motorsports', teampic: new URL('@/assets/Teams/DRRCusick.png', import.meta.url)},
       ],
     }
   },
