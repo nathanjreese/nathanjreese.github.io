@@ -34,19 +34,19 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-left" width=10%>
+        <th class="text-center" width=21%>
           Date
         </th>
-        <th class="text-left" width="25%">
+        <th class="text-left" width="21%">
           Time
         </th>
-        <th class="text-left">
+        <th class="text-left" width="21%">
           Series
         </th>
-        <th class="text-left">
+        <th class="text-left" width="21%">
           Session
         </th>
-        <th class="text-left">
+        <th class="text-left  " width="16%">
           TV (US)
         </th>
         <!-- <th class="text-left">
@@ -57,7 +57,7 @@
     <tbody
       v-for="(weekend, i) in getUnique"
     >
-      <tr class='weekend-header'>
+      <tr class="weekendheader" :class="{testheader:(weekend.includes('Test'))}">
         <td colspan="5" @click="">{{weekend}}</td>
         </tr>
       <tr
@@ -65,12 +65,13 @@
         :key="item.name"
         :class="{orow: this.uniqueDates.indexOf(item.date) % 2 === 0, erow: this.uniqueDates.indexOf(item.date) % 2 !== 0}"
       >
-      <td :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
-        >{{ item.newdate }}</td>
+      <td width=20% :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
+        >{{ item.dow }} {{ item.newdate }}</td>
       <td width=20% :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.newtime }}</td>
-        <td class="text-left">
-          <img ref="image" 
+        <td width=20% class="text-left">
+          {{item.series}}
+          <!-- <img ref="image" 
           v-if="item.series.includes('IndyCar')"
           :src="IndyCarLogoPic"
           title="IndyCar"
@@ -109,13 +110,13 @@
           alt="USF Juniors Logo"
           contain
           class="series-words"
-          >
+          > -->
         </td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.series }}</td> -->
-        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        <td width=20% :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.type }}</td>
-        <td width=10% :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        <td width=20% :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
         >{{ item.airing }}</td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.event }}</td> -->
@@ -328,15 +329,28 @@ import Dropdown from 'v-dropdown'
     color: whitesmoke;
     background-color: #323232;
   }
-  td{padding: calc(.1px + .3vw) calc(.0px + .8vw) calc(.1px + .3vw) calc(.2px + .5vw)}
+  td{
+    height: calc(16px + 1.5vw);
+    /* border: 2px solid black; */
+    padding: calc(.1px + .3vw) calc(.1px + .8vw) calc(.1px + .3vw) calc(.2px + .5vw)
+  }
 }
-.weekend-header{
+.weekendheader{
+    color: whitesmoke;
+    font-size: calc(10px + .5vw);
+    font-family: Verdana;
+    text-align: center;
+    font-weight: 520;
+    background-color: rgb(57, 118, 216);
+    padding-top: 100px !important;
+  }
+  .testheader{
     color: whitesmoke;
     font-size: calc(10px + .5vw);
     font-family: Verdana;
     text-align: center;
     font-weight: bold;
-    background-color: rgb(57, 118, 216);
+    background-color: rgb(88, 88, 88);
   }
 .orow{
   background-color: #dbdbdb;
@@ -357,6 +371,9 @@ import Dropdown from 'v-dropdown'
 }
 .text-center{
   text-align: center;
+}
+.text-left{
+  text-align: left !important;
 }
 /* .erow{
   background-color: whitesmoke;
