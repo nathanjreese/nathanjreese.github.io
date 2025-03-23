@@ -357,38 +357,45 @@ import Dropdown from 'v-dropdown'
     padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
     }
     .isracecenter{
+      height: calc(23px + 1.5vw);
       font-weight: bold;
       text-align: center;
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .notracecenter{
+      height: calc(23px + 1.5vw);
       text-align: center;
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .israce{
+      height: calc(23px + 1.5vw);
       font-weight: bold;
       text-align: left;
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .notrace{
+      height: calc(23px + 1.5vw);
       text-align: left;
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .text-center{
+      height: calc(23px + 1.5vw);
       text-align: center;
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .text-left{
+      height: calc(23px + 1.5vw);
       text-align: left !important;
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .erow{
+      height: calc(23px + 1.5vw);
       background-color: whitesmoke;
     }
     /* tr:nth-child(even)
