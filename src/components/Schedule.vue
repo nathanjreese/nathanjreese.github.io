@@ -329,13 +329,7 @@ import Dropdown from 'v-dropdown'
     color: whitesmoke;
     background-color: #323232;
   }
-  td{
-    height: calc(16px + 1.5vw);
-    /* border: 2px solid black; */
-    padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw)
-  }
-}
-.weekendheader{
+  .weekendheader{
     color: whitesmoke;
     font-size: calc(10px + .5vw);
     font-family: Verdana;
@@ -352,36 +346,44 @@ import Dropdown from 'v-dropdown'
     font-weight: bold;
     background-color: rgb(88, 88, 88);
   }
-.orow{
+  .orow{
   background-color: #dbdbdb;
+  height: calc(16px + 1.5vw);
 }
-.isracecenter{
-  font-weight: bold;
-  text-align: center;
-}
-.notracecenter{
-  text-align: center;
-}
-.israce{
-  font-weight: bold;
-  text-align: left;
-}
-.notrace{
-  text-align: left;
-}
-.text-center{
-  text-align: center;
-}
-.text-left{
-  text-align: left !important;
-}
-/* .erow{
-  background-color: whitesmoke;
-} */
-/* tr:nth-child(even)
-{
-  background-color: #dbdbdb;
-} */
+  td{
+    height: calc(16px + 1.5vw);
+    /* border: 2px solid black; */
+    padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
+    isracecenter{
+      font-weight: bold;
+      text-align: center;
+    }
+    notracecenter{
+      text-align: center;
+    }
+    .israce{
+      font-weight: bold;
+      text-align: left;
+    }
+    .notrace{
+      text-align: left;
+    }
+    .text-center{
+      text-align: center;
+    }
+    .text-left{
+      text-align: left !important;
+    }
+    .erow{
+      background-color: whitesmoke;
+    }
+    /* tr:nth-child(even)
+    {
+      background-color: #dbdbdb;
+    } */
+    }
+  }
+
 
 
   </style>
