@@ -34,16 +34,16 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-center" width=21%>
+        <th class="text-center" width=20%>
           Date
         </th>
-        <th class="text-left" width="21%">
+        <th class="text-left" width="24%">
           Time
         </th>
-        <th class="text-left" width="21%">
+        <th class="text-left" width="20%">
           Series
         </th>
-        <th class="text-left" width="21%">
+        <th class="text-left" width="20%">
           Session
         </th>
         <th class="text-left  " width="16%">
