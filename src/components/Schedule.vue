@@ -65,11 +65,11 @@
         :key="item.name"
         :class="{orow: this.uniqueDates.indexOf(item.date) % 2 === 0, erow: this.uniqueDates.indexOf(item.date) % 2 !== 0}"
       >
-      <td width=20% :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
+      <td :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
         >{{ item.dow }} {{ item.newdate }}</td>
-      <td width=20% :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+      <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.newtime }}</td>
-        <td width=20% class="text-left">
+        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}">
           {{item.series}}
           <!-- <img ref="image" 
           v-if="item.series.includes('IndyCar')"
@@ -114,9 +114,9 @@
         </td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.series }}</td> -->
-        <td width=20% :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
+        <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.type }}</td>
-        <td width=20% :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
+        <td :class="{isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race'}"
         >{{ item.airing }}</td>
         <!-- <td :class="{israce: item.type === 'Race', notrace: item.type !== 'Race'}"
         >{{ item.event }}</td> -->
@@ -354,25 +354,38 @@ import Dropdown from 'v-dropdown'
     height: calc(16px + 1.5vw);
     /* border: 2px solid black; */
     padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
-    isracecenter{
+    }
+    .isracecenter{
       font-weight: bold;
       text-align: center;
+      padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
+
     }
-    notracecenter{
+    .notracecenter{
       text-align: center;
+      padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
+
     }
     .israce{
       font-weight: bold;
       text-align: left;
+      padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
+
     }
     .notrace{
       text-align: left;
+      padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
+
     }
     .text-center{
       text-align: center;
+      padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
+
     }
     .text-left{
       text-align: left !important;
+      padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
+
     }
     .erow{
       background-color: whitesmoke;
@@ -381,7 +394,6 @@ import Dropdown from 'v-dropdown'
     {
       background-color: #dbdbdb;
     } */
-    }
   }
 
 
