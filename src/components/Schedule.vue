@@ -337,6 +337,9 @@ import Dropdown from 'v-dropdown'
   td text-left{
     padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw)
   }
+  td text-center{
+    padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw)
+  }
 }
 .weekendheader{
     color: whitesmoke;
