@@ -315,6 +315,8 @@ import Dropdown from 'v-dropdown'
     height: calc(11px + .8vw);
   }
 .schedule-table{
+  border-collapse: collapse;
+  border-spacing: 2px;
   width: 99%;
   height: 80%;
   font-size: calc(8px + .6vw);
@@ -358,32 +360,38 @@ import Dropdown from 'v-dropdown'
     .isracecenter{
       font-weight: bold;
       text-align: center;
+      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .notracecenter{
       text-align: center;
+      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .israce{
       font-weight: bold;
       text-align: left;
+      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .notrace{
       text-align: left;
+      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .text-center{
       text-align: center;
+      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .text-left{
       text-align: left !important;
+      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
