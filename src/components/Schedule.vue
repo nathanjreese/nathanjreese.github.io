@@ -34,19 +34,19 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-center" width=22%>
+        <th class="text-center" width=21%>
           Date
         </th>
-        <th class="text-left" width="24%">
+        <th class="text-left" width="21%">
           Time
         </th>
-        <th class="text-left" width="19%">
+        <th class="text-left" width="22%">
           Series
         </th>
-        <th class="text-left" width="19%">
+        <th class="text-left" width="18%">
           Session
         </th>
-        <th class="text-left  " width="16%">
+        <th class="text-left  " width="18%">
           TV (US)
         </th>
         <!-- <th class="text-left">
@@ -319,7 +319,7 @@ import Dropdown from 'v-dropdown'
   border-spacing: 2px;
   width: 99%;
   height: 80%;
-  font-size: calc(8px + .6vw);
+  font-size: calc(9px + .6vw);
   float: center;
   margin-left: auto;
   margin-right: auto;
@@ -350,48 +350,41 @@ import Dropdown from 'v-dropdown'
   }
   .orow{
   background-color: #dbdbdb;
-  height: calc(16px + 1.5vw);
 }
   td{
-    height: calc(16px + 1.5vw);
+    height: calc(23px + 1.5vw);
     /* border: 2px solid black; */
     padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
     }
     .isracecenter{
       font-weight: bold;
       text-align: center;
-      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .notracecenter{
       text-align: center;
-      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .israce{
       font-weight: bold;
       text-align: left;
-      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .notrace{
       text-align: left;
-      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .text-center{
       text-align: center;
-      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
     .text-left{
       text-align: left !important;
-      height: calc(16px + 1.5vw);
       padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw);
 
     }
