@@ -34,16 +34,16 @@
   <v-table class="schedule-table" density="compact">
     <thead>
       <tr>
-        <th class="text-center" width=20%>
+        <th class="text-center" width=22%>
           Date
         </th>
         <th class="text-left" width="24%">
           Time
         </th>
-        <th class="text-left" width="20%">
+        <th class="text-left" width="19%">
           Series
         </th>
-        <th class="text-left" width="20%">
+        <th class="text-left" width="19%">
           Session
         </th>
         <th class="text-left  " width="16%">
@@ -332,7 +332,7 @@ import Dropdown from 'v-dropdown'
   td{
     height: calc(16px + 1.5vw);
     /* border: 2px solid black; */
-    padding: calc(.1px + .3vw) calc(.1px + .8vw) calc(.1px + .3vw) calc(.2px + .5vw)
+    padding: calc(.1px + .3vw) calc(.1px + .5vw) calc(.1px + .3vw) calc(.2px + .3vw)
   }
 }
 .weekendheader{
