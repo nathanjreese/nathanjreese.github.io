@@ -345,7 +345,7 @@ import Dropdown from 'v-dropdown'
     font-size: calc(10px + .5vw);
     font-family: Verdana;
     text-align: center;
-    font-weight: bold;
+    font-weight: 520;
     background-color: rgb(88, 88, 88);
   }
   .orow{
