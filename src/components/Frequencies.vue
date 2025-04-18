@@ -7,16 +7,16 @@
   <v-table class="frequency-table" density="compact">
     <thead>
       <tr>
-        <th class="text-left">
+        <th class="text-left" width=10%>
           Number
         </th>
-        <th class="text-left">
+        <th class="text-left" width=35%>
           Name
         </th>
-        <th class="text-left">
+        <th class="text-left" width=45%>
           Team
         </th>
-        <th class="text-left">
+        <th class="text-left" width=10%>
           Frequency
         </th>
       </tr>
@@ -69,7 +69,11 @@ import frequencies from "@/components/Helpers/Frequencies.json"
   padding-bottom: 50px;
   }
   .v-table{
-    td{padding: 4px;}
+    td{
+    height: calc(23px + 1.5vw);
+    /* border: 2px solid black; */
+    padding: calc(.1px + .3vw) calc(.8px + .5vw) calc(.1px + .3vw) calc(.9px + .3vw);
+    }
   }
   .table-holder{
     display: flex;
