@@ -27,7 +27,7 @@
       "number": 8,
       "name": "Kyffin Simpson",
       "team": "Chip Ganassi Racing",
-      "frequency": "452.7000",
+      "frequency": "457.0250",
       "secondary": "",
       "series": "IndyCar"
     },
@@ -147,16 +147,16 @@
       "number": 26,
       "name": "Colton Herta",
       "team": "Andretti Global",
-      "frequency": "464.1375",
-      "secondary": "467.4000",
+      "frequency": "464.3000",
+      "secondary": "463.2125",
       "series": "IndyCar"
     },
     {
       "number": 27,
       "name": "Kyle Kirkwood",
       "team": "Andretti Global",
-      "frequency": "469.1375",
-      "secondary": "468.2125",
+      "frequency": "468.4875",
+      "secondary": "467.8875",
       "series": "IndyCar"
     },
     {
@@ -164,7 +164,7 @@
       "name": "Marcus Ericsson",
       "team": "Andretti Global",
       "frequency": "469.3000",
-      "secondary": "468.3875",
+      "secondary": "469.7500",
       "series": "IndyCar"
     },
     {
@@ -179,24 +179,96 @@
       "number": 66,
       "name": "Marcus Armstrong",
       "team": "Meyer Shank Racing",
-      "frequency": "460.3375",
-      "secondary": "",
+      "frequency": "452.8000",
+      "secondary": "461.7250",
+      "series": "IndyCar"
+    },
+    {
+      "number": 76,
+      "name": "Conor Daly",
+      "team": "Juncos Hollinger Racing",
+      "frequency": "458.1000",
+      "secondary": "455.1500",
       "series": "IndyCar"
     },
     {
       "number": 77,
-      "name": "Conor Daly",
+      "name": "Sting Ray Robb",
       "team": "Juncos Hollinger Racing",
       "frequency": "459.6500",
       "secondary": "454.6500",
       "series": "IndyCar"
     },
     {
-      "number": 78,
-      "name": "Sting Ray Robb",
-      "team": "Juncos Hollinger Racing",
-      "frequency": "458.1000",
-      "secondary": "455.1500",
+      "number": 83,
+      "name": "Robert Shwartzman",
+      "team": "Prema Racing",
+      "frequency": "461.1625",
+      "secondary": "461.3375",
+      "series": "IndyCar"
+    },
+    {
+      "number": 90,
+      "name": "Callum Ilott",
+      "team": "Prema Racing",
+      "frequency": "462.8375",
+      "secondary": "466.1625",
+      "series": "IndyCar"
+    },
+    {
+      "number": "06",
+      "name": "*Helio Castroneves",
+      "team": "Meyer Shank Racing",
+      "frequency": "460.3375",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": "17",
+      "name": "*Kyle Larson",
+      "team": "Arrow McLaren",
+      "frequency": "456.1375",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": "33",
+      "name": "*Ed Carpenter",
+      "team": "Ed Carpenter Racing",
+      "frequency": "467.7125",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": "75",
+      "name": "*Takuma Sato",
+      "team": "Rahal Letterman Lanigan",
+      "frequency": "460.4250",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 98,
+      "name": "*Marco Andretti",
+      "team": "Andretti Global",
+      "frequency": "469.1375",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 23,
+      "name": "*Ryan Hunter-Reay",
+      "team": "DRR / Cusick",
+      "frequency": "453.3750",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 24,
+      "name": "*Jack Harvey",
+      "team": "DRR / Cusick",
+      "frequency": "461.0125",
+      "secondary": "-",
       "series": "IndyCar"
     },
     {
@@ -212,6 +284,14 @@
       "name": "IndyCar Radio 2",
       "team": "",
       "frequency": "450.7375",
+      "secondary": "",
+      "series": "Broadcast"
+    },
+    {
+      "number": "",
+      "name": "IndyCar Radio 3",
+      "team": "",
+      "frequency": "450.9000",
       "secondary": "",
       "series": "Broadcast"
     }

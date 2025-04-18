@@ -81,7 +81,8 @@ import frequencies from "@/components/Helpers/Frequencies.json"
     padding: 0px;
   }
 .frequency-table{
-  max-width: 900px;
+  min-width: 60%;
+  max-width: 99%;
   height: 80%;
   font-size: calc(9px + .6vw);
   float: center;
