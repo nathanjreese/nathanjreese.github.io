@@ -27,7 +27,7 @@
           location="top"
           temporary
           class='drawer-menu'
-          style="width: 225px; height: 300px"
+          style="width: 225px; height: 290px"
         >
           <v-list>
             <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
