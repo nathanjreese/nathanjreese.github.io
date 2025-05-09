@@ -759,6 +759,50 @@
     "track": "Barber Motorsports Park"
   },
   {
+    "series": "USF2000",
+    "dow": "Thu",
+    "date": "2025-05-08",
+    "time": "4:40:00 PM",
+    "airing": "N/A",
+    "type": "Practice",
+    "description": "USF2000 Practice",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Thu",
+    "date": "2025-05-08",
+    "time": "5:20:00 PM",
+    "airing": "N/A",
+    "type": "Practice",
+    "description": "USF Pro 2000 Practice",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
+    "series": "USF2000",
+    "dow": "Fri",
+    "date": "2025-05-09",
+    "time": "7:55:00 AM",
+    "airing": "Youtube",
+    "type": "Qualifying",
+    "description": "USF2000 Qualifying",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Fri",
+    "date": "2025-05-09",
+    "time": "8:40:00 AM",
+    "airing": "Youtube",
+    "type": "Qualifying",
+    "description": "USF Pro 2000 Qualifying",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
     "series": "IndyCar",
     "dow": "Fri",
     "date": "2025-05-09",
@@ -777,6 +821,17 @@
     "airing": "FS2",
     "type": "Practice",
     "description": "IndyNXT Practice",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
+    "series": "USF2000",
+    "dow": "Fri",
+    "date": "2025-05-09",
+    "time": "12:10:00 PM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF2000 Race",
     "event": "Sansio Grand Prix",
     "track": "IMS Road Course"
   },
@@ -803,6 +858,17 @@
     "track": "IMS Road Course"
   },
   {
+    "series": "USFPro2000",
+    "dow": "Fri",
+    "date": "2025-05-09",
+    "time": "3:20:00 PM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF Pro 2000 Race",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
     "series": "IndyCar",
     "dow": "Fri",
     "date": "2025-05-09",
@@ -821,6 +887,28 @@
     "airing": "FS1",
     "type": "Race",
     "description": "IndyNXT Race 1",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Sat",
+    "date": "2025-05-10",
+    "time": "9:30:00 AM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF Pro 2000 Race",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
+    "series": "USF2000",
+    "dow": "Sat",
+    "date": "2025-05-10",
+    "time": "10:30:00 AM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF2000 Race",
     "event": "Sansio Grand Prix",
     "track": "IMS Road Course"
   },
@@ -1285,5 +1373,16 @@
     "description": "IndyCar Race",
     "event": "Big Machine Music City GP",
     "track": "Nashville Super Speedway"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Sat",
+    "date": "2025-05-10",
+    "time": "2:20:00 PM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF Pro 2000 Race",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
   }
 ]
