@@ -3,7 +3,7 @@
     <title-page
       title-text="Ladder Power Rankings"
       />
-      <div class="last-update"><b>Last Updated:</b>August 18, 2024</div>
+      <div class="last-update"><b>Last Updated:</b> May 12, 2025</div>
     <div class="table-holder">
   <v-table class="ladder-table" density="compact">
     <thead>
@@ -20,9 +20,9 @@
         <th class="text-left">
           Wins
         </th>
-        <th class="text-left">
+        <!-- <th class="text-left">
           Change
-        </th>
+        </th> -->
       </tr>
     </thead>
     <tbody>
@@ -67,7 +67,7 @@
         </td>
 
         <td >{{ item.wins }}</td>
-        <td :class="{ moveup: item.previous.includes('↑') || item.previous === 'Unranked', movedown: item.previous.includes('↓')}">{{ item.previous }}</td>
+        <!-- <td :class="{ moveup: item.previous.includes('↑') || item.previous === 'Unranked', movedown: item.previous.includes('↓')}">{{ item.previous }}</td> -->
       </tr>
     </tbody>
   </v-table>
@@ -88,22 +88,22 @@ export default {
     return {
       home_msg: 'IndyCar Ladder',
       driverRanks: [
-            { rank: 1, name: 'Louis Foster', series: 'IndyNXT', wins: 6, titles: 'USF Pro', previous: '-'},
-            { rank: 2, name: 'Jacob Abel', series: 'IndyNXT', wins: 3, titles: 'None', previous: '-'},
+            { rank: 1, name: 'Dennis Hauger', series: 'IndyNXT', wins: 3, titles: 'USF Pro', previous: '-'},
+            { rank: 2, name: 'Lochie Hughes', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
             { rank: 3, name: `Caio Collet`, series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
-            { rank: 4, name: `Jamie Chadwick`, series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
-            { rank: 5, name: `Callum Hedge`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
-            { rank: 6, name: 'Lochie Hughes', series: 'USF Pro 2000', wins: 5, titles: 'None', previous: '-'},
-            { rank: 7, name: 'Nikita Johnson', series: 'USF Pro 2000', wins: 8, titles: 'None', previous: '-'},
-            { rank: 8, name: 'Reece Gold', series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '↑ 2'},
-            { rank: 9, name: 'Simon Sikes', series: 'USF Pro 2000', wins: 2, titles: 'None', previous: '-'},
-            { rank: 10, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '↓ 2'},
-            { rank: 11, name: 'Max Garcia', series: 'USF 2000', wins: 5, titles: 'None', previous: '-'},
-            { rank: 12, name: 'Liam Sceats',series: 'USF Pro 2000', wins: 1, titles: 'USF2000', previous: 'Unranked'},
-            { rank: 13, name: 'Sam Corry', series: 'USF 2000', wins: 3, titles: 'None', previous: '↑ 2'},
-            { rank: 14, name: 'Max Taylor', series: 'USF 2000', wins: 4, titles: 'None', previous: '↓ 1'},
-            { rank: 15, name: 'Liam McNeilly', series: 'USF Juniors', wins: 5, titles: 'None', previous: 'Unranked'},
-            { rank: 16, name: 'Sebastian Wheldon', series: 'USF Juniors', wins: 4, titles: 'None', previous: '-'},
+            { rank: 4, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
+            { rank: 5, name: `Salvador De Alba`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
+            { rank: 6, name: 'Max Garcia', series: 'USF Pro 2000', wins: 2, titles: 'None', previous: '-'},
+            { rank: 7, name: 'Alessandro de Tullio', series: 'USF Pro 2000', wins: 3, titles: 'None', previous: '-'},
+            { rank: 8, name: 'Josh Pierson', series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '↑ 2'},
+            { rank: 9, name: 'Ariel Elkin', series: 'USF Pro 2000', wins: 2, titles: 'None', previous: '-'},
+            { rank: 10, name: `Callum Hedge`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '↓ 2'},
+            { rank: 11, name: 'Liam McNeilly ', series: 'USF 2000', wins: 5, titles: 'None', previous: '-'},
+            { rank: 12, name: 'Jacob Douglas ',series: 'USF Pro 2000', wins: 1, titles: 'USF2000', previous: 'Unranked'},
+            { rank: 13, name: 'Jack Jeffers', series: 'USF 2000', wins: 1, titles: 'None', previous: '↑ 2'},
+            { rank: 14, name: 'Ty Fisher', series: 'USF Juniors', wins: 2, titles: 'None', previous: '↓ 1'},
+            { rank: 15, name: 'Thomas Schrage', series: 'USF 2000', wins: 1, titles: 'None', previous: 'Unranked'},
+            { rank: 16, name: 'Leonardo Escorpioni', series: 'USF Juniors', wins: 3, titles: 'None', previous: '-'},
           ],
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
         USFProLogoPic: new URL('@/assets/USFProWords.png', import.meta.url),
@@ -138,7 +138,7 @@ a {
     font-size: calc(8px + 3vw);
     padding-bottom: calc(1px + 1vw);
     text-shadow: 2px 1px 1px #000000;
-    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    font-family: Verdana;    
     font-weight: bold;
     color: whitesmoke;
   }
@@ -204,7 +204,7 @@ background-size: 100%;
 .driver-series{
   position: relative;
   color: red;
-  font-family: Times;
+  font-family: Verdana;  
   -webkit-text-stroke: 1px black;
   font-weight: bold;
   font-size: 27px;
@@ -218,7 +218,7 @@ background-size: 100%;
   padding-top: 326px;
   padding-left: 0px;
   font-size: 15px;
-  font-family: Times;
+  font-family: Verdana;
   transform: rotate(-43deg);
   width: 140px;
   text-align: center;
@@ -229,7 +229,7 @@ background-size: 100%;
   padding-left: 8px;
   margin: auto;
   font-size: 15px;
-  font-family: Times;
+  font-family: Verdana;
   transform: rotate(-43deg);
   text-align: center;
   width: 140px;

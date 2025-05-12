@@ -21,7 +21,7 @@
       <div class="menu-item"><router-link to="/frequencies">Frequencies</router-link></div>
       <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div>
         <!-- <div class="menu-item"><router-link to="/wordle">Wordle</router-link></div> -->
-        <!-- <div class="menu-item"><router-link to="/ladder">Ladder Rankings</router-link></div> -->
+        <div class="menu-item"><router-link to="/ladder">Ladder</router-link></div>
     </div>
   </nav>
 </template>
@@ -166,6 +166,7 @@ align-items: center;
 justify-content: center;
 flex-direction: row;
 font-size: 17px;
+vertical-align: text-bottom;
 }
 a{
   text-decoration: none;
@@ -176,7 +177,7 @@ nav .main-logo-img{
   margin-right: 20px;
 }
 nav .left-nav{
-  width: 35%;
+  width: 25%;
   padding-left: 30px;
   margin-right: 10px;
   color: white;
@@ -184,7 +185,7 @@ nav .left-nav{
   display: inline-flex;
 }
 nav .right-nav{
-  width: 70%;
+  width: 75%;
   margin: 20px 30px;
   background-color: #323232;
   display: inline-flex;
@@ -221,12 +222,15 @@ padding-top: 7px;
 border-left: 1px solid rgb(99, 99, 99);
 border-right: 1px solid rgb(99, 99, 99);
 font-family: Verdana;
+padding-bottom: 50px;
+
 }
 nav .menu-item .router-link-active {
  cursor: pointer;
  border-bottom-color: #ffbb00 !important;
  font-weight: bold;
  color: whitesmoke;
+ padding-bottom: 50px;
 }
 
 nav .menu-item:hover {
