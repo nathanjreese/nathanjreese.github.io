@@ -24,7 +24,7 @@
         <v-navigation-drawer
           v-model="drawer"
           color="primary"
-          location="top"
+          location="left"
           temporary
           class='drawer-menu'
           style="width: 225px; height: 305px"
