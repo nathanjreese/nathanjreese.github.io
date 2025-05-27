@@ -408,7 +408,7 @@ export default {
         {id: 7, name: "Christian Lundgaard", original: 'mclaren', team: 'mclaren', pic: new URL('@/assets/SillyPhotos/ChristianLundgaard.jpeg', import.meta.url)},
         {id: 8, name: "Kyle Kirkwood", original: 'andretti', team: 'andretti', pic: new URL('@/assets/SillyPhotos/KyleKirkwood.jpeg', import.meta.url)},
         {id: 15, name: "Santino Ferrucci", original: 'foyt', team: 'foyt', pic: new URL('@/assets/SillyPhotos/SantinoFerrucci.jpeg', import.meta.url)},
-        {id: 9, name: "Alexander Rossi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/AlexanderRossi.jpeg', import.meta.url)},
+        {id: 9, name: "Alexander Rossi", original: 'ecr', team: 'ecr', pic: new URL('@/assets/SillyPhotos/AlexanderRossi.jpeg', import.meta.url)},
         {id: 11, name: "Rinus Veekay", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RinusVeeKay.jpeg', import.meta.url)},
         {id: 13, name: "Marcus Ericsson", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MarcusEricsson.jpeg', import.meta.url)},
         {id: 16, name: "David Malukas", original: 'foyt', team: 'foyt', pic: new URL('@/assets/SillyPhotos/DavidMalukas.jpeg', import.meta.url)},
