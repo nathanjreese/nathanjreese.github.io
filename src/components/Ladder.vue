@@ -3,7 +3,7 @@
     <title-page
       title-text="Ladder Power Rankings"
       />
-      <div class="last-update"><b>Last Updated:</b> May 12, 2025</div>
+      <div class="last-update"><b>Last Updated:</b> May 27, 2025</div>
     <div class="table-holder">
   <v-table class="ladder-table" density="compact">
     <thead>
@@ -90,19 +90,19 @@ export default {
       driverRanks: [
             { rank: 1, name: 'Dennis Hauger', series: 'IndyNXT', wins: 3, titles: 'USF Pro', previous: '-'},
             { rank: 2, name: 'Lochie Hughes', series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
-            { rank: 3, name: `Caio Collet`, series: 'IndyNXT', wins: 1, titles: 'None', previous: '-'},
-            { rank: 4, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
+            { rank: 3, name: `Myles Rowe`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
+            { rank: 4, name: `Caio Collet`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
             { rank: 5, name: `Salvador De Alba`, series: 'IndyNXT', wins: 0, titles: 'None', previous: '-'},
             { rank: 6, name: 'Max Garcia', series: 'USF Pro 2000', wins: 2, titles: 'None', previous: '-'},
-            { rank: 7, name: 'Alessandro de Tullio', series: 'USF Pro 2000', wins: 3, titles: 'None', previous: '-'},
+            { rank: 7, name: 'Ariel Elkin', series: 'USF Pro 2000', wins: 3, titles: 'None', previous: '-'},
             { rank: 8, name: 'Josh Pierson', series: 'IndyNXT', wins: 0, titles: 'USF2000', previous: '↑ 2'},
-            { rank: 9, name: 'Ariel Elkin', series: 'USF Pro 2000', wins: 2, titles: 'None', previous: '-'},
-            { rank: 10, name: `Callum Hedge`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '↓ 2'},
-            { rank: 11, name: 'Liam McNeilly ', series: 'USF 2000', wins: 5, titles: 'None', previous: '-'},
-            { rank: 12, name: 'Jacob Douglas ',series: 'USF Pro 2000', wins: 1, titles: 'USF2000', previous: 'Unranked'},
+            { rank: 9, name: 'Alessandro de Tullio', series: 'USF Pro 2000', wins: 3, titles: 'None', previous: '-'},
+            { rank: 10, name: `Liam Sceats`, series: 'IndyNXT', wins: 0, titles: 'USF Pro', previous: '↓ 2'},
+            { rank: 11, name: 'Thomas Schrage ', series: 'USF 2000', wins: 1, titles: 'None', previous: '-'},
+            { rank: 12, name: 'Mac Clark',series: 'USF Pro 2000', wins: 0, titles: 'USF2000', previous: 'Unranked'},
             { rank: 13, name: 'Jack Jeffers', series: 'USF 2000', wins: 1, titles: 'None', previous: '↑ 2'},
             { rank: 14, name: 'Ty Fisher', series: 'USF Juniors', wins: 2, titles: 'None', previous: '↓ 1'},
-            { rank: 15, name: 'Thomas Schrage', series: 'USF 2000', wins: 1, titles: 'None', previous: 'Unranked'},
+            { rank: 15, name: 'Liam McNeilly ', series: 'USF 2000', wins: 5, titles: 'None', previous: 'Unranked'},
             { rank: 16, name: 'Leonardo Escorpioni', series: 'USF Juniors', wins: 3, titles: 'None', previous: '-'},
           ],
         IndyNxtLogoPic: new URL('@/assets/IndyNxtWords.png', import.meta.url),
