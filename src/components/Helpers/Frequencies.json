@@ -16,11 +16,43 @@
       "series": "IndyCar"
     },
     {
-      "number": 12,
-      "name": "Will Power",
-      "team": "Team Penske",
-      "frequency": "466.2125",
-      "secondary": "464.6000",
+      "number": 4,
+      "name": "David Malukas",
+      "team": "AJ Foyt Racing",
+      "frequency": "463.0125",
+      "secondary": "465.0375",
+      "series": "IndyCar"
+    },
+    {
+      "number": 5,
+      "name": "Pato O'Ward",
+      "team": "Arrow McLaren",
+      "frequency": "460.5625",
+      "secondary": "469.4375",
+      "series": "IndyCar"
+    },
+    {
+      "number": 6,
+      "name": "Nolan Siegel",
+      "team": "Arrow McLaren",
+      "frequency": "460.6625",
+      "secondary": "463.8375",
+      "series": "IndyCar"
+    },
+    {
+      "number": "06",
+      "name": "*Helio Castroneves",
+      "team": "Meyer Shank Racing",
+      "frequency": "460.3375",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 7,
+      "name": "Christian Lundgaard",
+      "team": "Arrow McLaren",
+      "frequency": "460.7625",
+      "secondary": "459.7750",
       "series": "IndyCar"
     },
     {
@@ -28,7 +60,7 @@
       "name": "Kyffin Simpson",
       "team": "Chip Ganassi Racing",
       "frequency": "457.0250",
-      "secondary": "",
+      "secondary": "461.1125",
       "series": "IndyCar"
     },
     {
@@ -48,27 +80,11 @@
       "series": "IndyCar"
     },
     {
-      "number": 5,
-      "name": "Pato O'Ward",
-      "team": "Arrow McLaren",
-      "frequency": "469.4375",
-      "secondary": "464.4875",
-      "series": "IndyCar"
-    },
-    {
-      "number": 6,
-      "name": "Nolan Siegel",
-      "team": "Arrow McLaren",
-      "frequency": "462.7875",
-      "secondary": "461.7250",
-      "series": "IndyCar"
-    },
-    {
-      "number": 7,
-      "name": "Christian Lundgaard",
-      "team": "Arrow McLaren",
-      "frequency": "464.4625",
-      "secondary": "464.5625",
+      "number": 12,
+      "name": "Will Power",
+      "team": "Team Penske",
+      "frequency": "466.2125",
+      "secondary": "464.6000",
       "series": "IndyCar"
     },
     {
@@ -80,14 +96,6 @@
       "series": "IndyCar"
     },
     {
-      "number": 41,
-      "name": "David Malukas",
-      "team": "AJ Foyt Racing",
-      "frequency": "463.0125",
-      "secondary": "465.0375",
-      "series": "IndyCar"
-    },
-    {
       "number": 15,
       "name": "Graham Rahal",
       "team": "Rahal Letterman Lanigan",
@@ -96,19 +104,11 @@
       "series": "IndyCar"
     },
     {
-      "number": 30,
-      "name": "Devlin DeFrancesco",
-      "team": "Rahal Letterman Lanigan",
-      "frequency": "468.2625",
-      "secondary": "469.2625",
-      "series": "IndyCar"
-    },
-    {
-      "number": 45,
-      "name": "Louis Foster",
-      "team": "Rahal Letterman Lanigan",
-      "frequency": "466.3125",
-      "secondary": "467.8375",
+      "number": "17",
+      "name": "*Kyle Larson",
+      "team": "Arrow McLaren",
+      "frequency": "460.4500",
+      "secondary": "456.1375",
       "series": "IndyCar"
     },
     {
@@ -117,14 +117,6 @@
       "team": "Dale Coyne Racing",
       "frequency": "467.2000",
       "secondary": "469.9375",
-      "series": "IndyCar"
-    },
-    {
-      "number": 51,
-      "name": "Jacob Abel",
-      "team": "Dale Coyne Racing",
-      "frequency": "463.6000",
-      "secondary": "464.9375",
       "series": "IndyCar"
     },
     {
@@ -141,6 +133,22 @@
       "team": "Ed Carpenter Racing",
       "frequency": "469.9250",
       "secondary": "465.9625",
+      "series": "IndyCar"
+    },
+    {
+      "number": 23,
+      "name": "*Ryan Hunter-Reay",
+      "team": "DRR / Cusick",
+      "frequency": "453.3750",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 24,
+      "name": "*Jack Harvey",
+      "team": "DRR / Cusick",
+      "frequency": "461.0125",
+      "secondary": "-",
       "series": "IndyCar"
     },
     {
@@ -168,6 +176,38 @@
       "series": "IndyCar"
     },
     {
+      "number": 30,
+      "name": "Devlin DeFrancesco",
+      "team": "Rahal Letterman Lanigan",
+      "frequency": "468.2625",
+      "secondary": "469.2625",
+      "series": "IndyCar"
+    },
+    {
+      "number": "33",
+      "name": "*Ed Carpenter",
+      "team": "Ed Carpenter Racing",
+      "frequency": "467.7125",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 45,
+      "name": "Louis Foster",
+      "team": "Rahal Letterman Lanigan",
+      "frequency": "466.3125",
+      "secondary": "467.8375",
+      "series": "IndyCar"
+    },
+    {
+      "number": 51,
+      "name": "Jacob Abel",
+      "team": "Dale Coyne Racing",
+      "frequency": "463.6000",
+      "secondary": "464.9375",
+      "series": "IndyCar"
+    },
+    {
       "number": 60,
       "name": "Felix Rosenqvist",
       "team": "Meyer Shank Racing",
@@ -181,6 +221,14 @@
       "team": "Meyer Shank Racing",
       "frequency": "452.8000",
       "secondary": "461.7250",
+      "series": "IndyCar"
+    },
+    {
+      "number": "75",
+      "name": "*Takuma Sato",
+      "team": "Rahal Letterman Lanigan",
+      "frequency": "460.4250",
+      "secondary": "-",
       "series": "IndyCar"
     },
     {
@@ -216,58 +264,10 @@
       "series": "IndyCar"
     },
     {
-      "number": "06",
-      "name": "*Helio Castroneves",
-      "team": "Meyer Shank Racing",
-      "frequency": "460.3375",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
-      "number": "17",
-      "name": "*Kyle Larson",
-      "team": "Arrow McLaren",
-      "frequency": "456.1375",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
-      "number": "33",
-      "name": "*Ed Carpenter",
-      "team": "Ed Carpenter Racing",
-      "frequency": "467.7125",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
-      "number": "75",
-      "name": "*Takuma Sato",
-      "team": "Rahal Letterman Lanigan",
-      "frequency": "460.4250",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
       "number": 98,
       "name": "*Marco Andretti",
       "team": "Andretti Global",
-      "frequency": "469.1375",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
-      "number": 23,
-      "name": "*Ryan Hunter-Reay",
-      "team": "DRR / Cusick",
-      "frequency": "453.3750",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
-      "number": 24,
-      "name": "*Jack Harvey",
-      "team": "DRR / Cusick",
-      "frequency": "461.0125",
+      "frequency": "464.1375",
       "secondary": "-",
       "series": "IndyCar"
     },
