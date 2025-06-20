@@ -935,6 +935,17 @@
     "track": "IMS Road Course"
   },
   {
+    "series": "USFPro2000",
+    "dow": "Sat",
+    "date": "2025-05-10",
+    "time": "2:20:00 PM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF Pro 2000 Race",
+    "event": "Sansio Grand Prix",
+    "track": "IMS Road Course"
+  },
+  {
     "series": "IndyCar",
     "dow": "Sat",
     "date": "2025-05-10",
@@ -1320,6 +1331,61 @@
     "track": "World Wide Technology Raceway"
   },
   {
+    "series": "USFPro2000",
+    "dow": "Fri",
+    "date": "2025-06-20",
+    "time": "10:15:00 AM",
+    "airing": "N/A",
+    "type": "Practice",
+    "description": "USF Pro 2000 Practice",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USF2000",
+    "dow": "Fri",
+    "date": "2025-06-20",
+    "time": "10:55:00 AM",
+    "airing": "N/A",
+    "type": "Practice",
+    "description": "USF 2000 Practice",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Fri",
+    "date": "2025-06-20",
+    "time": "12:20:00 PM",
+    "airing": "Youtube",
+    "type": "Qualifying",
+    "description": "USF Pro 2000 Qualifying 1",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USF2000",
+    "dow": "Fri",
+    "date": "2025-06-20",
+    "time": "1:05:00 PM",
+    "airing": "Youtube",
+    "type": "Qualifying",
+    "description": "USF2000 Qualifying",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Fri",
+    "date": "2025-06-20",
+    "time": "2:35:00 PM",
+    "airing": "Youtube",
+    "type": "Qualifying",
+    "description": "USF Pro 2000 Qualifying 2",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
     "series": "IndyNXT",
     "dow": "Fri",
     "date": "2025-06-20",
@@ -1334,10 +1400,21 @@
     "series": "IndyCar",
     "dow": "Fri",
     "date": "2025-06-20",
-    "time": "4:30:00 PM",
+    "time": "4:35:00 PM",
     "airing": "FS2",
     "type": "Practice",
     "description": "IndyCar Practice 1",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Sat",
+    "date": "2025-06-21",
+    "time": "9:00:00 AM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF Pro 2000 Race 1",
     "event": "Xpel Grand Prix at Road America",
     "track": "Road America"
   },
@@ -1364,6 +1441,17 @@
     "track": "Road America"
   },
   {
+    "series": "USF2000",
+    "dow": "Sat",
+    "date": "2025-06-21",
+    "time": "12:25:00 PM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF2000 Race 1",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
     "series": "IndyNXT",
     "dow": "Sat",
     "date": "2025-06-21",
@@ -1382,6 +1470,39 @@
     "airing": "FS1",
     "type": "Qualifying",
     "description": "IndyCar Qualifying",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Sat",
+    "date": "2025-06-21",
+    "time": "5:25:00 PM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF Pro 2000 Race 2",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USF2000",
+    "dow": "Sat",
+    "date": "2025-06-21",
+    "time": "6:20:00 PM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF2000 Race 2",
+    "event": "Xpel Grand Prix at Road America",
+    "track": "Road America"
+  },
+  {
+    "series": "USFPro2000",
+    "dow": "Sun",
+    "date": "2025-06-22",
+    "time": "8:55:00 AM",
+    "airing": "Youtube",
+    "type": "Race",
+    "description": "USF Pro 2000 Race 3",
     "event": "Xpel Grand Prix at Road America",
     "track": "Road America"
   },
@@ -1582,16 +1703,5 @@
     "description": "IndyCar Race",
     "event": "Big Machine Music City GP",
     "track": "Nashville Super Speedway"
-  },
-  {
-    "series": "USFPro2000",
-    "dow": "Sat",
-    "date": "2025-05-10",
-    "time": "2:20:00 PM",
-    "airing": "Youtube",
-    "type": "Race",
-    "description": "USF Pro 2000 Race",
-    "event": "Sansio Grand Prix",
-    "track": "IMS Road Course"
   }
 ]
