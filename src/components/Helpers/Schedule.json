@@ -1783,13 +1783,68 @@
   },
   {
     "series": "IndyNXT",
+    "dow": "Fri",
+    "date": "2025-07-11",
+    "time": "2:30:00 PM",
+    "airing": "FS2",
+    "type": "Practice",
+    "description": "IndyNXT Practice",
+    "event": "Synk 275 powered by Sukup",
+    "track": "Iowa Speedway"
+  },
+  {
+    "series": "IndyCar",
+    "dow": "Fri",
+    "date": "2025-07-11",
+    "time": "3:30:00 PM",
+    "airing": "FS2",
+    "type": "Practice",
+    "description": "IndyCar Hight Line Practice",
+    "event": "Synk 275 powered by Sukup",
+    "track": "Iowa Speedway"
+  },
+  {
+    "series": "IndyCar",
+    "dow": "Fri",
+    "date": "2025-07-11",
+    "time": "4:30:00 PM",
+    "airing": "FS2",
+    "type": "Practice",
+    "description": "IndyCar Practice",
+    "event": "Synk 275 powered by Sukup",
+    "track": "Iowa Speedway"
+  },
+  {
+    "series": "IndyNXT",
+    "dow": "Fri",
+    "date": "2025-07-11",
+    "time": "6:30:00 PM",
+    "airing": "FS2",
+    "type": "Qualifying",
+    "description": "IndyNXT Qualifying",
+    "event": "Synk 275 powered by Sukup",
+    "track": "Iowa Speedway"
+  },
+  {
+    "series": "IndyCar",
+    "dow": "Sat",
+    "date": "2025-07-12",
+    "time": "12:00:00 PM",
+    "airing": "FS1",
+    "type": "Qualifying",
+    "description": "IndyCar Qualifying",
+    "event": "Synk 275 powered by Sukup",
+    "track": "Iowa Speedway"
+  },
+  {
+    "series": "IndyNXT",
     "dow": "Sat",
     "date": "2025-07-12",
     "time": "1:30:00 PM",
     "airing": "FS1",
     "type": "Race",
     "description": "IndyNXT Race",
-    "event": "Hy-Vee IndyCar Race Weekend",
+    "event": "Synk 275 powered by Sukup",
     "track": "Iowa Speedway"
   },
   {
@@ -1800,7 +1855,7 @@
     "airing": "Fox",
     "type": "Race",
     "description": "IndyCar Race 1",
-    "event": "Hy-Vee IndyCar Race Weekend",
+    "event": "Synk 275 powered by Sukup",
     "track": "Iowa Speedway"
   },
   {
@@ -1811,7 +1866,7 @@
     "airing": "Fox",
     "type": "Race",
     "description": "IndyCar Race 2",
-    "event": "Hy-Vee IndyCar Race Weekend",
+    "event": "Synk 275 powered by Sukup",
     "track": "Iowa Speedway"
   },
   {
