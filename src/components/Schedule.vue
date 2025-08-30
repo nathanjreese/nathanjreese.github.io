@@ -128,12 +128,10 @@
 </template>
 <script>
 
-import getSeasonSchedule from '@/utils/schedule.js'
 import TitlePage from '@/components/Partials/Title'
 import scheduleData from "@/components/Helpers/Schedule.json"
 import moment from 'moment-timezone'
 import timezones from 'timezones-list'
-import Dropdown from 'v-dropdown'
 
   export default {
     components: {

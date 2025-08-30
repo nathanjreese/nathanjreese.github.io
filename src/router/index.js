@@ -3,7 +3,6 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Selector from '../components/Selector/Selector.vue'
 import NotFoundComponent from '../components/NotFoundComponent.vue'
 import SillySeason from '../components/Silly/SillySeason.vue'
-import Rolex from '../components/Rolex.vue'
 import Wordle from '../components/Wordle/Wordle.vue'
 import LeadersCircle from '../components/LeadersCircle.vue'
 import Teams from '../components/Teams/Teams.vue'
@@ -74,14 +73,6 @@ const routes = [
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: SillySeason
-      },
-      {
-        path: '/daytona',
-        name: 'Rolex',
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: Rolex
       },
       {
         path: '/wordle',

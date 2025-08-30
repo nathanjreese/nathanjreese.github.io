@@ -35,8 +35,8 @@
             <v-list-item prepend-icon="mdi-account-group" title="Teams" to="/teams" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
-            <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
-            <v-list-item prepend-icon="mdi-ladder" title="Ladder Rankings" to="/ladder" color="blue"></v-list-item>
+            <!-- <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item> -->
+            <!-- <v-list-item prepend-icon="mdi-ladder" title="Ladder Rankings" to="/ladder" color="blue"></v-list-item> -->
             <!-- <v-list-item prepend-icon="mdi-alphabetical-variant" title="Wordle" to="/wordle" color="blue"></v-list-item> -->
        </v-list>
         </v-navigation-drawer> 
@@ -59,10 +59,6 @@
           {
             title: 'Silly Season',
             value: '/silly',
-          },
-          {
-            title: 'Rolex 24 Tracker',
-            value: '/rolex',
           },
           {
             title: 'Leaders Circle',

@@ -78,8 +78,8 @@
             <v-simple-table class="summary-table-desktop">
               <template v-slot:default>
                 <tbody class="summary-table-desktop">
-                    <tr>
-                    <div class="summary-desktop">{{ driverInfo["Summary"] }}</div>
+                    <tr class="summary-desktop">
+                    {{ driverInfo["Summary"] }}
                     </tr>
                 </tbody>
               </template>
@@ -185,8 +185,8 @@
             <v-simple-table class="summary-table-mobile">
               <template v-slot:default>
                 <tbody class="summary-table-mobile">
-                    <tr>
-                    <div class="summary-mobile">{{ driverInfo["Summary"] }}</div>
+                    <tr class="summary-mobile">
+                    {{ driverInfo["Summary"] }}
                     </tr>
                 </tbody>
               </template>

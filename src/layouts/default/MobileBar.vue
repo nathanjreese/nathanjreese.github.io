@@ -27,7 +27,7 @@
           style="width: 225px; height: 310px"
         >
           <v-list>
-            <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
+            <v-list-item prepend-icon="mdi-heart-box-outline" title="Favoritef Driver" to="/selector" color="blue"></v-list-item>
             <v-list-item prepend-icon="mdi-account-group" title="Silly Season" to="/silly" color="blue"></v-list-item>
             <!-- <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item> -->
             <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item>
@@ -52,10 +52,6 @@
         {
           title: 'Silly Season',
           value: '/silly',
-        },
-        {
-          title: 'Rolex 24 Tracker',
-          value: '/rolex',
         },
         {
           title: 'Leaders Circle',
