@@ -157,7 +157,7 @@ import timezones from 'timezones-list'
         const sortedByDate = scheduleData.sort((a, b) => new Date(a.date) - new Date(b.date))
 
         this.events = sortedByDate.filter(event =>
-          event.date.includes('2025')
+          event.date.includes('2026')
         )
       
     },
