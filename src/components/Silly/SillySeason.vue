@@ -417,7 +417,7 @@ export default {
         {id: 27, name: "Louis Foster", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/LouisFoster.jpeg', import.meta.url)},
         {id: 20, name: "Marcus Armstrong", original: 'msr', team: 'msr', pic: new URL('@/assets/SillyPhotos/MarcusArmstrong.jpeg', import.meta.url)},
         {id: 30, name: "Christian Rasmussen", original: 'ecr', team: 'ecr', pic: new URL('@/assets/SillyPhotos/ChristianRasmussen.jpeg', import.meta.url)},
-        {id: 28, name: "Sting Ray Robb", original: 'juncos', team: 'juncos', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
+        {id: 28, name: "Sting Ray Robb", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
         {id: 25, name: "Kyffin Simpson", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
         {id: 23, name: "Conor Daly", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ConorDaly.jpeg', import.meta.url)},
         {id: 29, name: "Nolan Siegel", original: 'mclaren', team: 'mclaren', pic: new URL('@/assets/SillyPhotos/NolanSiegel.jpeg', import.meta.url)},
@@ -431,7 +431,7 @@ export default {
         {id: 47, name: "Myles Rowe", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/MylesRowe.jpeg', import.meta.url)},
         {id: 57, name: "Dennis Hauger", original: 'coyne', team: 'coyne', pic: new URL('@/assets/SillyPhotos/DennisHauger.jpeg', import.meta.url)},
         {id: 50, name: "Callum Hedge", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/CallumHedge.jpeg', import.meta.url)},
-        {id: 55, name: "Lochie Hughes", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LochieHughes.jpeg', import.meta.url)},
+        {id: 55, name: "Lochie Hughes", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/LochieHughes.jpeg', import.meta.url)},
         {id: 40, name: "Hunter McElrea", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/HunterMcElrea.jpeg', import.meta.url)},
         {id: 24, name: "Jack Harvey", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/JackHarvey.jpeg', import.meta.url)},
         {id: 26, name: "Pietro Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/PietroFittipaldi.jpeg', import.meta.url)},
@@ -442,10 +442,12 @@ export default {
         {id: 35, name: "Jamie Chadwick", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JamieChadwick.jpeg', import.meta.url)},
         {id: 41, name: "Danial Frost", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
         {id: 45, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
-        {id: 52, name: "Enzo Fittipaldi", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)},
-        {id: 53, name: "Mick Schumacher", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MickSchumacher.jpeg', import.meta.url)},
+        {id: 52, name: "Enzo Fittipaldi", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)},
+        {id: 53, name: "Mick Schumacher", original: 'rll', team: 'rll', pic: new URL('@/assets/SillyPhotos/MickSchumacher.jpeg', import.meta.url)},
         {id: 54, name: "Logan Sargeant", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LoganSargeant.jpeg', import.meta.url)},
-        {id: 56, name: "Nikita Johnson", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NikitaJohnson.jpeg', import.meta.url)}
+        {id: 56, name: "Nikita Johnson", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NikitaJohnson.jpeg', import.meta.url)},
+        {id: 57, name: "Yuki Tsunoda", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/YukiTsunoda.jpeg', import.meta.url)}
+
 
 
 
