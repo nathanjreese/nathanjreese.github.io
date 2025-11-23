@@ -447,13 +447,6 @@ export default {
         {id: 45, name: "Mick Schumacher", original: 'rll', team: 'rll', pic: new URL('@/assets/SillyPhotos/MickSchumacher.jpeg', import.meta.url)},
         {id: 46, name: "Logan Sargeant", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LoganSargeant.jpeg', import.meta.url)},
         {id: 47, name: "Nikita Johnson", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NikitaJohnson.jpeg', import.meta.url)}
-
-
-
-
-
-
-
       ]
     }
   },
