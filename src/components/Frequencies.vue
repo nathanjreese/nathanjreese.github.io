@@ -51,7 +51,81 @@ import frequencies from "@/components/Helpers/Frequencies.json"
     },
     data () {
       return {
-        driverChannels: frequencies
+        driverChannels: frequencies,
+        extraFrequencies: [
+          {
+      "number": "06",
+      "name": "*Helio Castroneves",
+      "team": "Meyer Shank Racing",
+      "frequency": "460.3375",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": "17",
+      "name": "*Ryan Hunter-Reay",
+      "team": "Arrow McLaren",
+      "frequency": "460.4500",
+      "secondary": "456.1375",
+      "series": "IndyCar"
+    },
+    {
+      "number": 23,
+      "name": "Conor Daly",
+      "team": "DRR / Cusick",
+      "frequency": "453.3750",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 24,
+      "name": "*Jack Harvey",
+      "team": "DRR / Cusick",
+      "frequency": "461.0125",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": "33",
+      "name": "*Ed Carpenter",
+      "team": "Ed Carpenter Racing",
+      "frequency": "467.7125",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": "75",
+      "name": "*Takuma Sato",
+      "team": "Rahal Letterman Lanigan",
+      "frequency": "460.4250",
+      "secondary": "-",
+      "series": "IndyCar"
+    },
+    {
+      "number": 83,
+      "name": "Robert Shwartzman",
+      "team": "Prema Racing",
+      "frequency": "461.1625",
+      "secondary": "461.3375",
+      "series": "IndyCar"
+    },
+    {
+      "number": 90,
+      "name": "Callum Ilott",
+      "team": "Prema Racing",
+      "frequency": "462.8375",
+      "secondary": "466.1625",
+      "series": "IndyCar"
+    },
+    {
+      "number": 98,
+      "name": "*Marco Andretti",
+      "team": "Andretti Global",
+      "frequency": "464.1375",
+      "secondary": "-",
+      "series": "IndyCar"
+    }
+        ]
       }
     },
     computed: {

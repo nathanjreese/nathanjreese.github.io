@@ -17,7 +17,7 @@
     },
     {
       "number": 4,
-      "name": "David Malukas",
+      "name": "Caio Collet",
       "team": "AJ Foyt Racing",
       "frequency": "463.0125",
       "secondary": "465.0375",
@@ -37,14 +37,6 @@
       "team": "Arrow McLaren",
       "frequency": "460.6625",
       "secondary": "463.8375",
-      "series": "IndyCar"
-    },
-    {
-      "number": "06",
-      "name": "*Helio Castroneves",
-      "team": "Meyer Shank Racing",
-      "frequency": "460.3375",
-      "secondary": "-",
       "series": "IndyCar"
     },
     {
@@ -81,7 +73,7 @@
     },
     {
       "number": 12,
-      "name": "Will Power",
+      "name": "David Malukas",
       "team": "Team Penske",
       "frequency": "466.2125",
       "secondary": "464.6000",
@@ -104,19 +96,19 @@
       "series": "IndyCar"
     },
     {
-      "number": "17",
-      "name": "*Kyle Larson",
-      "team": "Arrow McLaren",
-      "frequency": "460.4500",
-      "secondary": "456.1375",
-      "series": "IndyCar"
-    },
-    {
       "number": 18,
-      "name": "Rinus Veekay",
+      "name": "Romain Grosjean",
       "team": "Dale Coyne Racing",
       "frequency": "467.2000",
       "secondary": "469.9375",
+      "series": "IndyCar"
+    },
+    {
+      "number": 19,
+      "name": "Dennis Hauger",
+      "team": "Dale Coyne Racing",
+      "frequency": "463.6000",
+      "secondary": "464.9375",
       "series": "IndyCar"
     },
     {
@@ -136,24 +128,8 @@
       "series": "IndyCar"
     },
     {
-      "number": 23,
-      "name": "*Ryan Hunter-Reay",
-      "team": "DRR / Cusick",
-      "frequency": "453.3750",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
-      "number": 24,
-      "name": "*Jack Harvey",
-      "team": "DRR / Cusick",
-      "frequency": "461.0125",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
       "number": 26,
-      "name": "Colton Herta",
+      "name": "Will Power",
       "team": "Andretti Global",
       "frequency": "464.3000",
       "secondary": "463.2125",
@@ -176,22 +152,6 @@
       "series": "IndyCar"
     },
     {
-      "number": 30,
-      "name": "Devlin DeFrancesco",
-      "team": "Rahal Letterman Lanigan",
-      "frequency": "468.2625",
-      "secondary": "469.2625",
-      "series": "IndyCar"
-    },
-    {
-      "number": "33",
-      "name": "*Ed Carpenter",
-      "team": "Ed Carpenter Racing",
-      "frequency": "467.7125",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
       "number": 45,
       "name": "Louis Foster",
       "team": "Rahal Letterman Lanigan",
@@ -200,11 +160,11 @@
       "series": "IndyCar"
     },
     {
-      "number": 51,
-      "name": "Jacob Abel",
-      "team": "Dale Coyne Racing",
-      "frequency": "463.6000",
-      "secondary": "464.9375",
+      "number": 47,
+      "name": "Mick Schumacher",
+      "team": "Rahal Letterman Lanigan",
+      "frequency": "468.2625",
+      "secondary": "469.2625",
       "series": "IndyCar"
     },
     {
@@ -224,16 +184,8 @@
       "series": "IndyCar"
     },
     {
-      "number": "75",
-      "name": "*Takuma Sato",
-      "team": "Rahal Letterman Lanigan",
-      "frequency": "460.4250",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
-    {
       "number": 76,
-      "name": "Conor Daly",
+      "name": "Rinus VeeKay",
       "team": "Juncos Hollinger Racing",
       "frequency": "458.1000",
       "secondary": "455.1500",
@@ -247,30 +199,7 @@
       "secondary": "454.6500",
       "series": "IndyCar"
     },
-    {
-      "number": 83,
-      "name": "Robert Shwartzman",
-      "team": "Prema Racing",
-      "frequency": "461.1625",
-      "secondary": "461.3375",
-      "series": "IndyCar"
-    },
-    {
-      "number": 90,
-      "name": "Callum Ilott",
-      "team": "Prema Racing",
-      "frequency": "462.8375",
-      "secondary": "466.1625",
-      "series": "IndyCar"
-    },
-    {
-      "number": 98,
-      "name": "*Marco Andretti",
-      "team": "Andretti Global",
-      "frequency": "464.1375",
-      "secondary": "-",
-      "series": "IndyCar"
-    },
+    
     {
       "number": "",
       "name": "IndyCar Radio 1",
@@ -296,3 +225,4 @@
       "series": "Broadcast"
     }
   ]
+  
