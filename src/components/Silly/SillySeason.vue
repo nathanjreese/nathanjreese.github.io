@@ -426,7 +426,7 @@ export default {
         {id: 25, name: "Devlin DeFrancesco", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/DevlinDeFrancesco.jpeg', import.meta.url)},
         {id: 26, name: "Robert Shwartzman", original: 'prema', team: 'prema', pic: new URL('@/assets/SillyPhotos/RobertShwartzman.jpeg', import.meta.url)},
         {id: 27, name: "Linus Lundqvist", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LinusLundqvist.jpeg', import.meta.url)},
-        {id: 28, name: "Romain Grosjean", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/RomainGrosjean.jpeg', import.meta.url)},
+        {id: 28, name: "Romain Grosjean", original: 'coyne', team: 'coyne', pic: new URL('@/assets/SillyPhotos/RomainGrosjean.jpeg', import.meta.url)},
         {id: 28, name: "Caio Collet", original: 'foyt', team: 'foyt', pic: new URL('@/assets/SillyPhotos/CaioCollet.jpeg', import.meta.url)},
         {id: 29, name: "Myles Rowe", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/MylesRowe.jpeg', import.meta.url)},
         {id: 30, name: "Dennis Hauger", original: 'coyne', team: 'coyne', pic: new URL('@/assets/SillyPhotos/DennisHauger.jpeg', import.meta.url)},
@@ -444,7 +444,7 @@ export default {
         {id: 42, name: "Danial Frost", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/DanialFrost.jpeg', import.meta.url)},
         {id: 43, name: "Felipe Drugovich", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/FelipeDrugovich.jpeg', import.meta.url)},
         {id: 44, name: "Enzo Fittipaldi", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/EnzoFittpaldi.jpeg', import.meta.url)},
-        {id: 45, name: "Mick Schumacher", original: 'rll', team: 'rll', pic: new URL('@/assets/SillyPhotos/MickSchumacher.jpeg', import.meta.url)},
+        {id: 45, name: "Mick Schumacher", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/MickSchumacher.jpeg', import.meta.url)},
         {id: 46, name: "Logan Sargeant", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LoganSargeant.jpeg', import.meta.url)},
         {id: 47, name: "Nikita Johnson", original: 'na', team: 'na', pic: new URL('@/assets/SillyPhotos/NikitaJohnson.jpeg', import.meta.url)}
       ]
