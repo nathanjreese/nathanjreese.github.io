@@ -373,7 +373,7 @@ export default {
       { name:'msr', size: 2, title: 'Meyer Shank Racing', teampic: new URL('@/assets/Teams/MeyerShankRacing.png', import.meta.url)},
       { name:'foyt', size: 2, title: 'A.J. Foyt Racing', teampic: new URL('@/assets/Teams/AJFoytRacing.png', import.meta.url)},
       { name:'juncos', size: 2, title: 'Juncos Hollinger Racing', teampic: new URL('@/assets/Teams/JuncosHollinger.png', import.meta.url)},
-      { name:'prema', size: 2, title: 'Prema Racing', teampic: new URL('@/assets/Teams/PremaRacing.png', import.meta.url)},
+      // { name:'prema', size: 2, title: 'Prema Racing', teampic: new URL('@/assets/Teams/PremaRacing.png', import.meta.url)},
       ],
       teams: {
         andretti: 3,
