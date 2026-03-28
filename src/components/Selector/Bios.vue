@@ -1,10 +1,10 @@
 <template>
   
   <div class="bio-backdrop"> 
-    <font-awesome-icon icon="fa-free fa-circle-chevron-left" 
+    <font-awesome-icon icon="fa-solid fa-circle-chevron-left" 
           @click="changeDriver(-1)"
           />
-          <font-awesome-icon icon="fa-free fa-circle-chevron-right"
+          <font-awesome-icon icon="fa-solid fa-circle-chevron-right"
             @click="changeDriver(1)" />
     <div v-if="!this.isMobile" class="bio-main-desktop">
       <header class="bio-header-desktop">
@@ -55,7 +55,7 @@
               <template v-slot:default>
                 <tbody>
                     <tr>
-                    <td class="table-key-desktop">2024 Finish:</td><td class="table-value-desktop">{{ driverInfo["2024 Finish"] }}</td>
+                    <td class="table-key-desktop">2025 Finish:</td><td class="table-value-desktop">{{ driverInfo["2025 Finish"] }}</td>
                     </tr>
                     <tr>
                     <td class="table-key-desktop">Team:</td><td class="table-value-desktop">{{ driverInfo["Team"] }}</td>
@@ -75,15 +75,9 @@
                 </tbody>
               </template>
             </v-simple-table>
-            <v-simple-table class="summary-table-desktop">
-              <template v-slot:default>
-                <tbody class="summary-table-desktop">
-                    <tr class="summary-desktop">
-                    {{ driverInfo["Summary"] }}
-                    </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
+            <div class="summary-desktop">
+              {{ driverInfo["Summary"] }}
+            </div>
           </div>
         </div>   
           <!-- <v-simple-table>
@@ -182,15 +176,9 @@
                 </tbody>
               </template>
             </v-simple-table>
-            <v-simple-table class="summary-table-mobile">
-              <template v-slot:default>
-                <tbody class="summary-table-mobile">
-                    <tr class="summary-mobile">
-                    {{ driverInfo["Summary"] }}
-                    </tr>
-                </tbody>
-              </template>
-            </v-simple-table>
+            <div class="summary-mobile">
+              {{ driverInfo["Summary"] }}
+            </div>
           </div>
         </div>   
           <!-- <v-simple-table>
@@ -277,7 +265,7 @@ import Btn from '@/components/Partials/Btn'
       return tweet
       },
       bskyText() {
-      const tweet = "https://bsky.app/intent/compose?text=" + encodeURIComponent(`My #Indycar Driver is ${this.driverInfo["Name"]}. Who will you get? indycardrivers.com`) + '%0a' + "&url=indycardrivers.com"
+      const tweet = "https://bsky.app/intent/compose?text=" + encodeURIComponent(`My #Indycar Driver is ${this.driverInfo["Name"]}. Who will you get? indycardrivers.com`) + '%0a' + "&url=indycardrivers.com" + '&image=' + encodeURIComponent(this.driverInfo["biopic"])
       return tweet
       },
       threadsText() {
@@ -376,18 +364,20 @@ import Btn from '@/components/Partials/Btn'
   .fa-circle-chevron-left {
     color: silver;
     height: calc(20px + 5vw);
-    padding-right: calc(190px + 2vw);
     position: fixed;
-    top: 100;
-    left: 0;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
   }
   .fa-circle-chevron-right {
     color: silver;
     height: calc(20px + 5vw);
-    padding-left: calc(190px + 2vw);
     position: fixed;
-    top: 100;
-    right: 0;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1000;
   }
   .fa-circle-chevron-left:hover {
     cursor: pointer;
@@ -477,14 +467,19 @@ import Btn from '@/components/Partials/Btn'
     font-size: calc(14px + .6vw)
   }
   .summary-table-desktop {
-    padding-top: 25px;
+    padding: 25px 20px 0 20px;
+    width: 100%;
   }
   .summary-desktop {
-    max-width: calc(170px + 23vw);
+    width: 100%;
     font-size: calc(12px + .5vw);
     text-align: justify;
-    padding-top: 25px;
-    font-family:'Times New Roman', Times, serif;
+    padding: 20px;
+    margin-top: 15px;
+    font-family: Verdana, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
   }
   .social-class-desktop {
     font-weight: bold;
@@ -660,14 +655,19 @@ import Btn from '@/components/Partials/Btn'
     font-size: calc(12px + .6vw)
   }
   .summary-table-mobile {
-    padding-top: 25px;
+    padding: 25px 20px 0 20px;
+    width: 100%;
   }
   .summary-mobile {
-    max-width: calc(200px + 23vw);
+    width: 100%;
     font-size: calc(13px + .5vw);
     text-align: justify;
-    padding-top: 25px;
-    font-family:'Times New Roman', Times, serif;
+    padding: 20px;
+    margin-top: 15px;
+    font-family: Verdana, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
   }
   .social-class-mobile {
     font-weight: bold;
