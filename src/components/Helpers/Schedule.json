@@ -331,17 +331,6 @@
   },
   {
     "series": "IndyCar",
-    "dow": "Sun",
-    "date": "2026-08-23",
-    "time": "TBD",
-    "airing": "Fox",
-    "type": "Race",
-    "description": "IndyCar Race",
-    "event": "Freedom 250 Grand Prix of Washington, D.C.",
-    "track": "Streets of Washington"
-  },
-  {
-    "series": "IndyCar",
     "dow": "Sat",
     "date": "2026-08-29",
     "time": "2:30 PM ET",
