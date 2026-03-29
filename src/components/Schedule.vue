@@ -17,19 +17,31 @@
         
       </select>
     </div>
-    <div class="schedule-options">
-      <input class="past-checkbox" type="checkbox" :value=!showPast id="pastCheckbox" :checked="false" v-model="showPast"/>
-      <label class="past-label" for="checkbox">Past </label>
-
-      <input class="race-checkbox" type="checkbox" :value=!showRaces id="raceCheckbox" :checked="false" v-model="showRaces"/>
-      <label class="race-label" for="checkbox"> Races </label>
-
-      <input class="type-checkbox" type="checkbox" value="IndyCar" id="IndyCarCheckbox" :checked="true" v-model="checkedEvents"/>
-      <label class="type-label" for="checkbox"> IndyCar </label>
-      <input class="type-checkbox" type="checkbox"  value="IndyNXT" id="IndyNxtCheckbox" :checked="true" v-model="checkedEvents"/>
-      <label class="type-label" for="checkbox"> IndyNXT </label>
-      <input class="type-checkbox" type="checkbox"  value="USF" id="USFCheckbox" :checked="false" v-model="checkedEvents"/>
-      <label class="type-label" for="checkbox">USF</label>
+    <div class="schedule-options filter-row">
+      <div class="filter-group">
+        <label class="filter-toggle">
+          <input type="checkbox" v-model="showPast"/>
+          <span class="toggle-label">Past</span>
+        </label>
+        <label class="filter-toggle">
+          <input type="checkbox" v-model="showRaces"/>
+          <span class="toggle-label">Races Only</span>
+        </label>
+      </div>
+      <div class="filter-group series-filters">
+        <label class="filter-toggle">
+          <input type="checkbox" value="IndyCar" v-model="checkedEvents"/>
+          <span class="toggle-label">IndyCar</span>
+        </label>
+        <label class="filter-toggle">
+          <input type="checkbox" value="IndyNXT" v-model="checkedEvents"/>
+          <span class="toggle-label">IndyNXT</span>
+        </label>
+        <!-- <label class="filter-toggle">
+          <input type="checkbox" value="USF" v-model="checkedEvents"/>
+          <span class="toggle-label">USF</span>
+        </label> -->
+      </div>
     </div>
   <v-table class="schedule-table" density="compact">
     <thead>
@@ -308,6 +320,69 @@ import timezones from 'timezones-list'
   .type-checkbox{
     margin: calc(1px + .2vw) calc(2px + .5vw) 10px calc(2px + .6vw);
   }
+  .filter-row {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .filter-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .series-filters {
+    border-left: 2px solid #ccc;
+    padding-left: 20px;
+  }
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+  }
+  .filter-toggle input[type="checkbox"] {
+    display: none;
+  }
+  .filter-toggle .toggle-label {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: calc(10px + .4vw);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+  }
+  .filter-toggle input[type="checkbox"]:checked + .toggle-label {
+    background-color: rgb(57, 118, 216);
+    color: white;
+    border-color: rgb(47, 98, 180);
+  }
+  .filter-toggle:hover .toggle-label {
+    border-color: rgb(57, 118, 216);
+  }
+  @media (max-width: 600px) {
+    .filter-row {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+    .filter-group {
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .series-filters {
+      border-left: none;
+      border-top: 1px solid #ccc;
+      padding-left: 0;
+      padding-top: 10px;
+    }
+    .filter-toggle .toggle-label {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
   }
   .series-words{
     height: calc(11px + .8vw);
@@ -335,7 +410,7 @@ import timezones from 'timezones-list'
     font-family: Verdana;
     text-align: center;
     font-weight: 520;
-    background-color: rgb(57, 118, 216);
+    background-color: rgb(57, 118, 216) !important;
     padding-top: 100px !important;
   }
   .testheader{
@@ -344,7 +419,7 @@ import timezones from 'timezones-list'
     font-family: Verdana;
     text-align: center;
     font-weight: 520;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(88, 88, 88) !important;
   }
   .orow{
   background-color: #dbdbdb;
@@ -396,10 +471,17 @@ import timezones from 'timezones-list'
       height: calc(23px + 1.5vw);
       background-color: whitesmoke;
     }
-    /* tr:nth-child(even)
+    tr:not(.weekendheader):not(.testheader):nth-child(odd)
     {
       background-color: #dbdbdb;
-    } */
+    }
+    tr:not(.weekendheader):not(.testheader):nth-child(even)
+    {
+      background-color: whitesmoke;
+    }
+    thead tr {
+      background-color: #323232 !important;
+    }
   }
 
 

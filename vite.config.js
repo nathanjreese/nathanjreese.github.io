@@ -22,6 +22,13 @@ export default defineConfig({
     }),
     nodePolyfills()
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/styles/variables.scss";`, // Example for global SCSS variables
+      },
+    },
+  },
   define: { 'process.env': {} },
   resolve: {
     alias: {
