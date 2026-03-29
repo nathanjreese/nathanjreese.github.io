@@ -7,11 +7,36 @@
       />
     </div>
       <div class="float-icon-div">
+      <div class="share-container">
+        <font-awesome-icon icon="fa-solid fa-share-nodes" 
+          class="float-icon-share"
+          title="Share Predictions"
+          @click="toggleShareMenu()"/>
+        <div v-if="showShareMenu" class="share-dropdown">
+          <div class="share-option" @click="shareToTwitter()">
+            <font-awesome-icon icon="fa-brands fa-x-twitter" />
+            <span>Twitter / X</span>
+          </div>
+          <div class="share-option" @click="shareToBluesky()">
+            <font-awesome-icon icon="fa-brands fa-bluesky" />
+            <span>Bluesky</span>
+          </div>
+          <div class="share-option" @click="shareToThreads()">
+            <font-awesome-icon icon="fa-brands fa-threads" />
+            <span>Threads</span>
+          </div>
+        </div>
+      </div>
+      <font-awesome-icon icon="fa-solid fa-camera" 
+        class="float-icon-camera"
+        title="Save as Image"
+        @click="captureTeams()"/>
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
         @click="resetTeams()"/>
       </div>
     <div v-if="!this.isMobile" class="float-container">
+      <div ref="teamsCapture" class="teams-capture-area">
 
       <!-- Left container -->
       <div class="float-child-1">
@@ -173,6 +198,7 @@
       </div>
 
     </div>
+      </div><!-- End teams-capture-area -->
     <div class="float-child-fa">
       <div class="drop-zone-fa"
         @drop="onDrop($event, 'fa')"
@@ -213,7 +239,7 @@
     </div>
   </div>
   <div v-if="this.isMobile" class="float-container-mobile">
-      <div class="float-child-mobile">
+      <div ref="teamsCaptureM" class="float-child-mobile teams-capture-area-mobile">
 
         <div v-for="team in teamData.slice(0,11)">
         <!-- <div class="drop-team-mobile">{{ team.title }}</div> -->
@@ -345,6 +371,7 @@ import SillyModal from './SillyModal'
 import driverData from "@/components/Helpers/driverData.json"
 import TitlePage from "@/components/Partials/Title"
 import RemoveModal from "./RemoveModal"
+import * as htmlToImage from 'html-to-image'
 
 export default {
   components: {
@@ -357,6 +384,7 @@ export default {
       msg: '2025 Silly Season Predictor',
       isSillyModalVisible: false,
       isRemoveModalVisible: false,
+      showShareMenu: false,
       activeTeam: '',
       isLoaded: false,
       driverRemove: null,
@@ -447,6 +475,12 @@ export default {
       ]
     }
   },
+  mounted() {
+    document.addEventListener('click', this.handleClickOutside)
+  },
+  beforeUnmount() {
+    document.removeEventListener('click', this.handleClickOutside)
+  },
   computed: {
     lockedDrivers() {
       const lockedIn = this.items.filter((item) => item.original != 'fa')
@@ -476,6 +510,89 @@ export default {
       },
   },
   methods: {
+    async captureTeams() {
+      const element = this.isMobile ? this.$refs.teamsCaptureM : this.$refs.teamsCapture
+      if (!element) return
+      
+      try {
+        if (this.isMobile) {
+          // Mobile: set containers to fit content
+          const parentContainer = element.closest('.float-container-mobile')
+          if (parentContainer) parentContainer.style.setProperty('min-height', 'fit-content', 'important')
+          element.style.setProperty('min-height', 'fit-content', 'important')
+          element.style.setProperty('padding', '10px', 'important')
+        } else {
+          // Desktop: override fixed heights for capture
+          const child1 = element.querySelector('.float-child-1')
+          const child2 = element.querySelector('.float-child-2')
+          
+          if (child1) child1.style.setProperty('height', 'fit-content', 'important')
+          if (child2) child2.style.setProperty('height', 'fit-content', 'important')
+          element.style.setProperty('height', 'fit-content', 'important')
+          element.style.setProperty('padding', '10px', 'important')
+        }
+        
+        const dataUrl = await htmlToImage.toPng(element, {
+          backgroundColor: '#3976d8',
+          pixelRatio: 2,
+          cacheBust: true,
+          fetchRequestInit: {
+            mode: 'cors',
+            cache: 'no-cache'
+          }
+        })
+        
+        // Restore original styles
+        if (this.isMobile) {
+          const parentContainer = element.closest('.float-container-mobile')
+          if (parentContainer) parentContainer.style.removeProperty('min-height')
+          element.style.removeProperty('min-height')
+          element.style.removeProperty('padding')
+        } else {
+          const child1 = element.querySelector('.float-child-1')
+          const child2 = element.querySelector('.float-child-2')
+          if (child1) child1.style.removeProperty('height')
+          if (child2) child2.style.removeProperty('height')
+          element.style.removeProperty('height')
+          element.style.removeProperty('padding')
+        }
+        
+        const link = document.createElement('a')
+        link.download = 'silly-season-predictions.png'
+        link.href = dataUrl
+        link.click()
+      } catch (error) {
+        console.error('Error capturing image:', error)
+        alert('Error creating image. Please try again.')
+      }
+    },
+    toggleShareMenu() {
+      this.showShareMenu = !this.showShareMenu
+    },
+    handleClickOutside(event) {
+      const shareContainer = this.$el.querySelector('.share-container')
+      if (shareContainer && !shareContainer.contains(event.target)) {
+        this.showShareMenu = false
+      }
+    },
+    async shareToTwitter() {
+      this.showShareMenu = false
+      await this.captureTeams()
+      const text = encodeURIComponent('Check out my 2026 IndyCar Silly Season predictions! 🏎️')
+      window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank')
+    },
+    async shareToBluesky() {
+      this.showShareMenu = false
+      await this.captureTeams()
+      const text = encodeURIComponent('Check out my 2026 IndyCar Silly Season predictions! 🏎️')
+      window.open(`https://bsky.app/intent/compose?text=${text}`, '_blank')
+    },
+    async shareToThreads() {
+      this.showShareMenu = false
+      await this.captureTeams()
+      const text = encodeURIComponent('Check out my 2026 IndyCar Silly Season predictions! 🏎️')
+      window.open(`https://www.threads.net/intent/post?text=${text}`, '_blank')
+    },
     listTeam(teamName) {
       return this.items.filter((item) => item.team === teamName)
     },
@@ -704,6 +821,77 @@ export default {
     display: inline-block;
     box-shadow: 3px 3px 3px rgb(48, 48, 48);
   }
+  .teams-capture-area {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(57, 118, 216);
+    flex: 1;
+  }
+  .teams-capture-area-mobile {
+    background-color: rgb(57, 118, 216);
+  }
+  .share-container {
+    position: relative;
+    display: inline-block;
+  }
+  .float-icon-share {
+    color: rgb(65, 129, 200) !important;
+    font-size: calc(2px + 1.3vw) !important;
+    padding: 10px;
+    margin: calc(2px + 1.3vw);
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: lightgrey;
+    border-radius: 5px;
+  }
+  .float-icon-share:hover {
+    color: rgb(109, 139, 222) !important;
+    background-color: rgb(231, 231, 231);
+  }
+  .share-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    min-width: 150px;
+    overflow: hidden;
+  }
+  .share-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #333;
+    transition: background-color 0.2s;
+  }
+  .share-option:hover {
+    background-color: #f0f0f0;
+  }
+  .share-option svg {
+    font-size: 18px !important;
+    width: 20px;
+  }
+  .float-icon-camera {
+    color: rgb(65, 129, 200) !important;
+    font-size: calc(2px + 1.3vw) !important;
+    padding: 10px;
+    margin: calc(2px + 1.3vw);
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: lightgrey;
+    border-radius: 5px;
+  }
+  .float-icon-camera:hover {
+    color: rgb(109, 139, 222) !important;
+    background-color: rgb(231, 231, 231);
+  }
   .fa-retweet {
     color:  rgb(65, 129, 200) !important;
     font-size: calc(2px + 1.3vw) !important;
@@ -815,14 +1003,14 @@ export default {
     text-align: center;
 }
 .float-child-1 {
-    width: 40%;
-    float: left;
+    width: 55%;
+    flex-shrink: 0;
     padding: 2px;
     height: calc(800px + .8vw);
 }
 .float-child-2 {
-    width: 30%;
-    float: left;
+    width: 45%;
+    flex-shrink: 0;
     padding: 2px;
     height: calc(800px + .8vw);
 }
@@ -971,6 +1159,37 @@ export default {
   display: grid;
   flex-direction: column;
   border-radius: 3px;
+}
+
+@media (max-width: 1000px) {
+  .float-icon-share {
+    font-size: 24px !important;
+    padding: 14px;
+    margin: 10px;
+    margin-right: 8px;
+  }
+  .float-icon-camera {
+    font-size: 24px !important;
+    padding: 14px;
+    margin: 10px;
+    margin-right: 8px;
+  }
+  .fa-retweet {
+    font-size: 24px !important;
+    padding: 14px;
+    margin: 10px;
+  }
+  .share-dropdown {
+    min-width: 180px;
+  }
+  .share-option {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+  .share-option svg {
+    font-size: 22px !important;
+    width: 24px;
+  }
 }
 
 
