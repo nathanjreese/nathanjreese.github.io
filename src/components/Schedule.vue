@@ -1,7 +1,7 @@
 <template>
   <div class="main-schedule">
     <title-page
-      title-text="2025 Schedule"
+      title-text="2026 Schedule"
       />
   <div class="schedule-table-holder">
     <div class="schedule-options">
