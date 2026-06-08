@@ -427,7 +427,7 @@ export default {
       marioProfile: new URL('@/assets/SillyPhotos/MarioAndretti.jpeg', import.meta.url),
       items: [
         {id: 0, name: "Alex Palou", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/AlexPalou.jpeg', import.meta.url)},
-        {id: 1, name: "Scott Dixon", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/ScottDixon.jpeg', import.meta.url)},
+        {id: 1, name: "Scott Dixon", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ScottDixon.jpeg', import.meta.url)},
         {id: 2, name: "Josef Newgarden", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/JosefNewgarden.jpeg', import.meta.url)},
         {id: 3, name: "Pato O'Ward", original: 'mclaren', team: 'mclaren', pic: new URL('@/assets/SillyPhotos/PatricioOWard.jpeg', import.meta.url)},
         {id: 4, name: "Scott McLaughlin", original: 'penske', team: 'penske', pic: new URL('@/assets/SillyPhotos/ScottMcLaughlin.jpeg', import.meta.url)},
@@ -444,7 +444,7 @@ export default {
         {id: 15, name: "Graham Rahal", original: 'rahal', team: 'rahal', pic: new URL('@/assets/SillyPhotos/GrahamRahal.jpeg', import.meta.url)},
         {id: 16, name: "Louis Foster", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/LouisFoster.jpeg', import.meta.url)},
         {id: 17, name: "Marcus Armstrong", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/MarcusArmstrong.jpeg', import.meta.url)},
-        {id: 18, name: "Christian Rasmussen", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ChristianRasmussen.jpeg', import.meta.url)},
+        {id: 18, name: "Christian Rasmussen", original: 'ecr', team: 'ecr', pic: new URL('@/assets/SillyPhotos/ChristianRasmussen.jpeg', import.meta.url)},
         {id: 19, name: "Sting Ray Robb", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/StingRayRobb.jpeg', import.meta.url)},
         {id: 20, name: "Kyffin Simpson", original: 'ganassi', team: 'ganassi', pic: new URL('@/assets/SillyPhotos/KyffinSimpson.jpeg', import.meta.url)},
         {id: 21, name: "Conor Daly", original: 'fa', team: 'fa', pic: new URL('@/assets/SillyPhotos/ConorDaly.jpeg', import.meta.url)},
