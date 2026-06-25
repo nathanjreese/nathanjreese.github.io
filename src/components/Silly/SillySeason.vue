@@ -6,27 +6,27 @@
       title-text="2026 Silly Season Predictor"
       />
     </div>
-      <div class="float-icon-div">
-      <div class="share-container">
-        <font-awesome-icon icon="fa-solid fa-share-nodes" 
-          class="float-icon-share"
-          title="Share Predictions"
-          @click="toggleShareMenu()"/>
-        <div v-if="showShareMenu" class="share-dropdown">
-          <div class="share-option" @click="shareToTwitter()">
-            <font-awesome-icon icon="fa-brands fa-x-twitter" />
-            <span>Twitter / X</span>
-          </div>
-          <div class="share-option" @click="shareToBluesky()">
-            <font-awesome-icon icon="fa-brands fa-bluesky" />
-            <span>Bluesky</span>
-          </div>
-          <div class="share-option" @click="shareToThreads()">
-            <font-awesome-icon icon="fa-brands fa-threads" />
-            <span>Threads</span>
+      <!-- <div class="float-icon-div"> -->
+        <!-- <div class="share-container">
+          <font-awesome-icon icon="fa-solid fa-share-nodes" 
+            class="float-icon-share"
+            title="Share Predictions"
+            @click="toggleShareMenu()"/>
+          <div v-if="showShareMenu" class="share-dropdown">
+            <div class="share-option" @click="shareToTwitter()">
+              <font-awesome-icon icon="fa-brands fa-x-twitter" />
+              <span>Twitter / X</span>
+            </div>
+            <div class="share-option" @click="shareToBluesky()">
+              <font-awesome-icon icon="fa-brands fa-bluesky" />
+              <span>Bluesky</span>
+            </div>
+            <div class="share-option" @click="shareToThreads()">
+              <font-awesome-icon icon="fa-brands fa-threads" />
+              <span>Threads</span>
+            </div>
           </div>
         </div>
-      </div>
       <font-awesome-icon icon="fa-solid fa-camera" 
         class="float-icon-camera"
         title="Save as Image"
@@ -34,7 +34,7 @@
       <font-awesome-icon icon="fa-solid fa-retweet " 
         class="float-icon"
         @click="resetTeams()"/>
-      </div>
+      </div> -->
     <div v-if="!this.isMobile" class="float-container">
       <div ref="teamsCapture" class="teams-capture-area">
 
@@ -371,7 +371,7 @@ import SillyModal from './SillyModal'
 import driverData from "@/components/Helpers/driverData.json"
 import TitlePage from "@/components/Partials/Title"
 import RemoveModal from "./RemoveModal"
-import * as htmlToImage from 'html-to-image'
+// import * as htmlToImage from 'html-to-image'
 
 export default {
   components: {
@@ -515,52 +515,53 @@ export default {
       if (!element) return
       
       try {
-        if (this.isMobile) {
-          // Mobile: set containers to fit content
-          const parentContainer = element.closest('.float-container-mobile')
-          if (parentContainer) parentContainer.style.setProperty('min-height', 'fit-content', 'important')
-          element.style.setProperty('min-height', 'fit-content', 'important')
-          element.style.setProperty('padding', '10px', 'important')
-        } else {
-          // Desktop: override fixed heights for capture
-          const child1 = element.querySelector('.float-child-1')
-          const child2 = element.querySelector('.float-child-2')
-          
-          if (child1) child1.style.setProperty('height', 'fit-content', 'important')
-          if (child2) child2.style.setProperty('height', 'fit-content', 'important')
-          element.style.setProperty('height', 'fit-content', 'important')
-          element.style.setProperty('padding', '10px', 'important')
-        }
-        
-        const dataUrl = await htmlToImage.toPng(element, {
-          backgroundColor: '#3976d8',
-          pixelRatio: 2,
-          cacheBust: true,
-          fetchRequestInit: {
-            mode: 'cors',
-            cache: 'no-cache'
-          }
-        })
-        
-        // Restore original styles
-        if (this.isMobile) {
-          const parentContainer = element.closest('.float-container-mobile')
-          if (parentContainer) parentContainer.style.removeProperty('min-height')
-          element.style.removeProperty('min-height')
-          element.style.removeProperty('padding')
-        } else {
-          const child1 = element.querySelector('.float-child-1')
-          const child2 = element.querySelector('.float-child-2')
-          if (child1) child1.style.removeProperty('height')
-          if (child2) child2.style.removeProperty('height')
-          element.style.removeProperty('height')
-          element.style.removeProperty('padding')
-        }
-        
-        const link = document.createElement('a')
-        link.download = 'silly-season-predictions.png'
-        link.href = dataUrl
-        link.click()
+        // Screenshot and image download are temporarily disabled.
+        // if (this.isMobile) {
+        //   // Mobile: set containers to fit content
+        //   const parentContainer = element.closest('.float-container-mobile')
+        //   if (parentContainer) parentContainer.style.setProperty('min-height', 'fit-content', 'important')
+        //   element.style.setProperty('min-height', 'fit-content', 'important')
+        //   element.style.setProperty('padding', '10px', 'important')
+        // } else {
+        //   // Desktop: override fixed heights for capture
+        //   const child1 = element.querySelector('.float-child-1')
+        //   const child2 = element.querySelector('.float-child-2')
+        //   
+        //   if (child1) child1.style.setProperty('height', 'fit-content', 'important')
+        //   if (child2) child2.style.setProperty('height', 'fit-content', 'important')
+        //   element.style.setProperty('height', 'fit-content', 'important')
+        //   element.style.setProperty('padding', '10px', 'important')
+        // }
+        // 
+        // const dataUrl = await htmlToImage.toPng(element, {
+        //   backgroundColor: '#3976d8',
+        //   pixelRatio: 2,
+        //   cacheBust: true,
+        //   fetchRequestInit: {
+        //     mode: 'cors',
+        //     cache: 'no-cache'
+        //   }
+        // })
+        // 
+        // // Restore original styles
+        // if (this.isMobile) {
+        //   const parentContainer = element.closest('.float-container-mobile')
+        //   if (parentContainer) parentContainer.style.removeProperty('min-height')
+        //   element.style.removeProperty('min-height')
+        //   element.style.removeProperty('padding')
+        // } else {
+        //   const child1 = element.querySelector('.float-child-1')
+        //   const child2 = element.querySelector('.float-child-2')
+        //   if (child1) child1.style.removeProperty('height')
+        //   if (child2) child2.style.removeProperty('height')
+        //   element.style.removeProperty('height')
+        //   element.style.removeProperty('padding')
+        // }
+        // 
+        // const link = document.createElement('a')
+        // link.download = 'silly-season-predictions.png'
+        // link.href = dataUrl
+        // link.click()
       } catch (error) {
         console.error('Error capturing image:', error)
         alert('Error creating image. Please try again.')
