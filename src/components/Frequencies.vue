@@ -7,16 +7,16 @@
   <v-table class="frequency-table" density="compact">
     <thead>
       <tr>
-        <th class="text-left" width=10%>
+        <th class="text-left" width="10%" style="background:#162844 !important; color:#eef4ff !important;">
           Number
         </th>
-        <th class="text-left" width=35%>
+        <th class="text-left" width="35%" style="background:#162844 !important; color:#eef4ff !important;">
           Name
         </th>
-        <th class="text-left" width=45%>
+        <th class="text-left" width="45%" style="background:#162844 !important; color:#eef4ff !important;">
           Team
         </th>
-        <th class="text-left" width=10%>
+        <th class="text-left" width="10%" style="background:#162844 !important; color:#eef4ff !important;">
           Frequency
         </th>
       </tr>
@@ -138,63 +138,73 @@ import frequencies from "@/components/Helpers/Frequencies.json"
 
 <style scoped>
 .main-frequency {
+  width: 100%;
   text-align: center;
-  background-color:rgb(231, 231, 231);
+  background: transparent;
+  color: var(--color-text);
   padding-bottom: 50px;
-  }
-  .v-table{
-    td{
-    height: calc(23px + 1.5vw);
-    /* border: 2px solid black; */
-    padding: calc(.1px + .3vw) calc(.8px + .5vw) calc(.1px + .3vw) calc(.9px + .3vw);
-    }
-  }
-  .table-holder{
-    display: flex;
-    float: center;
-    flex-direction: column;
-  }
-  .td-fields{
-    text-align: left;
-    padding: 0px;
-  }
-.frequency-table{
-  min-width: 60%;
-  max-width: 99%;
-  height: 80%;
-  font-size: calc(9px + .6vw);
-  float: center;
+}
+
+.table-holder {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 10px 14px;
+}
+
+.frequency-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  font-size: calc(10px + 0.45vw);
   margin-left: auto;
   margin-right: auto;
-  background-color: #cfcfcf;
-  border: 2px solid black;
-  box-shadow: 5px 5px 5px #616161;
-  color: black;
-  thead{
-    color: whitesmoke;
-    background-color: #323232;
-  }
-}
-.broadcast{
-  color: blue;
-  background-color: whitesmoke !important;
-}
-tr:nth-child(even)
-{
-  background-color: #dbdbdb;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--color-text);
 }
 
+.frequency-table thead {
+  color: #eef4ff;
+  background: var(--color-nav);
+}
 
-.frequency-title{
-    font-size: calc(10px + 2.5vw) !important;
-    padding-bottom: calc(20px + 3vw);
-    text-shadow: 2px 1px 1px #000000;
-    font-family: Verdana;    
-    font-weight: bold;
-  }
-  .notes{
-    padding-top: 30px;
-    font-size: 16px;
-    font-style: italic;
-  }
-  </style>
+.frequency-table thead tr {
+  background: var(--color-nav) !important;
+}
+
+:deep(.frequency-table .v-table__wrapper > table > tbody > tr > td) {
+  color: var(--color-text) !important;
+  height: calc(24px + 1.1vw);
+  padding: calc(2px + 0.2vw) calc(4px + 0.35vw);
+}
+
+.td-fields {
+  text-align: left;
+}
+
+.frequency-table tr:nth-child(odd) {
+  background: #edf3fc;
+}
+
+.frequency-table tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.broadcast {
+  color: var(--color-accent) !important;
+  font-weight: 600;
+}
+
+.notes {
+  padding-top: 16px;
+  font-size: calc(10px + 0.3vw);
+  font-style: italic;
+  color: var(--color-text-soft);
+  text-align: center;
+}
+</style>

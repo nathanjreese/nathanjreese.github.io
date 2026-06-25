@@ -13,15 +13,28 @@
           <div class="logo-title"><b>IndyCar</b> Drivers App</div>
     </div>
     <div class="right-nav">
-      <!-- <div class="menu-item"><router-link to="/daytona">Daytona Tracker</router-link></div> -->
-      <div class="menu-item"><router-link to="/selector">Driver Selector</router-link></div>
-      <div class="menu-item"><router-link to="/teams">Teams</router-link></div>
-      <div class="menu-item"><router-link to="/silly">Silly Season</router-link></div>
-      <div class="menu-item"><router-link to="/schedule">Schedule</router-link></div>
-      <div class="menu-item"><router-link to="/frequencies">Frequencies</router-link></div>
-      <!-- <div class="menu-item"><router-link to="/leaders">Leader's Circle</router-link></div> -->
-        <!-- <div class="menu-item"><router-link to="/wordle">Wordle</router-link></div> -->
-        <!-- <div class="menu-item"><router-link to="/ladder">Ladder</router-link></div> -->
+      <div class="nav-card">
+        <router-link class="menu-item" to="/selector">
+          <v-icon class="menu-icon">mdi-account-search</v-icon>
+          <span>Drivers</span>
+        </router-link>
+        <router-link class="menu-item" to="/teams">
+          <v-icon class="menu-icon">mdi-account-group</v-icon>
+          <span>Teams</span>
+        </router-link>
+        <router-link class="menu-item" to="/silly">
+          <v-icon class="menu-icon">mdi-transfer</v-icon>
+          <span>Silly Season</span>
+        </router-link>
+        <router-link class="menu-item" to="/schedule">
+          <v-icon class="menu-icon">mdi-calendar-month</v-icon>
+          <span>Schedule</span>
+        </router-link>
+        <router-link class="menu-item" to="/frequencies">
+          <v-icon class="menu-icon">mdi-radio-tower</v-icon>
+          <span>Frequencies</span>
+        </router-link>
+      </div>
     </div>
   </nav>
 </template>
@@ -159,102 +172,107 @@ watch: {
 </script>
 <style>
 nav {
-width: 100%;
-background-color: #323232;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-flex-direction: row;
-font-size: 17px;
-vertical-align: text-bottom;
+  width: 100%;
+  background: linear-gradient(120deg, #12233d, #1c355a);
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: 16px;
+  padding: 10px 18px;
+  border-bottom: 1px solid rgba(214, 228, 251, 0.2);
+  box-shadow: 0 10px 22px rgba(12, 24, 43, 0.25);
 }
 a{
   text-decoration: none;
 
 }
 nav .main-logo-img{
-  height: 60px;
-  margin-right: 20px;
+  height: 50px;
+  margin-right: 12px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.25));
 }
 nav .left-nav{
-  width: 25%;
-  padding-left: 30px;
-  margin-right: 10px;
-  color: white;
-  font-size: 25px;
-  display: inline-flex;
-}
-nav .right-nav{
-  width: 75%;
-  margin: 20px 30px;
-  background-color: #323232;
+  width: auto;
+  padding-left: 6px;
+  margin-right: 12px;
+  color: #ffffff;
+  font-size: 24px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  .menu-button{
-    height: 50px;
-    margin: 00px 10px;
-    .a {
-      text-decoration: none;
-      color: black;
-    }
-  }
 }
-nav .logo-title{
-  color: whitesmoke;
-  margin-top: 10px;
+nav .logo-title {
+  color: #f3f7ff;
+  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
+
+nav .right-nav {
+  width: auto;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: transparent;
+  border-radius: 14px;
+  padding: 6px 8px;
+  border: none;
+}
+
 nav .menu-item {
-color: rgb(194, 194, 194);
-padding: 35px 3px;
-height: 50px;
-margin: 0px 0px;
-width: 155px;
-position: relative;
-font-size: 16px;
-text-align: center;
-border-bottom: 5px solid transparent;
-display: flex;
-transition: 0.4s;
-/* border-right: 2px solid #b7b7b7; */
-padding-top: 7px;
-border-left: 1px solid rgb(99, 99, 99);
-border-right: 1px solid rgb(99, 99, 99);
-font-family: Verdana;
-padding-bottom: 50px;
-
-}
-nav .menu-item .router-link-active {
- cursor: pointer;
- border-bottom-color: #ffbb00 !important;
- font-weight: bold;
- color: whitesmoke;
- padding-bottom: 50px;
-}
-
-nav .menu-item:hover {
-border-bottom-color: #ffbb00;
-}
-nav .menu-item a {
-color: inherit;
-text-decoration: none;
-padding: 0px 3px 0px 4px;
-margin: auto;
-font-weight: 550;
-}
-
-div .right-nav{
-  width: 900px;
-  margin: 0px 30px;
-  padding-top: 50px;
-  background-color: #323232;
+  color: #c8dcf7 !important;
+  height: 40px;
+  position: relative;
+  font-size: 14px;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  gap: 7px;
+  padding: 0 14px;
+  border-radius: 10px;
+  transition: background 0.2s, color 0.2s;
+  font-family: Verdana;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: none;
+  border: none;
+  background: transparent;
+  white-space: nowrap;
 }
-div .logo-title{
-  margin-top: 10px;
+
+nav .menu-item::after {
+  content: none;
+}
+
+nav .menu-item .menu-icon {
+  font-size: 18px;
+  color: #8fb4e8;
+  transition: color 0.2s;
+}
+
+nav .menu-item.router-link-active {
+  color: #ffbe3d !important;
+  background: rgba(255, 190, 61, 0.15);
+  box-shadow: none;
+  cursor: default;
+}
+
+nav .menu-item.router-link-active .menu-icon {
+  color: #ffbe3d;
+}
+
+nav .menu-item:hover:not(.router-link-active) {
+  background: rgba(214, 228, 251, 0.14);
+  color: #ffffff !important;
+}
+
+nav .menu-item:hover:not(.router-link-active) .menu-icon {
+  color: #ffffff;
 }
 </style>

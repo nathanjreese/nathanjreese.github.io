@@ -88,9 +88,9 @@ export default {
     margin: auto;
     display: inline-flex;
     flex-direction: row;
-    background-color:rgb(231, 231, 231);
-    color: rgb(57, 118, 216);
-    text-shadow: 1px 1px 2px whitesmoke;
+    background-color: transparent;
+    color: var(--color-heading);
+    text-shadow: none;
     }
     .title-class-mobile {
       font-size: calc(16px + 2.3vw) !important;
@@ -101,8 +101,8 @@ export default {
       margin: auto;
       display: inline-flex;
       flex-direction: row;
-      background-color:rgb(231, 231, 231);
-      color: rgb(57, 118, 216);
-      text-shadow: 1px 1px 2px whitesmoke;
+      background-color: transparent;
+      color: var(--color-heading);
+      text-shadow: none;
       }
 </style>

@@ -1,24 +1,30 @@
 <template>
-  <div>
-	<div class="select-main">
-    <title-page
-      title-text="Help me find a favorite IndyCar driver"
+  <section class="select-main">
+    <div class="selector-shell">
+      <title-page
+        title-text="Help me find a favorite IndyCar driver"
       />
-		<div class="select-page">
-      
-      <div class="body-img">
-        <img ref="image" 
-          src="@/assets/IndycarLogo.png"
-          alt="IndyCar Logo"
-          contain
-          class="logo-img"
+
+      <div class="select-page">
+        <p class="selector-subtitle">
+          Answer a few prompts and discover the driver that fits your style.
+        </p>
+
+        <div class="body-img">
+          <img ref="image"
+            src="@/assets/IndycarLogo.png"
+            alt="IndyCar Logo"
+            contain
+            class="logo-img"
           >
+        </div>
+
+        <div class="button55">
+          <Btn class="selector-cta" @click="showModal()">Start</Btn>
+          <Btn class="selector-cta" @click="showBios(randomDriver)">Random</Btn>
+        </div>
       </div>
-      <div class="button55">
-        <Btn @click="showModal()">Start</Btn>
-        <Btn @click="showBios(randomDriver)">Random</Btn>
-      </div>
-		</div>
+
      <select-modal
       v-if="isModalVisible"
       :driver-data="driverData"
@@ -38,8 +44,8 @@
       @end="showBios"
       :three-drivers="this.threeDrivers"
     />	
-	</div>	
-</div>
+    </div>
+  </section>
 </template>
   
 <script>
@@ -1245,29 +1251,98 @@
   </script>
   
   <style>
-.select-main{
+.select-main {
   text-align: center;
   font-family: Verdana;
+  min-height: 100vh;
+  padding: 12px;
+  background:
+    radial-gradient(circle at 0% 0%, #cfe0ff 0%, transparent 38%),
+    radial-gradient(circle at 100% 100%, #d4ecff 0%, transparent 42%),
+    #edf1f7;
 }
-.body-img{
-  padding: auto;
-  display: inline-flex;
-  margin-top: 60px;
-  margin-bottom: 30px;
-  width: 100%
+
+.selector-shell {
+  background: linear-gradient(135deg, #ffffff, #eef4ff);
+  border: 1px solid #c9d7f2;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(10, 46, 97, 0.08);
+  overflow: hidden;
 }
-.select-page{
+
+.select-page {
   width: 100% !important;
   display: flex;
-  float: center;
   flex-direction: column;
+  align-items: center;
+  padding: 8px 16px 36px;
 }
-.logo-img{
-  height: calc(95px + 9vw);
+
+.selector-subtitle {
+  max-width: 640px;
+  margin: 6px auto 12px;
+  color: #1f355c;
+  font-size: calc(11px + 0.45vw);
+}
+
+.body-img {
+  display: inline-flex;
+  margin-top: 22px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.logo-img {
+  height: calc(95px + 8vw);
   margin: auto;
+  filter: drop-shadow(0 8px 16px rgba(18, 49, 93, 0.2));
 }
-  .button55{
-    margin: 60px 0px 150px 0px;
+
+.button55 {
+  margin: 28px 0 90px;
+}
+
+.selector-shell .title-class,
+.selector-shell .title-class-mobile {
+  color: #0f2d59 !important;
+}
+
+.button55 .selector-cta {
+  background: linear-gradient(135deg, #1f5ead, #2f76d8) !important;
+  border: 2px solid #124891 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 16px rgba(14, 52, 107, 0.35);
+  min-width: 170px;
+  font-size: 15px;
+}
+
+.button55 .selector-cta:hover {
+  background: linear-gradient(135deg, #174a8c, #245fae) !important;
+  border-color: #103a72 !important;
+}
+
+@media (max-width: 1020px) {
+  .select-main {
+    padding: 8px;
   }
+
+  .select-page {
+    padding: 6px 10px 24px;
+  }
+
+  .body-img {
+    margin-top: 14px;
+    margin-bottom: 12px;
+  }
+
+  .button55 {
+    margin: 14px 0 44px;
+  }
+
+  .button55 .selector-cta {
+    min-width: 145px;
+    font-size: 14px;
+  }
+}
   </style>
   

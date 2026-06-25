@@ -30,10 +30,10 @@ export default {
     display: inline-block;
     margin: 0.5em 0;
     padding: calc(11px + .5vw) calc(0px + .5vw);
-    background: #288eec;
-    border: 2px solid rgb(119, 119, 119);
+    background: var(--color-accent);
+    border: 2px solid var(--color-border-hover);
     border-radius: 3px;
-    color: whitesmoke;
+    color: #f5f9ff;
     font-family: "Quicksand", sans-serif;
     font-size: calc(9px + .3vw);
     font-weight: 700;
@@ -48,7 +48,7 @@ export default {
   }
   @media (hover: hover) {
     .button:hover {
-    background: #175186;
+    background: var(--color-accent-strong);
     color: #fff;
   }
   }
@@ -56,8 +56,8 @@ export default {
     display: inline-block;
     margin: 0.5em 0;
     padding: calc(11px + .5vw) calc(0px + .5vw);
-    background: #535353;
-    border: 2px solid rgb(119, 119, 119);
+    background: var(--color-nav);
+    border: 2px solid rgba(214, 228, 251, 0.25);
     border-radius: 3px;
     color: whitesmoke;
     font-family: "Quicksand", sans-serif;
@@ -74,7 +74,7 @@ export default {
   }
   @media (hover: hover) {
     .secondary:hover {
-      background: #0e0e0e;
+      background: #0f1d35;
       color: #fff;
     }
 }

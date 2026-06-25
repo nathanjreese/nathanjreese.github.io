@@ -27,14 +27,13 @@
           location="left"
           temporary
           class='drawer-menu'
-          style="width: 225px; height: 345px"
         >
-          <v-list>
-            <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector" color="blue"></v-list-item>
-            <v-list-item prepend-icon="mdi-racing-helmet" title="Silly Season" to="/silly" color="blue"></v-list-item>
-            <v-list-item prepend-icon="mdi-account-group" title="Teams" to="/teams" color="blue"></v-list-item>
-            <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule" color="blue"></v-list-item>
-            <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies" color="blue"></v-list-item>
+          <v-list class="mobile-menu-list">
+            <v-list-item prepend-icon="mdi-heart-box-outline" title="Favorite Driver" to="/selector"></v-list-item>
+            <v-list-item prepend-icon="mdi-racing-helmet" title="Silly Season" to="/silly"></v-list-item>
+            <v-list-item prepend-icon="mdi-account-group" title="Teams" to="/teams"></v-list-item>
+            <v-list-item prepend-icon="mdi-calendar" title="Schedule" to="/schedule"></v-list-item>
+            <v-list-item prepend-icon="mdi-radio" title="Driver Frequencies" to="/frequencies"></v-list-item>
             <!-- <v-list-item prepend-icon="mdi-cash-multiple" title="Leader's Circle" to="/leaders" color="blue"></v-list-item> -->
             <!-- <v-list-item prepend-icon="mdi-ladder" title="Ladder Rankings" to="/ladder" color="blue"></v-list-item> -->
             <!-- <v-list-item prepend-icon="mdi-alphabetical-variant" title="Wordle" to="/wordle" color="blue"></v-list-item> -->
@@ -104,15 +103,19 @@
   overflow-x: visible;
   }
   .app-bar-mobile {
-  margin-bottom: 110px;
+    margin-bottom: 90px;
   width: 100%;
   text-align: center;
   font-weight: bold;
-  color: whitesmoke;
+    color: #f4f8ff;
+    background: linear-gradient(120deg, #12233d, #1c355a) !important;
+    border-bottom: 1px solid rgba(214, 228, 251, 0.2);
+    box-shadow: 0 10px 22px rgba(12, 24, 43, 0.25);
   }
   .mobile-logo-img{
-    height: 40px;
-    margin-right: 20px;
+      height: 34px;
+      margin-right: 12px;
+      margin-top: 5px;
   }
   .headline {
     text-align: center;
@@ -121,24 +124,44 @@
   }
   .text-no-wrap{
     display: inline-flex;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
     width: 100%;
     flex-direction: row;
     position: relative;
-    float: center;
-    padding-left: 60px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
   }
   .mobile-nav-text{
-    margin-top: 25px;
-    padding-right: 20px;
-    font-size: calc(15px + 1vw);
+    margin-top: 8px;
+    padding-right: 10px;
+    font-size: calc(14px + .7vw);
+    font-weight: 700;
+    letter-spacing: 0.01em;
   }
   .mobile-nav-img{
-    margin-top: 18px;
-    padding-right: 20px;
+    margin-top: 2px;
+    padding-right: 6px;
     font-size: 20px;
   }
   .drawer-menu{
-    height: 900px;
+    width: 255px !important;
+    height: 100% !important;
+  }
+  .mobile-menu-list {
+    padding: 10px;
+  }
+  :deep(.mobile-menu-list .v-list-item) {
+    border-radius: 10px;
+    margin-bottom: 6px;
+    color: #d6e4fb;
+    background: rgba(214, 228, 251, 0.08);
+  }
+  :deep(.mobile-menu-list .v-list-item:hover) {
+    background: rgba(214, 228, 251, 0.18);
+  }
+  :deep(.mobile-menu-list .v-list-item--active) {
+    background: linear-gradient(120deg, #2f76d8, #1f5ead);
+    color: #ffffff;
   }
   </style>
