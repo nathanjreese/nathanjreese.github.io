@@ -16,7 +16,7 @@
       <div class="nav-card">
         <router-link class="menu-item" to="/selector">
           <v-icon class="menu-icon">mdi-account-search</v-icon>
-          <span>Drivers</span>
+          <span>Pick a Driver</span>
         </router-link>
         <router-link class="menu-item" to="/teams">
           <v-icon class="menu-icon">mdi-account-group</v-icon>

@@ -79,7 +79,7 @@
       align-items: left;
     }
     .fa-xmark {
-      color: #333333 !important;
+      color: #bfbfbf !important;
       font-size: calc(15px + .8vw) !important;
       padding-right:5px;
       padding-top: 5px;

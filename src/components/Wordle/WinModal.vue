@@ -213,7 +213,7 @@
     max-width: 100% !important;
   }
   .fa-xmark {
-    color: #333333 !important;
+    color: #b7b7b7 !important;
     font-size: calc(12px + 1.1vw) !important;
     padding-right:5px;
   }

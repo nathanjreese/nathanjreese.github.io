@@ -28,9 +28,9 @@
             How Important is this to you?
             </div>
           </v-container>
-          <Btn @click="submit(radioGroup, 2)">Very</Btn>
-          <Btn @click="submit(radioGroup, 1)">Somewhat</Btn>
-          <Btn @click="submit(0, 0)" button-type="secondary">Skip</Btn>
+          <Btn class="btn-modal" @click="submit(radioGroup, 2)">Very</Btn>
+          <Btn class="btn-modal" @click="submit(radioGroup, 1)">Somewhat</Btn>
+          <Btn class="btn-modal btn-secondary" @click="submit(0, 0)">Skip</Btn>
         </slot>
       </section>
     </div>
@@ -259,13 +259,15 @@ import Btn from '@/components/Partials/Btn'
   }
 
   .select-modal {
-    background: #FFFFFF;
+    background: #ffffff !important;
     min-height: 350px;
     width: calc(310px + 22vw) !important;
-    box-shadow: 2px 2px 20px 1px;
+    box-shadow: 0 4px 18px rgba(12, 24, 60, 0.18), 0 1px 3px rgba(12, 24, 60, 0.1);
     display: inline-flex;
     flex-direction: column;
     max-height: 90%;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .select-modal-footer {
@@ -275,55 +277,114 @@ import Btn from '@/components/Partials/Btn'
 
   .select-modal-header {
     padding-left: 10px;
+    padding-right: 10px;
     height: 45px;
     display: flex;
     position: relative;
-    border-bottom: 1px solid #000000;
-    background-color: #1867c0;
-    color: white;
+    border-bottom: 1px solid #253f66;
+    background-color: #162844;
+    color: #eef4ff;
     justify-content: space-between;
-    font-size: calc(13px + .5vw);
+    align-items: center;
+    font-size: calc(13px + 0.5vw);
+    font-weight: 700;
 
-    .header-text{
-      padding-top: 10px;
+    .header-text {
+      padding-top: 0;
     }
 
     .fa-xmark {
-    color: lightgray !important;
-    font-size: calc(10px + 1vw) !important;
-    float: right;
-  }
-  .fa-xmark:hover {
-    color: rgb(119, 119, 119) !important;
-    cursor: pointer !important;
-  }
+      color: #a0c4f7 !important;
+      font-size: calc(10px + 1vw) !important;
+      float: right;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .fa-xmark:hover {
+      color: #ffffff !important;
+    }
   }
 
   .select-modal-body {
     position: relative;
     padding: 10px 10px;
-    color: rgb(42, 42, 42);
+    background: #ffffff !important;
+    color: var(--color-text);
     min-width: calc(200px + 25vw);
+  }
+
+  :deep(.select-modal-body .v-radio) {
+    color: var(--color-text) !important;
+  }
+
+  :deep(.select-modal-body .v-radio .v-label) {
+    color: var(--color-text) !important;
+  }
+
+  :deep(.select-modal-body .v-radio-group) {
+    color: var(--color-text) !important;
   }
 
   .select-modal-question {
     position: relative;
     padding: 0px 10px !important;
-    padding-top: 10px !important;;
-    color: rgb(30, 3, 3);
-    font-size: calc(15px + .8vw) !important;
-    font-weight: bold;
+    padding-top: 10px !important;
+    color: var(--color-text);
+    font-size: calc(15px + 0.8vw) !important;
+    font-weight: 700;
   }
+
   .radio {
-    padding-bottom: calc(1px + .5vw) !important;
+    padding-bottom: calc(1px + 0.5vw) !important;
+    color: var(--color-text) !important;
   }
+
   .radio .v-label {
-    font-size: calc(12px + .4vw);
-    color: rgb(0, 0, 0);
+    font-size: calc(12px + 0.4vw);
+    color: var(--color-text) !important;
   }
-  .importance-class{
-    font-size: calc(12px + .4vw);
-    font-weight: bold;
+
+  :deep(.radio .v-radio__label) {
+    color: var(--color-text) !important;
+  }
+
+  :deep(.v-selection-control__input) {
+    color: var(--color-text) !important;
+  }
+
+  :deep(.v-label) {
+    color: var(--color-text) !important;
+  }
+
+  .importance-class {
+    font-size: calc(12px + 0.4vw);
+    font-weight: 700;
+    color: var(--color-text);
+    padding-top: 12px;
+  }
+
+  :deep(.select-modal-body .button) {
+    background: #2f76d8 !important;
+    color: #ffffff !important;
+    border: 2px solid #1f5ead !important;
+  }
+
+  :deep(.select-modal-body .secondary) {
+    background: #162844 !important;
+    color: #ffffff !important;
+    border: 2px solid #0f1d35 !important;
+  }
+
+  :deep(button.button) {
+    background: #2f76d8 !important;
+    color: #ffffff !important;
+    border: 2px solid #1f5ead !important;
+  }
+
+  :deep(button.secondary) {
+    background: #162844 !important;
+    color: #ffffff !important;
+    border: 2px solid #0f1d35 !important;
   }
   
 
@@ -353,13 +414,36 @@ import Btn from '@/components/Partials/Btn'
     background: transparent;
     
   }
-  .btn-primary {
-    color: black;
+  .btn-modal {
+    background-color: #2f76d8 !important;
+    color: #ffffff !important;
+    border: 2px solid #1f5ead !important;
+    border-radius: 4px !important;
+    padding: 10px 20px !important;
+    font-size: 15px !important;
+    width: calc(100px + 3vw) !important;
+    min-width: 100px !important;
+    font-weight: bold !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    text-align: center !important;
+    margin: 5px !important;
+  }
+
+  .btn-modal.btn-secondary {
+    background-color: #162844 !important;
+    color: #ffffff !important;
+    border: 2px solid #0f1d35 !important;
+  }
+
+  .btn-importance {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(102, 102, 102);
     border: 2px solid;
     border-radius: 4px;
     padding: 10px 20px;
     font-size: 15px;
-    background-color: whitesmoke;
+    background-color: rgb(28, 42, 162) !important;
     width: calc(80px + 3vw);
     font-weight: bold;
   }

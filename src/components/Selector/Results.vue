@@ -134,46 +134,48 @@
   }
 
   .results-main {
-    background: #2f589f;
-    color: black;
-    box-shadow: 2px 2px 20px 1px;
+    background: #ffffff !important;
+    color: var(--color-text);
+    box-shadow: 0 4px 18px rgba(12, 24, 60, 0.18), 0 1px 3px rgba(12, 24, 60, 0.1);
     display: flex;
     flex-direction: column;
     max-height: 95%;
     margin-top: calc(20px + 4vw);
-  }
-
-  .modal-footer {
-    padding: 15px;
-    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .results-header {
     padding: 10px 15px;
-    background: rgb(248, 248, 248);
+    background: #162844;
     height: calc(40px + 1vw);
     position: relative;
-    border-bottom: 3px solid #3c3c3c;
-    color: #2f589f;
+    border-bottom: 1px solid #253f66;
+    color: #eef4ff;
     justify-content: space-between;
+    align-items: center;
+    display: flex;
     font-size: calc(11px + 1.2vw);
-    font-weight: bold;
-     width: calc(250px + 33vw);
+    font-weight: 700;
+    width: calc(250px + 33vw);
   }
   .fa-xmark {
-    color: whitesmoke !important;
+    color: #a0c4f7 !important;
     font-size: calc(8px + 1.5vw);
-    padding-right:5px;
+    padding-right: 5px;
+    cursor: pointer;
+    transition: color 0.2s;
   }
   .fa-xmark:hover {
-    color: rgb(99, 99, 99) !important;
+    color: #ffffff !important;
   }
+
   .results-body {
-    background: #2f589f;
+    background: #ffffff !important;
     position: relative;
     padding: 15px 10px;
     width: calc(240px + 33vw);
-    color: rgb(42, 42, 42);
+    color: var(--color-text);
     overflow-y: auto;
   }
   .float-container2 {
@@ -188,12 +190,13 @@
   font-size: calc(12px + 1.5vw);
   text-align: center;
 }
-  .name-results{
+  .name-results {
     font-size: calc(9px + 1.3vw);
     text-align: center;
     white-space: nowrap;
-    font-weight: bold;
-
+    font-weight: 700;
+    color: var(--color-text);
+    padding-bottom: 8px;
   }
   .team-results{
     font-size: calc(6px + .7vw);
@@ -217,38 +220,49 @@
     height: calc(25px + 3vw);
   }
   .top-section {
-    position:relative;
+    position: relative;
     overflow-y: auto;
     text-align: left;
-    color: black;
-    background: #2f589f;
+    color: var(--color-text);
+    background: transparent;
     width: calc(210px + 28vw);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
   }
-  .rank{
-    float: left;
-    background: #2f589f;
-    color: whitesmoke;
+  .rank {
+    float: none;
+    background: linear-gradient(135deg, #162844, #1f3a5a);
+    color: #ffbe3d;
     font-size: calc(11px + 2vw);
-    text-shadow: 2px 2px black;
-    padding: calc(30px + 2vw) calc(10px + 1vw);
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 0 calc(10px + 1vw);
+    border-radius: 6px;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: calc(60px + 2vw);
   }
   .driver-section {
-    position:relative;
+    position: relative;
     overflow-y: auto;
     text-align: left;
-    color: black;
-    background: whitesmoke;
-    border: calc(2px + .4vw) solid cornflowerblue;
-    border-radius: 4px;
-    outline-width: 20px;
-    box-shadow: 0px 5px 15px 8px;
+    color: var(--color-text);
+    background: linear-gradient(to bottom, #f8fbff, #edf3fc);
+    border: 1px solid #d4e1f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(12, 24, 60, 0.08);
+    flex: 1;
+    transition: all 0.2s;
   }
   .driver-section:hover {
-    border: calc(2.5px + .4vw) solid #ffbb00;
-    box-shadow: -5px 15px 15px 8px;
-    cursor: pointer
-    
-
+    border-color: #ffbe3d;
+    box-shadow: 0 4px 16px rgba(255, 190, 61, 0.15);
+    cursor: pointer;
   }
   .btn-close {
     position: absolute;

@@ -97,13 +97,13 @@
           </v-simple-table> -->
           <div class="twitter-share-desktop">
           <a :href=tweetText target="_blank">
-            <Btn>Twitter</Btn>
+            <Btn class="btn-tweet-desktop">Twitter</Btn>
           </a>
           <a :href=bskyText target="_blank">
-            <Btn>Bluesky</Btn>
+            <Btn class="btn-tweet-desktop">Bluesky</Btn>
           </a>
           <a :href=threadsText target="_blank">
-            <Btn>Threads</Btn>
+            <Btn class="btn-tweet-desktop">Threads</Btn>
           </a>
         </div>
       </div>
@@ -310,26 +310,29 @@ import Btn from '@/components/Partials/Btn'
   }
 
   .bio-main-desktop {
-    background: whitesmoke;
-    color: black;
-    box-shadow: 2px 2px 20px 1px;
+    background: #ffffff !important;
+    color: var(--color-text);
+    box-shadow: 0 4px 18px rgba(12, 24, 60, 0.18), 0 1px 3px rgba(12, 24, 60, 0.1);
     display: inline-flex;
     flex-direction: column;
     max-height: 95%;
     width: calc(250px + 30vw);
     max-width: 90%;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .bio-header-desktop {
     padding: 10px 15px;
-    background-color: #2f589f;;
-    height: calc(27px + 2vw);
+    background-color: #162844 !important;
+    height: calc(40px + 1vw);
     display: flex;
     position: relative;
-    border-bottom: 2px solid #3c3c3c;
-    color: white;
+    border-bottom: 1px solid #253f66;
+    color: #eef4ff;
     justify-content: space-between;
-    font-size: calc(10px + 1.3vw);
+    font-size: calc(13px + 0.5vw);
+    font-weight: 700;
   }
   .fa-facebook {
     color: #144799;
@@ -353,13 +356,25 @@ import Btn from '@/components/Partials/Btn'
     color: #144799;
   }
   .fa-xmark {
-    color: whitesmoke !important;;
-    font-size: calc(8px + 1.5vw);
+    color: #ffffff !important;
+    font-size: calc(10px + 1vw) !important;
     padding-right:calc(3px + 1.5vw);
     padding-bottom: calc(1px + .5vw);
+    cursor: pointer;
+    transition: color 0.2s;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
   }
   .fa-xmark:hover {
-    color: rgb(183, 183, 183);
+    color: #ffbe3d !important;
+  }
+  :deep(.fa-xmark) {
+    color: #ffffff !important;
+  }
+  :deep(.btn-close-desktop .fa-xmark) {
+    color: #ffffff !important;
+  }
+  :deep(.btn-close-mobile .fa-xmark) {
+    color: #ffffff !important;
   }
   .fa-circle-chevron-left {
     color: silver;
@@ -393,30 +408,29 @@ import Btn from '@/components/Partials/Btn'
     position:relative !important
   }
   .modal-top-desktop {
-    background-color: rgb(213, 213, 213);
+    background-color: #ffffff;
     position: relative;
     padding: 10px 10px;
-    color: rgb(42, 42, 42);
-    border-bottom: 2px solid #3c3c3c;
+    color: var(--color-text);
+    border-bottom: 1px solid #e0e0e0;
     text-align: left;
     height: calc(120px + 8vw);
-    position: relative;
   }
   .modal-body-desktop {
     float: left;  
-    background: whitesmoke;
+    background: #ffffff;
     position: relative;
     padding: 2px 10px;
-    color: rgb(42, 42, 42);
+    color: var(--color-text);
   }
   .driver-intro1-desktop {
     float: left;  
     position: relative;
     padding: 3px 5px;
-    color: whitesmoke;
-    font-size: calc(6px + 1.5vw) !important;
+    color: #eef4ff;
+    font-size: calc(13px + 0.5vw) !important;
     display: flex;
-    font-weight: bold;
+    font-weight: 700;
   }
   .float-container-desktop {
     text-align: center !important;
@@ -425,7 +439,8 @@ import Btn from '@/components/Partials/Btn'
     text-align: center !important;
     padding: 20px 10px;
     font-size: calc(12px + 1.5vw);
-    font-weight: bold;
+    font-weight: 700;
+    color: var(--color-text);
   }
   .bio-img-desktop {
     text-align: left !important;
@@ -456,15 +471,17 @@ import Btn from '@/components/Partials/Btn'
     font-size: 18px;
   }
   .table-key-desktop {
-    font-weight: bold;
+    font-weight: 700;
     text-align: right;
     padding-right: calc(6px + .6vw);
     font-size: calc(14px + .6vw);
+    color: var(--color-text);
   }
   .table-value-desktop {
     text-align: left;
     padding-right: 25px;
-    font-size: calc(14px + .6vw)
+    font-size: calc(14px + .6vw);
+    color: var(--color-text);
   }
   .summary-table-desktop {
     padding: 25px 20px 0 20px;
@@ -480,6 +497,7 @@ import Btn from '@/components/Partials/Btn'
     word-wrap: break-word;
     overflow-wrap: break-word;
     box-sizing: border-box;
+    color: var(--color-text);
   }
   .social-class-desktop {
     font-weight: bold;
@@ -511,95 +529,86 @@ import Btn from '@/components/Partials/Btn'
     top: 0;
     right: 0;
     border: none;
-    font-size: 20px;
+    font-size: calc(10px + 1vw);
     padding: 5px 10px;
     cursor: pointer;
-    font-weight: bold;
-    color: whitesmoke;
+    font-weight: 700;
+    color: #ffffff !important;
     background: transparent;
-    
+    transition: color 0.2s;
   }
   .btn-close-desktop:hover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    font-size: 20px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-weight: bold;
-    color: rgb(192, 192, 192);
-    background: transparent;
-    
+    color: #ffbe3d !important;
   }
   .btn-tweet-desktop {
-    width: calc(90px + 4vw);
-    height: 50px !important;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    font-size: calc(8px + .4vw);
-    margin: calc(16px + 2vw) calc(16px + 2vw);
-    text-transform: uppercase;
-    cursor: pointer;
-    background: #288eec;
-    box-shadow: -2px 4px 16px #8bc3f6;
-    border-radius: 2px;
-    border: none;
-    color: whitesmoke !important;
-    font-weight: bold;
+    background-color: #2f76d8 !important;
+    color: #ffffff !important;
+    border: 2px solid #1f5ead !important;
+    border-radius: 4px !important;
+    padding: 10px 20px !important;
+    font-size: 15px !important;
+    width: calc(90px + 4vw) !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    text-align: center !important;
+    margin: 8px !important;
   }
   .twitter-share-desktop {
     padding: 25px;
   }
 
   .bio-main-mobile {
-    background: whitesmoke;
-    color: black;
-    box-shadow: 2px 2px 20px 1px;
+    background: #ffffff !important;
+    color: var(--color-text);
+    box-shadow: 0 4px 18px rgba(12, 24, 60, 0.18), 0 1px 3px rgba(12, 24, 60, 0.1);
     display: inline-flex;
     flex-direction: column;
     max-height: 95%;
     width: calc(250px + 30vw);
     max-width: 90%;
     margin-top: 85px;
+    border-radius: 8px;
+    overflow: hidden;
   }
   .bio-header-mobile {
     padding: 10px 15px;
-    background-color: #2f589f;
-    height: calc(37px + 2vw);
+    background-color: #162844 !important;
+    height: calc(40px + 1vw);
     display: flex;
     position: relative;
-    border-bottom: 2px solid #000000;
-    color: white;
+    border-bottom: 1px solid #253f66;
+    color: #eef4ff;
     justify-content: space-between;
+    font-weight: 700;
   }
   .modal-all-mobile {
     background-color: transparent;
     overflow-y: auto;
   }
   .modal-top-mobile {
-    background-color: rgb(213, 213, 213);
+    background-color: #ffffff;
     position: relative;
     padding: 10px 10px;
-    color: rgb(42, 42, 42);
-    border-bottom: 2px solid #3c3c3c;
+    color: var(--color-text);
+    border-bottom: 1px solid #e0e0e0;
     text-align: left;
   }
   .modal-body-mobile {
     float: left;  
-    background: whitesmoke;
+    background: #ffffff;
     position: relative;
     padding: 2px 10px;
-    color: rgb(42, 42, 42);
+    color: var(--color-text);
   }
   .driver-intro1-mobile {
     float: left;  
     position: relative;
     padding: 0px 0px 8px 2px;
-    color: whitesmoke;
-    font-size: calc(12px + 1.5vw) !important;
+    color: #eef4ff;
+    font-size: calc(13px + 0.5vw) !important;
     display: flex;
-    font-weight: bold;
+    font-weight: 700;
   }
   .float-container-mobile {
     text-align: center !important;
@@ -608,7 +617,8 @@ import Btn from '@/components/Partials/Btn'
     text-align: center !important;
     padding: 10px 5px;
     font-size: calc(27px + 1.5vw);
-    font-weight: bold;
+    font-weight: 700;
+    color: var(--color-text);
   }
   .bio-img-mobile {
     text-align: left !important;
@@ -644,15 +654,17 @@ import Btn from '@/components/Partials/Btn'
     background-color: whitesmoke;
   }
   .table-key-mobile {
-    font-weight: bold;
+    font-weight: 700;
     text-align: right;
     padding-right: calc(6px + .2vw);
     font-size: calc(12px + .3vw);
+    color: var(--color-text);
   }
   .table-value-mobile {
     text-align: left;
     padding-right: 25px;
-    font-size: calc(12px + .6vw)
+    font-size: calc(12px + .6vw);
+    color: var(--color-text);
   }
   .summary-table-mobile {
     padding: 25px 20px 0 20px;
@@ -668,6 +680,7 @@ import Btn from '@/components/Partials/Btn'
     word-wrap: break-word;
     overflow-wrap: break-word;
     box-sizing: border-box;
+    color: var(--color-text);
   }
   .social-class-mobile {
     font-weight: bold;
@@ -688,35 +701,30 @@ import Btn from '@/components/Partials/Btn'
   top: 0;
   right: 0;
   border: none;
-  font-size: 20px;
+  font-size: calc(10px + 1vw);
   padding: 5px 10px;
   cursor: pointer;
-  font-weight: bold;
-  color: whitesmoke;
+  font-weight: 700;
+  color: #ffffff !important;
   background: transparent;
-  
+  transition: color 0.2s;
 }
   .btn-close-mobile:hover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    font-size: 20px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-weight: bold;
-    color: rgb(192, 192, 192);
-    background: transparent;    
+    color: #ffbe3d !important;
   }
 
   .btn-tweet-mobile {
-    margin: 20px 10px !important;
-    color: whitesmoke !important;
-    background: #288eec;
-    width: calc(80px + 3vw);
-    font-size: calc(8px + .5vw);
-    font-weight: bold;
-    height: calc(35px + 1vw) !important;
+    background-color: #2f76d8 !important;
+    color: #ffffff !important;
+    border: 2px solid #1f5ead !important;
+    border-radius: 4px !important;
+    padding: 10px 20px !important;
+    font-size: 15px !important;
+    width: calc(80px + 3vw) !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    margin: 8px !important;
   }
   .twitter-share-mobile {
     padding: 0px;
