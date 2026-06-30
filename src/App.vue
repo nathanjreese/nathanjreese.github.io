@@ -64,6 +64,15 @@
             value: '/leaders',
           }
         ],
+        // Route to meta image mapping
+        routeImages: {
+          'Home': 'https://indycardrivers.com/Preview.png',
+          'Selector': 'https://indycardrivers.com/Preview.png',
+          'Teams': 'https://indycardrivers.com/TeamsPreview.png',
+          'Schedule': 'https://indycardrivers.com/SchedulePreview.png',
+          'Frequencies': 'https://indycardrivers.com/FrequenciesPreview.png',
+          'Silly': 'https://indycardrivers.com/SillySeasonPreview.png',
+        }
       }),
       computed: {
         isMobile() {
@@ -79,7 +88,38 @@
         group () {
           this.drawer = false
         },
+        $route() {
+          this.updateMetaTags();
+        }
       },
+      mounted() {
+        this.updateMetaTags();
+      },
+      methods: {
+        updateMetaTags() {
+          const routeName = this.$route.name || 'Home';
+          const imageUrl = this.routeImages[routeName] || 'https://indycardrivers.com/Preview.png';
+          const pageTitle = routeName || 'IndyCar Drivers App';
+          
+          // Update OG image meta tags
+          this.updateOrCreateMetaTag('property', 'og:image', imageUrl);
+          this.updateOrCreateMetaTag('name', 'twitter:image', imageUrl);
+          this.updateOrCreateMetaTag('itemprop', 'image', imageUrl);
+          
+          // Update OG title and description if needed
+          this.updateOrCreateMetaTag('property', 'og:title', pageTitle);
+          this.updateOrCreateMetaTag('name', 'twitter:title', pageTitle);
+        },
+        updateOrCreateMetaTag(attrName, attrValue, content) {
+          let tag = document.querySelector(`meta[${attrName}="${attrValue}"]`);
+          if (!tag) {
+            tag = document.createElement('meta');
+            tag.setAttribute(attrName, attrValue);
+            document.head.appendChild(tag);
+          }
+          tag.setAttribute('content', content);
+        }
+      }
     }
   </script>
 

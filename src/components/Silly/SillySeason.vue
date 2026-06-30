@@ -59,10 +59,6 @@
               <span class="empty-slot-dot" />
               <span class="empty-slot-text">Add driver</span>
             </div>
-
-            <p v-if="listTeam(team.name).length === 0" class="empty-message">
-              Drag drivers here
-            </p>
           </div>
         </div>
       </div>
@@ -201,12 +197,15 @@ export default {
         { id: 35, name: "Yuki Tsunoda", original: "na", team: "na", pic: new URL("@/assets/SillyPhotos/YukiTsunoda.jpeg", import.meta.url) },
         { id: 36, name: "Pietro Fittipaldi", original: "na", team: "na", pic: new URL("@/assets/SillyPhotos/PietroFittipaldi.jpeg", import.meta.url) },
         { id: 38, name: "Tymek Kucharczyk", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/TymekKucharczyk.jpeg", import.meta.url) },
-        { id: 39, name: "Zane Maloney", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/ZaneMaloney.jpeg", import.meta.url) },
+        { id: 39, name: "Zane Maloney", original: "na", team: "na", pic: new URL("@/assets/SillyPhotos/ZaneMaloney.jpeg", import.meta.url) },
         { id: 41, name: "Allesandro de Tullio", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/AllesandrodeTullio.jpeg", import.meta.url) },
         { id: 44, name: "Enzo Fittipaldi", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/EnzoFittpaldi.jpeg", import.meta.url) },
         { id: 45, name: "Mick Schumacher", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/MickSchumacher.jpeg", import.meta.url) },
         { id: 47, name: "Nikita Johnson", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/NikitaJohnson.jpeg", import.meta.url) },
         { id: 48, name: "Leonardo Fornaroli", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/LeonardoFornaroli.jpeg", import.meta.url) },
+        { id: 49, name: "Sebastian Montoya", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/SebastianMontoya.jpeg", import.meta.url) },
+        { id: 50, name: "Kakunoshin Ohta", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/KakunoshinOhta.jpeg", import.meta.url) },
+
       ]
     }
   },
@@ -584,29 +583,29 @@ export default {
 }
 
 .empty-slot-dot {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #cad5eb;
   display: inline-block;
 }
 
 .empty-slot-text {
-  font-size: 12px;
+  font-size: 14px;
   color: #7a8ead;
   font-weight: 600;
 }
 
 .driver-photo {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid #c7d7f4;
 }
 
 .driver-name {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--text);
 }

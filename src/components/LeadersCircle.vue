@@ -8,16 +8,16 @@
   <v-table class="leaders-table" density="compact">
     <thead>
       <tr>
-        <th class="text-left">
+        <th class="text-left" style="background:#162844 !important; color:#eef4ff !important;">
           Rank
         </th>
-        <th class="text-left">
+        <th class="text-left" style="background:#162844 !important; color:#eef4ff !important;">
           Entry
         </th>
-        <th class="text-left">
+        <th class="text-left" style="background:#162844 !important; color:#eef4ff !important;">
           Points
         </th>
-        <th class="text-left">
+        <th class="text-left" style="background:#162844 !important; color:#eef4ff !important;">
           +/-
         </th>
       </tr>
@@ -116,52 +116,66 @@ import TitlePage from '@/components/Partials/Title'
 
 <style scoped>
 .main-leaders {
+  width: 100%;
   text-align: center;
-  background-color:rgb(231, 231, 231);
+  background: transparent;
+  color: var(--color-text);
   padding-bottom: 50px;
-  }
-  .last-update{
-  padding-bottom: 20px;
-}
-  .table-holder{
-    display: flex;
-    float: center;
-    flex-direction: column;
-  }
-.leaders-table{
-  max-width: 600px;
-  min-width: calc(250px + 25vw);
-  height: 80%;
-  font-size: calc(10px + .5vw);
-  float: center;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #cfcfcf;
-  border: 2px solid black;
-  box-shadow: 5px 5px 5px #616161;
-  color: black;
-  thead{
-    color: whitesmoke;
-    background-color: #323232;
-  }
-  td{padding: 4px;}
-}
-tr:nth-child(even)
-{
-  background-color: #dbdbdb;
 }
 
-.leaders-title{
-    font-size: calc(10px + 2.5vw) !important;
-    padding-bottom: calc(20px + 3vw);
-    text-shadow: 2px 1px 1px #000000;
-    font-family: Verdana;
-    font-weight: bold;
-  }
-  .points-col{
-    color: darkgreen;
-  }
-  .points-col.out{
-    color: #a30707;
-  }
-  </style>
+.last-update {
+  padding-bottom: 20px;
+  color: var(--color-text-soft);
+  font-size: calc(10px + 0.3vw);
+}
+
+.table-holder {
+  display: flex;
+  max-width: 700px;
+  margin: auto;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 10px 14px;
+}
+
+.leaders-table {
+  width: 100%;
+  min-width: calc(250px + 25vw);
+  font-size: calc(10px + 0.5vw);
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  overflow: hidden;
+  color: var(--color-text);
+}
+
+.leaders-table thead {
+  background: var(--color-nav);
+  color: #eef4ff;
+}
+
+:deep(.leaders-table .v-table__wrapper > table > tbody > tr > td) {
+  color: var(--color-text) !important;
+  height: calc(24px + 1.1vw);
+  padding: calc(2px + 0.2vw) calc(4px + 0.35vw);
+}
+
+.leaders-table tr:nth-child(odd) {
+  background: #edf3fc;
+}
+
+.leaders-table tr:nth-child(even) {
+  background: #f8fbff;
+}
+
+.points-col {
+  color: #1a7a3a;
+  font-weight: 700;
+}
+
+.points-col.out {
+  color: #b91c1c;
+}
+</style>
