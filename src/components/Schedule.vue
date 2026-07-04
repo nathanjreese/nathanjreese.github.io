@@ -60,7 +60,7 @@
           <tr
             v-for="item in filteredEvents.filter(event => event.event === weekend)"
             :key="item.name"
-            :class="{ orow: uniqueDates.indexOf(item.date) % 2 === 0, erow: uniqueDates.indexOf(item.date) % 2 !== 0 }"
+            :class="{ orow: getDayIndexWithinEvent(weekend, item.date) % 2 === 0, erow: getDayIndexWithinEvent(weekend, item.date) % 2 !== 0 }"
           >
             <td :class="{ isracecenter: item.type === 'Race', notracecenter: item.type !== 'Race' }">
               {{ item.dow }} {{ item.newdate }}
@@ -115,6 +115,17 @@ export default {
       events = events.filter(event => this.timeStatus(event) === true)
       events = this.showRaces ? events.filter(event => event.type === 'Race') : events
 
+      // Sort by date, then by time
+      events.sort((a, b) => {
+        const dateCompare = new Date(a.date) - new Date(b.date)
+        if (dateCompare !== 0) return dateCompare
+        
+        // If same date, sort by time (handle TBD times)
+        const timeA = a.time.includes('44') ? '23:59' : a.time
+        const timeB = b.time.includes('44') ? '23:59' : b.time
+        return moment(timeA, 'hh:mm A').diff(moment(timeB, 'hh:mm A'))
+      })
+
       this.uniqueEvents = [...new Set(events.map(event => event.event))]
       this.uniqueDates = [...new Set(events.map(event => event.date))]
 
@@ -127,6 +138,11 @@ export default {
     }
   },
   methods: {
+    getDayIndexWithinEvent(weekend, date) {
+      const eventsInWeekend = this.filteredEvents.filter(event => event.event === weekend)
+      const uniqueDatesInWeekend = [...new Set(eventsInWeekend.map(e => e.date))]
+      return uniqueDatesInWeekend.indexOf(date)
+    },
     setTimeZone() {
       const targetTimezone = this.selectedTime
       this.events.forEach(item => {
