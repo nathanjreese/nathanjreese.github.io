@@ -137,12 +137,14 @@ export default {
         { name: "penske", size: 3, title: "Team Penske", teampic: new URL("@/assets/Teams/TeamPenske.png", import.meta.url) },
         { name: "ganassi", size: 3, title: "Chip Ganassi Racing", teampic: new URL("@/assets/Teams/ChipGanassiRacing.png", import.meta.url) },
         { name: "mclaren", size: 3, title: "Arrow McLaren", teampic: new URL("@/assets/Teams/ArrowMcLaren.png", import.meta.url) },
-        { name: "rahal", size: 3, title: "Rahal Letterman Lanigan", teampic: new URL("@/assets/Teams/RahalLetterman.png", import.meta.url) },
+        { name: "rahal", size: 2, title: "Rahal Letterman Lanigan", teampic: new URL("@/assets/Teams/RahalLetterman.png", import.meta.url) },
         { name: "ecr", size: 2, title: "Ed Carpenter Racing", teampic: new URL("@/assets/Teams/EdCarpenterRacing.png", import.meta.url) },
         { name: "coyne", size: 2, title: "Dale Coyne Racing", teampic: new URL("@/assets/Teams/DaleCoyneRacing.png", import.meta.url) },
         { name: "msr", size: 2, title: "Meyer Shank Racing", teampic: new URL("@/assets/Teams/MeyerShankRacing.png", import.meta.url) },
         { name: "foyt", size: 2, title: "A.J. Foyt Racing", teampic: new URL("@/assets/Teams/AJFoytRacing.png", import.meta.url) },
-        { name: "juncos", size: 2, title: "Juncos Hollinger Racing", teampic: new URL("@/assets/Teams/JuncosHollinger.png", import.meta.url) }
+        { name: "juncos", size: 2, title: "Juncos Hollinger Racing", teampic: new URL("@/assets/Teams/JuncosHollinger.png", import.meta.url) },
+        { name: "dreyer", size: 1, title: "Dreyer & Reinbold Racing", teampic: new URL("@/assets/Teams/DreyerReinboldRacing.png", import.meta.url) },
+
       ],
       teams: {
         andretti: 3,
@@ -161,7 +163,7 @@ export default {
       marioProfile: new URL("@/assets/SillyPhotos/MarioAndretti.jpeg", import.meta.url),
       items: [
         { id: 0, name: "Alex Palou", original: "ganassi", team: "ganassi", pic: new URL("@/assets/SillyPhotos/AlexPalou.jpeg", import.meta.url) },
-        { id: 1, name: "Scott Dixon", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/ScottDixon.jpeg", import.meta.url) },
+        { id: 1, name: "Scott Dixon", original: "mclaren", team: "mclaren", pic: new URL("@/assets/SillyPhotos/ScottDixon.jpeg", import.meta.url) },
         { id: 2, name: "Josef Newgarden", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/JosefNewgarden.jpeg", import.meta.url) },
         { id: 3, name: "Pato O'Ward", original: "mclaren", team: "mclaren", pic: new URL("@/assets/SillyPhotos/PatricioOWard.jpeg", import.meta.url) },
         { id: 4, name: "Scott McLaughlin", original: "penske", team: "penske", pic: new URL("@/assets/SillyPhotos/ScottMcLaughlin.jpeg", import.meta.url) },
@@ -174,7 +176,7 @@ export default {
         { id: 11, name: "Rinus Veekay", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/RinusVeeKay.jpeg", import.meta.url) },
         { id: 12, name: "Marcus Ericsson", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/MarcusEricsson.jpeg", import.meta.url) },
         { id: 13, name: "David Malukas", original: "penske", team: "penske", pic: new URL("@/assets/SillyPhotos/DavidMalukas.jpeg", import.meta.url) },
-        { id: 14, name: "Felix Rosenqvist", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/FelixRosenqvist.jpeg", import.meta.url) },
+        { id: 14, name: "Felix Rosenqvist", original: "mclaren", team: "mclaren", pic: new URL("@/assets/SillyPhotos/FelixRosenqvist.jpeg", import.meta.url) },
         { id: 15, name: "Graham Rahal", original: "rahal", team: "rahal", pic: new URL("@/assets/SillyPhotos/GrahamRahal.jpeg", import.meta.url) },
         { id: 16, name: "Louis Foster", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/LouisFoster.jpeg", import.meta.url) },
         { id: 17, name: "Marcus Armstrong", original: "fa", team: "fa", pic: new URL("@/assets/SillyPhotos/MarcusArmstrong.jpeg", import.meta.url) },
